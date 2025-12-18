@@ -8,7 +8,7 @@ This doc covers Figma-specific guidance for using design tokens in design work.
 
 For the full Tokens Studio operating model, see:
 
-- `tokens-studio.md`
+- [Tokens Studio](tokens-studio)
 
 ## Figma rules
 

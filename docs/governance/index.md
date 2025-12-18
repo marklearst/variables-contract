@@ -32,7 +32,7 @@ This governance exists to keep variables stable, predictable, and easy to consum
 
 ## Next docs to read
 
-- `getting-started.md`
-- `../contract/naming.md`
-- `../tooling/tokens-studio.md`
-- `change-control.md`
+- [Getting Started](getting-started)
+- [Naming](../contract/naming)
+- [Tokens Studio](../tooling/tokens-studio)
+- [Change Control](change-control)
