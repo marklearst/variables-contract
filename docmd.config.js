@@ -17,7 +17,7 @@ module.exports = {
   autoTitleFromH1: true,
   copyCode: true,
   navigation: [
-    { title: "Home", path: "/", icon: "home" },
+    { title: "Home", path: ".", icon: "home" },
     {
       title: "Contract",
       icon: "file-text",
@@ -25,11 +25,11 @@ module.exports = {
       children: [
         {
           title: "Variable Contract",
-          path: "/contract/variable-contract",
+          path: "contract/variable-contract",
           icon: "file-text",
         },
-        { title: "Naming", path: "/contract/naming", icon: "tag" },
-        { title: "Anatomy", path: "/contract/anatomy", icon: "layers" },
+        { title: "Naming", path: "contract/naming", icon: "tag" },
+        { title: "Anatomy", path: "contract/anatomy", icon: "layers" },
       ],
     },
     {
@@ -37,26 +37,26 @@ module.exports = {
       icon: "shield",
       collapsible: true,
       children: [
-        { title: "Governance Index", path: "/governance", icon: "list" },
-        { title: "Overview", path: "/governance/overview", icon: "book-open" },
+        { title: "Governance Index", path: "governance", icon: "list" },
+        { title: "Overview", path: "governance/overview", icon: "book-open" },
         {
           title: "Getting Started",
-          path: "/governance/getting-started",
+          path: "governance/getting-started",
           icon: "flag",
         },
         {
           title: "Accessibility",
-          path: "/governance/accessibility",
+          path: "governance/accessibility",
           icon: "eye",
         },
         {
           title: "Change Control",
-          path: "/governance/change-control",
+          path: "governance/change-control",
           icon: "git-branch",
         },
         {
           title: "Role: Design Systems Engineer",
-          path: "/governance/roles/design-systems-engineer",
+          path: "governance/roles/design-systems-engineer",
           icon: "user",
         },
       ],
@@ -66,10 +66,10 @@ module.exports = {
       icon: "wrench",
       collapsible: true,
       children: [
-        { title: "Figma", path: "/tooling/figma", icon: "pen-tool" },
+        { title: "Figma", path: "tooling/figma", icon: "pen-tool" },
         {
           title: "Tokens Studio",
-          path: "/tooling/tokens-studio",
+          path: "tooling/tokens-studio",
           icon: "sliders",
         },
       ],
@@ -81,7 +81,7 @@ module.exports = {
       children: [
         {
           title: "Figma Export JSON",
-          path: "/examples/figma-export",
+          path: "examples/figma-export",
           icon: "file-code",
         },
       ],
