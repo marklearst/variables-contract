@@ -8,7 +8,7 @@ This governance defines how a design system team creates, changes, reviews, and 
 
 The goal is stable variable names and predictable change control, so design and engineering can treat variables as a shared contract.
 
-The contract rules (schema and validation expectations) live in [Variable Contract](contract/variable-contract).
+The contract rules (schema and validation expectations) live in [Variable Contract](../../contract/variable-contract).
 
 ## Principles
 
