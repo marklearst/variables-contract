@@ -16,8 +16,8 @@ This checklist is the fastest way to get productive in a variable-governed desig
 
 1. Read:
    - [Variable Governance](overview)
-   - [Naming](../contract/naming)
-   - [Tokens Studio](../tooling/tokens-studio)
+   - [Naming](contract/naming)
+   - [Tokens Studio](tooling/tokens-studio)
    - [Change Control](change-control)
 2. Identify which variable category you are working in:
    - base

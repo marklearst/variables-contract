@@ -8,7 +8,7 @@ This role owns the variable contract and the systems that make variables usable 
 
 ## Responsibilities
 
-- Own the Variable Contract ([Variable Contract](../../contract/variable-contract)) and its validation requirements.
+- Own the Variable Contract ([Variable Contract](contract/variable-contract)) and its validation requirements.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
 - Define consumption patterns in code (CSS variables, TypeScript, theming) and keep them stable.
