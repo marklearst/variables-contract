@@ -1,0 +1,19 @@
+docs/
+  index.md
+  contract/
+    variable-contract.md
+    naming.md
+    anatomy.md
+  governance/
+    index.md
+    overview.md
+    getting-started.md
+    accessibility.md
+    change-control.md
+    roles/
+      design-systems-engineer.md
+  tooling/
+    figma.md
+    tokens-studio.md
+  examples/
+    figma-export.json
