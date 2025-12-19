@@ -12,8 +12,10 @@ docs/
     change-control.md
     roles/
       design-systems-engineer.md
-  tooling/
+  adapters/
+    index.md
     figma.md
     tokens-studio.md
+    style-dictionary.md
   examples/
     figma-export.json
