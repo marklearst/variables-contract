@@ -4,11 +4,11 @@ title: Variable Anatomy
 
 # Variable Anatomy
 
-This document defines the three layers of tokens used in a governed token system and how they should be consumed.
+These are the three layers we use so components do not depend on raw palette values.
 
 ## 1. Base tokens
 
-Base tokens hold raw scales and palettes. They are the source of truth for value selection.
+Base tokens hold raw scales and palettes. They are the only place raw values live.
 
 Examples:
 
@@ -19,7 +19,7 @@ Examples:
 
 Rules:
 
-- Base tokens are stable and reused broadly.
+- Base tokens are reused broadly.
 - Components should not consume base tokens directly unless explicitly allowed.
 
 ## 2. Alias (semantic) tokens
