@@ -44,7 +44,7 @@ Examples:
 
 - Variable Contract → Style Dictionary → CSS variables
 - Variable Contract → TypeScript types
-- Variable Contract → Tailwind config
+- Variable Contract → Tailwind CSS v4 (`@theme` directive)
 
 ## Adapter pattern
 
@@ -72,6 +72,7 @@ If adapters fail:
 - [Figma Adapter](/variable-contract/adapters/figma) - Figma Variables export normalization
 - [Tokens Studio Adapter](/variable-contract/adapters/tokens-studio) - Tokens Studio export normalization
 - [Style Dictionary Adapter](/variable-contract/adapters/style-dictionary) - Variable Contract to CSS/TypeScript/etc.
+- [Tailwind Adapter](/variable-contract/adapters/tailwind) - Tailwind theme configuration generation
 
 ## Out of scope
 
