@@ -215,14 +215,14 @@ interface ButtonProps {
 }
 
 function Button({ children, variant = 'primary', disabled }: ButtonProps) {
-  const backgroundColor = variant === 'primary' 
-    ? color.surface.brand 
+  const backgroundColor = variant === 'primary'
+    ? color.surface.brand
     : color.surface.secondary;
-  
+
   const textColor = variant === 'primary'
     ? color.text.onBrand
     : color.text.primary;
-  
+
   return (
     <button
       disabled={disabled}
@@ -263,12 +263,12 @@ const ThemeContext = createContext<{
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
-  
+
   const colors = {
     surface: color.surface[theme],
     text: color.text[theme]
   };
-  
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, colors }}>
       {children}
