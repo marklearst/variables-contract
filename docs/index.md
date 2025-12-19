@@ -8,9 +8,17 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 
 ## Start here
 
-- Variable Contract: [Variable Contract](contract/variable-contract)
-- Variable Governance: [Variable Governance](governance/overview)
-- DTCG Alignment: [DTCG Alignment](contract/dtcg-alignment)
+- [Why Variables](introduction/why-variables) - Why we call them variables, not design tokens
+- [Variable Contract](contract/variable-contract) - JSON shape and structure
+- [Variable Governance](governance/overview) - Governance principles and workflow
+- [DTCG Alignment](contract/dtcg-alignment) - DTCG 2025.10 compliance
+- [Getting Started](adoption/getting-started) - Team adoption guide
+
+## Introduction
+
+- [Why Variables](introduction/why-variables) - Why "variables" not "design tokens"
+- [Comparison](introduction/comparison) - Variable Contract vs other standards
+- [Positioning](introduction/positioning) - What Variable Contract is and is not
 
 ## Contract reference
 
@@ -23,6 +31,12 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 - [Naming](contract/naming) - Naming convention
 - [Anatomy](contract/anatomy) - Base, alias, and component tokens
 
+## Adoption
+
+- [Getting Started](adoption/getting-started) - Team adoption guide and implementation
+- [Implementation Checklist](adoption/implementation-checklist) - Pre/post implementation checklists
+- [Migration Strategy](adoption/migration-strategy) - Phased migration approaches
+
 ## Governance
 
 - [Governance Overview](governance) - Governance principles and workflow
@@ -34,6 +48,46 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 - [Troubleshooting](governance/troubleshooting) - Common issues and solutions
 - [Accessibility](governance/accessibility) - Accessibility constraints
 - [Roles](governance/roles/design-systems-engineer) - Design Systems Engineer role
+
+## Scenarios
+
+- [Multi-Brand](scenarios/multi-brand) - Multi-brand architecture patterns
+- [Multi-Theme](scenarios/multi-theme) - Theme composition and mode inheritance
+- [Large Sets](scenarios/large-sets) - Performance considerations and optimization
+- [Component Integration](scenarios/component-integration) - Component library integration patterns
+
+## Tooling
+
+- [Ecosystem](tooling/ecosystem) - Tools that support Variable Contract
+- [CI/CD](tooling/ci-cd) - CI/CD integration patterns and examples
+- [Build Pipelines](tooling/build-pipelines) - Complete build pipeline examples
+- [Figma](adapters/figma) - Figma export normalization and workflow
+- [Tokens Studio](adapters/tokens-studio) - Tokens Studio export normalization and workflow
+- [Style Dictionary](adapters/style-dictionary) - CSS/TypeScript output generation
+
+## Consumption
+
+- [CSS](consumption/css) - CSS variable consumption patterns
+- [TypeScript](consumption/typescript) - TypeScript type generation and usage
+- [Frameworks](consumption/frameworks) - React/Vue integration patterns
+
+## Design
+
+- [Figma Naming](design/figma-naming) - How to name variables in Figma UI
+- [Figma Workflow](design/figma-workflow) - Designer workflow optimization
+- [Component Variables](design/component-variables) - Using variables in Figma components
+
+## Testing
+
+- [Validation](testing/validation) - Testing variable changes and reference validation
+- [Visual Regression](testing/visual-regression) - Visual regression testing strategies
+- [Consumption Tests](testing/consumption-tests) - Testing generated outputs
+
+## Patterns
+
+- [Multi-Brand Architecture](patterns/multi-brand-architecture) - Complete multi-brand example
+- [Theme Composition](patterns/theme-composition) - Theme composition patterns and examples
+- [Performance](patterns/performance) - Performance optimization strategies
 
 ## Adapters
 

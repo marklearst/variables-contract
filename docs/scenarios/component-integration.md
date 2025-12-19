@@ -176,7 +176,7 @@ function Button({ bg, color, children }) {
     backgroundColor: bg || 'var(--color-surface-brand)',
     color: color || 'var(--color-text-primary)'
   };
-  
+
   return <button style={style}>{children}</button>;
 }
 ```
@@ -190,7 +190,7 @@ const ThemeContext = createContext();
 
 function Button({ children }) {
   const theme = useContext(ThemeContext);
-  
+
   return (
     <button style={{
       backgroundColor: theme.button.bg,

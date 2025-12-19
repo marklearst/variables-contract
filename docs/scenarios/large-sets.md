@@ -140,7 +140,7 @@ function resolveReference(path, variables) {
   if (referenceCache.has(path)) {
     return referenceCache.get(path);
   }
-  
+
   const resolved = resolve(path, variables);
   referenceCache.set(path, resolved);
   return resolved;
@@ -194,7 +194,7 @@ function buildWithCache(variables) {
   if (buildCache.has(cacheKey)) {
     return buildCache.get(cacheKey);
   }
-  
+
   const output = build(variables);
   buildCache.set(cacheKey, output);
   return output;
