@@ -3,6 +3,8 @@ module.exports = {
   siteTitle: "Variable Contract",
   srcDir: "docs",
   outputDir: "site",
+  basePath: "/variable-contract",
+  siteUrl: "https://marklearst.github.io/variable-contract",
   search: true,
   sidebar: {
     collapsible: true,

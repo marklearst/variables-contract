@@ -25,10 +25,10 @@ DTCG 2025.10 defines:
 
 Variable Contract adds a governance layer on top of DTCG format:
 
-- Naming convention rules (see [Naming](naming))
-- Change control process (see [Change Control](../governance/change-control))
-- Role definitions (see [Design Systems Engineer](../governance/roles/design-systems-engineer))
-- Adapter patterns for tool integration (see [Adapters](../adapters))
+- Naming convention rules (see [Naming](/variable-contract/contract/naming))
+- Change control process (see [Change Control](/variable-contract/governance/change-control))
+- Role definitions (see [Design Systems Engineer](/variable-contract/governance/roles/design-systems-engineer))
+- Adapter patterns for tool integration (see [Adapters](/variable-contract/adapters))
 - Validation requirements beyond format correctness
 
 ## Compatibility matrix

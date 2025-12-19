@@ -32,15 +32,15 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 
 ## Next docs to read
 
-- [Getting Started](getting-started)
-- [Change Control](change-control)
-- [Validation](validation)
-- [Versioning](versioning)
-- [Migration](migration)
-- [Troubleshooting](troubleshooting)
+- [Getting Started](/variable-contract/governance/getting-started)
+- [Change Control](/variable-contract/governance/change-control)
+- [Validation](/variable-contract/governance/validation)
+- [Versioning](/variable-contract/governance/versioning)
+- [Migration](/variable-contract/governance/migration)
+- [Troubleshooting](/variable-contract/governance/troubleshooting)
 
 ## Reference
 
-- [Naming](../contract/naming)
-- [Tokens Studio](../adapters/tokens-studio)
-- [Accessibility](accessibility)
+- [Naming](/variable-contract/governance/contract/naming)
+- [Tokens Studio](/variable-contract/governance/adapters/tokens-studio)
+- [Accessibility](/variable-contract/governance/accessibility)

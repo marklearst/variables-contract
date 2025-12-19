@@ -189,7 +189,7 @@ Variable Contract supports migration from:
 - Adobe Spectrum (simplify structure, apply governance)
 - Custom formats (normalize to Variable Contract)
 
-See [Migration Strategy](../adoption/migration-strategy) for details.
+See [Migration Strategy](/variable-contract/introduction/adoption/migration-strategy) for details.
 
 ## Out of scope
 
