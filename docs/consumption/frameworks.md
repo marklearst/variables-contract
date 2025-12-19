@@ -292,7 +292,7 @@ const buttonStyle = computed(() => ({
 </script>
 ```
 
-## Best practices
+## Implementation rules
 
 1. Use CSS variables when possible
 2. Use TypeScript types for type safety

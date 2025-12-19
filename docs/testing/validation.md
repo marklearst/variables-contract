@@ -17,7 +17,10 @@ function testReferenceResolution(variables) {
   const errors = [];
 
   for (const [path, variable] of Object.entries(variables)) {
-    if (typeof variable.$value === 'string' && variable.$value.startsWith('{')) {
+    if (
+      typeof variable.$value === "string" &&
+      variable.$value.startsWith("{")
+    ) {
       const referencedPath = variable.$value.slice(1, -1);
       if (!variables[referencedPath]) {
         errors.push(`Reference ${variable.$value} in ${path} does not resolve`);
@@ -52,7 +55,10 @@ function testCircularReferences(variables) {
     visited.add(path);
     recursionStack.add(path);
 
-    if (typeof variable.$value === 'string' && variable.$value.startsWith('{')) {
+    if (
+      typeof variable.$value === "string" &&
+      variable.$value.startsWith("{")
+    ) {
       const referencedPath = variable.$value.slice(1, -1);
       if (variables[referencedPath]) {
         checkCircular(referencedPath, variables[referencedPath]);
@@ -84,11 +90,11 @@ function testTypeCorrectness(variables) {
     const type = variable.$type;
     const value = variable.$value;
 
-    if (type === 'color' && !isValidColor(value)) {
+    if (type === "color" && !isValidColor(value)) {
       errors.push(`Invalid color value in ${path}: ${value}`);
     }
 
-    if (type === 'dimension' && !isValidDimension(value)) {
+    if (type === "dimension" && !isValidDimension(value)) {
       errors.push(`Invalid dimension value in ${path}: ${value}`);
     }
 
@@ -99,15 +105,17 @@ function testTypeCorrectness(variables) {
 }
 
 function isValidColor(value) {
-  return /^#[0-9A-Fa-f]{6}$/.test(value) ||
-         /^rgba?\(/.test(value) ||
-         value.startsWith('{');
+  return (
+    /^#[0-9A-Fa-f]{6}$/.test(value) ||
+    /^rgba?\(/.test(value) ||
+    value.startsWith("{")
+  );
 }
 
 function isValidDimension(value) {
-  return /^\d+px$/.test(value) ||
-         /^\d+rem$/.test(value) ||
-         value.startsWith('{');
+  return (
+    /^\d+px$/.test(value) || /^\d+rem$/.test(value) || value.startsWith("{")
+  );
 }
 ```
 
@@ -124,17 +132,22 @@ function testModeConsistency(variables) {
 
   // Collect mode keys per collection
   for (const [path, variable] of Object.entries(variables)) {
-    const collection = path.split('.')[0];
+    const collection = path.split(".")[0];
 
-    if (typeof variable.$value === 'object' && variable.$value !== null) {
+    if (typeof variable.$value === "object" && variable.$value !== null) {
       const modeKeys = Object.keys(variable.$value);
 
       if (!collectionModes.has(collection)) {
         collectionModes.set(collection, modeKeys);
       } else {
         const expectedModes = collectionModes.get(collection);
-        if (JSON.stringify(modeKeys.sort()) !== JSON.stringify(expectedModes.sort())) {
-          errors.push(`Mode mismatch in ${path}: expected ${expectedModes}, got ${modeKeys}`);
+        if (
+          JSON.stringify(modeKeys.sort()) !==
+          JSON.stringify(expectedModes.sort())
+        ) {
+          errors.push(
+            `Mode mismatch in ${path}: expected ${expectedModes}, got ${modeKeys}`
+          );
         }
       }
     }
@@ -155,7 +168,7 @@ function testNamingConvention(variables) {
   const errors = [];
 
   for (const path of Object.keys(variables)) {
-    const segments = path.split('.');
+    const segments = path.split(".");
 
     // Check lowercase
     if (path !== path.toLowerCase()) {
@@ -163,12 +176,12 @@ function testNamingConvention(variables) {
     }
 
     // Check dot-separated
-    if (path.includes('-') || path.includes('_')) {
+    if (path.includes("-") || path.includes("_")) {
       errors.push(`Path ${path} should use dots, not hyphens or underscores`);
     }
 
     // Check no platform prefixes
-    if (segments[0].startsWith('web-') || segments[0].startsWith('ios-')) {
+    if (segments[0].startsWith("web-") || segments[0].startsWith("ios-")) {
       errors.push(`Path ${path} should not include platform prefix`);
     }
   }
@@ -197,7 +210,7 @@ function testVariableContract(variables) {
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Test reference resolution
 2. Test circular references
@@ -219,4 +232,3 @@ If validation tests fail:
 - Visual regression testing (see visual regression docs)
 - Consumption testing (see consumption tests docs)
 - Performance testing (see performance docs)
-

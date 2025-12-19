@@ -65,14 +65,15 @@ Developers use Variable Contract to:
 - Generate CSS/TypeScript outputs
 - Understand variable structure
 
-### Design Systems Engineers
+### Design Engineers
 
-Design Systems Engineers use Variable Contract to:
+Design Engineers use Variable Contract to:
 
 - Maintain variable contract
 - Review variable changes
 - Set up validation
 - Manage versioning
+- Bridge design and development
 
 ## Problem it solves
 
@@ -103,7 +104,7 @@ Variable Contract succeeds when:
 - Variables are validated automatically
 - Design and code stay aligned
 - Migration is straightforward
-- Tools work together seamlessly
+- Tools work together via DTCG format and adapters
 
 ## Out of scope
 

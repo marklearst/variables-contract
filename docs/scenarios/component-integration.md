@@ -75,7 +75,10 @@ CSS:
 
 ```css
 .button {
-  background-color: var(--component-button-color-background-default, var(--color-surface-brand));
+  background-color: var(
+    --component-button-color-background-default,
+    var(--color-surface-brand)
+  );
 }
 ```
 
@@ -83,7 +86,7 @@ JavaScript:
 
 ```javascript
 const buttonStyle = {
-  backgroundColor: 'var(--component-button-color-background-default)'
+  backgroundColor: "var(--component-button-color-background-default)",
 };
 ```
 
@@ -95,11 +98,7 @@ Use CSS variables in React components:
 
 ```jsx
 function Button({ children }) {
-  return (
-    <button className="button">
-      {children}
-    </button>
-  );
+  return <button className="button">{children}</button>;
 }
 ```
 
@@ -136,12 +135,12 @@ Use CSS variables in Vue components:
 Use generated TypeScript types:
 
 ```typescript
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 const buttonStyle = {
   backgroundColor: color.surface.brand,
   color: color.text.primary,
-  padding: spacing.component.button.padding
+  padding: spacing.component.button.padding,
 };
 ```
 
@@ -173,8 +172,8 @@ Use component props for overrides:
 ```jsx
 function Button({ bg, color, children }) {
   const style = {
-    backgroundColor: bg || 'var(--color-surface-brand)',
-    color: color || 'var(--color-text-primary)'
+    backgroundColor: bg || "var(--color-surface-brand)",
+    color: color || "var(--color-text-primary)",
   };
 
   return <button style={style}>{children}</button>;
@@ -192,10 +191,12 @@ function Button({ children }) {
   const theme = useContext(ThemeContext);
 
   return (
-    <button style={{
-      backgroundColor: theme.button.bg,
-      color: theme.button.color
-    }}>
+    <button
+      style={{
+        backgroundColor: theme.button.bg,
+        color: theme.button.color,
+      }}
+    >
       {children}
     </button>
   );
@@ -255,7 +256,9 @@ CSS:
 .button {
   background-color: var(--component-button-color-background-default);
   color: var(--component-button-color-text-default);
-  padding: var(--component-button-spacing-padding-vertical) var(--component-button-spacing-padding-horizontal);
+  padding: var(--component-button-spacing-padding-vertical) var(
+      --component-button-spacing-padding-horizontal
+    );
 }
 
 .button:hover {
@@ -309,7 +312,7 @@ CSS:
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Use semantic variables in components
 2. Create component-specific variables when needed
@@ -331,4 +334,3 @@ If component integration is wrong:
 - Component library architecture (focus on variables)
 - Component API design (separate concern)
 - Component testing (separate concern)
-

@@ -4,7 +4,7 @@ title: Design - Figma Workflow
 
 # Designer Workflow
 
-Optimized workflow for designers creating and managing variables in Figma.
+Workflow for designers creating and managing variables in Figma. Reduces handoff friction and naming errors.
 
 ## Variable creation process
 
@@ -101,7 +101,7 @@ Commit normalized JSON:
 2. Open PR for review
 3. Address review feedback
 
-## Best practices
+## Implementation rules
 
 1. Plan variables before creating
 2. Use references instead of duplicating

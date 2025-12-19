@@ -225,7 +225,7 @@ Card component example:
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Use semantic variables in components
 2. Provide fallbacks for critical values

@@ -13,14 +13,14 @@ How to test CSS variables, TypeScript types, and framework integration.
 Test that CSS variables are generated correctly:
 
 ```javascript
-import fs from 'fs';
+import fs from "fs";
 
 function testCSSGeneration() {
-  const css = fs.readFileSync('dist/variables.css', 'utf8');
+  const css = fs.readFileSync("dist/variables.css", "utf8");
 
   // Test variables exist
-  expect(css).toContain('--color-surface-brand');
-  expect(css).toContain('--color-text-primary');
+  expect(css).toContain("--color-surface-brand");
+  expect(css).toContain("--color-text-primary");
 
   // Test values are correct
   expect(css).toMatch(/--color-surface-brand:\s*#0066cc/);
@@ -34,8 +34,8 @@ Test mode-specific CSS generation:
 
 ```javascript
 function testModeSpecificCSS() {
-  const lightCSS = fs.readFileSync('dist/variables-light.css', 'utf8');
-  const darkCSS = fs.readFileSync('dist/variables-dark.css', 'utf8');
+  const lightCSS = fs.readFileSync("dist/variables-light.css", "utf8");
+  const darkCSS = fs.readFileSync("dist/variables-dark.css", "utf8");
 
   // Test light mode
   expect(lightCSS).toMatch(/--color-surface:\s*#ffffff/);
@@ -52,15 +52,15 @@ function testModeSpecificCSS() {
 Test that TypeScript types are generated correctly:
 
 ```typescript
-import { color, spacing } from './dist/tokens';
+import { color, spacing } from "./dist/tokens";
 
 // Test types exist
 expect(color).toBeDefined();
 expect(spacing).toBeDefined();
 
 // Test type structure
-expect(color.surface.brand).toBe('#0066cc');
-expect(spacing.component.button.padding).toBe('16px');
+expect(color.surface.brand).toBe("#0066cc");
+expect(spacing.component.button.padding).toBe("16px");
 ```
 
 ### Test type safety
@@ -82,16 +82,16 @@ const brandColor: string = color.surface.brand;
 Test React component with variables:
 
 ```jsx
-import { render, screen } from '@testing-library/react';
-import { Button } from './Button';
+import { render, screen } from "@testing-library/react";
+import { Button } from "./Button";
 
-test('button uses variables', () => {
+test("button uses variables", () => {
   render(<Button>Click me</Button>);
-  const button = screen.getByRole('button');
+  const button = screen.getByRole("button");
 
   expect(button).toHaveStyle({
-    backgroundColor: 'var(--color-surface-brand)',
-    color: 'var(--color-text-primary)'
+    backgroundColor: "var(--color-surface-brand)",
+    color: "var(--color-text-primary)",
   });
 });
 ```
@@ -101,19 +101,21 @@ test('button uses variables', () => {
 Test Vue component with variables:
 
 ```javascript
-import { mount } from '@vue/test-utils';
-import Button from './Button.vue';
+import { mount } from "@vue/test-utils";
+import Button from "./Button.vue";
 
-test('button uses variables', () => {
+test("button uses variables", () => {
   const wrapper = mount(Button);
-  const button = wrapper.find('button');
+  const button = wrapper.find("button");
 
-  expect(button.element.style.backgroundColor).toBe('var(--color-surface-brand)');
-  expect(button.element.style.color).toBe('var(--color-text-primary)');
+  expect(button.element.style.backgroundColor).toBe(
+    "var(--color-surface-brand)"
+  );
+  expect(button.element.style.color).toBe("var(--color-text-primary)");
 });
 ```
 
-## Best practices
+## Implementation rules
 
 1. Test CSS generation
 2. Test TypeScript types
@@ -135,4 +137,3 @@ If consumption tests fail:
 - Test framework setup (see tool docs)
 - Component testing (separate concern)
 - E2E testing (separate concern)
-

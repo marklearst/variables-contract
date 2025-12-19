@@ -93,7 +93,7 @@ Card component using variables:
 - Padding: `spacing/component/card/padding`
 - Shadow: `shadow/card`
 
-## Best practices
+## Implementation rules
 
 1. Use semantic variables in components
 2. Create component-specific variables when needed

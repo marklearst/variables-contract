@@ -173,10 +173,10 @@ Switch themes by changing mode:
 
 ```javascript
 // Set theme mode
-document.documentElement.setAttribute('data-theme', 'dark');
+document.documentElement.setAttribute("data-theme", "dark");
 
 // Or use CSS class
-document.documentElement.classList.add('theme-dark');
+document.documentElement.classList.add("theme-dark");
 ```
 
 ## Examples
@@ -275,7 +275,7 @@ Combine multiple mode dimensions:
 
 Avoid mode explosion. Prefer separate mode dimensions when possible.
 
-## Best practices
+## Implementation rules
 
 1. Keep modes limited (`light`, `dark`)
 2. Use consistent mode keys across variables
@@ -297,4 +297,3 @@ If themes are inconsistent:
 - Runtime theme switching (handle in consumption layer)
 - Theme transformation (handle in adapters)
 - Theme management UI (use existing tools)
-

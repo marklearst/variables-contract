@@ -57,11 +57,11 @@ Test component states:
 Use Playwright for visual regression:
 
 ```javascript
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('button visual regression', async ({ page }) => {
-  await page.goto('/button');
-  await expect(page).toHaveScreenshot('button.png');
+test("button visual regression", async ({ page }) => {
+  await page.goto("/button");
+  await expect(page).toHaveScreenshot("button.png");
 });
 ```
 
@@ -70,13 +70,13 @@ test('button visual regression', async ({ page }) => {
 Use Chromatic for component visual testing:
 
 ```javascript
-import { Button } from './Button';
+import { Button } from "./Button";
 
 export default {
   component: Button,
   parameters: {
-    chromatic: { viewports: [320, 768, 1024] }
-  }
+    chromatic: { viewports: [320, 768, 1024] },
+  },
 };
 ```
 
@@ -85,15 +85,15 @@ export default {
 Use Percy for visual testing:
 
 ```javascript
-import percySnapshot from '@percy/playwright';
+import percySnapshot from "@percy/playwright";
 
-test('button visual test', async ({ page }) => {
-  await page.goto('/button');
-  await percySnapshot(page, 'Button');
+test("button visual test", async ({ page }) => {
+  await page.goto("/button");
+  await percySnapshot(page, "Button");
 });
 ```
 
-## Best practices
+## Implementation rules
 
 1. Test critical components
 2. Test all modes
@@ -115,4 +115,3 @@ If visual regression testing fails:
 - Test framework setup (see tool docs)
 - Component rendering (separate concern)
 - Test infrastructure (separate concern)
-
