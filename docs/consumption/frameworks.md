@@ -99,12 +99,12 @@ const ThemeContext = createContext({
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('light');
-  
+
   const colors = {
     surface: color.surface[theme],
     text: color.text[theme]
   };
-  
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, colors }}>
       {children}
@@ -231,11 +231,11 @@ import { useTheme } from './ThemeContext';
 
 function Button({ children, variant = 'primary' }) {
   const { colors } = useTheme();
-  
-  const backgroundColor = variant === 'primary' 
-    ? colors.surface.brand 
+
+  const backgroundColor = variant === 'primary'
+    ? colors.surface.brand
     : colors.surface.secondary;
-  
+
   return (
     <button
       style={{
@@ -256,7 +256,7 @@ Complete Vue button:
 
 ```vue
 <template>
-  <button 
+  <button
     :class="['button', `button--${variant}`]"
     :style="buttonStyle"
   >
@@ -283,8 +283,8 @@ const colors = computed(() => ({
 }));
 
 const buttonStyle = computed(() => ({
-  backgroundColor: props.variant === 'primary' 
-    ? colors.value.surface.brand 
+  backgroundColor: props.variant === 'primary'
+    ? colors.value.surface.brand
     : colors.value.surface.secondary,
   color: colors.value.text.primary,
   padding: spacing.component.button.padding
