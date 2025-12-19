@@ -23,12 +23,18 @@ The contract rules (schema and validation expectations) live in [Variable Contra
 - Engineers can consume variables via generated outputs (CSS variables, TypeScript) with minimal manual wiring.
 - Variable changes are reviewed, versioned, and communicated.
 
+## Roles
+
+- [Designer](/variable-contract/governance/roles/designer) - Creates variables in Figma
+- [Design Engineer](/variable-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
+- [Frontend Developer](/variable-contract/governance/roles/frontend-developer) - Consumes variables in code
+
 ## Scope
 
 Covers:
 
-- token categories (base, alias, component)
-- naming rules
-- Tokens Studio usage guidelines
-- change control and semantic versioning
-- accessibility constraints and checks
+- Variable categories (base, alias, component)
+- Naming rules
+- Change control and semantic versioning
+- Accessibility constraints and checks
+- Role definitions and responsibilities

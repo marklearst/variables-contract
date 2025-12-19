@@ -4,17 +4,18 @@ title: Governance - Change Control
 
 # Governance - Design and Development Workflow
 
-Use this workflow so a token change doesn't silently break components.
+Use this workflow so a variable change doesn't silently break components.
 
 ## Roles
 
-- Design: proposes intent and usage (states, pairings, constraints).
-- Engineering: validates feasibility, implements consumption, and owns compatibility.
+- **Designer**: Proposes intent and usage (states, pairings, constraints). Creates variables in Figma.
+- **Design Engineer**: Reviews changes, validates contract compliance, maintains naming rules. Bridges design and development.
+- **Frontend Developer**: Validates consumption feasibility, implements variables in code, owns compatibility.
 
 ## Workflow overview
 
 1. Design proposes a change.
-2. Token change is reviewed (naming, type, references, modes).
+2. Variable change is reviewed (naming, type, references, modes).
 3. Tokens are updated in the repo JSON through a PR.
 4. Component implementation consumes semantic tokens.
 5. Changes are released with versioning and notes.
@@ -36,7 +37,7 @@ Include:
 - Layout rules (spacing, sizing, typography)
 - Accessibility constraints (contrast targets, focus visibility, reduced motion)
 
-## Token change request checklist
+## Variable change request checklist
 
 Before creating or changing tokens:
 
@@ -48,15 +49,15 @@ Before creating or changing tokens:
 
 ## Review and approval
 
-All token changes should be reviewed by at least:
+All variable changes should be reviewed by at least:
 
-- one design system maintainer
-- one engineer responsible for consumption and releases
+- Design Engineer (contract owner, reviews naming, structure, references)
+- Frontend Developer (validates consumption feasibility)
 
 Reviews should verify:
 
 - naming and structure
-- correct token types
+- correct variable types
 - references resolve correctly
 - change type (breaking or non-breaking)
 - migration notes when required
@@ -69,7 +70,7 @@ Reviews should verify:
 
 ## Release and communication
 
-- Use semantic versioning for token changes.
+- Use semantic versioning for variable changes.
 - Publish release notes that include:
   - what changed
   - who needs to update

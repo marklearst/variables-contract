@@ -15,10 +15,10 @@ Use this checklist when you're adding or changing a variable.
 ## Where to start
 
 1. Read:
-   - [Variable Governance](/variable-contract/governance/governance/overview)
-   - [Naming](/variable-contract/governance/contract/naming)
-   - [Tokens Studio](/variable-contract/governance/adapters/tokens-studio)
-   - [Change Control](/variable-contract/governance/governance/change-control)
+   - [Variable Governance](/variable-contract/governance/overview)
+   - [Naming](/variable-contract/contract/naming)
+   - [Tokens Studio](/variable-contract/adapters/tokens-studio)
+   - [Change Control](/variable-contract/governance/change-control)
 2. Identify which variable category you are working in:
    - base
    - alias (semantic)
@@ -46,8 +46,8 @@ Before you open a change:
 
 Reviews need:
 
-- one design system maintainer
-- one engineer responsible for consumption and releases
+- Design Engineer (contract owner, reviews naming, structure, references)
+- Frontend Developer (validates consumption feasibility)
 
 ## Release expectations
 
