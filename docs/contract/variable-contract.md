@@ -18,7 +18,7 @@ This contract defines the canonical shape used in version control.
 
 Tool exports (example: a Figma variable export JSON) are treated as inputs. They may include extra metadata and alternate reference syntax. An adapter can normalize those inputs into this contract.
 
-See [Adapters](../adapters) for adapter patterns and implementations.
+See [Adapters](/adapters) for adapter patterns and implementations.
 
 ## Adapter pipeline
 
@@ -157,7 +157,7 @@ Variable Contract conformance requires:
 - Validation implementation
 - Versioning compliance
 
-See [Conformance](../reference/conformance) for complete conformance requirements and how to claim compliance.
+See [Conformance](/reference/conformance) for complete conformance requirements and how to claim compliance.
 
 ## Out of scope
 
