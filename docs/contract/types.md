@@ -290,7 +290,7 @@ Rules:
     },
     "invalid-dimension": {
       "$type": "dimension",
-      "$value": "16"  // Missing unit
+      "$value": "16" // Missing unit
     }
   }
 }
@@ -383,4 +383,3 @@ A variable type is valid if:
 - Custom type definitions (use `$extensions` for metadata)
 - Type coercion or conversion
 - Runtime type checking libraries (use DTCG-compliant validators)
-

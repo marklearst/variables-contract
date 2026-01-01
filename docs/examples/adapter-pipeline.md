@@ -219,4 +219,3 @@ Validate at each step:
 1. Figma export: JSON syntax, required fields
 2. Adapter output: Variable Contract compliance, naming convention
 3. Style Dictionary output: CSS syntax, all references resolved
-
