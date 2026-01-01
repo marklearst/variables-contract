@@ -25,6 +25,7 @@ Not immediately. Variable Contract provides migration paths from existing format
 ## What tools do I need?
 
 Any DTCG-compliant tool works. Variable Contract is tool-agnostic. Common tools:
+
 - Figma (authoring)
 - Style Dictionary (output generation)
 - DTCG validators (validation)
@@ -63,6 +64,7 @@ Use an adapter to normalize tool-specific syntax to Variable Contract format. Se
 ## How do I validate variables?
 
 Run validation in CI:
+
 1. Validate JSON structure
 2. Validate naming convention
 3. Validate reference resolution
@@ -111,6 +113,7 @@ See [Conformance](reference/conformance) for conformance requirements and report
 ## What if I find a bug?
 
 Report issues via GitHub issues. Include:
+
 - Variable Contract version
 - Steps to reproduce
 - Expected behavior
@@ -119,4 +122,3 @@ Report issues via GitHub issues. Include:
 ## Can I use Variable Contract with my design system?
 
 Yes. Variable Contract is design-system agnostic. It governs variable structure and governance, not design decisions (values, colors, spacing).
-

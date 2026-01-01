@@ -139,7 +139,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ### Contract reference
 
-- [Variable Contract](docs/contract/variable-contract) - JSON shape and structure
+- [Variables Contract](docs/contract/variable-contract) - JSON shape and structure
 - [Groups](docs/contract/groups) - Group structure and extension
 - [References](docs/contract/references) - Reference syntax and resolution
 - [Modes](docs/contract/modes) - Mode structure and resolution
