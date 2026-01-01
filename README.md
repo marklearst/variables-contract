@@ -1,4 +1,4 @@
-# Variable Contract
+# Variables Contract
 
 Public specification and governance standard for design variables. DTCG 2025.10 compliant format with naming rules, validation requirements, versioning strategy, and adapter patterns.
 
@@ -6,13 +6,13 @@ Public specification and governance standard for design variables. DTCG 2025.10 
 **Status:** Draft
 **Editor:** Mark Learst
 
-Variables are variables. CSS variables, JavaScript variables, Figma variables. Variable Contract standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
+Variables are variables. CSS variables, JavaScript variables, Figma variables. Variables Contract standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
 
 If variables are managed without a contract, you get silent renames, broken references, inconsistent naming, tool lock-in, and production failures.
 
 ## What this is
 
-Variable Contract defines:
+Variables Contract defines:
 
 - JSON structure (DTCG 2025.10 format)
 - Naming convention (dot-separated paths, lowercase, no platform prefixes)
@@ -21,7 +21,7 @@ Variable Contract defines:
 - Versioning strategy (semantic versioning, breaking change definitions)
 - Adapter patterns (Figma, Tokens Studio, Style Dictionary)
 
-Variable Contract does NOT define:
+Variables Contract does NOT define:
 
 - Variable values (your design decisions)
 - Tools to use (works with any DTCG-compliant tool)
@@ -32,7 +32,7 @@ Variable Contract does NOT define:
 
 Variables are variables. CSS variables, JavaScript variables, Figma variables. They store values, can be referenced, and can be changed.
 
-"Design tokens" creates confusion. Developers know variables. Designers know variables. Variable Contract uses the term everyone understands.
+"Design tokens" creates confusion. Developers know variables. Designers know variables. Variables Contract uses the term everyone understands.
 
 See [Why Variables](docs/introduction/why-variables) for the full argument.
 
@@ -42,35 +42,35 @@ See [Why Variables](docs/introduction/why-variables) for the full argument.
 
 Everyone calls them something different: design tokens, style properties, design constants, variables, tokens. This creates confusion and separation between design and code.
 
-Variable Contract standardizes on "variables" and provides clear naming rules.
+Variables Contract standardizes on "variables" and provides clear naming rules.
 
 ### No governance
 
 Variables change without rules. Renames break components. Invalid references ship to production. Breaking changes go unnoticed.
 
-Variable Contract provides governance: naming rules, validation requirements, versioning strategy, change control process.
+Variables Contract provides governance: naming rules, validation requirements, versioning strategy, change control process.
 
 ### Tool lock-in
 
 Variables are tied to specific tools. Figma exports don't work with Style Dictionary. Tokens Studio format doesn't match DTCG. Migration is painful.
 
-Variable Contract is tool-agnostic. Use any tool. Adapters normalize tool outputs to the contract.
+Variables Contract is tool-agnostic. Use any tool. Adapters normalize tool outputs to the contract.
 
 ### Handoff breaks
 
 Design and code don't align. Designers create variables in Figma. Developers consume CSS variables. The connection breaks.
 
-Variable Contract bridges the gap. Variables flow from Figma through adapters to version control to generated outputs.
+Variables Contract bridges the gap. Variables flow from Figma through adapters to version control to generated outputs.
 
 ### No validation
 
 Invalid variables ship to production. Broken references break components. Type mismatches cause runtime errors.
 
-Variable Contract requires validation. CI checks catch errors before they ship.
+Variables Contract requires validation. CI checks catch errors before they ship.
 
 ## DTCG 2025.10 compliance
 
-Variable Contract is DTCG 2025.10 compliant. Any JSON file that follows Variable Contract rules is valid DTCG 2025.10 format.
+Variables Contract is DTCG 2025.10 compliant. Any JSON file that follows Variables Contract rules is valid DTCG 2025.10 format.
 
 What DTCG provides:
 
@@ -81,7 +81,7 @@ What DTCG provides:
 - Group extension with `$ref`
 - Mode support
 
-What Variable Contract adds:
+What Variables Contract adds:
 
 - Naming convention rules
 - Change control process
@@ -93,7 +93,7 @@ See [DTCG Alignment](docs/contract/dtcg-alignment) for details.
 
 ## Quick start
 
-### For teams adopting Variable Contract
+### For teams adopting Variables Contract
 
 1. Read [Getting Started](docs/adoption/getting-started)
 2. Set up repository structure (`tokens/` directory)
@@ -134,8 +134,8 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 ### Introduction
 
 - [Why Variables](docs/introduction/why-variables) - Why "variables" not "design tokens"
-- [Comparison](docs/introduction/comparison) - Variable Contract vs DTCG, Style Dictionary, Material, Adobe
-- [Positioning](docs/introduction/positioning) - What Variable Contract is and is not
+- [Comparison](docs/introduction/comparison) - Variables Contract vs DTCG, Style Dictionary, Material, Adobe
+- [Positioning](docs/introduction/positioning) - What Variables Contract is and is not
 
 ### Contract reference
 
@@ -173,7 +173,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ### Tooling
 
-- [Ecosystem](docs/tooling/ecosystem) - Tools that support Variable Contract
+- [Ecosystem](docs/tooling/ecosystem) - Tools that support Variables Contract
 - [CI/CD](docs/tooling/ci-cd) - CI/CD integration patterns
 - [Build Pipelines](docs/tooling/build-pipelines) - Complete build pipeline examples
 - [Figma Adapter](docs/adapters/figma) - Figma export normalization
@@ -206,7 +206,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ## Requirements
 
-Variable Contract JSON files MUST:
+Variables Contract JSON files MUST:
 
 - Use DTCG 2025.10 format
 - Follow naming convention (dot-separated paths, lowercase, no platform prefixes)
@@ -216,7 +216,7 @@ Variable Contract JSON files MUST:
 - Avoid circular references
 - Use consistent mode keys within collections
 
-Variable Contract JSON files SHOULD:
+Variables Contract JSON files SHOULD:
 
 - Include `$description` when intent is not obvious
 - Use semantic aliases for UI consumption
@@ -227,7 +227,7 @@ See [Validation Checklist](docs/governance/validation) for complete requirements
 
 ## Validation
 
-Variable Contract requires validation at multiple points:
+Variables Contract requires validation at multiple points:
 
 1. After adapter normalization (check structure, naming, references)
 2. In CI on every PR (block invalid changes)
@@ -248,7 +248,7 @@ See [Validation](docs/governance/validation) for validation tools and CI setup.
 
 ## Versioning
 
-Variable Contract uses semantic versioning (MAJOR.MINOR.PATCH):
+Variables Contract uses semantic versioning (MAJOR.MINOR.PATCH):
 
 - MAJOR: breaking changes (renames, removals, type changes)
 - MINOR: new variables, new modes, non-breaking additions
@@ -271,7 +271,7 @@ See [Versioning](docs/governance/versioning) for complete versioning strategy.
 
 ## Adapters
 
-Adapters normalize tool outputs into Variable Contract format.
+Adapters normalize tool outputs into Variables Contract format.
 
 ### Figma adapter
 
@@ -298,7 +298,7 @@ See [Tokens Studio Adapter](docs/adapters/tokens-studio) for details.
 
 ### Style Dictionary adapter
 
-Generates platform outputs from Variable Contract JSON:
+Generates platform outputs from Variables Contract JSON:
 
 - CSS variables
 - TypeScript types
@@ -316,20 +316,20 @@ See [Style Dictionary Adapter](docs/adapters/style-dictionary) for details.
 
 ## UMP context
 
-Variable Contract is part of UMP (UI Mapping Protocol), a larger system for mapping design and development artifacts.
+Variables Contract is part of UMP (UI Mapping Protocol), a larger system for mapping design and development artifacts.
 
 UMP components:
 
-- Variable Contract (this spec) - variables/tokens
+- Variables Contract (this spec) - variables/tokens
 - Component Contract (future) - component mapping
 - Pattern Contract (future) - pattern mapping
 - Design-Dev Mapping (future) - artifact relationships
 
-Variable Contract is the first piece of UMP, focusing on variables.
+Variables Contract is the first piece of UMP, focusing on variables.
 
 ## Status
 
-Variable Contract is:
+Variables Contract is:
 
 - DTCG 2025.10 compliant
 - Production-ready
@@ -337,7 +337,7 @@ Variable Contract is:
 - Validated in CI
 - Used by teams
 
-Variable Contract is NOT:
+Variables Contract is NOT:
 
 - A W3C standard (uses DTCG format)
 - A tool (works with existing tools)
@@ -346,7 +346,7 @@ Variable Contract is NOT:
 
 ## Failure modes
 
-If Variable Contract is not used:
+If Variables Contract is not used:
 
 - Silent renames break components
 - Broken references cause production failures
@@ -355,7 +355,7 @@ If Variable Contract is not used:
 - No validation allows invalid variables to ship
 - Versioning chaos makes upgrades risky
 
-If Variable Contract is used incorrectly:
+If Variables Contract is used incorrectly:
 
 - Skipping validation allows invalid variables to ship
 - Not following naming convention breaks code generation
@@ -365,7 +365,7 @@ If Variable Contract is used incorrectly:
 
 ## Contributing
 
-Variable Contract is a public specification. Contributions welcome.
+Variables Contract is a public specification. Contributions welcome.
 
 Before contributing:
 
@@ -405,11 +405,11 @@ Generates static site in `site/`.
 
 **Editor:** Mark Learst
 
-Variable Contract is maintained by the editor. Contributions welcome.
+Variables Contract is maintained by the editor. Contributions welcome.
 
 ## Acknowledgments
 
-Variable Contract builds on:
+Variables Contract builds on:
 
 - [DTCG 2025.10 Format](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
 - [Style Dictionary](https://styledictionary.com/) - Output generation tool
@@ -419,12 +419,12 @@ Variable Contract builds on:
 ## References
 
 - [DTCG 2025.10 Specification](https://www.designtokens.org/tr/2025.10/format/) - Design Tokens Community Group format
-- [Variable Contract Documentation](docs/index.md) - Complete specification and governance
+- [Variables Contract Documentation](docs/index.md) - Complete specification and governance
 - [DTCG Alignment](docs/contract/dtcg-alignment.md) - Compliance details
 
 ## Conformance
 
-To claim Variable Contract compliance:
+To claim Variables Contract compliance:
 
 1. Use DTCG 2025.10 format for variable JSON
 2. Follow naming convention (dot-separated paths, lowercase, no platform prefixes)

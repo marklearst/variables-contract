@@ -15,10 +15,10 @@ Use this checklist when you're adding or changing a variable.
 ## Where to start
 
 1. Read:
-   - [Variable Governance](/variable-contract/governance/overview)
-   - [Naming](/variable-contract/contract/naming)
-   - [Tokens Studio](/variable-contract/adapters/tokens-studio)
-   - [Change Control](/variable-contract/governance/change-control)
+   - [Variable Governance](/variables-contract/governance/overview)
+   - [Naming](/variables-contract/contract/naming)
+   - [Tokens Studio](/variables-contract/adapters/tokens-studio)
+   - [Change Control](/variables-contract/governance/change-control)
 2. Identify which variable category you are working in:
    - base
    - alias (semantic)
