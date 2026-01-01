@@ -4,6 +4,8 @@
   "version": "0.3.5",
   "packageManager": "pnpm@10.26.0",
   "scripts": {
+    "dev": "docmd dev",
+    "build": "docmd build",
     "docs:dev": "docmd dev",
     "docs:build": "docmd build"
   },
