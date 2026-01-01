@@ -77,4 +77,4 @@ If anatomy rules are ignored:
 
 - Specific variable values (anatomy governs structure, not content)
 - Number of variables per category (depends on design system size)
-- Naming within categories (see [Naming Convention](/variables-contract/contract/naming))
+- Naming within categories (see [Naming Convention](naming))
