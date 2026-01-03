@@ -9,7 +9,7 @@ The Variables Contract provides a JSON Schema for validating design variable fil
 ## Schema URL
 
 ```
-https://variables-contract.vercel.app/schema/v1
+https://variables-contract.vercel.app/assets/schema/v1.json
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ Add the `$schema` property to your Variables Contract JSON files to enable valid
 
 ```json
 {
-  "$schema": "https://variables-contract.vercel.app/schema/v1",
+  "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json",
   "color": {
     "primary": {
       "$type": "color",
@@ -185,7 +185,7 @@ Use additional validation tooling for complete conformance checking.
 
 The schema is available at:
 
-- **URL:** [/schema/v1.json](/schema/v1.json)
+- **URL:** [/assets/schema/v1.json](/assets/schema/v1.json)
 - **Raw:** [GitHub](https://github.com/marklearst/variables-contract/blob/main/docs/schema/v1.json)
 
 ## Conformance

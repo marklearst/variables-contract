@@ -1,0 +1,479 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://variables-contract.vercel.app/assets/schema/v1.json",
+  "title": "Variables Contract Schema v1",
+  "description": "JSON Schema for validating Variables Contract compliant design variable files. DTCG 2025.10 aligned.",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/$defs/groupOrVariable"
+  },
+  "$defs": {
+    "groupOrVariable": {
+      "oneOf": [{ "$ref": "#/$defs/variable" }, { "$ref": "#/$defs/group" }]
+    },
+    "group": {
+      "type": "object",
+      "description": "A group containing nested groups and/or variables. Groups do not have $type or $value.",
+      "properties": {
+        "$ref": {
+          "type": "string",
+          "pattern": "^#/",
+          "description": "JSON Pointer reference to another group for extension/inheritance"
+        },
+        "$description": {
+          "type": "string",
+          "description": "Human-readable description of the group"
+        },
+        "$deprecated": {
+          "type": "boolean",
+          "description": "Marks the group and all nested variables as deprecated"
+        },
+        "$extensions": {
+          "$ref": "#/$defs/extensions"
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/groupOrVariable"
+      },
+      "not": {
+        "anyOf": [{ "required": ["$type"] }, { "required": ["$value"] }]
+      }
+    },
+    "variable": {
+      "type": "object",
+      "description": "A design variable with type, value, and optional metadata",
+      "required": ["$type", "$value"],
+      "properties": {
+        "$type": {
+          "$ref": "#/$defs/variableType"
+        },
+        "$value": {
+          "$ref": "#/$defs/variableValue"
+        },
+        "$description": {
+          "type": "string",
+          "description": "Human-readable description of the variable's purpose and usage"
+        },
+        "$deprecated": {
+          "type": "boolean",
+          "description": "Marks the variable as deprecated"
+        },
+        "$extensions": {
+          "$ref": "#/$defs/extensions"
+        }
+      },
+      "additionalProperties": false
+    },
+    "variableType": {
+      "type": "string",
+      "enum": [
+        "color",
+        "dimension",
+        "fontFamily",
+        "fontWeight",
+        "duration",
+        "cubicBezier",
+        "number",
+        "border",
+        "transition",
+        "shadow",
+        "gradient",
+        "typography"
+      ],
+      "description": "The type of the variable, determining how $value is interpreted"
+    },
+    "variableValue": {
+      "description": "The value of the variable. Can be a literal, reference, or mode object.",
+      "oneOf": [
+        { "$ref": "#/$defs/literalValue" },
+        { "$ref": "#/$defs/reference" },
+        { "$ref": "#/$defs/modeObject" }
+      ]
+    },
+    "literalValue": {
+      "description": "A literal value (not a reference or mode object)",
+      "oneOf": [
+        { "$ref": "#/$defs/colorValue" },
+        { "$ref": "#/$defs/dimensionValue" },
+        { "$ref": "#/$defs/fontFamilyValue" },
+        { "$ref": "#/$defs/fontWeightValue" },
+        { "$ref": "#/$defs/durationValue" },
+        { "$ref": "#/$defs/cubicBezierValue" },
+        { "$ref": "#/$defs/numberValue" },
+        { "$ref": "#/$defs/borderValue" },
+        { "$ref": "#/$defs/transitionValue" },
+        { "$ref": "#/$defs/shadowValue" },
+        { "$ref": "#/$defs/gradientValue" },
+        { "$ref": "#/$defs/typographyValue" }
+      ]
+    },
+    "reference": {
+      "type": "string",
+      "description": "Reference to another variable using curly brace or JSON Pointer syntax",
+      "oneOf": [
+        {
+          "pattern": "^\\{[a-z][a-z0-9._-]*\\}$",
+          "description": "Curly brace reference syntax (canonical): {path.to.variable}"
+        },
+        {
+          "pattern": "^#/[a-z][a-z0-9/_-]*$",
+          "description": "JSON Pointer reference syntax: #/path/to/variable"
+        }
+      ]
+    },
+    "modeObject": {
+      "type": "object",
+      "description": "An object where keys are mode names and values are literal values or references",
+      "minProperties": 1,
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "#/$defs/literalValue" },
+          { "$ref": "#/$defs/reference" }
+        ]
+      },
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9-]*$",
+        "description": "Mode names must be lowercase alphanumeric with optional hyphens"
+      }
+    },
+    "colorValue": {
+      "description": "Color value in hex, RGB object, or color space object format",
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$",
+          "description": "Hex color string"
+        },
+        {
+          "type": "string",
+          "pattern": "^rgba?\\(",
+          "description": "CSS rgb/rgba function"
+        },
+        {
+          "type": "object",
+          "description": "RGB(A) object",
+          "required": ["r", "g", "b"],
+          "properties": {
+            "r": { "type": "number", "minimum": 0, "maximum": 255 },
+            "g": { "type": "number", "minimum": 0, "maximum": 255 },
+            "b": { "type": "number", "minimum": 0, "maximum": 255 },
+            "alpha": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "description": "Color space object",
+          "required": ["colorSpace", "components"],
+          "properties": {
+            "colorSpace": {
+              "type": "string",
+              "enum": [
+                "srgb",
+                "srgb-linear",
+                "display-p3",
+                "a98-rgb",
+                "prophoto-rgb",
+                "rec2020",
+                "lab",
+                "oklab",
+                "lch",
+                "oklch",
+                "xyz",
+                "xyz-d50",
+                "xyz-d65"
+              ]
+            },
+            "components": {
+              "type": "array",
+              "items": { "type": "number" },
+              "minItems": 3,
+              "maxItems": 4
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "dimensionValue": {
+      "description": "Dimension value with unit",
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^-?[0-9]+(\\.[0-9]+)?(px|rem|em|%|vw|vh|vmin|vmax|ch|ex|cap|ic|lh|rlh|vi|vb|svw|svh|lvw|lvh|dvw|dvh)$",
+          "description": "Dimension string with unit"
+        },
+        {
+          "type": "object",
+          "description": "Dimension object",
+          "required": ["value", "unit"],
+          "properties": {
+            "value": { "type": "number" },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "px",
+                "rem",
+                "em",
+                "%",
+                "vw",
+                "vh",
+                "vmin",
+                "vmax",
+                "ch",
+                "ex",
+                "cap",
+                "ic",
+                "lh",
+                "rlh",
+                "vi",
+                "vb",
+                "svw",
+                "svh",
+                "lvw",
+                "lvh",
+                "dvw",
+                "dvh"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "fontFamilyValue": {
+      "description": "Font family name or list of font families",
+      "oneOf": [
+        { "type": "string", "minLength": 1 },
+        {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 1
+        }
+      ]
+    },
+    "fontWeightValue": {
+      "description": "Font weight as number (1-1000) or keyword",
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 1000
+        },
+        {
+          "type": "string",
+          "enum": ["normal", "bold"]
+        }
+      ]
+    },
+    "durationValue": {
+      "description": "Duration value in milliseconds or seconds",
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+)?(ms|s)$"
+        },
+        {
+          "type": "number",
+          "minimum": 0,
+          "description": "Duration in milliseconds"
+        }
+      ]
+    },
+    "cubicBezierValue": {
+      "type": "array",
+      "description": "Cubic Bezier timing function as array of 4 numbers",
+      "items": { "type": "number", "minimum": 0, "maximum": 1 },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "numberValue": {
+      "type": "number",
+      "description": "Numeric value without unit"
+    },
+    "borderValue": {
+      "type": "object",
+      "description": "Border composite type with width, color, and style",
+      "required": ["width", "color", "style"],
+      "properties": {
+        "width": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "color": {
+          "oneOf": [
+            { "$ref": "#/$defs/colorValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "style": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "solid",
+                "dashed",
+                "dotted",
+                "double",
+                "groove",
+                "ridge",
+                "inset",
+                "outset",
+                "none",
+                "hidden"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "dashArray": {
+                  "type": "array",
+                  "items": { "type": "number" }
+                },
+                "lineCap": {
+                  "type": "string",
+                  "enum": ["butt", "round", "square"]
+                }
+              }
+            },
+            { "$ref": "#/$defs/reference" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "transitionValue": {
+      "type": "object",
+      "description": "Transition composite type with duration, delay, and timing function",
+      "required": ["duration", "timingFunction"],
+      "properties": {
+        "duration": {
+          "oneOf": [
+            { "$ref": "#/$defs/durationValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "delay": {
+          "oneOf": [
+            { "$ref": "#/$defs/durationValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "timingFunction": {
+          "oneOf": [
+            { "$ref": "#/$defs/cubicBezierValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "shadowValue": {
+      "type": "object",
+      "description": "Shadow composite type with color, offset, blur, and spread",
+      "required": ["color", "offsetX", "offsetY", "blur"],
+      "properties": {
+        "color": {
+          "oneOf": [
+            { "$ref": "#/$defs/colorValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "offsetX": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "offsetY": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "blur": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "spread": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "gradientValue": {
+      "type": "array",
+      "description": "Gradient as array of color stops",
+      "items": {
+        "type": "object",
+        "required": ["color", "position"],
+        "properties": {
+          "color": {
+            "oneOf": [
+              { "$ref": "#/$defs/colorValue" },
+              { "$ref": "#/$defs/reference" }
+            ]
+          },
+          "position": {
+            "oneOf": [
+              { "type": "number", "minimum": 0, "maximum": 1 },
+              { "$ref": "#/$defs/reference" }
+            ]
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "typographyValue": {
+      "type": "object",
+      "description": "Typography composite type with font properties",
+      "required": ["fontFamily", "fontSize", "fontWeight", "lineHeight"],
+      "properties": {
+        "fontFamily": {
+          "oneOf": [
+            { "$ref": "#/$defs/fontFamilyValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "fontSize": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "fontWeight": {
+          "oneOf": [
+            { "$ref": "#/$defs/fontWeightValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "letterSpacing": {
+          "oneOf": [
+            { "$ref": "#/$defs/dimensionValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        },
+        "lineHeight": {
+          "oneOf": [
+            { "$ref": "#/$defs/numberValue" },
+            { "$ref": "#/$defs/reference" }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Non-standard metadata. Extensions must not change the meaning of $value.",
+      "additionalProperties": true
+    }
+  }
+}

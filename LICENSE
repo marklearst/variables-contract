@@ -68,7 +68,7 @@ include attribution visible to end users:
 B.2 METADATA ATTRIBUTION
 JSON files claiming conformance should include:
 
-    "$schema": "https://variables-contract.vercel.app/schema/v1.json"
+    "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json"
 
 ---
 

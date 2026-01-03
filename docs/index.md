@@ -10,7 +10,7 @@ title: Variables Contract
 | **Version**    | 0.3.7                              |
 | **Editor**     | Mark Learst                        |
 | **Compliance** | DTCG 2025.10                       |
-| **Schema**     | [v1.json](schema/v1.json)          |
+| **Schema**     | [v1.json](assets/schema/v1.json)   |
 | **License**    | [CC BY-ND 4.0 + Addendum](license) |
 
 A deterministic protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control.
