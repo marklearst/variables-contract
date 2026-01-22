@@ -1,0 +1,347 @@
+---
+title: Governance - Versioning
+---
+
+# Variable Contract Versioning
+
+Versioning communicates breaking changes and migration requirements.
+
+If versioning is inconsistent, consumers cannot plan upgrades and breaking changes ship without notice.
+
+## Semantic versioning
+
+Use semantic versioning (MAJOR.MINOR.PATCH) for variable releases:
+
+- MAJOR: breaking changes (renames, removals, type changes)
+- MINOR: new variables, new modes, non-breaking additions
+- PATCH: bug fixes, documentation updates
+
+## Breaking changes
+
+Breaking changes require MAJOR version bump.
+
+### Variable renames
+
+Renaming a variable breaks all references to it.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#0066cc"
+    }
+  }
+}
+
+// v2.0.0 (BREAKING)
+{
+  "color": {
+    "brand": {
+      "$type": "color",
+      "$value": "#0066cc"
+    }
+  }
+}
+```
+
+Action: Bump to v2.0.0, document migration path.
+
+### Variable removals
+
+Removing a variable breaks all references to it.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "primary": { "$type": "color", "$value": "#0066cc" },
+    "secondary": { "$type": "color", "$value": "#666666" }
+  }
+}
+
+// v2.0.0 (BREAKING)
+{
+  "color": {
+    "primary": { "$type": "color", "$value": "#0066cc" }
+  }
+}
+```
+
+Action: Bump to v2.0.0, mark as deprecated first, then remove in next major version.
+
+### Type changes
+
+Changing a variable's `$type` breaks type validation and consumption.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "spacing": {
+    "base": {
+      "$type": "dimension",
+      "$value": "16px"
+    }
+  }
+}
+
+// v2.0.0 (BREAKING)
+{
+  "spacing": {
+    "base": {
+      "$type": "number",
+      "$value": 16
+    }
+  }
+}
+```
+
+Action: Bump to v2.0.0, document migration path.
+
+### Reference changes that break intent
+
+Changing a reference to point to a different variable may break visual output.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.gray.900}"
+      }
+    }
+  }
+}
+
+// v2.0.0 (BREAKING if visual output changes)
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.gray.800}"
+      }
+    }
+  }
+}
+```
+
+Action: Bump to v2.0.0 if visual output changes, MINOR if intent unchanged.
+
+## Non-breaking changes
+
+Non-breaking changes allow MINOR or PATCH version bump.
+
+### New variables
+
+Adding new variables does not break existing references.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "primary": { "$type": "color", "$value": "#0066cc" }
+  }
+}
+
+// v1.1.0 (NON-BREAKING)
+{
+  "color": {
+    "primary": { "$type": "color", "$value": "#0066cc" },
+    "secondary": { "$type": "color", "$value": "#666666" }
+  }
+}
+```
+
+Action: Bump to v1.1.0.
+
+### New modes
+
+Adding new modes does not break existing mode consumers.
+
+Example:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "surface": {
+      "$type": "color",
+      "$value": {
+        "light": "#ffffff"
+      }
+    }
+  }
+}
+
+// v1.1.0 (NON-BREAKING)
+{
+  "color": {
+    "surface": {
+      "$type": "color",
+      "$value": {
+        "light": "#ffffff",
+        "dark": "#000000"
+      }
+    }
+  }
+}
+```
+
+Action: Bump to v1.1.0.
+
+### Value changes (non-breaking)
+
+Changing a variable value may or may not be breaking depending on usage.
+
+If the value change is intentional and documented, it may be MINOR:
+
+```json
+// v1.0.0
+{
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#0066cc"
+    }
+  }
+}
+
+// v1.1.0 (NON-BREAKING if documented)
+{
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#0077dd"
+    }
+  }
+}
+```
+
+Action: Bump to v1.1.0 if change is intentional and documented.
+
+If the value change is accidental or breaks visual output, treat as breaking.
+
+## Deprecation strategy
+
+Deprecate variables before removing them:
+
+1. Mark variable as deprecated: `"$deprecated": true`
+2. Document migration path in release notes
+3. Keep deprecated variable for at least one release cycle
+4. Remove in next major version
+
+Example:
+
+```json
+// v1.5.0
+{
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#0066cc",
+      "$deprecated": true,
+      "$description": "Use color.brand.primary instead"
+    },
+    "brand": {
+      "primary": {
+        "$type": "color",
+        "$value": "#0066cc"
+      }
+    }
+  }
+}
+
+// v2.0.0 (remove deprecated)
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "$type": "color",
+        "$value": "#0066cc"
+      }
+    }
+  }
+}
+```
+
+## Release notes format
+
+Release notes MUST include:
+
+- Version number (MAJOR.MINOR.PATCH)
+- Breaking changes (if any)
+- Migration steps for breaking changes
+- New variables (if any)
+- Deprecated variables (if any)
+- Bug fixes (if any)
+
+Example release notes:
+
+```markdown
+# Variable Contract v2.0.0
+
+## Breaking Changes
+
+### Renamed Variables
+
+- `color.primary` → `color.brand.primary`
+- `spacing.base` → `spacing.scale.base`
+
+Migration: Update all references from old names to new names.
+
+### Removed Variables
+
+- `color.secondary` (deprecated in v1.5.0)
+
+Migration: Use `color.brand.secondary` instead.
+
+## New Variables
+
+- `color.brand.accent`
+- `spacing.scale.xl`
+
+## Deprecated Variables
+
+- `color.old` (will be removed in v3.0.0)
+
+Migration: Use `color.new` instead.
+```
+
+## Versioning workflow
+
+1. Identify change type (breaking or non-breaking)
+2. Determine version bump (MAJOR, MINOR, or PATCH)
+3. Update version in package.json or version file
+4. Write release notes
+5. Tag release in version control
+6. Publish release notes
+
+## Failure modes
+
+If versioning is inconsistent:
+
+- Breaking changes ship without notice
+- Consumers cannot plan upgrades
+- Migration paths are unclear
+- Deprecated variables removed too early
+
+## Out of scope
+
+- Automated version bumping (handle manually or with tools)
+- Version comparison tools
+- Release automation
+
