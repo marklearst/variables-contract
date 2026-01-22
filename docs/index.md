@@ -4,7 +4,7 @@ title: Variable Contract
 
 # Variable Contract
 
-This repo documents a variables-first contract and an operating model for governing changes across design and engineering.
+This is a public spec for design variables: the JSON shape, naming, references, modes, and change control.
 
 ## Start here
 

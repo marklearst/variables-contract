@@ -4,9 +4,9 @@ title: Variable Contract
 
 # Variable Contract
 
-This document defines the minimum contract for variables stored as Design Tokens JSON.
+This page describes the JSON shape for variables that you can store in a repo, validate in CI, and generate outputs from.
 
-The goal is that design and engineering can share a stable, machine-checkable shape for variables, references, and change control.
+If the contract is loose, you get silent renames, broken references, and "same token, different meaning" across tools.
 
 ## Inputs and adapters
 
@@ -62,7 +62,7 @@ Modes represent intentional variants of a variable (example: `light`/`dark`, `mo
 Rules:
 
 - If `$value` is an object, its keys are treated as mode names.
-- Mode names should be stable and treated as part of the contract.
+- Mode names should not change without a breaking change.
 - A mode value may be a literal value or a reference.
 
 ## References (aliases)
@@ -125,7 +125,7 @@ A change is considered valid if:
 - Every variable has `$type` and `$value`.
 - References resolve and are acyclic.
 - References use the canonical reference syntax.
-- If `$value` uses modes, mode keys are intentional and consistent within a collection.
+- If `$value` uses modes, mode keys are explicit and shared within a collection.
 - Alias variables do not duplicate raw palette values when a base variable exists.
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).

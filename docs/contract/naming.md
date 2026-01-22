@@ -4,17 +4,19 @@ title: Governance - Token Naming Convention
 
 # Governance - Token Naming Convention
 
-This document defines the token naming rules for a design system token set. These rules are intended to be tool-agnostic and align with the Design Tokens Community Group (DTCG) file format.
+Naming is an API. If names change casually, every consumer breaks.
+
+These rules are tool-agnostic and map directly to the Design Tokens Community Group (DTCG) file format.
 
 ## Goals
 
-- Names are stable over time.
+- Renames are breaking changes.
 - Names communicate intent, not implementation.
 - Names support automation, search, and code generation.
 
 ## Token categories
 
-- Base tokens: raw values used as a source of truth (scale or palette).
+- Base tokens: raw values (scale or palette).
 - Alias tokens: semantic names that reference other tokens.
 - Component tokens: component-scoped aliases for specific UI parts.
 
@@ -30,7 +32,7 @@ Notes:
 
 - Omit segments that do not apply.
 - Prefer fewer segments over placeholder values.
-- Keep category and system consistent across the token set.
+- Keep category and system prefixes the same across the token set.
 
 ## Character rules
 
@@ -75,7 +77,7 @@ Component tokens:
 ## Units and types
 
 - Use token types (`$type`) to define validation rules.
-- Dimensions should use consistent units at the source (example: px, rem).
+- Dimensions should use one unit per scale (example: px, rem).
 - Do not mix units within a single scale.
 
 ## Versioning impact
