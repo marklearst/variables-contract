@@ -4,15 +4,21 @@ title: Variable Contract
 
 # Variable Contract
 
-This page describes the JSON shape for variables that you can store in a repo, validate in CI, and generate outputs from.
+JSON shape for variables stored in version control, validated in CI, and used to generate outputs.
 
 If the contract is loose, you get silent renames, broken references, and "same token, different meaning" across tools.
+
+## DTCG compliance
+
+This contract is DTCG 2025.10 compliant. See [DTCG Alignment](dtcg-alignment) for details.
 
 ## Inputs and adapters
 
 This contract defines the canonical shape used in version control.
 
 Tool exports (example: a Figma variable export JSON) are treated as inputs. They may include extra metadata and alternate reference syntax. An adapter can normalize those inputs into this contract.
+
+See [Adapters](../adapters) for adapter patterns and implementations.
 
 ## Adapter pipeline
 
@@ -34,6 +40,8 @@ A variable is an object with the following properties:
 
 A group is an object that contains nested groups and/or variables. Groups do not have `$type`/`$value`.
 
+Groups can extend other groups using `$ref`. See [Groups](groups) for details.
+
 ## `$type`
 
 `$type` describes how a tool should interpret `$value`.
@@ -43,6 +51,8 @@ Rules:
 - `$type` is required on every variable.
 - A variable's `$type` must not change unless it is a breaking change.
 - Composite types must use the expected structure for that type.
+
+See [Types](types) for the complete type reference and [Composite Types](composite-types) for structured types.
 
 ## `$value`
 
@@ -65,6 +75,8 @@ Rules:
 - Mode names should not change without a breaking change.
 - A mode value may be a literal value or a reference.
 
+See [Modes](modes) for complete mode documentation including structure, resolution, and consistency rules.
+
 ## References (aliases)
 
 A reference is a `$value` that points to another variable by name.
@@ -78,14 +90,18 @@ Rules:
 
 ## Reference syntax
 
-The canonical reference format is a string that uses braces:
+Variable Contract supports two reference syntaxes:
 
-- `{path.to.variable}`
+- Curly brace syntax (canonical): `{path.to.variable}`
+- JSON Pointer syntax (DTCG required): `#/path/to/variable`
 
 Rules:
 
-- References must use the canonical format in the contract.
+- References must use curly brace format in Variable Contract files.
+- JSON Pointer syntax is supported for DTCG compliance.
 - Tool-specific reference formats are allowed only as adapter inputs.
+
+See [References](references) for complete reference documentation including resolution algorithms, chained references, and property-level references.
 
 ## `$description`
 
@@ -121,11 +137,12 @@ Rules:
 
 A change is considered valid if:
 
-- Names follow the naming convention ([Naming](../naming)).
+- Names follow the naming convention ([Naming](naming)).
 - Every variable has `$type` and `$value`.
-- References resolve and are acyclic.
-- References use the canonical reference syntax.
+- References resolve and are acyclic (see [References](references)).
+- References use the canonical reference syntax (`{path}`).
 - If `$value` uses modes, mode keys are explicit and shared within a collection.
 - Alias variables do not duplicate raw palette values when a base variable exists.
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).
+- Group extensions (`$ref`) do not create circular references (see [Groups](groups)).

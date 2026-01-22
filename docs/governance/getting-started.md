@@ -17,7 +17,7 @@ Use this checklist when you're adding or changing a variable.
 1. Read:
    - [Variable Governance](../overview)
    - [Naming](../../contract/naming)
-   - [Tokens Studio](../../tooling/tokens-studio)
+   - [Tokens Studio](../../adapters/tokens-studio)
    - [Change Control](../change-control)
 2. Identify which variable category you are working in:
    - base

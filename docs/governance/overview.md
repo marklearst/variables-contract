@@ -25,7 +25,7 @@ The contract rules (schema and validation expectations) live in [Variable Contra
 
 ## Scope
 
-This repo covers:
+Covers:
 
 - token categories (base, alias, component)
 - naming rules
