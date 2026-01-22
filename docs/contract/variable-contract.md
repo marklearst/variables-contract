@@ -121,7 +121,7 @@ Rules:
 
 A change is considered valid if:
 
-- Names follow the naming convention (`naming.md`).
+- Names follow the naming convention ([Naming](naming)).
 - Every variable has `$type` and `$value`.
 - References resolve and are acyclic.
 - References use the canonical reference syntax.
