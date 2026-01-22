@@ -4,7 +4,7 @@ title: Governance - Getting Started
 
 # Governance - Getting Started
 
-This checklist is the fastest way to get productive in a variable-governed design system.
+Use this checklist when you're adding or changing a variable.
 
 ## What you should know first
 
@@ -30,7 +30,7 @@ Create a new variable only when:
 
 - an existing semantic token cannot express the intent
 - multiple components need the same decision
-- you can name it in a way that will remain stable
+- you can name it in a way you won't want to rename later
 
 ## How to propose a variable change
 
@@ -44,7 +44,7 @@ Before you open a change:
 
 ## Review requirements
 
-Variable changes should be reviewed by:
+Reviews need:
 
 - one design system maintainer
 - one engineer responsible for consumption and releases

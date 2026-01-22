@@ -4,29 +4,29 @@ title: Role - Design Systems Engineer
 
 # Variable Governance - Design Systems Engineer Role
 
-This role owns the variable contract and the systems that make variables usable across design and engineering.
+Owns the variable contract and the pipeline that turns variables into outputs teams can ship.
 
 ## Responsibilities
 
 - Own the Variable Contract ([Variable Contract](../../../contract/variable-contract)) and its validation requirements.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
-- Define consumption patterns in code (CSS variables, TypeScript, theming) and keep them stable.
+- Define how variables are consumed in code (CSS variables, TypeScript, theming). Treat changes like API changes.
 - Maintain adapter inputs and outputs (example: Figma exports in, build artifacts out), without making tool metadata a dependency.
 - Publish release notes and migrations for breaking changes.
 
 ## What success looks like
 
-- Variable names and references are stable enough to treat as an API.
+- Renames and reference changes are handled like API changes (reviewed, versioned, documented).
 - Designers can author variables without creating duplicate values or unreviewable naming.
 - Engineers can consume variables with minimal manual wiring.
-- Variables ship with predictable versioning, review, and migration notes.
+- Releases include migration notes when something breaks.
 - Adapters can evolve without breaking the core contract.
 
 ## Interfaces
 
-- Design: agrees on semantic intent, modes, and naming.
-- Engineering: agrees on consumption patterns, build outputs, and upgrade paths.
+- Design: owns semantic intent and mode definitions.
+- Engineering: owns consumption patterns, build outputs, and upgrade paths.
 - Product: agrees on change priorities and release timing.
 
 ## Non-goals

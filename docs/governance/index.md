@@ -4,18 +4,18 @@ title: Variable Governance Overview
 
 # Variable Governance Overview
 
-This governance exists to keep variables stable, predictable, and easy to consume across tools and platforms.
+Governance is what keeps variable changes boring: reviewed, versioned, and safe to roll out.
 
 ## What a governed variable system provides
 
 - A shared variable contract between design and code.
-- Stable variable names and structures that support automation.
+- Variable names and structures that support CI validation and code generation.
 - A semantic layer that prevents direct palette usage in components.
-- Change control and versioning so teams can upgrade safely.
+- Change control and versioning so upgrades are explicit.
 
 ## Operating model
 
-- Base variables: palettes and scales (the raw source of truth).
+- Base variables: palettes and scales (raw values live here).
 - Alias variables: semantic variables that reference base variables.
 - Component variables: component-scoped aliases that reference semantic variables.
 

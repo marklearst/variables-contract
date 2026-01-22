@@ -4,9 +4,9 @@ title: Variable Governance
 
 # Variable Governance
 
-This governance defines how a design system team creates, changes, reviews, and releases variables.
+Governance is how you keep a token change from turning into a cleanup project across components.
 
-The goal is stable variable names and predictable change control, so design and engineering can treat variables as a shared contract.
+The rules here treat variable names and references like an API: changes are reviewed, and breaking changes are called out.
 
 The contract rules (schema and validation expectations) live in [Variable Contract](../../contract/variable-contract).
 
@@ -14,8 +14,8 @@ The contract rules (schema and validation expectations) live in [Variable Contra
 
 - Variable names are an API.
 - Prefer semantic aliases for UI usage.
-- Keep base scales and palettes stable.
-- Treat variable JSON (Design Tokens JSON) as the source of truth.
+- Keep base scales and palettes unchanged unless you plan a migration.
+- Treat variable JSON (Design Tokens JSON) as the contract.
 
 ## What good looks like
 
