@@ -33,6 +33,6 @@ This governance exists to keep variables stable, predictable, and easy to consum
 ## Next docs to read
 
 - [Getting Started](getting-started)
-- [Naming](contract/naming)
-- [Tokens Studio](tooling/tokens-studio)
+- [Naming](../contract/naming)
+- [Tokens Studio](../tooling/tokens-studio)
 - [Change Control](change-control)
