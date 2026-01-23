@@ -215,7 +215,7 @@ let hasErrors = false;
 for (const file of files) {
   const content = JSON.parse(fs.readFileSync(file, 'utf8'));
   const errors = validate(content);
-  
+
   if (errors.length > 0) {
     console.error(`Errors in ${file}:`);
     errors.forEach(error => console.error(`  - ${error.message}`));
@@ -230,7 +230,7 @@ if (hasErrors) {
 function getAllJsonFiles(dir) {
   const files = [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
-  
+
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
@@ -239,7 +239,7 @@ function getAllJsonFiles(dir) {
       files.push(fullPath);
     }
   }
-  
+
   return files;
 }
 ```
