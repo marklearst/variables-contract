@@ -71,7 +71,7 @@ name: Validate Variables
 on:
   pull_request:
     paths:
-      - 'tokens/**/*.json'
+      - "tokens/**/*.json"
 
 jobs:
   validate:
@@ -219,4 +219,3 @@ If validation is skipped:
 - Runtime validation libraries (use DTCG-compliant validators)
 - Validation UI tools (use existing tools or build custom)
 - Performance optimization for large token sets (handle separately)
-
