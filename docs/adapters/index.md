@@ -69,9 +69,9 @@ If adapters fail:
 
 ## Adapter documentation
 
-- [Figma Adapter](figma) - Figma Variables export normalization
-- [Tokens Studio Adapter](tokens-studio) - Tokens Studio export normalization
-- [Style Dictionary Adapter](style-dictionary) - Variable Contract to CSS/TypeScript/etc.
+- [Figma Adapter](/variable-contract/adapters/figma) - Figma Variables export normalization
+- [Tokens Studio Adapter](/variable-contract/adapters/tokens-studio) - Tokens Studio export normalization
+- [Style Dictionary Adapter](/variable-contract/adapters/style-dictionary) - Variable Contract to CSS/TypeScript/etc.
 
 ## Out of scope
 

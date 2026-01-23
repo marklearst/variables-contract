@@ -462,9 +462,9 @@ Validate property-level references target compatible types.
 If issues persist:
 
 1. Check validation output for specific errors
-2. Review [Validation](validation) guide
-3. Check [Change Control](change-control) for review process
-4. Consult [Design Systems Engineer](../roles/design-systems-engineer) role
+2. Review [Validation](/variable-contract/governance/validation) guide
+3. Check [Change Control](/variable-contract/governance/change-control) for review process
+4. Consult [Design Systems Engineer](/variable-contract/governance/governance/roles/design-systems-engineer) role
 
 ## Out of scope
 

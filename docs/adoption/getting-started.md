@@ -244,8 +244,8 @@ Avoid these mistakes:
 
 After adoption:
 
-- Review [Implementation Checklist](implementation-checklist)
-- Set up [Migration Strategy](migration-strategy) if migrating
+- Review [Implementation Checklist](/variable-contract/adoption/adoption/implementation-checklist)
+- Set up [Migration Strategy](/variable-contract/adoption/adoption/migration-strategy) if migrating
 - Document team-specific patterns
 - Iterate on workflow
 

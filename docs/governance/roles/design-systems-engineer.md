@@ -8,7 +8,7 @@ Owns the variable contract and the pipeline that turns variables into outputs te
 
 ## Responsibilities
 
-- Own the Variable Contract ([Variable Contract](../../../contract/variable-contract)) and its validation requirements.
+- Own the Variable Contract ([Variable Contract](/variable-contract/contract/variable-contract)) and its validation requirements.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
 - Define how variables are consumed in code (CSS variables, TypeScript, theming). Treat changes like API changes.

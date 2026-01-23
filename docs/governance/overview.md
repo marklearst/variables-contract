@@ -8,7 +8,7 @@ Governance is how you keep a token change from turning into a cleanup project ac
 
 The rules here treat variable names and references like an API: changes are reviewed, and breaking changes are called out.
 
-The contract rules (schema and validation expectations) live in [Variable Contract](../../contract/variable-contract).
+The contract rules (schema and validation expectations) live in [Variable Contract](/variable-contract/contract/variable-contract).
 
 ## Principles
 

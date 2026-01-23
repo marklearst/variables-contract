@@ -10,7 +10,7 @@ If the contract is loose, you get silent renames, broken references, and "same t
 
 ## DTCG compliance
 
-This contract is DTCG 2025.10 compliant. See [DTCG Alignment](dtcg-alignment) for details.
+This contract is DTCG 2025.10 compliant. See [DTCG Alignment](/variable-contract/contract/dtcg-alignment) for details.
 
 ## Inputs and adapters
 
@@ -18,7 +18,7 @@ This contract defines the canonical shape used in version control.
 
 Tool exports (example: a Figma variable export JSON) are treated as inputs. They may include extra metadata and alternate reference syntax. An adapter can normalize those inputs into this contract.
 
-See [Adapters](../adapters) for adapter patterns and implementations.
+See [Adapters](/variable-contract/adapters) for adapter patterns and implementations.
 
 ## Adapter pipeline
 
@@ -40,7 +40,7 @@ A variable is an object with the following properties:
 
 A group is an object that contains nested groups and/or variables. Groups do not have `$type`/`$value`.
 
-Groups can extend other groups using `$ref`. See [Groups](groups) for details.
+Groups can extend other groups using `$ref`. See [Groups](/variable-contract/contract/groups) for details.
 
 ## `$type`
 
@@ -52,7 +52,7 @@ Rules:
 - A variable's `$type` must not change unless it is a breaking change.
 - Composite types must use the expected structure for that type.
 
-See [Types](types) for the complete type reference and [Composite Types](composite-types) for structured types.
+See [Types](/variable-contract/contract/types) for the complete type reference and [Composite Types](/variable-contract/contract/composite-types) for structured types.
 
 ## `$value`
 
@@ -75,7 +75,7 @@ Rules:
 - Mode names should not change without a breaking change.
 - A mode value may be a literal value or a reference.
 
-See [Modes](modes) for complete mode documentation including structure, resolution, and consistency rules.
+See [Modes](/variable-contract/contract/modes) for complete mode documentation including structure, resolution, and consistency rules.
 
 ## References (aliases)
 
@@ -101,7 +101,7 @@ Rules:
 - JSON Pointer syntax is supported for DTCG compliance.
 - Tool-specific reference formats are allowed only as adapter inputs.
 
-See [References](references) for complete reference documentation including resolution algorithms, chained references, and property-level references.
+See [References](/variable-contract/contract/references) for complete reference documentation including resolution algorithms, chained references, and property-level references.
 
 ## `$description`
 
@@ -137,12 +137,12 @@ Rules:
 
 A change is considered valid if:
 
-- Names follow the naming convention ([Naming](naming)).
+- Names follow the naming convention ([Naming](/variable-contract/contract/naming)).
 - Every variable has `$type` and `$value`.
-- References resolve and are acyclic (see [References](references)).
+- References resolve and are acyclic (see [References](/variable-contract/contract/references)).
 - References use the canonical reference syntax (`{path}`).
 - If `$value` uses modes, mode keys are explicit and shared within a collection.
 - Alias variables do not duplicate raw palette values when a base variable exists.
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).
-- Group extensions (`$ref`) do not create circular references (see [Groups](groups)).
+- Group extensions (`$ref`) do not create circular references (see [Groups](/variable-contract/contract/groups)).
