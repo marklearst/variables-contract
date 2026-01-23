@@ -19,6 +19,16 @@ module.exports = {
   navigation: [
     { title: "Home", path: ".", icon: "home" },
     {
+      title: "Introduction",
+      icon: "book",
+      collapsible: true,
+      children: [
+        { title: "Why Variables", path: "introduction/why-variables", icon: "help-circle" },
+        { title: "Comparison", path: "introduction/comparison", icon: "git-compare" },
+        { title: "Positioning", path: "introduction/positioning", icon: "target" },
+      ],
+    },
+    {
       title: "Contract",
       icon: "file-text",
       collapsible: true,
@@ -36,6 +46,16 @@ module.exports = {
         { title: "Composite Types", path: "contract/composite-types", icon: "layers" },
         { title: "Naming", path: "contract/naming", icon: "tag" },
         { title: "Anatomy", path: "contract/anatomy", icon: "layers" },
+      ],
+    },
+    {
+      title: "Adoption",
+      icon: "rocket",
+      collapsible: true,
+      children: [
+        { title: "Getting Started", path: "adoption/getting-started", icon: "flag" },
+        { title: "Implementation Checklist", path: "adoption/implementation-checklist", icon: "check-square" },
+        { title: "Migration Strategy", path: "adoption/migration-strategy", icon: "arrow-right" },
       ],
     },
     {
@@ -85,6 +105,70 @@ module.exports = {
           path: "governance/roles/design-systems-engineer",
           icon: "user",
         },
+      ],
+    },
+    {
+      title: "Scenarios",
+      icon: "layers",
+      collapsible: true,
+      children: [
+        { title: "Multi-Brand", path: "scenarios/multi-brand", icon: "palette" },
+        { title: "Multi-Theme", path: "scenarios/multi-theme", icon: "toggle-left" },
+        { title: "Large Sets", path: "scenarios/large-sets", icon: "database" },
+        { title: "Component Integration", path: "scenarios/component-integration", icon: "package" },
+      ],
+    },
+    {
+      title: "Tooling",
+      icon: "wrench",
+      collapsible: true,
+      children: [
+        { title: "Ecosystem", path: "tooling/ecosystem", icon: "grid" },
+        { title: "CI/CD", path: "tooling/ci-cd", icon: "git-branch" },
+        { title: "Build Pipelines", path: "tooling/build-pipelines", icon: "settings" },
+        { title: "Figma", path: "adapters/figma", icon: "pen-tool" },
+        { title: "Tokens Studio", path: "adapters/tokens-studio", icon: "sliders" },
+        { title: "Style Dictionary", path: "adapters/style-dictionary", icon: "code" },
+      ],
+    },
+    {
+      title: "Consumption",
+      icon: "code",
+      collapsible: true,
+      children: [
+        { title: "CSS", path: "consumption/css", icon: "file-code" },
+        { title: "TypeScript", path: "consumption/typescript", icon: "type" },
+        { title: "Frameworks", path: "consumption/frameworks", icon: "layers" },
+      ],
+    },
+    {
+      title: "Design",
+      icon: "pen-tool",
+      collapsible: true,
+      children: [
+        { title: "Figma Naming", path: "design/figma-naming", icon: "tag" },
+        { title: "Figma Workflow", path: "design/figma-workflow", icon: "workflow" },
+        { title: "Component Variables", path: "design/component-variables", icon: "package" },
+      ],
+    },
+    {
+      title: "Testing",
+      icon: "check-circle",
+      collapsible: true,
+      children: [
+        { title: "Validation", path: "testing/validation", icon: "check-square" },
+        { title: "Visual Regression", path: "testing/visual-regression", icon: "image" },
+        { title: "Consumption Tests", path: "testing/consumption-tests", icon: "test-tube" },
+      ],
+    },
+    {
+      title: "Patterns",
+      icon: "layers",
+      collapsible: true,
+      children: [
+        { title: "Multi-Brand Architecture", path: "patterns/multi-brand-architecture", icon: "palette" },
+        { title: "Theme Composition", path: "patterns/theme-composition", icon: "toggle-left" },
+        { title: "Performance", path: "patterns/performance", icon: "zap" },
       ],
     },
     {
