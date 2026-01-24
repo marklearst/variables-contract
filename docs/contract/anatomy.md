@@ -1,14 +1,14 @@
 ---
-title: Variable Anatomy
+title: Contract - Anatomy
 ---
 
-# Variable Anatomy
+# Contract - Anatomy
 
 These are the three layers we use so components do not depend on raw palette values.
 
-## 1. Base tokens
+## 1. Base variables
 
-Base tokens hold raw scales and palettes. They are the only place raw values live.
+Base variables hold raw scales and palettes. They are the only place raw values live.
 
 Examples:
 
@@ -19,12 +19,12 @@ Examples:
 
 Rules:
 
-- Base tokens are reused broadly.
-- Components should not consume base tokens directly unless explicitly allowed.
+- Base variables are reused broadly.
+- Components SHOULD NOT consume base variables directly unless explicitly allowed.
 
-## 2. Alias (semantic) tokens
+## 2. Alias (semantic) variables
 
-Alias tokens represent intent and reference base tokens.
+Alias variables represent intent and reference base variables.
 
 Examples:
 
@@ -34,12 +34,12 @@ Examples:
 
 Rules:
 
-- UI components should consume semantic aliases.
-- Semantic names should describe usage, not hue or numeric scale.
+- UI components SHOULD consume semantic aliases.
+- Semantic names SHOULD describe usage, not hue or numeric scale.
 
-## 3. Component tokens
+## 3. Component variables
 
-Component tokens are component-scoped aliases for fine-grained control. They should reference semantic aliases.
+Component variables are component-scoped aliases for fine-grained control. They SHOULD reference semantic aliases.
 
 Examples:
 
@@ -48,11 +48,33 @@ Examples:
 
 Rules:
 
-- Create component tokens only when multiple surfaces need per-component control.
-- Avoid creating component tokens as a first move when semantic tokens are missing.
+- Create component variables only when multiple surfaces need per-component control.
+- Avoid creating component variables as a first move when semantic variables are missing.
 
 ## Consumption summary
 
-- Base tokens: for building scales and palettes.
-- Alias tokens: for usage in UI.
-- Component tokens: for controlled overrides when needed.
+- Base variables: for building scales and palettes.
+- Alias variables: for usage in UI.
+- Component variables: for controlled overrides when needed.
+
+## Validation checklist
+
+- [ ] Base variables contain only raw values (no references to other base variables)
+- [ ] Alias variables reference base variables or other alias variables
+- [ ] Component variables reference alias variables (not base variables directly)
+- [ ] Components do not consume base variables directly (unless explicitly allowed)
+
+## Failure modes
+
+If anatomy rules are ignored:
+
+- Components depend on raw palette values (theme switching breaks)
+- Semantic intent is lost (developers guess meaning from value)
+- Component variables reference base variables (tight coupling, hard to refactor)
+- Alias layer is skipped (no semantic abstraction)
+
+## Out of scope
+
+- Specific variable values (anatomy governs structure, not content)
+- Number of variables per category (depends on design system size)
+- Naming within categories (see [Naming Convention](/variable-contract/contract/naming))

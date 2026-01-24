@@ -27,23 +27,23 @@ Variable Contract adds a governance layer on top of DTCG format:
 
 - Naming convention rules (see [Naming](/variable-contract/contract/naming))
 - Change control process (see [Change Control](/variable-contract/governance/change-control))
-- Role definitions (see [Design Systems Engineer](/variable-contract/governance/roles/design-systems-engineer))
+- Role definitions (see [Design Engineer](/variable-contract/governance/roles/design-engineer))
 - Adapter patterns for tool integration (see [Adapters](/variable-contract/adapters))
 - Validation requirements beyond format correctness
 
 ## Compatibility matrix
 
-| DTCG Feature | Variable Contract Requirement | Notes |
-|--------------|------------------------------|-------|
-| Variable structure (`$type`, `$value`) | MUST | Required for all variables |
-| Groups | MUST | Required for organization |
-| Group extension (`$ref`) | MAY | Supported but not required |
-| Curly brace references (`{path}`) | MUST | Canonical format |
-| JSON Pointer references (`#/path`) | MAY | Supported for DTCG compliance |
-| Modes | SHOULD | Use when needed for variants |
-| Composite types | MAY | Use when structure is needed |
-| `$extensions` | MAY | For tool metadata only |
-| `$deprecated` | SHOULD | Use when deprecating variables |
+| DTCG Feature                           | Variable Contract Requirement | Notes                          |
+| -------------------------------------- | ----------------------------- | ------------------------------ |
+| Variable structure (`$type`, `$value`) | MUST                          | Required for all variables     |
+| Groups                                 | MUST                          | Required for organization      |
+| Group extension (`$ref`)               | MAY                           | Supported but not required     |
+| Curly brace references (`{path}`)      | MUST                          | Canonical format               |
+| JSON Pointer references (`#/path`)     | MAY                           | Supported for DTCG compliance  |
+| Modes                                  | SHOULD                        | Use when needed for variants   |
+| Composite types                        | MAY                           | Use when structure is needed   |
+| `$extensions`                          | MAY                           | For tool metadata only         |
+| `$deprecated`                          | SHOULD                        | Use when deprecating variables |
 
 ## Format differences
 
@@ -57,7 +57,7 @@ Variable Contract does not change DTCG format. It adds:
 
 If you have variables in older DTCG formats (pre-2025.10):
 
-1. Update reference syntax to use curly braces: `{path.to.token}`
+1. Update reference syntax to use curly braces: `{path.to.variable}`
 2. Add `$type` to all variables if missing
 3. Move tool metadata to `$extensions` if it's in root properties
 4. Update group structure if using deprecated patterns
@@ -75,4 +75,3 @@ If you ignore DTCG compliance:
 - Runtime validation libraries (use DTCG-compliant validators)
 - Format conversion tools (use adapters)
 - Tool-specific features not in DTCG spec
-

@@ -6,7 +6,7 @@ title: Variable Contract
 
 JSON shape for variables stored in version control, validated in CI, and used to generate outputs.
 
-If the contract is loose, you get silent renames, broken references, and "same token, different meaning" across tools.
+If the contract is loose, you get silent renames, broken references, and "same variable, different meaning" across tools.
 
 ## DTCG compliance
 
@@ -26,7 +26,7 @@ A typical pipeline looks like:
 
 1. Input: Figma export JSON (Dev Mode plugin export) or Figma Variables REST API output.
 2. Adapter: normalize naming, references, and metadata into this contract.
-3. Build: use Style Dictionary to generate CSS variables, TypeScript, Tailwind theme, and other platform outputs.
+3. Build: use Style Dictionary to generate CSS variables, TypeScript, Tailwind CSS v4 (`@theme` directive), and other platform outputs.
 
 ## Variable object shape
 
@@ -146,3 +146,27 @@ A change is considered valid if:
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).
 - Group extensions (`$ref`) do not create circular references (see [Groups](/variable-contract/contract/groups)).
+
+## Conformance
+
+Variable Contract conformance requires:
+
+- DTCG 2025.10 format compliance
+- Naming convention compliance
+- Reference syntax compliance
+- Validation implementation
+- Versioning compliance
+
+See [Conformance](/variable-contract/reference/conformance) for complete conformance requirements and how to claim compliance.
+
+## Out of scope
+
+Variable Contract does NOT define:
+
+- Variable values (your design decisions: colors, spacing, typography)
+- Tools to use (works with any DTCG-compliant tool)
+- Consumption patterns (CSS, TypeScript, whatever works for your team)
+- Design system decisions (governs structure, not values)
+- Runtime libraries (validation is build-time)
+- UI frameworks (tool-agnostic)
+- Component structure (focuses on variables only)

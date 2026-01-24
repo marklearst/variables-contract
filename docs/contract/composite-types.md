@@ -287,7 +287,7 @@ Example:
 }
 ```
 
-## Groups versus composite tokens
+## Groups versus composite variables
 
 Use groups when:
 
@@ -295,7 +295,7 @@ Use groups when:
 - You need to extend or override group structure
 - Variables are independent but related
 
-Use composite tokens when:
+Use composite variables when:
 
 - The combination represents a single design decision
 - Properties must be used together
