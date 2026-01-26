@@ -4,7 +4,7 @@ title: Style Dictionary Adapter
 
 # Style Dictionary Adapter
 
-Style Dictionary consumes Variable Contract (DTCG) format and generates platform outputs like CSS variables, TypeScript types, and Tailwind configs.
+Style Dictionary consumes Variable Contract (DTCG) format and generates platform outputs like CSS variables, TypeScript types, and Tailwind CSS v4 custom properties.
 
 ## Role
 
@@ -55,7 +55,7 @@ Style Dictionary can generate:
 - Less variables (`less/variables`)
 - JavaScript/TypeScript (`javascript/es6`, `typescript/es6-declarations`)
 - JSON (`json/nested`, `json/flat`)
-- Tailwind config (`javascript/module`)
+- Tailwind CSS v4 (`css/variables` for `@theme` directive)
 - Android resources (`android/resources`)
 - iOS plist (`ios/plist`)
 - And more
@@ -258,21 +258,21 @@ export const color = {
 };
 ```
 
-### Tailwind config
+### Tailwind CSS v4
 
 Input (same as above)
 
-Output (`dist/tailwind.config.js`):
+Output (`dist/theme.css`):
 
-```javascript
-module.exports = {
-  theme: {
-    colors: {
-      primary: '#0066cc'
-    }
-  }
-};
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0066cc;
+}
 ```
+
+Note: Tailwind CSS v4 uses CSS-first configuration. Generate CSS custom properties, not JavaScript config files. See [Tailwind Adapter](adapters/tailwind) for details.
 
 ## Links
 

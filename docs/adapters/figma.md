@@ -345,15 +345,15 @@ Designers author variables in Figma. Changes flow through export, normalization,
 ### Who does what
 
 - Designer: authors variables in Figma, exports JSON
-- Design Systems Engineer: runs adapter, opens PR, reviews changes
+- Design Engineer: runs adapter, opens PR, reviews changes
 - CI: validates normalized JSON
 
 ### Workflow steps
 
 1. Designer exports variables from Figma (Dev Mode plugin or REST API).
-2. Design Systems Engineer runs Figma adapter to normalize export JSON.
-3. Design Systems Engineer commits normalized JSON to version control.
-4. Design Systems Engineer opens PR for review.
+2. Design Engineer runs Figma adapter to normalize export JSON.
+3. Design Engineer commits normalized JSON to version control.
+4. Design Engineer opens PR for review.
 5. Reviewers check naming, types, references (see [Change Control](/variable-contract/adapters/governance/change-control)).
 6. After merge, CI generates build outputs.
 

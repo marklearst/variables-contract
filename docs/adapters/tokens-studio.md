@@ -195,15 +195,15 @@ Designers author variables in Figma using Tokens Studio plugin. The repo JSON is
 ### Who does what
 
 - Designer: authors variables in Tokens Studio, exports JSON
-- Design Systems Engineer: validates export, opens PR, reviews changes
+- Design Engineer: validates export, opens PR, reviews changes
 - CI: validates JSON, generates build outputs
 
 ### Workflow steps
 
 1. Designer exports from Figma via Tokens Studio plugin.
-2. Design Systems Engineer validates export JSON (run adapter if needed).
-3. Design Systems Engineer commits JSON to version control.
-4. Design Systems Engineer opens PR for review.
+2. Design Engineer validates export JSON (run adapter if needed).
+3. Design Engineer commits JSON to version control.
+4. Design Engineer opens PR for review.
 5. Reviewers check naming, types, references (see [Change Control](/variable-contract/adapters/governance/change-control)).
 6. After merge, CI validates JSON and generates build outputs.
 
