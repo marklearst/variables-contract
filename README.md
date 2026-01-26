@@ -2,6 +2,12 @@
 
 Public specification and governance standard for design variables. DTCG 2025.10 compliant format with naming rules, validation requirements, versioning strategy, and adapter patterns.
 
+**Version:** 1.0.0
+**Status:** Stable
+**Editor:** Mark Learst
+
+Variables are variables. CSS variables, JavaScript variables, Figma variables. Variable Contract standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
+
 If variables are managed without a contract, you get silent renames, broken references, inconsistent naming, tool lock-in, and production failures.
 
 ## What this is
@@ -115,7 +121,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 3. Follow [Framework Integration](docs/consumption/frameworks) for React/Vue
 4. Test variable consumption
 
-### For design systems engineers
+### For Design Engineers
 
 1. Read [Variable Contract](docs/contract/variable-contract)
 2. Set up [Validation](docs/governance/validation)
@@ -296,7 +302,7 @@ Generates platform outputs from Variable Contract JSON:
 
 - CSS variables
 - TypeScript types
-- Tailwind config
+- Tailwind CSS v4 (CSS custom properties)
 - SCSS variables
 - Other platform formats
 
@@ -394,6 +400,40 @@ pnpm run docs:build
 ```
 
 Generates static site in `site/`.
+
+## Contributors
+
+**Editor:** Mark Learst
+
+Variable Contract is maintained by the editor. Contributions welcome.
+
+## Acknowledgments
+
+Variable Contract builds on:
+
+- [DTCG 2025.10 Format](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
+- [Style Dictionary](https://styledictionary.com/) - Output generation tool
+- Figma Variables - Design tool integration
+- Tokens Studio - Design tool integration
+
+## References
+
+- [DTCG 2025.10 Specification](https://www.designtokens.org/tr/2025.10/format/) - Design Tokens Community Group format
+- [Variable Contract Documentation](docs/index.md) - Complete specification and governance
+- [DTCG Alignment](docs/contract/dtcg-alignment.md) - Compliance details
+
+## Conformance
+
+To claim Variable Contract compliance:
+
+1. Use DTCG 2025.10 format for variable JSON
+2. Follow naming convention (dot-separated paths, lowercase, no platform prefixes)
+3. Use canonical reference syntax (`{path.to.variable}`)
+4. Validate variables (structure, naming, references, types, modes)
+5. Use semantic versioning for variable releases
+6. Document breaking changes
+
+See [Conformance](docs/reference/conformance.md) for complete conformance requirements and test suite.
 
 ## License
 

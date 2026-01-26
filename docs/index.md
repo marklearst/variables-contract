@@ -29,7 +29,7 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 - [Types](/variable-contract/contract/types) - Type system reference
 - [Composite Types](/variable-contract/contract/composite-types) - Border, Transition, Shadow, Gradient, Typography
 - [Naming](/variable-contract/contract/naming) - Naming convention
-- [Anatomy](/variable-contract/contract/anatomy) - Base, alias, and component tokens
+- [Anatomy](/variable-contract/contract/anatomy) - Base, alias, and component variables
 
 ## Adoption
 
@@ -47,7 +47,10 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 - [Migration](/variable-contract/governance/migration) - Migrating from other formats
 - [Troubleshooting](/variable-contract/governance/troubleshooting) - Common issues and solutions
 - [Accessibility](/variable-contract/governance/accessibility) - Accessibility constraints
-- [Roles](/variable-contract/governance/roles/design-systems-engineer) - Design Systems Engineer role
+- [Roles](/variable-contract/governance/roles) - Role definitions
+  - [Designer](/variable-contract/governance/roles/designer) - Creates variables in Figma
+  - [Design Engineer](/variable-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
+  - [Frontend Developer](/variable-contract/governance/roles/frontend-developer) - Consumes variables in code
 
 ## Scenarios
 
@@ -95,9 +98,20 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 - [Figma Adapter](/variable-contract/adapters/figma) - Figma export normalization and workflow
 - [Tokens Studio Adapter](/variable-contract/adapters/tokens-studio) - Tokens Studio export normalization and workflow
 - [Style Dictionary Adapter](/variable-contract/adapters/style-dictionary) - CSS/TypeScript output generation
+- [Tailwind Adapter](/variable-contract/adapters/tailwind) - Tailwind theme configuration generation
 
 ## Examples
 
 - [Figma Export JSON](/variable-contract/examples/figma-export) - Example Figma export
 - [DTCG Compliant Example](/variable-contract/examples/dtcg-compliant) - Complete DTCG 2025.10 example
 - [Adapter Pipeline](/variable-contract/examples/adapter-pipeline) - End-to-end transformation example
+
+## Reference
+
+- [Glossary](/variable-contract/reference/glossary) - Terminology definitions
+- [Quick Reference](/variable-contract/reference/quick-reference) - Cheat sheet for common tasks
+- [Conformance](/variable-contract/reference/conformance) - How to claim compliance
+
+## FAQ
+
+- [FAQ](/variable-contract/faq) - Common questions and answers
