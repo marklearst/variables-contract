@@ -464,11 +464,10 @@ If issues persist:
 1. Check validation output for specific errors
 2. Review [Validation](/variable-contract/governance/validation) guide
 3. Check [Change Control](/variable-contract/governance/change-control) for review process
-4. Consult [Design Systems Engineer](/variable-contract/governance/governance/roles/design-systems-engineer) role
+4. Consult [Design Engineer](/variable-contract/governance/roles/design-engineer) role
 
 ## Out of scope
 
 - Tool-specific issues (see adapter documentation)
 - Build pipeline issues (see Style Dictionary documentation)
 - Runtime consumption issues (see platform-specific docs)
-

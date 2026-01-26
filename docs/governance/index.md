@@ -39,8 +39,14 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 - [Migration](/variable-contract/governance/migration)
 - [Troubleshooting](/variable-contract/governance/troubleshooting)
 
+## Roles
+
+- [Designer](/variable-contract/governance/roles/designer) - Creates variables in Figma
+- [Design Engineer](/variable-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
+- [Frontend Developer](/variable-contract/governance/roles/frontend-developer) - Consumes variables in code
+
 ## Reference
 
-- [Naming](/variable-contract/governance/contract/naming)
-- [Tokens Studio](/variable-contract/governance/adapters/tokens-studio)
+- [Naming](/variable-contract/contract/naming)
+- [Tokens Studio](/variable-contract/adapters/tokens-studio)
 - [Accessibility](/variable-contract/governance/accessibility)
