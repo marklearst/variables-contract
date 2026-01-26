@@ -169,7 +169,7 @@ Consume brand-specific variables:
 2. Use brand-specific variables in components
 3. Test brand-specific styling
 
-## Best practices
+## Implementation rules
 
 1. Share base scales across brands
 2. Keep brand-specific variables minimal

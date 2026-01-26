@@ -216,7 +216,7 @@ Theme with multiple modes:
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Use modes for theme variants
 2. Reference base variables in mode values

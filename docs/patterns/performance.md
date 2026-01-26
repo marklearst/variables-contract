@@ -4,7 +4,7 @@ title: Patterns - Performance Optimization
 
 # Performance Optimization
 
-How to optimize Variable Contract for large variable sets and fast builds.
+How to reduce build times and file sizes for Variable Contract with large variable sets.
 
 ## Performance considerations
 
@@ -124,17 +124,17 @@ function resolveMode(variables, mode) {
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Organize files efficiently
 2. Cache resolved references
 3. Use incremental builds
 4. Process in parallel
-5. Optimize build pipeline
+5. Reduce build time (parallelize, cache)
 
 ## Failure modes
 
-If performance is not optimized:
+If performance rules are not followed:
 
 - Slow builds (> 30 seconds)
 - High memory usage (> 500MB)

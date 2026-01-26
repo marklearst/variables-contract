@@ -59,11 +59,13 @@ tokens/
 ```
 
 Pros:
+
 - Clear organization
 - Easy to find variables
 - Minimal merge conflicts
 
 Cons:
+
 - Some files may be large
 - Cross-category references
 
@@ -88,11 +90,13 @@ tokens/
 ```
 
 Pros:
+
 - Small files
 - Fast parsing
 - Minimal merge conflicts
 
 Cons:
+
 - More files to manage
 - More complex structure
 
@@ -120,10 +124,12 @@ tokens/
 ```
 
 Pros:
+
 - Component-scoped organization
 - Easy component updates
 
 Cons:
+
 - Potential duplication
 - Cross-component references
 
@@ -164,7 +170,7 @@ Resolve references in parallel:
 
 ```javascript
 async function resolveReferencesParallel(variables) {
-  const promises = variables.map(v => resolveVariable(v));
+  const promises = variables.map((v) => resolveVariable(v));
   return Promise.all(promises);
 }
 ```
@@ -178,7 +184,7 @@ Only rebuild changed files:
 ```javascript
 function buildIncremental(changedFiles) {
   // Only process changed files
-  return changedFiles.map(file => processFile(file));
+  return changedFiles.map((file) => processFile(file));
 }
 ```
 
@@ -207,7 +213,7 @@ Build outputs in parallel:
 
 ```javascript
 async function buildParallel(platforms) {
-  const promises = platforms.map(platform => buildPlatform(platform));
+  const promises = platforms.map((platform) => buildPlatform(platform));
   return Promise.all(promises);
 }
 ```
@@ -266,17 +272,17 @@ tokens/
       component.json     # Component spacing
 ```
 
-## Best practices
+## Implementation rules
 
 1. Organize by category or component
 2. Keep files under 1000 variables
 3. Use consistent naming
 4. Cache resolved references
-5. Optimize build pipeline
+5. Reduce build time (parallelize, cache)
 
 ## Failure modes
 
-If large sets are not optimized:
+If large set rules are not followed:
 
 - Slow builds (> 30 seconds)
 - High memory usage (> 500MB)
@@ -288,4 +294,3 @@ If large sets are not optimized:
 - Runtime performance (handle in consumption layer)
 - Database storage (use version control)
 - Variable management UI (use existing tools)
-

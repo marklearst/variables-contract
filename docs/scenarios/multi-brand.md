@@ -173,10 +173,7 @@ Configure build to generate brand-specific outputs:
 
 ```json
 {
-  "source": [
-    "tokens/base/**/*.json",
-    "tokens/brand-a/**/*.json"
-  ],
+  "source": ["tokens/base/**/*.json", "tokens/brand-a/**/*.json"],
   "platforms": {
     "css": {
       "buildPath": "dist/brand-a/",
@@ -270,7 +267,7 @@ Brands extend base groups:
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Share base scales (spacing, typography)
 2. Keep brand-specific variables minimal
@@ -292,4 +289,3 @@ If multi-brand structure is wrong:
 - Brand-specific design decisions (focus on structure)
 - Brand management tools (use existing tools)
 - Brand switching at runtime (handle in consumption layer)
-

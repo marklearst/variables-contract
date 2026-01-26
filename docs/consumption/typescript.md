@@ -281,7 +281,7 @@ export function useTheme() {
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Generate types from Variable Contract
 2. Use type-safe access

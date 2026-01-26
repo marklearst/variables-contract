@@ -15,6 +15,7 @@ If CI/CD is not set up, invalid variables ship to production and breaking change
 Validate Variable Contract JSON on every PR.
 
 Use when:
+
 - Variables are consumed manually
 - Build happens separately
 - Focus on validation
@@ -24,6 +25,7 @@ Use when:
 Validate and build outputs on every PR.
 
 Use when:
+
 - Outputs are generated automatically
 - Outputs are committed to repo
 - Focus on complete pipeline
@@ -33,6 +35,7 @@ Use when:
 Validate, build, and deploy outputs.
 
 Use when:
+
 - Outputs are published automatically
 - Outputs are consumed from CDN/NPM
 - Focus on automation
@@ -47,7 +50,7 @@ name: Validate Variables
 on:
   pull_request:
     paths:
-      - 'tokens/**/*.json'
+      - "tokens/**/*.json"
 
 jobs:
   validate:
@@ -57,7 +60,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - name: Install dependencies
         run: npm install
       - name: Validate variables
@@ -72,7 +75,7 @@ name: Validate and Build Variables
 on:
   pull_request:
     paths:
-      - 'tokens/**/*.json'
+      - "tokens/**/*.json"
 
 jobs:
   validate-and-build:
@@ -82,7 +85,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - name: Install dependencies
         run: npm install
       - name: Validate variables
@@ -103,7 +106,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'tokens/**/*.json'
+      - "tokens/**/*.json"
 
 jobs:
   validate-build-deploy:
@@ -113,7 +116,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
       - name: Install dependencies
         run: npm install
       - name: Validate variables
@@ -203,22 +206,22 @@ pre-commit install
 Create `scripts/validate.js`:
 
 ```javascript
-const fs = require('fs');
-const path = require('path');
-const { validate } = require('@dtcg/validator');
+const fs = require("fs");
+const path = require("path");
+const { validate } = require("@dtcg/validator");
 
-const tokensDir = path.join(__dirname, '../tokens');
+const tokensDir = path.join(__dirname, "../tokens");
 const files = getAllJsonFiles(tokensDir);
 
 let hasErrors = false;
 
 for (const file of files) {
-  const content = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const content = JSON.parse(fs.readFileSync(file, "utf8"));
   const errors = validate(content);
 
   if (errors.length > 0) {
     console.error(`Errors in ${file}:`);
-    errors.forEach(error => console.error(`  - ${error.message}`));
+    errors.forEach((error) => console.error(`  - ${error.message}`));
     hasErrors = true;
   }
 }
@@ -235,7 +238,7 @@ function getAllJsonFiles(dir) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files.push(...getAllJsonFiles(fullPath));
-    } else if (entry.name.endsWith('.json')) {
+    } else if (entry.name.endsWith(".json")) {
       files.push(fullPath);
     }
   }
@@ -259,32 +262,32 @@ Add to `package.json`:
 Create `scripts/build.js`:
 
 ```javascript
-const StyleDictionary = require('style-dictionary');
+const StyleDictionary = require("style-dictionary");
 
 const sd = StyleDictionary.extend({
-  source: ['tokens/**/*.json'],
+  source: ["tokens/**/*.json"],
   platforms: {
     css: {
-      transformGroup: 'css',
-      buildPath: 'dist/',
+      transformGroup: "css",
+      buildPath: "dist/",
       files: [
         {
-          destination: 'variables.css',
-          format: 'css/variables'
-        }
-      ]
+          destination: "variables.css",
+          format: "css/variables",
+        },
+      ],
     },
     typescript: {
-      transformGroup: 'js',
-      buildPath: 'dist/',
+      transformGroup: "js",
+      buildPath: "dist/",
       files: [
         {
-          destination: 'tokens.ts',
-          format: 'typescript/es6-declarations'
-        }
-      ]
-    }
-  }
+          destination: "tokens.ts",
+          format: "typescript/es6-declarations",
+        },
+      ],
+    },
+  },
 });
 
 sd.buildAllPlatforms();
@@ -300,7 +303,7 @@ Add to `package.json`:
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Validate on every PR
 2. Build outputs automatically
@@ -322,4 +325,3 @@ If CI/CD is not set up:
 - Tool-specific CI/CD setup (see tool docs)
 - Deployment strategies (focus on validation/build)
 - Monitoring and alerting (separate concern)
-

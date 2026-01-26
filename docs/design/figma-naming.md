@@ -233,7 +233,7 @@ tokens/
       font-weight -> {primitives.typography.fontWeight.bold}
 ```
 
-## Best practices
+## Implementation rules
 
 1. Use forward slashes in Figma (`/`)
 2. Use lowercase for all names

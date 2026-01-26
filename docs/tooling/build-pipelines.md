@@ -62,7 +62,7 @@ Style Dictionary config:
 
 - CSS variables
 - TypeScript types
-- Tailwind config
+- Tailwind CSS v4
 - SCSS variables
 
 ### Configuration
@@ -92,12 +92,12 @@ Style Dictionary config:
       ]
     },
     "tailwind": {
-      "transformGroup": "js",
+      "transformGroup": "css",
       "buildPath": "dist/tailwind/",
       "files": [
         {
-          "destination": "tailwind.config.js",
-          "format": "javascript/module"
+          "destination": "theme.css",
+          "format": "css/variables"
         }
       ]
     },
@@ -177,10 +177,7 @@ Generate brand-specific outputs:
 
 ```json
 {
-  "source": [
-    "tokens/base/**/*.json",
-    "tokens/brand-a/**/*.json"
-  ],
+  "source": ["tokens/base/**/*.json", "tokens/brand-a/**/*.json"],
   "platforms": {
     "css-brand-a": {
       "transformGroup": "css",
@@ -205,15 +202,15 @@ Create separate config for each brand or use programmatic approach.
 Create custom transform for Variable Contract naming:
 
 ```javascript
-const StyleDictionary = require('style-dictionary');
+const StyleDictionary = require("style-dictionary");
 
 StyleDictionary.registerTransform({
-  name: 'variable-contract/name',
-  type: 'name',
+  name: "variable-contract/name",
+  type: "name",
   transform: (token) => {
     // Convert dot-separated path to CSS variable name
-    return token.path.join('-').replace(/\$/g, '');
-  }
+    return token.path.join("-").replace(/\$/g, "");
+  },
 });
 ```
 
@@ -270,24 +267,24 @@ style-dictionary.config.json
 `scripts/build.js`:
 
 ```javascript
-const StyleDictionary = require('style-dictionary');
-const fs = require('fs');
+const StyleDictionary = require("style-dictionary");
+const fs = require("fs");
 
 // Validate before build
-const { validate } = require('@dtcg/validator');
-const tokensDir = './tokens';
+const { validate } = require("@dtcg/validator");
+const tokensDir = "./tokens";
 
 function validateTokens() {
   const files = getAllJsonFiles(tokensDir);
   let hasErrors = false;
 
   for (const file of files) {
-    const content = JSON.parse(fs.readFileSync(file, 'utf8'));
+    const content = JSON.parse(fs.readFileSync(file, "utf8"));
     const errors = validate(content);
 
     if (errors.length > 0) {
       console.error(`Errors in ${file}:`);
-      errors.forEach(error => console.error(`  - ${error.message}`));
+      errors.forEach((error) => console.error(`  - ${error.message}`));
       hasErrors = true;
     }
   }
@@ -305,7 +302,7 @@ function getAllJsonFiles(dir) {
     const fullPath = `${dir}/${entry.name}`;
     if (entry.isDirectory()) {
       files.push(...getAllJsonFiles(fullPath));
-    } else if (entry.name.endsWith('.json')) {
+    } else if (entry.name.endsWith(".json")) {
       files.push(fullPath);
     }
   }
@@ -317,10 +314,10 @@ function getAllJsonFiles(dir) {
 validateTokens();
 
 // Then build
-const sd = StyleDictionary.extend('./style-dictionary.config.json');
+const sd = StyleDictionary.extend("./style-dictionary.config.json");
 sd.buildAllPlatforms();
 
-console.log('Build complete!');
+console.log("Build complete!");
 ```
 
 ### Package.json scripts
@@ -335,7 +332,7 @@ console.log('Build complete!');
 }
 ```
 
-## Best practices
+## Implementation rules
 
 1. Validate before building
 2. Generate all needed outputs
@@ -357,4 +354,3 @@ If build pipeline is wrong:
 - Tool-specific build configs (see tool docs)
 - Deployment strategies (focus on build)
 - Build optimization (see performance docs)
-
