@@ -15,7 +15,7 @@ Before adopting Variable Contract:
 - Designers use Figma (or similar design tool)
 - Developers use version control (Git)
 - Team has CI/CD pipeline (or can set one up)
-- Design Systems Engineer role exists (or can be assigned)
+- Design Engineer role exists (or can be assigned)
 
 ## Adoption phases
 
@@ -24,11 +24,13 @@ Before adopting Variable Contract:
 **Goal**: Set up structure and tooling
 
 1. Create variable repository structure
+
    - Set up `tokens/` directory in version control
    - Create initial Variable Contract JSON files
    - Set up file organization (base, semantic, component)
 
 2. Set up validation
+
    - Install validation tools
    - Configure CI validation
    - Set up pre-commit hooks
@@ -39,6 +41,7 @@ Before adopting Variable Contract:
    - Set up review process
 
 **Deliverables**:
+
 - Variable repository structure
 - CI validation running
 - Team documentation
@@ -54,6 +57,7 @@ Before adopting Variable Contract:
 5. Generate initial outputs (CSS, TypeScript)
 
 **Deliverables**:
+
 - First Variable Contract JSON files
 - Generated CSS/TypeScript outputs
 - Validation passing
@@ -68,6 +72,7 @@ Before adopting Variable Contract:
 4. Document consumption patterns
 
 **Deliverables**:
+
 - Components using variables
 - TypeScript types working
 - Consumption documented
@@ -82,13 +87,14 @@ Before adopting Variable Contract:
 4. Document change workflow
 
 **Deliverables**:
+
 - Team trained
 - Review process working
 - Workflow documented
 
 ## Team roles
 
-### Design Systems Engineer
+### Design Engineer
 
 Responsibilities:
 
@@ -96,6 +102,7 @@ Responsibilities:
 - Review variable changes
 - Set up validation and CI
 - Manage versioning and releases
+- Bridge design and development
 
 ### Designer
 
@@ -153,7 +160,7 @@ name: Validate Variables
 on:
   pull_request:
     paths:
-      - 'tokens/**/*.json'
+      - "tokens/**/*.json"
 
 jobs:
   validate:
@@ -254,4 +261,3 @@ After adoption:
 - Tool-specific setup (see adapter documentation)
 - Design system creation (focus on variables)
 - Component library setup (separate concern)
-

@@ -103,9 +103,14 @@ module.exports = {
           icon: "help-circle",
         },
         {
-          title: "Role: Design Systems Engineer",
-          path: "governance/roles/design-systems-engineer",
-          icon: "user",
+          title: "Roles",
+          icon: "users",
+          collapsible: true,
+          children: [
+            { title: "Designer", path: "governance/roles/designer", icon: "pen-tool" },
+            { title: "Design Engineer", path: "governance/roles/design-engineer", icon: "user" },
+            { title: "Frontend Developer", path: "governance/roles/frontend-developer", icon: "code" },
+          ],
         },
       ],
     },
@@ -190,6 +195,11 @@ module.exports = {
           path: "adapters/style-dictionary",
           icon: "code",
         },
+        {
+          title: "Tailwind",
+          path: "adapters/tailwind",
+          icon: "wind",
+        },
       ],
     },
     {
@@ -213,6 +223,21 @@ module.exports = {
           icon: "arrow-right",
         },
       ],
+    },
+    {
+      title: "Reference",
+      icon: "book",
+      collapsible: true,
+      children: [
+        { title: "Glossary", path: "reference/glossary", icon: "book-open" },
+        { title: "Quick Reference", path: "reference/quick-reference", icon: "zap" },
+        { title: "Conformance", path: "reference/conformance", icon: "check-circle" },
+      ],
+    },
+    {
+      title: "FAQ",
+      icon: "help-circle",
+      path: "faq",
     },
   ],
 };

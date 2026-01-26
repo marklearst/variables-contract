@@ -12,7 +12,7 @@ Before starting implementation, verify:
 
 ### Team readiness
 
-- [ ] Design Systems Engineer role assigned
+- [ ] Design Engineer role assigned
 - [ ] Designers available for training
 - [ ] Developers available for integration
 - [ ] Team understands Variable Contract concept
@@ -76,6 +76,56 @@ During implementation, complete:
 - [ ] Document change workflow
 - [ ] Create PR template for variable changes
 - [ ] Set up release process
+
+## Conformance checklist
+
+To claim Variable Contract compliance, verify:
+
+### Format compliance
+
+- [ ] DTCG 2025.10 format used for all variable JSON
+- [ ] All variables have `$type` and `$value`
+- [ ] Valid DTCG types used (color, dimension, etc.)
+- [ ] Group structure used correctly
+
+### Naming compliance
+
+- [ ] Dot-separated paths used (example: `color.text.primary`)
+- [ ] Lowercase segments used
+- [ ] No platform names in variable names
+- [ ] Semantic aliases used for UI consumption
+
+### Reference compliance
+
+- [ ] Canonical reference syntax used (`{path.to.variable}`)
+- [ ] All references resolve correctly
+- [ ] No circular references detected
+- [ ] JSON Pointer syntax supported (if needed for DTCG compliance)
+
+### Validation compliance
+
+- [ ] Structure validation implemented
+- [ ] Naming validation implemented
+- [ ] Reference validation implemented
+- [ ] Circular reference detection implemented
+- [ ] CI validation configured
+- [ ] Validation blocks invalid changes
+
+### Versioning compliance
+
+- [ ] Semantic versioning used (MAJOR.MINOR.PATCH)
+- [ ] Breaking changes documented
+- [ ] Migration paths provided
+- [ ] Deprecated variables marked before removal
+
+### Governance compliance
+
+- [ ] Change control process defined
+- [ ] Roles assigned (Designer, Design Engineer, Frontend Developer)
+- [ ] Review process documented
+- [ ] Release process documented
+
+See [Conformance](reference/conformance) for complete conformance requirements.
 
 ## Post-implementation validation
 
