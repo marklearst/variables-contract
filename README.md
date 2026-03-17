@@ -2,8 +2,8 @@
 
 Public specification and governance standard for design variables. DTCG 2025.10 compliant format with naming rules, validation requirements, versioning strategy, and adapter patterns.
 
-**Version:** 1.0.0
-**Status:** Stable
+**Version:** 0.3.3
+**Status:** Draft
 **Editor:** Mark Learst
 
 Variables are variables. CSS variables, JavaScript variables, Figma variables. Variable Contract standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
