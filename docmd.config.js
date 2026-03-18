@@ -11,8 +11,8 @@ module.exports = {
     defaultCollapsed: false,
   },
   theme: {
-    name: "sky",
-    defaultMode: "light",
+    name: "default",
+    defaultMode: "dark",
     enableModeToggle: true,
     positionMode: "top",
   },
@@ -25,9 +25,21 @@ module.exports = {
       icon: "book",
       collapsible: true,
       children: [
-        { title: "Why Variables", path: "introduction/why-variables", icon: "help-circle" },
-        { title: "Comparison", path: "introduction/comparison", icon: "git-compare" },
-        { title: "Positioning", path: "introduction/positioning", icon: "target" },
+        {
+          title: "Why Variables",
+          path: "introduction/why-variables",
+          icon: "help-circle",
+        },
+        {
+          title: "Comparison",
+          path: "introduction/comparison",
+          icon: "git-compare",
+        },
+        {
+          title: "Positioning",
+          path: "introduction/positioning",
+          icon: "target",
+        },
       ],
     },
     {
@@ -40,12 +52,24 @@ module.exports = {
           path: "contract/variable-contract",
           icon: "file-text",
         },
-        { title: "DTCG Alignment", path: "contract/dtcg-alignment", icon: "link" },
+        {
+          title: "DTCG Alignment",
+          path: "contract/dtcg-alignment",
+          icon: "link",
+        },
         { title: "Groups", path: "contract/groups", icon: "folder" },
-        { title: "References", path: "contract/references", icon: "arrow-right" },
+        {
+          title: "References",
+          path: "contract/references",
+          icon: "arrow-right",
+        },
         { title: "Modes", path: "contract/modes", icon: "toggle-left" },
         { title: "Types", path: "contract/types", icon: "type" },
-        { title: "Composite Types", path: "contract/composite-types", icon: "layers" },
+        {
+          title: "Composite Types",
+          path: "contract/composite-types",
+          icon: "layers",
+        },
         { title: "Naming", path: "contract/naming", icon: "tag" },
         { title: "Anatomy", path: "contract/anatomy", icon: "layers" },
       ],
@@ -55,9 +79,21 @@ module.exports = {
       icon: "rocket",
       collapsible: true,
       children: [
-        { title: "Getting Started", path: "adoption/getting-started", icon: "flag" },
-        { title: "Implementation Checklist", path: "adoption/implementation-checklist", icon: "check-square" },
-        { title: "Migration Strategy", path: "adoption/migration-strategy", icon: "arrow-right" },
+        {
+          title: "Getting Started",
+          path: "adoption/getting-started",
+          icon: "flag",
+        },
+        {
+          title: "Implementation Checklist",
+          path: "adoption/implementation-checklist",
+          icon: "check-square",
+        },
+        {
+          title: "Migration Strategy",
+          path: "adoption/migration-strategy",
+          icon: "arrow-right",
+        },
       ],
     },
     {
@@ -107,9 +143,21 @@ module.exports = {
           icon: "users",
           collapsible: true,
           children: [
-            { title: "Designer", path: "governance/roles/designer", icon: "pen-tool" },
-            { title: "Design Engineer", path: "governance/roles/design-engineer", icon: "user" },
-            { title: "Frontend Developer", path: "governance/roles/frontend-developer", icon: "code" },
+            {
+              title: "Designer",
+              path: "governance/roles/designer",
+              icon: "pen-tool",
+            },
+            {
+              title: "Design Engineer",
+              path: "governance/roles/design-engineer",
+              icon: "user",
+            },
+            {
+              title: "Frontend Developer",
+              path: "governance/roles/frontend-developer",
+              icon: "code",
+            },
           ],
         },
       ],
@@ -119,10 +167,22 @@ module.exports = {
       icon: "layers",
       collapsible: true,
       children: [
-        { title: "Multi-Brand", path: "scenarios/multi-brand", icon: "palette" },
-        { title: "Multi-Theme", path: "scenarios/multi-theme", icon: "toggle-left" },
+        {
+          title: "Multi-Brand",
+          path: "scenarios/multi-brand",
+          icon: "palette",
+        },
+        {
+          title: "Multi-Theme",
+          path: "scenarios/multi-theme",
+          icon: "toggle-left",
+        },
         { title: "Large Sets", path: "scenarios/large-sets", icon: "database" },
-        { title: "Component Integration", path: "scenarios/component-integration", icon: "package" },
+        {
+          title: "Component Integration",
+          path: "scenarios/component-integration",
+          icon: "package",
+        },
       ],
     },
     {
@@ -132,10 +192,22 @@ module.exports = {
       children: [
         { title: "Ecosystem", path: "tooling/ecosystem", icon: "grid" },
         { title: "CI/CD", path: "tooling/ci-cd", icon: "git-branch" },
-        { title: "Build Pipelines", path: "tooling/build-pipelines", icon: "settings" },
+        {
+          title: "Build Pipelines",
+          path: "tooling/build-pipelines",
+          icon: "settings",
+        },
         { title: "Figma", path: "adapters/figma", icon: "pen-tool" },
-        { title: "Tokens Studio", path: "adapters/tokens-studio", icon: "sliders" },
-        { title: "Style Dictionary", path: "adapters/style-dictionary", icon: "code" },
+        {
+          title: "Tokens Studio",
+          path: "adapters/tokens-studio",
+          icon: "sliders",
+        },
+        {
+          title: "Style Dictionary",
+          path: "adapters/style-dictionary",
+          icon: "code",
+        },
       ],
     },
     {
@@ -154,8 +226,16 @@ module.exports = {
       collapsible: true,
       children: [
         { title: "Figma Naming", path: "design/figma-naming", icon: "tag" },
-        { title: "Figma Workflow", path: "design/figma-workflow", icon: "workflow" },
-        { title: "Component Variables", path: "design/component-variables", icon: "package" },
+        {
+          title: "Figma Workflow",
+          path: "design/figma-workflow",
+          icon: "workflow",
+        },
+        {
+          title: "Component Variables",
+          path: "design/component-variables",
+          icon: "package",
+        },
       ],
     },
     {
@@ -163,9 +243,21 @@ module.exports = {
       icon: "check-circle",
       collapsible: true,
       children: [
-        { title: "Validation", path: "testing/validation", icon: "check-square" },
-        { title: "Visual Regression", path: "testing/visual-regression", icon: "image" },
-        { title: "Consumption Tests", path: "testing/consumption-tests", icon: "test-tube" },
+        {
+          title: "Validation",
+          path: "testing/validation",
+          icon: "check-square",
+        },
+        {
+          title: "Visual Regression",
+          path: "testing/visual-regression",
+          icon: "image",
+        },
+        {
+          title: "Consumption Tests",
+          path: "testing/consumption-tests",
+          icon: "test-tube",
+        },
       ],
     },
     {
@@ -173,8 +265,16 @@ module.exports = {
       icon: "layers",
       collapsible: true,
       children: [
-        { title: "Multi-Brand Architecture", path: "patterns/multi-brand-architecture", icon: "palette" },
-        { title: "Theme Composition", path: "patterns/theme-composition", icon: "toggle-left" },
+        {
+          title: "Multi-Brand Architecture",
+          path: "patterns/multi-brand-architecture",
+          icon: "palette",
+        },
+        {
+          title: "Theme Composition",
+          path: "patterns/theme-composition",
+          icon: "toggle-left",
+        },
         { title: "Performance", path: "patterns/performance", icon: "zap" },
       ],
     },
@@ -230,8 +330,16 @@ module.exports = {
       collapsible: true,
       children: [
         { title: "Glossary", path: "reference/glossary", icon: "book-open" },
-        { title: "Quick Reference", path: "reference/quick-reference", icon: "zap" },
-        { title: "Conformance", path: "reference/conformance", icon: "check-circle" },
+        {
+          title: "Quick Reference",
+          path: "reference/quick-reference",
+          icon: "zap",
+        },
+        {
+          title: "Conformance",
+          path: "reference/conformance",
+          icon: "check-circle",
+        },
       ],
     },
     {
