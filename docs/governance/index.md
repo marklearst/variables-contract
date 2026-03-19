@@ -32,21 +32,21 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 
 ## Next docs to read
 
-- [Getting Started](/variable-contract/governance/getting-started)
-- [Change Control](/variable-contract/governance/change-control)
-- [Validation](/variable-contract/governance/validation)
-- [Versioning](/variable-contract/governance/versioning)
-- [Migration](/variable-contract/governance/migration)
-- [Troubleshooting](/variable-contract/governance/troubleshooting)
+- [Getting Started](/variables-contract/governance/getting-started)
+- [Change Control](/variables-contract/governance/change-control)
+- [Validation](/variables-contract/governance/validation)
+- [Versioning](/variables-contract/governance/versioning)
+- [Migration](/variables-contract/governance/migration)
+- [Troubleshooting](/variables-contract/governance/troubleshooting)
 
 ## Roles
 
-- [Designer](/variable-contract/governance/roles/designer) - Creates variables in Figma
-- [Design Engineer](/variable-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
-- [Frontend Developer](/variable-contract/governance/roles/frontend-developer) - Consumes variables in code
+- [Designer](/variables-contract/governance/roles/designer) - Creates variables in Figma
+- [Design Engineer](/variables-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
+- [Frontend Developer](/variables-contract/governance/roles/frontend-developer) - Consumes variables in code
 
 ## Reference
 
-- [Naming](/variable-contract/contract/naming)
-- [Tokens Studio](/variable-contract/adapters/tokens-studio)
-- [Accessibility](/variable-contract/governance/accessibility)
+- [Naming](/variables-contract/contract/naming)
+- [Tokens Studio](/variables-contract/adapters/tokens-studio)
+- [Accessibility](/variables-contract/governance/accessibility)

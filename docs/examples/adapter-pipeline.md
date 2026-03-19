@@ -57,7 +57,7 @@ Figma Variables export JSON:
 
 ## Step 2: Figma adapter normalization
 
-After running the Figma adapter (see [Figma Adapter](/variable-contract/examples/adapters/figma)):
+After running the Figma adapter (see [Figma Adapter](/variables-contract/examples/adapters/figma)):
 
 ```json
 {

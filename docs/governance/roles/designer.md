@@ -14,11 +14,11 @@ Design Engineer reviews and approves all variable changes before they enter the 
 
 ## Responsibilities
 
-- Create variables in Figma following naming convention (see [Naming](/variable-contract/contract/naming)).
+- Create variables in Figma following naming convention (see [Naming](/variables-contract/contract/naming)).
 - Define semantic intent for variables (what they represent, not just values).
 - Define mode values (light/dark, mobile/desktop) when needed.
-- Use variables in Figma components (see [Component Variables](/variable-contract/design/component-variables)).
-- Export variables for normalization (see [Figma Workflow](/variable-contract/design/figma-workflow)).
+- Use variables in Figma components (see [Component Variables](/variables-contract/design/component-variables)).
+- Export variables for normalization (see [Figma Workflow](/variables-contract/design/figma-workflow)).
 - Submit variable changes for review by Design Engineer.
 
 ## Boundaries

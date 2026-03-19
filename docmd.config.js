@@ -1,11 +1,11 @@
 // docmd.config.js: basic config for docmd
-// basePath is "/variable-contract" for GitHub Pages
+// basePath is "/variables-contract" for GitHub Pages
 // Vercel deploys from gh-pages branch (same build) and uses rewrites
-const basePath = "/variable-contract";
-const siteUrl = "https://marklearst.github.io/variable-contract";
+const basePath = "/variables-contract";
+const siteUrl = "https://marklearst.github.io/variables-contract";
 
 module.exports = {
-  siteTitle: "Variable Contract",
+  siteTitle: "Variables Contract",
   srcDir: "docs",
   outputDir: "site",
   basePath,
