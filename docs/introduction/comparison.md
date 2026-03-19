@@ -8,17 +8,17 @@ How Variable Contract compares to other variable/token standards and why it wins
 
 ## Comparison matrix
 
-| Feature | Variable Contract | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
-|---------|------------------|--------------|------------------|-----------------|----------------|
-| Format | DTCG 2025.10 | DTCG 2025.10 | Legacy + DTCG | Custom JSON | Custom JSON |
-| Governance | Yes | No | No | Partial | Partial |
-| Naming rules | Yes | No | No | Yes | Yes |
-| Validation | Yes | Format only | Format only | Partial | Partial |
-| Versioning | Yes | No | No | Yes | Yes |
-| Adapters | Yes | No | Tool-specific | No | No |
-| Tool-agnostic | Yes | Yes | No | No | No |
-| Designer-focused | Yes | No | No | Yes | Yes |
-| Developer-focused | Yes | No | Yes | Partial | Partial |
+| Feature           | Variable Contract | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
+| ----------------- | ----------------- | ------------ | ---------------- | --------------- | -------------- |
+| Format            | DTCG 2025.10      | DTCG 2025.10 | Legacy + DTCG    | Custom JSON     | Custom JSON    |
+| Governance        | Yes               | No           | No               | Partial         | Partial        |
+| Naming rules      | Yes               | No           | No               | Yes             | Yes            |
+| Validation        | Yes               | Format only  | Format only      | Partial         | Partial        |
+| Versioning        | Yes               | No           | No               | Yes             | Yes            |
+| Adapters          | Yes               | No           | Tool-specific    | No              | No             |
+| Tool-agnostic     | Yes               | Yes          | No               | No              | No             |
+| Designer-focused  | Yes               | No           | No               | Yes             | Yes            |
+| Developer-focused | Yes               | No           | Yes              | Partial         | Partial        |
 
 ## Variable Contract vs DTCG 2025.10
 
@@ -197,4 +197,3 @@ See [Migration Strategy](/variables-contract/introduction/adoption/migration-str
 - Replacing Style Dictionary (we work with it)
 - Replacing design systems (we govern variables)
 - Tool-specific features (we're tool-agnostic)
-

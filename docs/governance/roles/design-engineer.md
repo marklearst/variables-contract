@@ -45,14 +45,14 @@ Design Engineer MUST demonstrate proficiency in:
 
 These skills can be verified:
 
-| Skill | Verification |
-|-------|--------------|
-| Figma component libraries | Show a component library you built. Walk through the structure. |
-| Storybook | Write a story file and MDX doc for a component. Explain the patterns. |
-| CSS | Debug a styling issue without dev tools hints. Explain the cascade. |
-| React | Build a component with TypeScript. Explain the architecture decisions. |
-| Design systems | Explain your naming convention. Walk through base/alias/component layers. |
-| Translation | Given a Figma component, explain how you would structure it in React. Given a React constraint, explain how you would communicate it to design. |
+| Skill                     | Verification                                                                                                                                    |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Figma component libraries | Show a component library you built. Walk through the structure.                                                                                 |
+| Storybook                 | Write a story file and MDX doc for a component. Explain the patterns.                                                                           |
+| CSS                       | Debug a styling issue without dev tools hints. Explain the cascade.                                                                             |
+| React                     | Build a component with TypeScript. Explain the architecture decisions.                                                                          |
+| Design systems            | Explain your naming convention. Walk through base/alias/component layers.                                                                       |
+| Translation               | Given a Figma component, explain how you would structure it in React. Given a React constraint, explain how you would communicate it to design. |
 
 If a candidate cannot demonstrate these skills, they are not ready for this role.
 

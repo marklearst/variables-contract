@@ -4,7 +4,7 @@ title: Tokens Studio Adapter
 
 # Tokens Studio Adapter
 
-Tokens Studio exports are close to Variable Contract format but may include Tokens Studio-specific metadata. This adapter normalizes Tokens Studio exports.
+Tokens Studio exports are close to Variables Contract format but may include Tokens Studio-specific metadata. This adapter normalizes Tokens Studio exports.
 
 ## Input format
 
