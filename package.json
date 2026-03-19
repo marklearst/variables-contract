@@ -1,7 +1,7 @@
 {
   "name": "variable-contract",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.3.5",
   "packageManager": "pnpm@10.26.0",
   "scripts": {
     "docs:dev": "docmd dev",
