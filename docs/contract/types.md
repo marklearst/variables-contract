@@ -257,7 +257,7 @@ Examples:
 
 ## Composite types
 
-Composite types combine multiple primitive types into structured values. See [Composite Types](/variables-contract/contract/composite-types) for details.
+Composite types combine multiple primitive types into structured values. See [Composite Types](composite-types) for details.
 
 Supported composite types:
 

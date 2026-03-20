@@ -8,7 +8,7 @@ Governance is how you keep a token change from turning into a cleanup project ac
 
 The rules here treat variable names and references like an API: changes are reviewed, and breaking changes are called out.
 
-The contract rules (schema and validation expectations) live in [Variable Contract](/variables-contract/contract/variable-contract).
+The contract rules (schema and validation expectations) live in [Variable Contract](../contract/variable-contract).
 
 ## Principles
 
@@ -25,9 +25,9 @@ The contract rules (schema and validation expectations) live in [Variable Contra
 
 ## Roles
 
-- [Designer](/variables-contract/governance/roles/designer) - Creates variables in Figma
-- [Design Engineer](/variables-contract/governance/roles/design-engineer) - Bridges design and development, owns contract
-- [Frontend Developer](/variables-contract/governance/roles/frontend-developer) - Consumes variables in code
+- [Designer](roles/designer) - Creates variables in Figma
+- [Design Engineer](roles/design-engineer) - Bridges design and development, owns contract
+- [Frontend Developer](roles/frontend-developer) - Consumes variables in code
 
 ## Scope
 

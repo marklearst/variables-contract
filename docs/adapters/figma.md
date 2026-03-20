@@ -212,7 +212,7 @@ After:
 
 ### Step 6: Validate naming
 
-Check that normalized names follow Variable Contract naming convention (see [Naming](/variables-contract/adapters/contract/naming)).
+Check that normalized names follow Variable Contract naming convention (see [Naming](../contract/naming)).
 
 - Names MUST use dot-separated paths
 - Names MUST be lowercase
@@ -354,12 +354,12 @@ Designers author variables in Figma. Changes flow through export, normalization,
 2. Design Engineer runs Figma adapter to normalize export JSON.
 3. Design Engineer commits normalized JSON to version control.
 4. Design Engineer opens PR for review.
-5. Reviewers check naming, types, references (see [Change Control](/variables-contract/adapters/governance/change-control)).
+5. Reviewers check naming, types, references (see [Change Control](../governance/change-control)).
 6. After merge, CI generates build outputs.
 
 ### What gets reviewed
 
-- Variable names follow naming convention ([Naming](/variables-contract/adapters/contract/naming))
+- Variable names follow naming convention ([Naming](../contract/naming))
 - References resolve correctly
 - Modes are limited (`light`, `dark`)
 - No duplicate values when base tokens exist
