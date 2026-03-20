@@ -47,6 +47,6 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 
 ## Reference
 
-- [Naming](../contract/naming)
-- [Tokens Studio](../adapters/tokens-studio)
+- [Naming](/contract/naming)
+- [Tokens Studio](/adapters/tokens-studio)
 - [Accessibility](accessibility)

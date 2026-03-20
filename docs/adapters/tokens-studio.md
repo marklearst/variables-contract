@@ -74,7 +74,7 @@ This format is already correct. No transformation needed.
 
 ### Step 4: Validate naming
 
-Check that names follow Variable Contract naming convention (see [Naming](../contract/naming)).
+Check that names follow Variable Contract naming convention (see [Naming](/contract/naming)).
 
 - Names MUST use dot-separated paths
 - Names MUST be lowercase
@@ -204,12 +204,12 @@ Designers author variables in Figma using Tokens Studio plugin. The repo JSON is
 2. Design Engineer validates export JSON (run adapter if needed).
 3. Design Engineer commits JSON to version control.
 4. Design Engineer opens PR for review.
-5. Reviewers check naming, types, references (see [Change Control](../governance/change-control)).
+5. Reviewers check naming, types, references (see [Change Control](/governance/change-control)).
 6. After merge, CI validates JSON and generates build outputs.
 
 ### What gets reviewed
 
-- Variable names follow naming convention ([Naming](../contract/naming))
+- Variable names follow naming convention ([Naming](/contract/naming))
 - References resolve correctly
 - Token organization (base, semantic, component layers)
 - Breaking changes are documented
@@ -232,7 +232,7 @@ Before exporting from Tokens Studio:
 - Semantic aliases: reference base tokens, describe usage
 - Component tokens: reference semantic aliases, component-scoped
 
-See [Anatomy](../contract/anatomy) for details.
+See [Anatomy](/contract/anatomy) for details.
 
 ### Artifacts that change
 

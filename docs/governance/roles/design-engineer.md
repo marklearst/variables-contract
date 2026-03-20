@@ -60,7 +60,7 @@ If a candidate cannot demonstrate these skills, they are not ready for this role
 
 ### Contract owner responsibilities
 
-- Own the Variable Contract ([Variable Contract](../../contract/variable-contract)).
+- Own the Variable Contract ([Variable Contract](/contract/variable-contract)).
 - Approve all variable changes before they enter version control.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
