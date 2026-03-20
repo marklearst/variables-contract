@@ -9,8 +9,8 @@ Public spec for design variables: JSON shape, naming, references, modes, and cha
 ## Start here
 
 - [Why Variables](introduction/why-variables) - Why we call them variables, not design tokens
-- [Variable Contract](contract/variable-contract) - JSON shape and structure
-- [Variable Governance](governance/overview) - Governance principles and workflow
+- [Variables Contract](contract/variable-contract) - JSON shape and structure
+- [Variables Governance](governance/overview) - Governance principles and workflow
 - [DTCG Alignment](contract/dtcg-alignment) - DTCG 2025.10 compliance
 - [Getting Started](adoption/getting-started) - Team adoption guide
 
