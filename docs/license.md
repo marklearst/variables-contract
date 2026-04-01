@@ -55,7 +55,7 @@ JSON files should include:
 
 ```json
 {
-  "$schema": "https://variables-contract.vercel.app/schema/v1.json"
+  "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json"
 }
 ```
 
