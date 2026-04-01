@@ -345,12 +345,22 @@ module.exports = {
           path: "reference/conformance",
           icon: "check-circle",
         },
+        {
+          title: "JSON Schema",
+          path: "schema",
+          icon: "code",
+        },
       ],
     },
     {
       title: "FAQ",
       icon: "help-circle",
       path: "faq",
+    },
+    {
+      title: "License",
+      icon: "file-text",
+      path: "license",
     },
   ],
 };

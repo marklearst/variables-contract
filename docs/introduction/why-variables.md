@@ -4,6 +4,10 @@ title: Why Variables
 
 # Why Variables
 
+::: callout info Part of the Variables Contract Specification
+This page is part of the [Variables Contract](../contract/variable-contract) governed specification. See [License](../license) for usage terms.
+:::
+
 Variables are variables. CSS variables, JavaScript variables, Figma variables. They're all variables.
 
 If you call them "design tokens" or "style properties" or "design constants," you create confusion. Developers know variables. Designers know variables. Variable Contract uses the term everyone understands.
@@ -97,4 +101,3 @@ If you use confusing terminology:
 - Changing industry terminology (we use "variables" internally)
 - Convincing others to use "variables" (they can call them what they want)
 - Tool naming (tools can use their own terms)
-

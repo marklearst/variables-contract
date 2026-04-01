@@ -100,7 +100,9 @@ See [Anatomy](contract/anatomy) for details.
 
 ## Can I contribute?
 
-Yes. Variable Contract is open source. Contributions welcome. See [Contributors](meta/contributors) for details.
+Yes. Contributions welcome. See [Contributors](meta/contributors) for details.
+
+See [License](license) for usage terms.
 
 ## Is Variable Contract production-ready?
 

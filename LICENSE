@@ -1,7 +1,173 @@
-Creative Commons Attribution 4.0 International
+VARIABLES CONTRACT SPECIFICATION LICENSE
 
-This work is licensed under the Creative Commons Attribution 4.0 International License.
+Copyright (c) 2021-2026 Mark Learst
 
-To view a copy of this license, visit:
+================================================================================
+PART I. BASE LICENSE (CC BY-ND 4.0)
+================================================================================
 
-https://creativecommons.org/licenses/by/4.0/
+This Specification is licensed under the Creative Commons Attribution-
+NoDerivatives 4.0 International License (CC BY-ND 4.0).
+
+You are free to:
+
+- Share: Copy and redistribute the Specification in any medium or format
+- Implement: Build software that conforms to the Specification
+
+Under the following terms:
+
+- Attribution: You must give appropriate credit, provide a link to the
+  license, and indicate if changes were made.
+- NoDerivatives: If you remix, transform, or build upon the Specification,
+  you may not distribute the modified specification as an alternative standard.
+
+Full license text: https://creativecommons.org/licenses/by-nd/4.0/legalcode
+
+================================================================================
+PART II. ADDITIONAL TERMS (STANDARDS INTEGRITY ADDENDUM)
+================================================================================
+
+The following additional terms apply to uses of this Specification beyond
+personal reference and internal implementation. These terms are designed to
+prevent ecosystem fragmentation and protect standards integrity.
+
+By using this Specification in any public-facing capacity, you agree to these
+additional terms.
+
+---
+
+## A. DEFINITIONS
+
+"Specification" means the Variables Contract protocol, including all documentation,
+JSON schemas, naming conventions, governance rules, architectural patterns, and
+code examples published at the Canonical Source.
+
+"Canonical Source" means https://variables-contract.vercel.app
+
+"Synthetic Derivative" means any work produced by inputting the Specification
+into a Generative AI system, Large Language Model, or similar automated system
+for the purpose of generating rephrased, restructured, or "original" content
+that replicates the structure, methodology, or technical approach of the
+Specification.
+
+"Conformant Implementation" means software that fully implements the Specification:
+Variable Anatomy (Base, Alias, Component), Mode resolution, Reference syntax,
+DTCG-aligned JSON structure, and Naming conventions.
+
+---
+
+## B. ATTRIBUTION REQUIREMENTS
+
+B.1 PUBLIC TOOLING
+Any public-facing software claiming compatibility with the Specification must
+include attribution visible to end users:
+
+    "Built on the Variables Contract Specification
+     https://variables-contract.vercel.app"
+
+B.2 METADATA ATTRIBUTION
+JSON files claiming conformance should include:
+
+    "$schema": "https://variables-contract.vercel.app/schema/v1.json"
+
+---
+
+## C. CONFORMANCE CLAIMS
+
+C.1 "VARIABLES CONTRACT CONFORMANT"
+To claim conformance, an implementation must:
+a. Support full Variable Anatomy (Base, Alias, Component)
+b. Support Mode resolution and inheritance
+c. Support Reference syntax and resolution
+d. Output valid DTCG-aligned JSON with references (not flattened values)
+e. Enforce or validate Naming conventions
+
+C.2 "VARIABLES CONTRACT COMPATIBLE"
+To claim compatibility, an implementation must:
+a. Not corrupt Specification-compliant data
+b. Include Attribution per Section B
+
+C.3 FALSE CLAIMS
+Claiming conformance or compatibility while failing to meet requirements
+constitutes fraud and breach of these terms.
+
+---
+
+## D. PROHIBITED ACTS
+
+D.1 SYNTHETIC DERIVATIVES (AI LAUNDERING)
+You may NOT use the Specification as input to AI systems to:
+a. Generate competing standards or protocols
+b. Produce "original" content replicating the Specification without attribution
+c. Create AI training data for generating standards-related content
+
+PERMITTED: Using AI to write code that implements the Specification.
+PROHIBITED: Using AI to rewrite or obscure the origin of the Specification.
+
+D.2 COMPETING STANDARDS
+You may NOT publish a competing standard incorporating substantial elements
+of this Specification without:
+a. Written permission from the Copyright Holder, OR
+b. Clear attribution linking to the Canonical Source
+
+D.3 FALSE COMPATIBILITY
+You may NOT market a tool as "Variables Contract compatible" if it:
+a. Omits required structural elements (Anatomy, Modes, References)
+b. Outputs non-conformant data (flattened hex values instead of references)
+c. Contradicts the governance principles of the Specification
+
+D.4 NAME MISAPPROPRIATION
+You may NOT use "Variables Contract" or "VCSL" to imply endorsement or
+affiliation without written permission.
+
+---
+
+## E. ENFORCEMENT
+
+E.1 AUTOMATIC TERMINATION
+Your rights under this license terminate immediately upon:
+a. Creating or distributing a Synthetic Derivative
+b. Publishing a Competing Standard without permission/attribution
+c. Making false conformance claims
+d. Misappropriating the Variables Contract name
+
+E.2 EFFECT OF TERMINATION
+Upon termination:
+a. All rights cease immediately
+b. Continued use constitutes copyright infringement
+c. You must cease all public conformance claims
+
+E.3 NO AUTOMATIC REINSTATEMENT
+Termination is not cured by ceasing violation. Reinstatement requires
+written permission from the Copyright Holder.
+
+E.4 RESERVED RIGHTS
+The Copyright Holder reserves the right to:
+a. Publicly identify non-conformant implementations
+b. Issue takedown requests to platforms hosting infringing content
+c. Pursue legal remedies for infringement or misrepresentation
+d. Request evidence of independent development where substantial
+similarity exists
+
+---
+
+## F. NO TRADEMARK GRANT
+
+This license grants no trademark rights. "Variables Contract" may only be used
+for truthful conformance statements per Section C.
+
+---
+
+## G. WARRANTY DISCLAIMER
+
+THE SPECIFICATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. THE
+COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM USE OF
+THE SPECIFICATION.
+
+================================================================================
+
+Canonical Source: https://variables-contract.vercel.app
+Schema: https://variables-contract.vercel.app/schema/v1.json
+License Inquiries: https://variables-contract.vercel.app/license
+
+================================================================================

@@ -4,7 +4,18 @@ title: Variables Contract
 
 # Variables Contract
 
-Public spec for design variables: JSON shape, naming, references, modes, and change control.
+|                |                                    |
+| -------------- | ---------------------------------- |
+| **Status**     | Draft Standard                     |
+| **Version**    | 0.3.7                              |
+| **Editor**     | Mark Learst                        |
+| **Compliance** | DTCG 2025.10                       |
+| **Schema**     | [v1.json](schema/v1.json)          |
+| **License**    | [CC BY-ND 4.0 + Addendum](license) |
+
+A deterministic protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control.
+
+This specification is protected under the [Variables Contract License](license). Usage for AI-generated derivative standards, false compatibility claims, or ecosystem fragmentation is prohibited.
 
 ## Start here
 
