@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft-07/schema",
   "$id": "https://variables-contract.vercel.app/assets/schema/v1.json",
   "title": "Variables Contract Schema v1",
   "description": "JSON Schema for validating Variables Contract compliant design variable files. DTCG 2025.10 aligned.",
