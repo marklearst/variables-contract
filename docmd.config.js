@@ -23,6 +23,7 @@ module.exports = {
   },
   autoTitleFromH1: true,
   copyCode: true,
+  customJs: ["/assets/js/vercel-analytics.js"],
   navigation: [
     { title: "Home", path: ".", icon: "home" },
     {
