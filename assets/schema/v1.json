@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema",
-  "$id": "https://variables-contract.vercel.app/assets/schema/v1.json",
-  "title": "Variables Contract Schema v1",
-  "description": "JSON Schema for validating Variables Contract compliant design variable files. DTCG 2025.10 aligned.",
+  "$id": "https://variable-design-standard.vercel.app/assets/schema/v1.json",
+  "title": "Variable Design Standard (VDS) JSON Schema v1",
+  "description": "JSON Schema for validating Variable Design Standard (VDS) compliant design variable files. DTCG 2025.10 aligned.",
   "type": "object",
   "additionalProperties": {
     "$ref": "#/$defs/groupOrVariable"
