@@ -2,23 +2,23 @@
 title: Schema
 ---
 
-# Variables Contract JSON Schema
+# Variable Design Standard (VDS) JSON Schema
 
-The Variables Contract provides a JSON Schema for validating design variable files. This schema enforces DTCG 2025.10 alignment and Variables Contract conformance requirements.
+The Variable Design Standard (VDS) provides a JSON Schema for validating design variable files. This schema enforces DTCG 2025.10 alignment and Variable Design Standard (VDS) conformance requirements.
 
 ## Schema URL
 
 ```
-https://variables-contract.vercel.app/assets/schema/v1.json
+https://variable-design-standard.vercel.app/assets/schema/v1.json
 ```
 
 ## Usage
 
-Add the `$schema` property to your Variables Contract JSON files to enable validation:
+Add the `$schema` property to your Variable Design Standard (VDS) JSON files to enable validation:
 
 ```json
 {
-  "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json",
+  "$schema": "https://variable-design-standard.vercel.app/assets/schema/v1.json",
   "color": {
     "primary": {
       "$type": "color",
@@ -177,7 +177,7 @@ The JSON Schema validates structure but cannot check:
 - **Reference resolution** - Whether referenced variables exist
 - **Circular references** - Cycles in reference chains
 - **Mode consistency** - Whether all variables in a collection use the same modes
-- **Naming conventions** - Variables Contract naming rules
+- **Naming conventions** - Variable Design Standard (VDS) naming rules
 
 Use additional validation tooling for complete conformance checking.
 
@@ -186,8 +186,8 @@ Use additional validation tooling for complete conformance checking.
 The schema is available at:
 
 - **URL:** [/assets/schema/v1.json](/assets/schema/v1.json)
-- **Raw:** [GitHub](https://github.com/marklearst/variables-contract/blob/main/docs/schema/v1.json)
+- **Raw:** [GitHub](https://github.com/marklearst/variables-contract/blob/main/assets/schema/v1.json)
 
 ## Conformance
 
-Using this schema for validation is one component of Variables Contract conformance. See [Conformance](/reference/conformance) for complete requirements.
+Using this schema for validation is one component of Variable Design Standard (VDS) conformance. See [Conformance](/reference/conformance) for complete requirements.
