@@ -4,7 +4,7 @@ title: Consumption - Frameworks
 
 # Framework Integration
 
-How to integrate Variable Contract variables with React, Vue, and other frameworks.
+How to integrate Variable Design Standard (VDS) variables with React, Vue, and other frameworks.
 
 ## React integration
 

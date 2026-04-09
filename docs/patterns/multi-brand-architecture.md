@@ -4,7 +4,7 @@ title: Patterns - Multi-Brand Architecture
 
 # Multi-Brand Architecture
 
-Complete example of multi-brand variable architecture using Variable Contract.
+Complete example of multi-brand variable architecture using Variable Design Standard (VDS).
 
 ## Architecture overview
 

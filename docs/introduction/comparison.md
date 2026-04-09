@@ -2,25 +2,25 @@
 title: Comparison
 ---
 
-# Variable Contract vs Other Standards
+# Variable Design Standard (VDS) vs Other Standards
 
-How Variable Contract compares to other variable/token standards and why it wins.
+How Variable Design Standard (VDS) compares to other variable/token standards and why it wins.
 
 ## Comparison matrix
 
-| Feature           | Variable Contract | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
-| ----------------- | ----------------- | ------------ | ---------------- | --------------- | -------------- |
-| Format            | DTCG 2025.10      | DTCG 2025.10 | Legacy + DTCG    | Custom JSON     | Custom JSON    |
-| Governance        | Yes               | No           | No               | Partial         | Partial        |
-| Naming rules      | Yes               | No           | No               | Yes             | Yes            |
-| Validation        | Yes               | Format only  | Format only      | Partial         | Partial        |
-| Versioning        | Yes               | No           | No               | Yes             | Yes            |
-| Adapters          | Yes               | No           | Tool-specific    | No              | No             |
-| Tool-agnostic     | Yes               | Yes          | No               | No              | No             |
-| Designer-focused  | Yes               | No           | No               | Yes             | Yes            |
-| Developer-focused | Yes               | No           | Yes              | Partial         | Partial        |
+| Feature           | VDS          | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
+| ----------------- | ------------ | ------------ | ---------------- | --------------- | -------------- |
+| Format            | DTCG 2025.10 | DTCG 2025.10 | Legacy + DTCG    | Custom JSON     | Custom JSON    |
+| Governance        | Yes          | No           | No               | Partial         | Partial        |
+| Naming rules      | Yes          | No           | No               | Yes             | Yes            |
+| Validation        | Yes          | Format only  | Format only      | Partial         | Partial        |
+| Versioning        | Yes          | No           | No               | Yes             | Yes            |
+| Adapters          | Yes          | No           | Tool-specific    | No              | No             |
+| Tool-agnostic     | Yes          | Yes          | No               | No              | No             |
+| Designer-focused  | Yes          | No           | No               | Yes             | Yes            |
+| Developer-focused | Yes          | No           | Yes              | Partial         | Partial        |
 
-## Variable Contract vs DTCG 2025.10
+## Variable Design Standard (VDS) vs DTCG 2025.10
 
 ### What DTCG provides
 
@@ -32,9 +32,9 @@ DTCG 2025.10 defines:
 - Composite types
 - Group extension
 
-### What Variable Contract adds
+### What Variable Design Standard (VDS) adds
 
-Variable Contract adds governance:
+Variable Design Standard (VDS) adds governance:
 
 - Naming convention rules
 - Change control process
@@ -42,9 +42,9 @@ Variable Contract adds governance:
 - Versioning strategy
 - Adapter patterns
 
-DTCG is a format. Variable Contract is governance on that format.
+DTCG is a format. Variable Design Standard (VDS) is governance on that format.
 
-## Variable Contract vs Style Dictionary
+## Variable Design Standard (VDS) vs Style Dictionary
 
 ### Style Dictionary is a tool
 
@@ -55,18 +55,18 @@ Style Dictionary:
 - Has its own format (legacy) and supports DTCG format
 - Focuses on build pipeline
 
-### Variable Contract is governance
+### Variable Design Standard (VDS) is governance
 
-Variable Contract:
+Variable Design Standard (VDS):
 
 - Defines the contract (format + rules)
 - Works with Style Dictionary (as an output adapter)
 - Focuses on version control and validation
 - Tool-agnostic
 
-They work together: Variable Contract defines the contract, Style Dictionary generates outputs.
+They work together: Variable Design Standard (VDS) defines the contract, Style Dictionary generates outputs.
 
-## Variable Contract vs Material Design
+## Variable Design Standard (VDS) vs Material Design
 
 ### Material Design is opinionated
 
@@ -77,18 +77,18 @@ Material Design:
 - Tied to Material Design system
 - Less flexible for other brands
 
-### Variable Contract is flexible
+### Variable Design Standard (VDS) is flexible
 
-Variable Contract:
+Variable Design Standard (VDS):
 
 - Defines structure and rules, not specific names
 - Works for any brand or system
 - Focuses on governance, not design decisions
 - Adaptable to any design system
 
-Material Design is a design system. Variable Contract is a governance standard.
+Material Design is a design system. Variable Design Standard (VDS) is a governance standard.
 
-## Variable Contract vs Adobe Spectrum
+## Variable Design Standard (VDS) vs Adobe Spectrum
 
 ### Adobe Spectrum is complex
 
@@ -99,18 +99,18 @@ Adobe Spectrum:
 - Brand-specific structure
 - Over-engineered for most use cases
 
-### Variable Contract is simple
+### Variable Design Standard (VDS) is simple
 
-Variable Contract:
+Variable Design Standard (VDS):
 
 - Simple dot-separated paths
 - Minimal required segments
 - Flexible structure
 - Practical and testable
 
-Adobe Spectrum solves Adobe's problems. Variable Contract solves everyone's problems.
+Adobe Spectrum solves Adobe's problems. Variable Design Standard (VDS) solves everyone's problems.
 
-## Why Variable Contract wins
+## Why Variable Design Standard (VDS) wins
 
 ### 1. Simplicity
 
@@ -161,9 +161,9 @@ Adobe Spectrum solves Adobe's problems. Variable Contract solves everyone's prob
 - Real-world scenarios
 - No marketing fluff
 
-## When to use Variable Contract
+## When to use Variable Design Standard (VDS)
 
-Use Variable Contract when:
+Use Variable Design Standard (VDS) when:
 
 - You need governance for variables
 - You want DTCG compliance
@@ -172,7 +172,7 @@ Use Variable Contract when:
 - You want tool-agnostic approach
 - You need migration paths
 
-Do not use Variable Contract when:
+Do not use Variable Design Standard (VDS) when:
 
 - You only need format (use DTCG directly)
 - You only need build tool (use Style Dictionary)
@@ -181,13 +181,13 @@ Do not use Variable Contract when:
 
 ## Migration from other standards
 
-Variable Contract supports migration from:
+Variable Design Standard (VDS) supports migration from:
 
 - DTCG (add governance)
 - Style Dictionary format (migrate to DTCG format)
 - Material Design (extract variables, apply governance)
 - Adobe Spectrum (simplify structure, apply governance)
-- Custom formats (normalize to Variable Contract)
+- Custom formats (normalize to Variable Design Standard (VDS))
 
 See [Migration Strategy](adoption/migration-strategy) for details.
 

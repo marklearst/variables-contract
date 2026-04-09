@@ -4,7 +4,7 @@ title: Scenarios - Multi-Brand
 
 # Multi-Brand Architecture
 
-How to structure variables for multiple brands using Variable Contract.
+How to structure variables for multiple brands using Variable Design Standard (VDS).
 
 If brands share variables incorrectly, you get duplication, maintenance burden, and inconsistent branding.
 
@@ -80,15 +80,22 @@ Structure:
 // tokens/brand-a.json
 {
   "color": {
-    "$ref": "#/base/color",
+    "$extends": "{base.color}",
     "brand": {
-      "primary": { "$type": "color", "$value": "#0066cc" }
+      "primary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.4, 0.8],
+          "hex": "#0066cc"
+        }
+      }
     }
   }
 }
 ```
 
-Use group extension (`$ref`) to compose brands.
+Use group extension (`$extends`) to compose brands.
 
 ### Pattern 3: Mode-based brands
 
@@ -259,9 +266,15 @@ Brands extend base groups:
 // tokens/brand-a/color.json
 {
   "color": {
-    "$ref": "#/base/color",
+    "$extends": "{base.color}",
     "brand": {
-      "primary": { "$type": "color", "$value": "#0066cc" }
+      "primary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.4, 0.8],
+          "hex": "#0066cc"
+        }
     }
   }
 }

@@ -4,13 +4,13 @@ title: Why Variables
 
 # Why Variables
 
-::: callout info Part of the Variables Contract Specification
-This page is part of the [Variables Contract](../contract/variable-contract) governed specification. See [License](../license) for usage terms.
+::: callout info Part of the Variable Design Standard (VDS) Specification
+This page is part of the [Variable Design Standard (VDS)](../contract/variable-contract) governed specification. See [License](../license) for usage terms.
 :::
 
 Variables are variables. CSS variables, JavaScript variables, Figma variables. They're all variables.
 
-If you call them "design tokens" or "style properties" or "design constants," you create confusion. Developers know variables. Designers know variables. Variable Contract uses the term everyone understands.
+If you call them "design tokens" or "style properties" or "design constants," you create confusion. Developers know variables. Designers know variables. Variable Design Standard (VDS) uses the term everyone understands.
 
 ## The naming problem
 
@@ -35,7 +35,7 @@ Variables exist in:
 
 They're all variables. They store values. They can be referenced. They can be changed.
 
-## Why Variable Contract uses "variables"
+## Why Variable Design Standard (VDS) uses "variables"
 
 1. Developers understand variables (CSS variables, JS variables)
 2. Designers understand variables (Figma variables)
@@ -43,16 +43,16 @@ They're all variables. They store values. They can be referenced. They can be ch
 4. Maps directly to code concepts
 5. Clear and unambiguous
 
-## What Variable Contract standardizes
+## What Variable Design Standard (VDS) standardizes
 
-Variable Contract standardizes:
+Variable Design Standard (VDS) standardizes:
 
 - JSON structure (DTCG 2025.10 format)
 - Naming convention (dot-separated paths)
 - Reference syntax (`{path.to.variable}`)
 - Governance rules (validation, versioning, change control)
 
-Variable Contract does NOT standardize:
+Variable Design Standard (VDS) does NOT standardize:
 
 - What you call them (call them variables)
 - What tools you use (use any tool)
@@ -69,7 +69,7 @@ Variable Contract does NOT standardize:
 
 This creates separation between design and code. Variables bridge that gap.
 
-## Variable Contract's approach
+## Variable Design Standard (VDS)'s approach
 
 Variables are:
 
@@ -79,7 +79,7 @@ Variables are:
 - Consumed by both designers and developers
 - Just variables
 
-Variable Contract provides:
+Variable Design Standard (VDS) provides:
 
 - Structure (how to store variables)
 - Governance (how to manage variables)

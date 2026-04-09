@@ -4,7 +4,7 @@ title: Scenarios - Component Integration
 
 # Component Library Integration
 
-How to integrate Variable Contract with component libraries.
+How to integrate Variable Design Standard (VDS) with component libraries.
 
 If components don't use variables correctly, you get hardcoded values, inconsistent styling, and maintenance burden.
 

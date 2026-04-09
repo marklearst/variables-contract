@@ -4,13 +4,13 @@ title: Consumption - CSS
 
 # CSS Variable Consumption
 
-How to consume Variable Contract variables in CSS.
+How to consume Variable Design Standard (VDS) variables in CSS.
 
 ## Basic usage
 
 ### CSS custom properties
 
-Use CSS custom properties (variables) generated from Variable Contract:
+Use CSS custom properties (variables) generated from Variable Design Standard (VDS):
 
 ```css
 .button {
