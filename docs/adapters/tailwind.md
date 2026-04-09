@@ -4,15 +4,15 @@ title: Tailwind Adapter
 
 # Tailwind Adapter
 
-Tailwind CSS v4 integration patterns for Variable Contract. Generate CSS custom properties from Variable Contract JSON using Tailwind CSS v4's CSS-first approach.
+Tailwind CSS v4 integration patterns for Variable Design Standard (VDS). Generate CSS custom properties from Variable Design Standard (VDS) JSON using Tailwind CSS v4's CSS-first approach.
 
 ## Role
 
-Tailwind adapter generates CSS custom properties from Variable Contract JSON. Variables map to Tailwind CSS v4's `@theme` directive. No JavaScript config files. Pure CSS.
+Tailwind adapter generates CSS custom properties from Variable Design Standard (VDS) JSON. Variables map to Tailwind CSS v4's `@theme` directive. No JavaScript config files. Pure CSS.
 
 ## Why Tailwind CSS v4
 
-Tailwind CSS v4 is pure CSS. No JavaScript config. Design Engineers MUST master Tailwind CSS v4. Variable Contract variables map directly to CSS custom properties that Tailwind CSS v4 consumes.
+Tailwind CSS v4 is pure CSS. No JavaScript config. Design Engineers MUST master Tailwind CSS v4. Variable Design Standard (VDS) variables map directly to CSS custom properties that Tailwind CSS v4 consumes.
 
 ## Tailwind CSS v4 approach
 
@@ -32,7 +32,7 @@ See [Tailwind CSS v4 documentation](https://tailwindcss.com/docs) for complete d
 
 ### Pattern 1: CSS custom properties
 
-Generate CSS custom properties from Variable Contract JSON. Tailwind CSS v4 reads CSS variables directly.
+Generate CSS custom properties from Variable Design Standard (VDS) JSON. Tailwind CSS v4 reads CSS variables directly.
 
 **Style Dictionary config:**
 
@@ -92,9 +92,9 @@ Generate CSS custom properties from Variable Contract JSON. Tailwind CSS v4 read
 
 ### Pattern 2: Direct CSS generation
 
-Transform Variable Contract JSON directly to CSS custom properties.
+Transform Variable Design Standard (VDS) JSON directly to CSS custom properties.
 
-**Variable Contract:**
+**Variable Design Standard (VDS):**
 
 ```json
 {
@@ -137,13 +137,13 @@ Transform Variable Contract JSON directly to CSS custom properties.
 
 ### Colors
 
-Variable Contract: `color.primary.500`
+Variable Design Standard (VDS): `color.primary.500`
 CSS: `--color-primary-500: #0066cc`
 Tailwind: `bg-primary-500` or `text-primary-500`
 
 ### Spacing
 
-Variable Contract: `spacing.md`
+Variable Design Standard (VDS): `spacing.md`
 CSS: `--spacing-md: 1rem`
 Tailwind: `p-md` or `m-md`
 
@@ -151,7 +151,7 @@ Tailwind CSS v4 uses a dynamic spacing scale. The `--spacing` variable defines t
 
 ### Typography
 
-Variable Contract: `typography.fontFamily.sans`
+Variable Design Standard (VDS): `typography.fontFamily.sans`
 CSS: `--font-family-sans: "Inter", sans-serif`
 Tailwind: `font-sans`
 
@@ -159,7 +159,7 @@ Tailwind: `font-sans`
 
 Tailwind CSS v4 handles modes via CSS custom properties. Generate mode-specific CSS or use CSS variable overrides.
 
-**Variable Contract with modes:**
+**Variable Design Standard (VDS) with modes:**
 
 ```json
 {
@@ -197,7 +197,7 @@ Design Engineer MUST:
 
 - Master Tailwind CSS v4 CSS-first approach
 - Understand CSS custom properties and `@theme` directive
-- Map Variable Contract structure to CSS custom properties
+- Map Variable Design Standard (VDS) structure to CSS custom properties
 - Test variables in Tailwind components before approval
 - Maintain CSS generation pipeline (no JavaScript config)
 
@@ -206,14 +206,14 @@ Design Engineer MUST:
 1. Designer creates variables in Figma
 2. Export from Figma
 3. Design Engineer normalizes with adapter
-4. Design Engineer generates CSS custom properties from Variable Contract JSON
+4. Design Engineer generates CSS custom properties from Variable Design Standard (VDS) JSON
 5. Design Engineer tests variables in Tailwind CSS v4 components
-6. Commit Variable Contract JSON and generated CSS
+6. Commit Variable Design Standard (VDS) JSON and generated CSS
 7. Frontend Developer consumes Tailwind utilities in components
 
 ## Example component
 
-**Variable Contract:**
+**Variable Design Standard (VDS):**
 
 ```json
 {
@@ -254,7 +254,7 @@ Tailwind CSS v4 generates: `background-color: var(--color-surface-brand)`
 Tailwind adapter MUST:
 
 - Generate valid CSS custom properties syntax
-- Map all Variable Contract variables to CSS custom properties
+- Map all Variable Design Standard (VDS) variables to CSS custom properties
 - Preserve variable references (use CSS `var()` syntax)
 - Handle modes (generate mode-specific CSS or CSS variable overrides)
 - Follow Tailwind CSS v4 naming conventions (`--color-*`, `--spacing-*`, `--font-*`)
