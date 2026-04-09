@@ -4,7 +4,7 @@ title: Governance - Troubleshooting
 
 # Troubleshooting
 
-Common issues when working with Variable Contract and how to fix them.
+Common issues when working with Variable Design Standard (VDS) and how to fix them.
 
 ## Circular references
 
@@ -312,7 +312,7 @@ Reference uses non-canonical format: `color.primary` instead of `{color.primary}
 
 ### Cause
 
-Reference syntax does not match Variable Contract format.
+Reference syntax does not match Variable Design Standard (VDS) format.
 
 ### Solution
 
@@ -356,11 +356,11 @@ Run adapter normalization. Validate reference syntax in CI.
 
 ### Problem
 
-Group `color.brand` references non-existent group `#/color/base`
+Group `color.brand` references non-existent group `{color.base}`
 
 ### Cause
 
-Group `$ref` target does not exist.
+Group `$extends` target does not exist.
 
 ### Solution
 
@@ -372,7 +372,7 @@ Before:
 {
   "color": {
     "brand": {
-      "$ref": "#/color/base"
+      "$extends": "{color.base}"
     }
   }
 }
@@ -386,11 +386,15 @@ After:
     "base": {
       "primary": {
         "$type": "color",
-        "$value": "#0066cc"
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0.4, 0.8],
+          "hex": "#0066cc"
+        }
       }
     },
     "brand": {
-      "$ref": "#/color/base"
+      "$extends": "{color.base}"
     }
   }
 }
@@ -398,7 +402,7 @@ After:
 
 ### Prevention
 
-Validate group references resolve. Check `$ref` targets exist.
+Validate group references resolve. Check `$extends` targets exist.
 
 ## Property-level reference errors
 

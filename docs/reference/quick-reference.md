@@ -2,9 +2,9 @@
 title: Quick Reference
 ---
 
-# Variable Contract Quick Reference
+# Variable Design Standard (VDS) Quick Reference
 
-Cheat sheet for common Variable Contract tasks.
+Cheat sheet for common Variable Design Standard (VDS) tasks.
 
 ## Naming convention
 
@@ -140,7 +140,7 @@ tokens/
 ## Links
 
 - [Naming Convention](contract/naming)
-- [Variable Contract](contract/variable-contract)
+- [Variable Design Standard (VDS)](contract/variable-contract)
 - [Roles](governance/roles)
 - [Change Control](governance/change-control)
 

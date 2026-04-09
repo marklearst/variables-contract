@@ -2,9 +2,9 @@
 title: References
 ---
 
-# Variable Contract References
+# Variable Design Standard (VDS) References
 
-External standards and specifications referenced by Variable Contract.
+External standards and specifications referenced by Variable Design Standard (VDS).
 
 ## Primary references
 
@@ -15,7 +15,7 @@ External standards and specifications referenced by Variable Contract.
 **URL:** https://www.designtokens.org/tr/2025.10/format/
 **Status:** W3C Community Group Specification
 
-Variable Contract is built on DTCG 2025.10 format. Any Variable Contract JSON is valid DTCG 2025.10 format.
+Variable Design Standard (VDS) is built on DTCG 2025.10 format. Any Variable Design Standard (VDS) JSON is valid DTCG 2025.10 format.
 
 ## Related standards
 
@@ -23,7 +23,7 @@ Variable Contract is built on DTCG 2025.10 format. Any Variable Contract JSON is
 
 **Title:** Semantic Versioning 2.0.0
 **URL:** https://semver.org/
-**Usage:** Variable Contract uses semantic versioning for variable releases (MAJOR.MINOR.PATCH)
+**Usage:** Variable Design Standard (VDS) uses semantic versioning for variable releases (MAJOR.MINOR.PATCH)
 
 ### JSON Pointer
 
@@ -41,16 +41,16 @@ Variable Contract is built on DTCG 2025.10 format. Any Variable Contract JSON is
 ### Figma Variables
 
 **URL:** https://help.figma.com/hc/en-us/sections/14506605769879-Variables
-**Usage:** Design tool for authoring variables. Variable Contract provides adapter for normalization.
+**Usage:** Design tool for authoring variables. Variable Design Standard (VDS) provides adapter for normalization.
 
 ### Tokens Studio
 
 **URL:** https://tokens.studio/
-**Usage:** Design tool plugin for managing variables. Variable Contract provides adapter for normalization.
+**Usage:** Design tool plugin for managing variables. Variable Design Standard (VDS) provides adapter for normalization.
 
 ## Standards alignment
 
-Variable Contract aligns with:
+Variable Design Standard (VDS) aligns with:
 
 - W3C standards practices (normative keywords, conformance requirements)
 - ECMAScript specification structure (editor attribution, versioning)
@@ -58,7 +58,7 @@ Variable Contract aligns with:
 
 ## Out of scope
 
-Variable Contract does not reference:
+Variable Design Standard (VDS) does not reference:
 
 - Runtime libraries (validation is build-time)
 - UI frameworks (tool-agnostic)

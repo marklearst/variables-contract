@@ -2,7 +2,7 @@
 title: Governance - Versioning
 ---
 
-# Variable Contract Versioning
+# Variable Design Standard (VDS) Versioning
 
 Versioning communicates breaking changes and migration requirements.
 
@@ -27,7 +27,6 @@ Renaming a variable breaks all references to it.
 Example:
 
 ```json
-// v1.0.0
 {
   "color": {
     "primary": {
@@ -36,8 +35,9 @@ Example:
     }
   }
 }
+```
 
-// v2.0.0 (BREAKING)
+```json
 {
   "color": {
     "brand": {
@@ -57,15 +57,15 @@ Removing a variable breaks all references to it.
 Example:
 
 ```json
-// v1.0.0
 {
   "color": {
     "primary": { "$type": "color", "$value": "#0066cc" },
     "secondary": { "$type": "color", "$value": "#666666" }
   }
 }
+```
 
-// v2.0.0 (BREAKING)
+```json
 {
   "color": {
     "primary": { "$type": "color", "$value": "#0066cc" }
@@ -82,7 +82,6 @@ Changing a variable's `$type` breaks type validation and consumption.
 Example:
 
 ```json
-// v1.0.0
 {
   "spacing": {
     "base": {
@@ -91,8 +90,9 @@ Example:
     }
   }
 }
+```
 
-// v2.0.0 (BREAKING)
+```json
 {
   "spacing": {
     "base": {
@@ -112,7 +112,6 @@ Changing a reference to point to a different variable may break visual output.
 Example:
 
 ```json
-// v1.0.0
 {
   "color": {
     "text": {
@@ -123,8 +122,9 @@ Example:
     }
   }
 }
+```
 
-// v2.0.0 (BREAKING if visual output changes)
+```json
 {
   "color": {
     "text": {
@@ -150,14 +150,14 @@ Adding new variables does not break existing references.
 Example:
 
 ```json
-// v1.0.0
 {
   "color": {
     "primary": { "$type": "color", "$value": "#0066cc" }
   }
 }
+```
 
-// v1.1.0 (NON-BREAKING)
+```json
 {
   "color": {
     "primary": { "$type": "color", "$value": "#0066cc" },
@@ -175,7 +175,6 @@ Adding new modes does not break existing mode consumers.
 Example:
 
 ```json
-// v1.0.0
 {
   "color": {
     "surface": {
@@ -186,8 +185,9 @@ Example:
     }
   }
 }
+```
 
-// v1.1.0 (NON-BREAKING)
+```json
 {
   "color": {
     "surface": {
@@ -210,7 +210,6 @@ Changing a variable value may or may not be breaking depending on usage.
 If the value change is intentional and documented, it may be MINOR:
 
 ```json
-// v1.0.0
 {
   "color": {
     "primary": {
@@ -219,8 +218,9 @@ If the value change is intentional and documented, it may be MINOR:
     }
   }
 }
+```
 
-// v1.1.0 (NON-BREAKING if documented)
+```json
 {
   "color": {
     "primary": {
@@ -247,7 +247,6 @@ Deprecate variables before removing them:
 Example:
 
 ```json
-// v1.5.0
 {
   "color": {
     "primary": {
@@ -264,8 +263,9 @@ Example:
     }
   }
 }
+```
 
-// v2.0.0 (remove deprecated)
+```json
 {
   "color": {
     "brand": {
@@ -292,7 +292,7 @@ Release notes MUST include:
 Example release notes:
 
 ```markdown
-# Variable Contract v2.0.0
+# Variable Design Standard (VDS) v2.0.0
 
 ## Breaking Changes
 

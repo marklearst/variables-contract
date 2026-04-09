@@ -4,7 +4,7 @@ title: Tooling - CI/CD Integration
 
 # CI/CD Integration
 
-How to integrate Variable Contract validation and builds into CI/CD pipelines.
+How to integrate Variable Design Standard (VDS) validation and builds into CI/CD pipelines.
 
 If CI/CD is not set up, invalid variables ship to production and breaking changes go unnoticed.
 
@@ -12,7 +12,7 @@ If CI/CD is not set up, invalid variables ship to production and breaking change
 
 ### Pattern 1: Validation only
 
-Validate Variable Contract JSON on every PR.
+Validate Variable Design Standard (VDS) JSON on every PR.
 
 Use when:
 
@@ -188,7 +188,7 @@ repos:
   - repo: local
     hooks:
       - id: validate-variables
-        name: Validate Variable Contract
+        name: Validate Variable Design Standard (VDS)
         entry: npm run validate:tokens
         language: system
         files: 'tokens/.*\.json$'

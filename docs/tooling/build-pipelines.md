@@ -4,13 +4,13 @@ title: Tooling - Build Pipelines
 
 # Build Pipeline Examples
 
-Complete build pipeline examples for generating outputs from Variable Contract.
+Complete build pipeline examples for generating outputs from Variable Design Standard (VDS).
 
 ## Basic pipeline
 
 ### Input
 
-Variable Contract JSON files:
+Variable Design Standard (VDS) JSON files:
 
 ```
 tokens/
@@ -199,7 +199,7 @@ Create separate config for each brand or use programmatic approach.
 
 ### Custom transform
 
-Create custom transform for Variable Contract naming:
+Create custom transform for Variable Design Standard (VDS) naming:
 
 ```javascript
 const StyleDictionary = require("style-dictionary");

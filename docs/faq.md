@@ -4,27 +4,27 @@ title: FAQ
 
 # Frequently Asked Questions
 
-Common questions about Variable Contract.
+Common questions about Variable Design Standard (VDS).
 
-## What is Variable Contract?
+## What is Variable Design Standard (VDS)?
 
-Variable Contract is a governance standard for design variables. It defines JSON structure, naming rules, validation requirements, and versioning strategy. Built on DTCG 2025.10 format.
+Variable Design Standard (VDS) is a governance standard for design variables. It defines JSON structure, naming rules, validation requirements, and versioning strategy. Built on DTCG 2025.10 format.
 
 ## Why "variables" not "design tokens"?
 
 Variables are variables. CSS variables, JavaScript variables, Figma variables. Everyone understands "variables." "Design tokens" creates confusion and separation between design and code.
 
-## Is Variable Contract a new format?
+## Is Variable Design Standard (VDS) a new format?
 
-No. Variable Contract uses DTCG 2025.10 format. It adds governance (naming rules, validation, versioning) on top of the format.
+No. Variable Design Standard (VDS) uses DTCG 2025.10 format. It adds governance (naming rules, validation, versioning) on top of the format.
 
 ## Do I need to change my existing variables?
 
-Not immediately. Variable Contract provides migration paths from existing formats (Style Dictionary, custom formats, older DTCG). See [Migration Strategy](adoption/migration-strategy).
+Not immediately. Variable Design Standard (VDS) provides migration paths from existing formats (Style Dictionary, custom formats, older DTCG). See [Migration Strategy](adoption/migration-strategy).
 
 ## What tools do I need?
 
-Any DTCG-compliant tool works. Variable Contract is tool-agnostic. Common tools:
+Any DTCG-compliant tool works. Variable Design Standard (VDS) is tool-agnostic. Common tools:
 
 - Figma (authoring)
 - Style Dictionary (output generation)
@@ -32,7 +32,7 @@ Any DTCG-compliant tool works. Variable Contract is tool-agnostic. Common tools:
 
 ## Who owns variables?
 
-**Designer** creates variables in Figma. **Design Engineer** owns the Variable Contract (maintains naming rules, reviews changes). **Frontend Developer** consumes variables in code.
+**Designer** creates variables in Figma. **Design Engineer** owns the Variable Design Standard (VDS) (maintains naming rules, reviews changes). **Frontend Developer** consumes variables in code.
 
 ## What's the difference between Designer and Design Engineer?
 
@@ -59,7 +59,7 @@ No. Variable names MUST NOT include platform names (ios, android, web, etc.). Pl
 
 ## What if my tool uses different reference syntax?
 
-Use an adapter to normalize tool-specific syntax to Variable Contract format. See [Adapters](adapters) for examples.
+Use an adapter to normalize tool-specific syntax to Variable Design Standard (VDS) format. See [Adapters](adapters) for examples.
 
 ## How do I validate variables?
 
@@ -104,9 +104,9 @@ Yes. Contributions welcome. See [Contributors](meta/contributors) for details.
 
 See [License](license) for usage terms.
 
-## Is Variable Contract production-ready?
+## Is Variable Design Standard (VDS) production-ready?
 
-Yes. Version 1.0.0 is stable and production-ready. Used by teams in production.
+Yes. Version 0.4.0 is in Draft status but production-ready. Used by teams in production. See [Specification Status](meta/status) for status definitions.
 
 ## How do I claim conformance?
 
@@ -116,11 +116,11 @@ See [Conformance](reference/conformance) for conformance requirements and report
 
 Report issues via GitHub issues. Include:
 
-- Variable Contract version
+- Variable Design Standard (VDS) version
 - Steps to reproduce
 - Expected behavior
 - Actual behavior
 
-## Can I use Variable Contract with my design system?
+## Can I use Variable Design Standard (VDS) with my design system?
 
-Yes. Variable Contract is design-system agnostic. It governs variable structure and governance, not design decisions (values, colors, spacing).
+Yes. Variable Design Standard (VDS) is design-system agnostic. It governs variable structure and governance, not design decisions (values, colors, spacing).

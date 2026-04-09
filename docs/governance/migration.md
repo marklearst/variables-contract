@@ -4,18 +4,18 @@ title: Governance - Migration
 
 # Migration Guide
 
-How to migrate existing variable formats to Variable Contract format.
+How to migrate existing variable formats to Variable Design Standard (VDS) format.
 
 If you skip migration steps, you lose reference resolution, break type validation, and create maintenance burden.
 
 ## Migration overview
 
-Migration converts existing variable formats to Variable Contract (DTCG 2025.10) format with governance rules applied.
+Migration converts existing variable formats to Variable Design Standard (VDS) (DTCG 2025.10) format with governance rules applied.
 
 Migration steps:
 
 1. Audit existing variables (identify format, structure, naming)
-2. Map to Variable Contract structure (groups, types, references)
+2. Map to Variable Design Standard (VDS) structure (groups, types, references)
 3. Normalize naming (apply naming convention)
 4. Convert references (update reference syntax)
 5. Validate output (run validation checklist)
@@ -194,7 +194,7 @@ After:
 
 ### Step 3: Normalize naming
 
-Style Dictionary naming may not follow Variable Contract convention. Apply naming rules:
+Style Dictionary naming may not follow Variable Design Standard (VDS) convention. Apply naming rules:
 
 Before:
 
@@ -233,9 +233,9 @@ Identify:
 - References between variables
 - Modes or variants
 
-### Step 2: Convert to Variable Contract structure
+### Step 2: Convert to Variable Design Standard (VDS) structure
 
-Create groups and variables following Variable Contract structure:
+Create groups and variables following Variable Design Standard (VDS) structure:
 
 - Base tokens: raw scales and palettes
 - Semantic aliases: reference base tokens
@@ -243,7 +243,7 @@ Create groups and variables following Variable Contract structure:
 
 ### Step 3: Normalize types
 
-Map custom types to Variable Contract types:
+Map custom types to Variable Design Standard (VDS) types:
 
 - Custom color formats → `color`
 - Custom spacing formats → `dimension`

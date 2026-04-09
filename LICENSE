@@ -1,4 +1,6 @@
-VARIABLES CONTRACT SPECIFICATION LICENSE
+VARIABLE DESIGN STANDARD (VDS) SPECIFICATION LICENSE
+
+Also Known As: Variables Contract
 
 Copyright (c) 2021-2026 Mark Learst
 
@@ -38,11 +40,9 @@ additional terms.
 
 ## A. DEFINITIONS
 
-"Specification" means the Variables Contract protocol, including all documentation,
-JSON schemas, naming conventions, governance rules, architectural patterns, and
-code examples published at the Canonical Source.
+"Specification" means the Variable Design Standard (VDS) protocol (also known as Variables Design Standard or VDS), including all documentation, JSON schemas, naming conventions, governance rules, architectural patterns, and code examples published at the Canonical Source.
 
-"Canonical Source" means https://variables-contract.vercel.app
+"Canonical Source" means https://variable-design-standard.vercel.app
 
 "Synthetic Derivative" means any work produced by inputting the Specification
 into a Generative AI system, Large Language Model, or similar automated system
@@ -62,19 +62,19 @@ B.1 PUBLIC TOOLING
 Any public-facing software claiming compatibility with the Specification must
 include attribution visible to end users:
 
-    "Built on the Variables Contract Specification
-     https://variables-contract.vercel.app"
+    "Built on the Variable Design Standard (VDS) Specification
+     https://variable-design-standard.vercel.app"
 
 B.2 METADATA ATTRIBUTION
 JSON files claiming conformance should include:
 
-    "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json"
+    "$schema": "https://variable-design-standard.vercel.app/assets/schema/v1.json"
 
 ---
 
 ## C. CONFORMANCE CLAIMS
 
-C.1 "VARIABLES CONTRACT CONFORMANT"
+C.1 "VARIABLE DESIGN STANDARD (VDS) CONFORMANT"
 To claim conformance, an implementation must:
 a. Support full Variable Anatomy (Base, Alias, Component)
 b. Support Mode resolution and inheritance
@@ -82,7 +82,7 @@ c. Support Reference syntax and resolution
 d. Output valid DTCG-aligned JSON with references (not flattened values)
 e. Enforce or validate Naming conventions
 
-C.2 "VARIABLES CONTRACT COMPATIBLE"
+C.2 "VARIABLE DESIGN STANDARD (VDS) COMPATIBLE"
 To claim compatibility, an implementation must:
 a. Not corrupt Specification-compliant data
 b. Include Attribution per Section B
@@ -111,13 +111,13 @@ a. Written permission from the Copyright Holder, OR
 b. Clear attribution linking to the Canonical Source
 
 D.3 FALSE COMPATIBILITY
-You may NOT market a tool as "Variables Contract compatible" if it:
+You may NOT market a tool as "Variable Design Standard (VDS) compatible" if it:
 a. Omits required structural elements (Anatomy, Modes, References)
 b. Outputs non-conformant data (flattened hex values instead of references)
 c. Contradicts the governance principles of the Specification
 
 D.4 NAME MISAPPROPRIATION
-You may NOT use "Variables Contract" or "VCSL" to imply endorsement or
+You may NOT use "Variable Design Standard (VDS)" or "VDS" to imply endorsement or
 affiliation without written permission.
 
 ---
@@ -129,7 +129,7 @@ Your rights under this license terminate immediately upon:
 a. Creating or distributing a Synthetic Derivative
 b. Publishing a Competing Standard without permission/attribution
 c. Making false conformance claims
-d. Misappropriating the Variables Contract name
+d. Misappropriating the Variable Design Standard (VDS) name
 
 E.2 EFFECT OF TERMINATION
 Upon termination:
@@ -153,7 +153,7 @@ similarity exists
 
 ## F. NO TRADEMARK GRANT
 
-This license grants no trademark rights. "Variables Contract" may only be used
+This license grants no trademark rights. "Variable Design Standard (VDS)" may only be used
 for truthful conformance statements per Section C.
 
 ---
@@ -166,8 +166,8 @@ THE SPECIFICATION.
 
 ================================================================================
 
-Canonical Source: https://variables-contract.vercel.app
-Schema: https://variables-contract.vercel.app/schema/v1.json
-License Inquiries: https://variables-contract.vercel.app/license
+Canonical Source: https://variable-design-standard.vercel.app
+Schema: https://variable-design-standard.vercel.app/schema/v1.json
+License Inquiries: https://variable-design-standard.vercel.app/license
 
 ================================================================================

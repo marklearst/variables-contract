@@ -2,9 +2,9 @@
 title: Glossary
 ---
 
-# Variable Contract Glossary
+# Variable Design Standard (VDS) Glossary
 
-Terminology used in Variable Contract specification and governance.
+Terminology used in Variable Design Standard (VDS) specification and governance.
 
 ## Base variable
 
@@ -24,7 +24,7 @@ A component-scoped alias that references semantic variables. Component variables
 
 Example: `component.button.color.background.default` with `$value: "{color.surface.brand}"`
 
-## Variable Contract
+## Variable Design Standard (VDS)
 
 The governance standard for design variables. Defines JSON structure, naming rules, validation requirements, and versioning strategy.
 
@@ -34,7 +34,7 @@ Design Tokens Community Group. W3C community group that defines the format speci
 
 ## DTCG 2025.10
 
-The October 2025 version of the DTCG format specification. Variable Contract is built on this format.
+The October 2025 version of the DTCG format specification. Variable Design Standard (VDS) is built on this format.
 
 ## Reference
 
@@ -52,15 +52,15 @@ An object that contains nested groups and/or variables. Groups organize variable
 
 ## Group extension
 
-A group that extends another group using `$ref`. Allows inheritance of group structure.
+A group that extends another group using `$extends` with curly brace syntax. Allows inheritance of group structure.
 
 ## Adapter
 
-A tool or script that normalizes tool-specific exports (Figma, Tokens Studio) into Variable Contract format.
+A tool or script that normalizes tool-specific exports (Figma, Tokens Studio) into Variable Design Standard (VDS) format.
 
 ## Normalization
 
-The process of converting tool-specific exports into canonical Variable Contract format. Includes extracting metadata, normalizing references, and validating naming.
+The process of converting tool-specific exports into canonical Variable Design Standard (VDS) format. Includes extracting metadata, normalizing references, and validating naming.
 
 ## Breaking change
 
@@ -84,7 +84,7 @@ Role: Creates variables in Figma following naming conventions.
 
 ## Design Engineer
 
-Role: Bridges design and development. Owns Variable Contract, maintains naming rules, reviews changes. Understands both Figma and React component libraries.
+Role: Bridges design and development. Owns Variable Design Standard (VDS), maintains naming rules, reviews changes. Understands both Figma and React component libraries.
 
 ## Frontend Developer
 
