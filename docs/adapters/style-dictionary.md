@@ -4,15 +4,15 @@ title: Style Dictionary Adapter
 
 # Style Dictionary Adapter
 
-Style Dictionary consumes Variable Contract (DTCG) format and generates platform outputs like CSS variables, TypeScript types, and Tailwind CSS v4 custom properties.
+Style Dictionary consumes Variable Design Standard (VDS) (DTCG) format and generates platform outputs like CSS variables, TypeScript types, and Tailwind CSS v4 custom properties.
 
 ## Role
 
-Style Dictionary is an output adapter. It reads Variable Contract JSON and produces files for consumption in code.
+Style Dictionary is an output adapter. It reads Variable Design Standard (VDS) JSON and produces files for consumption in code.
 
 ## DTCG format support
 
-Style Dictionary supports DTCG format natively. Use Variable Contract JSON files directly as Style Dictionary source files.
+Style Dictionary supports DTCG format natively. Use Variable Design Standard (VDS) JSON files directly as Style Dictionary source files.
 
 ## Configuration
 
@@ -77,7 +77,7 @@ Legacy Style Dictionary format:
 }
 ```
 
-DTCG format (Variable Contract):
+DTCG format (Variable Design Standard (VDS)):
 
 ```json
 {
@@ -90,7 +90,7 @@ DTCG format (Variable Contract):
 }
 ```
 
-Style Dictionary handles both formats. Use DTCG format for Variable Contract compliance.
+Style Dictionary handles both formats. Use DTCG format for Variable Design Standard (VDS) compliance.
 
 ## Transform groups
 
@@ -196,7 +196,7 @@ CSS output (separate files):
 
 Typical workflow:
 
-1. Store Variable Contract JSON in `tokens/` directory
+1. Store Variable Design Standard (VDS) JSON in `tokens/` directory
 2. Configure Style Dictionary to read from `tokens/`
 3. Run Style Dictionary build
 4. Generated files appear in `dist/`
@@ -219,7 +219,7 @@ Style Dictionary validates:
 - Reference resolution
 - Type correctness (for transforms that check types)
 
-Variable Contract validation should happen before Style Dictionary build (in CI or pre-commit hooks).
+Variable Design Standard (VDS) validation should happen before Style Dictionary build (in CI or pre-commit hooks).
 
 ## Examples
 

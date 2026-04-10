@@ -4,33 +4,48 @@ title: Design - Figma Naming
 
 # Naming Variables in Figma
 
-How to name variables in Figma UI to match Variable Contract naming convention.
+How to name variables in Figma UI to match Variable Design Standard (VDS) naming convention.
 
 If variables are named incorrectly in Figma, adapter normalization fails and naming violations occur.
 
+## Important: Export prefixes
+
+The `@` and `$` prefixes you see in export JSON are **added by export plugins**, not typed in Figma UI:
+
+- **In Figma UI**: Name a collection `primitives`
+- **In export JSON**: Appears as `@primitives`
+- **After normalization**: Becomes `primitives`
+
+Similarly for groups:
+
+- **In Figma UI**: Name a variable `color/primary`
+- **In export JSON**: Appears as `$color.primary` (groups get `$` prefix)
+- **After normalization**: Becomes `color.primary`
+
+Do NOT type `@` or `$` in the Figma UI. These are export artifacts that the adapter removes.
+
 ## Figma variable naming
 
-Figma uses collection names and variable names. Variable Contract uses dot-separated paths.
+Figma uses collection names and variable names. Variable Design Standard (VDS) uses dot-separated paths.
 
 ### Collection names
 
-Figma collections map to Variable Contract groups.
+Figma collections map to Variable Design Standard (VDS) groups. Name them without prefixes in Figma UI.
 
-Good collection names:
+Good collection names (in Figma UI):
 
-- `primitives` (becomes `primitives` group)
-- `tokens` (becomes `tokens` group)
-- `base` (becomes `base` group)
+- `primitives` (exports as `@primitives`, normalizes to `primitives`)
+- `tokens` (exports as `@tokens`, normalizes to `tokens`)
+- `base` (exports as `@base`, normalizes to `base`)
 
 Bad collection names:
 
-- `@primitives` (adapter removes `@` prefix)
 - `Primitives` (should be lowercase)
 - `primitives-colors` (use separate collections)
 
 ### Variable names
 
-Figma variable names map to Variable Contract paths.
+Figma variable names map to Variable Design Standard (VDS) paths.
 
 Good variable names:
 
@@ -53,7 +68,7 @@ Figma uses forward slashes (`/`) to separate path segments. Adapter converts to 
 Example:
 
 - Figma: `color/text/primary`
-- Variable Contract: `color.text.primary`
+- Variable Design Standard (VDS): `color.text.primary`
 
 ### Use lowercase
 
@@ -147,7 +162,7 @@ components/
 
 ### Mode names
 
-Figma mode names should match Variable Contract mode names.
+Figma mode names should match Variable Design Standard (VDS) mode names.
 
 Good mode names:
 
@@ -235,11 +250,12 @@ tokens/
 
 ## Implementation rules
 
-1. Use forward slashes in Figma (`/`)
+1. Use forward slashes in Figma (`/`) - exports convert to nested JSON with `$` prefixes
 2. Use lowercase for all names
 3. Use descriptive names (usage, not implementation)
 4. Organize by collections (base, semantic, component)
 5. Keep mode names consistent
+6. Do NOT type `@` or `$` prefixes - these are added by exports and removed by the adapter
 
 ## Failure modes
 

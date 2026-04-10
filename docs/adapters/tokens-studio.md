@@ -4,7 +4,7 @@ title: Tokens Studio Adapter
 
 # Tokens Studio Adapter
 
-Tokens Studio exports are close to Variables Contract format but may include Tokens Studio-specific metadata. This adapter normalizes Tokens Studio exports.
+Tokens Studio exports are close to Variable Design Standard (VDS) format but may include Tokens Studio-specific metadata. This adapter normalizes Tokens Studio exports.
 
 ## Input format
 
@@ -52,7 +52,7 @@ If Tokens Studio uses non-standard syntax, convert to canonical format.
 
 ### Step 3: Handle modes
 
-Tokens Studio stores modes in `$value` objects, which matches Variable Contract format.
+Tokens Studio stores modes in `$value` objects, which matches Variable Design Standard (VDS) format.
 
 Example:
 
@@ -74,7 +74,7 @@ This format is already correct. No transformation needed.
 
 ### Step 4: Validate naming
 
-Check that names follow Variable Contract naming convention (see [Naming](/contract/naming)).
+Check that names follow Variable Design Standard (VDS) naming convention (see [Naming](/contract/naming)).
 
 - Names MUST use dot-separated paths
 - Names MUST be lowercase
@@ -115,7 +115,7 @@ Tokens Studio export:
 }
 ```
 
-Normalized Variable Contract:
+Normalized Variable Design Standard (VDS):
 
 ```json
 {
@@ -152,7 +152,7 @@ In this case, the format is already correct. The adapter mainly validates and pr
 
 ## Round-trip considerations
 
-Tokens Studio can read Variable Contract format directly. For round-trip workflows:
+Tokens Studio can read Variable Design Standard (VDS) format directly. For round-trip workflows:
 
 - Preserve Tokens Studio metadata in `$extensions.studio.tokens`
 - Keep reference syntax as curly braces
@@ -173,13 +173,13 @@ After normalization, verify:
 
 - All variables have `$type` and `$value`
 - References use canonical format (`{path}`)
-- Names follow Variable Contract naming convention
+- Names follow Variable Design Standard (VDS) naming convention
 - Modes are stored in `$value` objects
 - Tokens Studio metadata preserved in `$extensions`
 
 ## Differences from Figma adapter
 
-Tokens Studio exports are closer to Variable Contract format than Figma exports:
+Tokens Studio exports are closer to Variable Design Standard (VDS) format than Figma exports:
 
 - No `$collection_metadata` to extract
 - No `$variable_metadata` to move
@@ -237,7 +237,7 @@ See [Anatomy](/contract/anatomy) for details.
 ### Artifacts that change
 
 - Tokens Studio export JSON (input, may be committed)
-- Variable Contract JSON (committed, reviewed)
+- Variable Design Standard (VDS) JSON (committed, reviewed)
 - Generated CSS/TypeScript files (output, not committed)
 
 ## Out of scope

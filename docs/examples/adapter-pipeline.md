@@ -9,7 +9,7 @@ This example shows the complete transformation from Figma export to CSS variable
 ## Pipeline overview
 
 1. Figma export JSON (input)
-2. Figma adapter normalization (Variable Contract)
+2. Figma adapter normalization (Variable Design Standard (VDS))
 3. Style Dictionary build (CSS variables output)
 
 ## Step 1: Figma export (input)
@@ -190,7 +190,7 @@ After running Style Dictionary build:
 - Modes stored in metadata
 - Collection names with `@` prefix
 
-### After (Variable Contract)
+### After (Variable Design Standard (VDS))
 
 - Metadata moved to `$extensions`
 - Canonical reference syntax
@@ -217,5 +217,5 @@ If any step fails:
 Validate at each step:
 
 1. Figma export: JSON syntax, required fields
-2. Adapter output: Variable Contract compliance, naming convention
+2. Adapter output: Variable Design Standard (VDS) compliance, naming convention
 3. Style Dictionary output: CSS syntax, all references resolved
