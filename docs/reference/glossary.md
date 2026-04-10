@@ -24,6 +24,14 @@ A component-scoped alias that references semantic variables. Component variables
 
 Example: `component.button.color.background.default` with `$value: "{color.surface.brand}"`
 
+## File selection rule
+
+A file selection model where the folder path and file name select the active brand or mode. The JSON file set is the contract input.
+
+## JSON-as-API
+
+Treat the JSON file set as the API surface. Paths and names are the interface. File selection chooses brand and mode.
+
 ## Variable Design Standard (VDS)
 
 The governance standard for design variables. Defines JSON structure, naming rules, validation requirements, and versioning strategy.
@@ -42,7 +50,7 @@ A `$value` that points to another variable by name. References use curly brace s
 
 ## Mode
 
-Intentional variants of a variable. Modes are stored as object keys in `$value`.
+Named variants of a variable. Modes are stored as object keys in `$value`.
 
 Example: `$value: { "light": "#ffffff", "dark": "#000000" }`
 
@@ -86,7 +94,6 @@ Role: Creates variables in Figma following naming conventions.
 
 Role: Bridges design and development. Owns Variable Design Standard (VDS), maintains naming rules, reviews changes. Understands both Figma and React component libraries.
 
-## Frontend Developer
+## Frontend Engineer
 
 Role: Consumes variables in code. Maintains build pipelines and component integration.
-

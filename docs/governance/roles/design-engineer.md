@@ -1,8 +1,8 @@
 ---
-title: Role - Design Engineer
+title: Role: Design Engineer
 ---
 
-# Variable Governance - Design Engineer Role
+# Variable Governance: Design Engineer Role
 
 True hybrid role. Masters both design and frontend. Owns the Variable Design Standard (VDS). Approves all variable changes.
 
@@ -73,9 +73,22 @@ If a candidate cannot demonstrate these skills, they are not ready for this role
 
 - Translate design intent to variables. Map design decisions to variable structure.
 - Verify consumption feasibility. Test variables in React/Storybook before approving.
-- Work between Designer and Frontend Developer. Communicate in both languages.
+- Work between Designer and Frontend Engineer. Communicate in both languages.
 - Build component libraries in both Figma and React. Maintain parity.
 - Resolve design/development tensions.
+
+## Ownership
+
+- Owns the Variable Design Standard (VDS) contract
+- Owns validation rules and review gates
+
+## Workflow
+
+1. Designer submits changes via PR.
+2. Run validation checks.
+3. Test consumption in code.
+4. Approve or request changes.
+5. Merge after checks pass.
 
 ### Review gate responsibilities
 
@@ -85,7 +98,7 @@ Review checklist:
 
 - [ ] Naming convention compliance (dot-separated, lowercase, no platform prefixes)
 - [ ] Reference validity (all references resolve, no circular references)
-- [ ] Mode consistency (mode keys match within collections)
+- [ ] Mode key set match within collections
 - [ ] Type correctness (`$value` matches `$type`)
 - [ ] Consumption feasibility (tested in React/Storybook)
 - [ ] Breaking change assessment (is this a rename? removal? type change?)
@@ -107,7 +120,7 @@ If review fails, Designer revises and resubmits.
 ## Interfaces
 
 - **Designer**: Creates variables in Figma. Design Engineer reviews ALL changes for contract compliance and tests consumption feasibility.
-- **Frontend Developer**: Consumes variables in code. Design Engineer structures variables so consumption requires zero manual work.
+- **Frontend Engineer**: Consumes variables in code. Design Engineer structures variables so consumption requires zero manual work.
 - **Product**: Agrees on change priorities and release timing.
 
 ## Failure modes
@@ -143,3 +156,9 @@ Design Engineer bridges design and development. This requires demonstrated profi
 In smaller teams, one person fills this role. In larger teams, multiple Design Engineers may work together, with one serving as the primary contract owner.
 
 The Variable Design Standard (VDS) depends on this role being held to a clear standard. The skills are specific and verifiable.
+
+## Links
+
+- [Variable Contract](/contract/variable-contract)
+- [Change Control](../change-control)
+- [Validation](../validation)

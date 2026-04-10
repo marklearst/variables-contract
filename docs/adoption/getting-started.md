@@ -1,12 +1,14 @@
 ---
-title: Adoption - Getting Started
+title: Adoption: Getting Started
 ---
 
 # Team Adoption Guide
 
-How to adopt Variable Design Standard (VDS) in your team or organization.
+Scope: team adoption steps for Variable Design Standard (VDS).
 
-If you skip adoption steps, you get inconsistent variables, broken validation, and team confusion.
+Failure if ignored: naming rules break and validation fails.
+
+If you skip adoption steps, naming rules break, validation fails, and teams diverge on usage.
 
 ## Prerequisites
 
@@ -28,6 +30,7 @@ Before adopting Variable Design Standard (VDS):
    - Set up `tokens/` directory in version control
    - Create initial Variable Design Standard (VDS) JSON files
    - Set up file organization (base, semantic, component)
+   - Define brand and mode folders (file selection rule)
 
 2. Set up validation
 
@@ -39,6 +42,7 @@ Before adopting Variable Design Standard (VDS):
    - Create team-specific guidelines
    - Document roles and responsibilities
    - Set up review process
+   - Define the contract review gate
 
 **Deliverables**:
 
@@ -113,7 +117,7 @@ Responsibilities:
 - Review variable changes
 - Use variables in components
 
-### Developer
+### Frontend Engineer
 
 Responsibilities:
 
@@ -324,14 +328,14 @@ Adoption is successful when:
 - Developers consume variables easily
 - Review process works
 - No broken references
-- Versioning is consistent
+- Versioning follows semantic versioning rules
 
 ## Common pitfalls
 
 Avoid these mistakes:
 
 1. Skipping validation setup (invalid variables ship)
-2. Not training team (inconsistent usage)
+2. Not training team (base values used in components instead of alias variables)
 3. Skipping review process (breaking changes)
 4. Not documenting workflow (confusion)
 5. Rushing adoption (incomplete setup)

@@ -18,6 +18,10 @@ Variables are variables. CSS variables, JavaScript variables, Figma variables. E
 
 No. Variable Design Standard (VDS) uses DTCG 2025.10 format. It adds governance (naming rules, validation, versioning) on top of the format.
 
+## Is Variable Design Standard (VDS) a spec or governance?
+
+Both. The spec defines JSON shape, naming, references, and modes. Governance defines review and validation gates. The contract is the JSON in version control.
+
 ## Do I need to change my existing variables?
 
 Not immediately. Variable Design Standard (VDS) provides migration paths from existing formats (Style Dictionary, custom formats, older DTCG). See [Migration Strategy](adoption/migration-strategy).
@@ -32,7 +36,7 @@ Any DTCG-compliant tool works. Variable Design Standard (VDS) is tool-agnostic. 
 
 ## Who owns variables?
 
-**Designer** creates variables in Figma. **Design Engineer** owns the Variable Design Standard (VDS) (maintains naming rules, reviews changes). **Frontend Developer** consumes variables in code.
+**Designer** creates variables in Figma. **Design Engineer** owns the Variable Design Standard (VDS) (maintains naming rules, reviews changes). **Frontend Engineer** consumes variables in code.
 
 ## What's the difference between Designer and Design Engineer?
 
@@ -40,7 +44,7 @@ Any DTCG-compliant tool works. Variable Design Standard (VDS) is tool-agnostic. 
 
 ## Do I need all three roles?
 
-In smaller teams, one person (Design Engineer) may fill multiple roles. But responsibilities remain distinct: authoring (Designer), contract ownership (Design Engineer), consumption (Frontend Developer).
+In smaller teams, one person (Design Engineer) may fill multiple roles. But responsibilities remain distinct: authoring (Designer), contract ownership (Design Engineer), consumption (Frontend Engineer).
 
 ## How do I handle breaking changes?
 
@@ -78,6 +82,10 @@ See [Validation](governance/validation) for tools and setup.
 Yes. Modes are supported. Mode keys must match within collections (validation enforces this). Common modes: light/dark, mobile/desktop.
 
 See [Modes](contract/modes) for details.
+
+## Do I need a mapped layer or mapped collection?
+
+No. Variable Design Standard (VDS) uses three layers only: base, alias, component. Brand selection happens by file selection or alias modes. CSS cascade layers handle consumption. See [Anatomy](contract/anatomy), [Multi-Brand Architecture](patterns/multi-brand-architecture), and [CSS Consumption](consumption/css).
 
 ## What's the difference between base, alias, and component variables?
 

@@ -209,7 +209,7 @@ Design Engineer MUST:
 4. Design Engineer generates CSS custom properties from Variable Design Standard (VDS) JSON
 5. Design Engineer tests variables in Tailwind CSS v4 components
 6. Commit Variable Design Standard (VDS) JSON and generated CSS
-7. Frontend Developer consumes Tailwind utilities in components
+7. Frontend Engineer consumes Tailwind utilities in components
 
 ## Example component
 

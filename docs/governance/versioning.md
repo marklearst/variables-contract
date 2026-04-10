@@ -1,12 +1,12 @@
 ---
-title: Governance - Versioning
+title: Governance: Versioning
 ---
 
 # Variable Design Standard (VDS) Versioning
 
 Versioning communicates breaking changes and migration requirements.
 
-If versioning is inconsistent, consumers cannot plan upgrades and breaking changes ship without notice.
+If versioning rules are not followed, consumers cannot plan upgrades and breaking changes ship without notice.
 
 ## Semantic versioning
 
@@ -207,7 +207,7 @@ Action: Bump to v1.1.0.
 
 Changing a variable value may or may not be breaking depending on usage.
 
-If the value change is intentional and documented, it may be MINOR:
+If the value change is approved in review and documented, it may be MINOR:
 
 ```json
 {
@@ -231,7 +231,7 @@ If the value change is intentional and documented, it may be MINOR:
 }
 ```
 
-Action: Bump to v1.1.0 if change is intentional and documented.
+Action: Bump to v1.1.0 if change is approved in review and documented.
 
 If the value change is accidental or breaks visual output, treat as breaking.
 
@@ -330,9 +330,15 @@ Migration: Use `color.new` instead.
 5. Tag release in version control
 6. Publish release notes
 
+## Review checklist
+
+- [ ] Change type is labeled (breaking or non-breaking)
+- [ ] Version bump matches the change type
+- [ ] Release notes include breaking changes and migrations
+
 ## Failure modes
 
-If versioning is inconsistent:
+If versioning rules are not followed:
 
 - Breaking changes ship without notice
 - Consumers cannot plan upgrades
@@ -345,3 +351,12 @@ If versioning is inconsistent:
 - Version comparison tools
 - Release automation
 
+## Ownership
+
+- Design Engineer: owns versioning decisions
+- Frontend Engineer: validates impact in code
+
+## Links
+
+- [Change Control](change-control)
+- [Conformance](../reference/conformance)

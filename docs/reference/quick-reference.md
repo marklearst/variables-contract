@@ -111,7 +111,7 @@ Example:
 - Run adapters
 - Publish releases
 
-**Frontend Developer:**
+**Frontend Engineer:**
 - Consume variables in code
 - Maintain build pipelines
 - Test consumption
