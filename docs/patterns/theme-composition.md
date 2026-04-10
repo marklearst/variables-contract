@@ -1,10 +1,12 @@
 ---
-title: Patterns - Theme Composition
+title: Patterns: Theme Composition
 ---
 
 # Theme Composition Patterns
 
-How to compose themes using modes and variable references.
+This pattern specifies theme composition using modes and references.
+
+Failure if ignored: theme variants diverge and outputs do not match expected modes.
 
 ## Theme composition patterns
 
@@ -220,7 +222,7 @@ Theme with multiple modes:
 
 1. Use modes for theme variants
 2. Reference base variables in mode values
-3. Keep mode keys consistent
+3. Keep the same mode key set across the collection
 4. Document mode strategy
 5. Test theme switching
 
@@ -231,11 +233,10 @@ If theme composition is wrong:
 - Theme switching breaks
 - Mode-specific outputs fail
 - Reference resolution fails
-- Inconsistent theming
+- Mode keys differ across variables
 
 ## Out of scope
 
 - Runtime theme switching (handle in consumption layer)
 - Theme management UI (use existing tools)
 - Theme persistence (handle in application layer)
-

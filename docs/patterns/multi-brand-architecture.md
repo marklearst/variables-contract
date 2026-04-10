@@ -1,10 +1,12 @@
 ---
-title: Patterns - Multi-Brand Architecture
+title: Patterns: Multi-Brand Architecture
 ---
 
 # Multi-Brand Architecture
 
-Complete example of multi-brand variable architecture using Variable Design Standard (VDS).
+This pattern specifies a multi-brand architecture that keeps one semantic name set across brands.
+
+Failure if ignored: brand values leak across outputs or require a mapped layer to resolve.
 
 ## Architecture overview
 
@@ -23,6 +25,84 @@ tokens/
     color.json
     typography.json
 ```
+
+## File structure is the API
+
+Semantic names are the API. Consumers request `color.surface.brand`. The build selects the brand folder that defines that name.
+
+This replaces a mapped collection with file selection.
+
+JSON files are the contract input. The folder path is the selector. The semantic names stay the same across brands.
+
+Rules:
+
+- The semantic name set MUST match across brand folders.
+- Build config MUST select exactly one brand folder at a time.
+- Mapped variables MUST NOT exist in the contract graph.
+
+## File selection rule
+
+File selection rule is shorthand for this model.
+
+- The files are the contract input.
+- The folder path and file name are the selector.
+- The build or import list is the switch.
+
+JSON-as-API: the file set is the interface and the selector.
+
+This keeps brand choice out of a mapped layer and out of tool panels.
+
+This is a file selection rule. It is not a hosted service.
+
+Example selector:
+
+```
+tokens/brand-a/color.json
+tokens/brand-b/color.json
+```
+
+Pick one folder. The semantic names stay the same. The values change.
+
+If you can select files, you can switch brands. No map required.
+
+Example build selection:
+
+```json
+{
+  "source": ["tokens/base/**/*.json", "tokens/brand-a/**/*.json"]
+}
+```
+
+Example CSS selection:
+
+```css
+@layer base, brand;
+@import "variables-base.css" layer(base);
+@import "variables-brand-a.css" layer(brand);
+```
+
+## Decision surface
+
+Decisions live in files and build inputs, not in a mapped collection.
+
+- Choose the brand by the source list or by CSS imports.
+- Use alias modes in tools for preview. Do not store brand logic in a variables panel.
+- Use one decision point. Do not add a second map.
+
+Example preview:
+
+```
+Alias collection
+  Mode: brand-a
+  color.surface.brand -> {color.brand.primary}
+  Mode: brand-b
+  color.surface.brand -> {color.brand.primary}
+```
+
+## Governance note
+
+- The file list is the only switch.
+- Changes to brand folders follow the contract review gate.
 
 ### Shared base
 
@@ -93,10 +173,7 @@ Each brand has specific variables:
 
 ```json
 {
-  "source": [
-    "tokens/base/**/*.json",
-    "tokens/brand-a/**/*.json"
-  ],
+  "source": ["tokens/base/**/*.json", "tokens/brand-a/**/*.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
@@ -116,10 +193,7 @@ Each brand has specific variables:
 
 ```json
 {
-  "source": [
-    "tokens/base/**/*.json",
-    "tokens/brand-b/**/*.json"
-  ],
+  "source": ["tokens/base/**/*.json", "tokens/brand-b/**/*.json"],
   "platforms": {
     "css": {
       "transformGroup": "css",
@@ -174,7 +248,7 @@ Consume brand-specific variables:
 1. Share base scales across brands
 2. Keep brand-specific variables minimal
 3. Reference base variables in brand variables
-4. Use consistent naming across brands
+4. Use the same semantic name set across brand folders
 5. Document brand differences
 
 ## Failure modes
@@ -182,13 +256,15 @@ Consume brand-specific variables:
 If multi-brand architecture is wrong:
 
 - Duplication of shared variables
-- Inconsistent branding
+- Brand A values appear in Brand B output
 - Maintenance burden
 - Build complexity
+- Mapped variables appear as a shadow layer
+- Brand selection leaks into token names
+- All brands end up in one output bundle
 
 ## Out of scope
 
 - Brand management tools (use existing tools)
 - Brand switching at runtime (handle in consumption layer)
 - Brand-specific design decisions (focus on structure)
-

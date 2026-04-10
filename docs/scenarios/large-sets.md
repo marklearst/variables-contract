@@ -1,12 +1,12 @@
 ---
-title: Scenarios - Large Variable Sets
+title: Scenarios: Large Variable Sets
 ---
 
 # Large Variable Sets
 
-How to handle large variable sets (100+ variables) with performance considerations.
+This scenario specifies constraints for large variable sets (100+ variables).
 
-If large sets are not organized correctly, you get slow builds, memory issues, and maintenance burden.
+Failure if ignored: build time and memory use grow until validation and output generation fail.
 
 ## Performance considerations
 
@@ -133,7 +133,7 @@ Cons:
 - Potential duplication
 - Cross-component references
 
-## Reference resolution optimization
+## Reference resolution performance
 
 ### Cache resolved references
 
@@ -175,7 +175,7 @@ async function resolveReferencesParallel(variables) {
 }
 ```
 
-## Build time optimization
+## Build time performance
 
 ### Incremental builds
 
@@ -276,7 +276,7 @@ tokens/
 
 1. Organize by category or component
 2. Keep files under 1000 variables
-3. Use consistent naming
+3. Use the same naming rules across files
 4. Cache resolved references
 5. Reduce build time (parallelize, cache)
 
