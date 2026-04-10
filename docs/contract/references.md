@@ -6,6 +6,12 @@ title: References
 
 References allow variables to point to other variables. Variable Design Standard (VDS) supports two reference syntaxes: curly brace and JSON Pointer.
 
+## Requirements
+
+- References MUST point to an existing variable path.
+- References MUST NOT create cycles.
+- Variable Design Standard (VDS) files MUST use curly brace syntax.
+
 ## Reference syntax
 
 ### Curly brace syntax (canonical)
@@ -202,10 +208,10 @@ Example:
 
 Supported color component references:
 
-- `{variable.r}` - red component
-- `{variable.g}` - green component
-- `{variable.b}` - blue component
-- `{variable.alpha}` - alpha component
+- `{variable.r}`: red component
+- `{variable.g}`: green component
+- `{variable.b}`: blue component
+- `{variable.alpha}`: alpha component
 
 ### Dimension component references
 
@@ -233,8 +239,8 @@ Example:
 
 Supported dimension component references:
 
-- `{variable.value}` - numeric value
-- `{variable.unit}` - unit string (read-only, cannot be referenced)
+- `{variable.value}`: numeric value
+- `{variable.unit}`: unit string (read-only, cannot be referenced)
 
 ### Typography component references
 
@@ -268,11 +274,11 @@ Example:
 
 Supported typography component references:
 
-- `{variable.fontFamily}` - font family
-- `{variable.fontSize}` - font size (dimension)
-- `{variable.fontWeight}` - font weight
-- `{variable.letterSpacing}` - letter spacing (dimension)
-- `{variable.lineHeight}` - line height (number)
+- `{variable.fontFamily}`: font family
+- `{variable.fontSize}`: font size (dimension)
+- `{variable.fontWeight}`: font weight
+- `{variable.letterSpacing}`: letter spacing (dimension)
+- `{variable.lineHeight}`: line height (number)
 
 ## References in modes (Variable Design Standard (VDS) extension)
 
@@ -402,7 +408,7 @@ If you ignore reference rules:
 - Invalid paths silently fail or resolve incorrectly
 - Property-level references on wrong types cause type errors
 
-## Validation checklist
+## Validation Checklist
 
 A reference is valid if:
 
@@ -415,6 +421,5 @@ A reference is valid if:
 ## Out of scope
 
 - Runtime reference resolution libraries (use DTCG-compliant resolvers)
-- Reference rewriting or transformation
+- Reference rewriting or conversion
 - Cross-file references (all references are within the same JSON document)
-

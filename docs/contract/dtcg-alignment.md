@@ -10,6 +10,14 @@ Variable Design Standard (VDS) is DTCG 2025.10 compliant. What that means and wh
 
 Variable Design Standard (VDS) uses the Design Tokens Community Group (DTCG) format 2025.10 as its base format. Variable Design Standard (VDS) extends DTCG with modes and convenience formats. Files using only DTCG features are strictly compliant. Files using modes or string shortcuts for dimension/duration are Variable Design Standard (VDS) format.
 
+## Requirements
+
+- Variable JSON MUST follow DTCG 2025.10 structure.
+- `$type` and `$value` MUST exist on every variable.
+- References MUST use curly brace syntax in Variable Design Standard (VDS) files.
+- JSON Pointer references MAY be supported for DTCG compliance.
+- Modes in `$value` are a Variable Design Standard (VDS) extension.
+
 ## What DTCG provides
 
 DTCG 2025.10 defines:
@@ -61,6 +69,30 @@ Variable Design Standard (VDS) extends DTCG format with:
 4. Validation that checks references resolve
 5. Governance that treats renames as breaking changes
 
+## Examples
+
+Strict DTCG:
+
+```json
+{
+  "$type": "color",
+  "$value": {
+    "colorSpace": "srgb",
+    "components": [0, 0.4, 0.8],
+    "hex": "#0066cc"
+  }
+}
+```
+
+Variable Design Standard (VDS) extension:
+
+```json
+{
+  "$type": "color",
+  "$value": "#0066cc"
+}
+```
+
 ## Strict DTCG compliance
 
 For strict DTCG 2025.10 compliance, use:
@@ -93,3 +125,10 @@ If you ignore DTCG compliance:
 - Runtime validation libraries (use DTCG-compliant validators)
 - Format conversion tools (use adapters)
 - Tool-specific features not in DTCG spec
+
+## Validation checklist
+
+- [ ] All variables include `$type` and `$value`
+- [ ] References in Variable Design Standard (VDS) files use `{path}` syntax
+- [ ] JSON Pointer references are only used for DTCG compliance
+- [ ] Modes in `$value` are documented as a Variable Design Standard (VDS) extension

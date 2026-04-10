@@ -6,6 +6,12 @@ title: Types
 
 Types define how a variable's `$value` is interpreted. Variable Design Standard (VDS) supports all DTCG 2025.10 types.
 
+## Requirements
+
+- Every variable MUST include `$type`.
+- `$value` MUST match the structure defined for that type.
+- DTCG object formats are the canonical forms for color, dimension, and duration.
+
 ## Type system overview
 
 Every variable MUST have a `$type` property. The type determines:
@@ -321,11 +327,11 @@ Composite types combine multiple primitive types into structured values. See [Co
 
 Supported composite types:
 
-- `border` - border width, color, and style
-- `transition` - duration, delay, and timing function
-- `shadow` - shadow color, offset, blur, and spread
-- `gradient` - array of color stops with positions
-- `typography` - font family, size, weight, letter spacing, and line height
+- `border`: border width, color, and style
+- `transition`: duration, delay, and timing function
+- `shadow`: shadow color, offset, blur, and spread
+- `gradient`: array of color stops with positions
+- `typography`: font family, size, weight, letter spacing, and line height
 
 ## Type validation rules
 
@@ -466,7 +472,7 @@ If you ignore type rules:
 - Missing `$type` prevents tools from interpreting values
 - Changing `$type` breaks consumers expecting the old type
 
-## Validation checklist
+## Validation Checklist
 
 A variable type is valid if:
 

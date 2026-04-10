@@ -6,6 +6,12 @@ title: Composite Types
 
 Composite types combine multiple primitive types into structured values. They represent complex design decisions like borders, shadows, and typography styles.
 
+## Requirements
+
+- Composite variables MUST use an object in `$value`.
+- The `$value` object MUST match the property list for that composite type.
+- Each property value MUST be a literal of the expected type or a reference to one.
+
 ## Border
 
 `$type: "border"`
@@ -50,9 +56,9 @@ Stroke style values:
 
 Property-level references:
 
-- `{variable.width}` - border width
-- `{variable.color}` - border color
-- `{variable.style}` - border style
+- `{variable.width}`: border width
+- `{variable.color}`: border color
+- `{variable.style}`: border style
 
 ## Transition
 
@@ -92,9 +98,9 @@ Example:
 
 Property-level references:
 
-- `{variable.duration}` - transition duration
-- `{variable.delay}` - transition delay
-- `{variable.timingFunction}` - timing function
+- `{variable.duration}`: transition duration
+- `{variable.delay}`: transition delay
+- `{variable.timingFunction}`: timing function
 
 ## Shadow
 
@@ -141,11 +147,11 @@ Example:
 
 Property-level references:
 
-- `{variable.color}` - shadow color
-- `{variable.offsetX}` - horizontal offset
-- `{variable.offsetY}` - vertical offset
-- `{variable.blur}` - blur radius
-- `{variable.spread}` - spread radius
+- `{variable.color}`: shadow color
+- `{variable.offsetX}`: horizontal offset
+- `{variable.offsetY}`: vertical offset
+- `{variable.blur}`: blur radius
+- `{variable.spread}`: spread radius
 
 ## Gradient
 
@@ -244,13 +250,32 @@ Example:
 }
 ```
 
+## Failure modes
+
+If composite rules are ignored:
+
+- Missing required fields for a composite type
+- Property-level references point to incompatible types
+- Consumers cannot render the composite correctly
+
+## Validation checklist
+
+- [ ] Each composite includes all required fields for its type
+- [ ] Each field value matches the expected primitive type
+- [ ] Property-level references resolve to matching fields
+
+## Out of scope
+
+- Runtime rendering rules for composites
+- Tool-specific composite extensions
+
 Property-level references:
 
-- `{variable.fontFamily}` - font family
-- `{variable.fontSize}` - font size
-- `{variable.fontWeight}` - font weight
-- `{variable.letterSpacing}` - letter spacing
-- `{variable.lineHeight}` - line height
+- `{variable.fontFamily}`: font family
+- `{variable.fontSize}`: font size
+- `{variable.fontWeight}`: font weight
+- `{variable.letterSpacing}`: letter spacing
+- `{variable.lineHeight}`: line height
 
 ## Composite type validation
 
@@ -421,4 +446,3 @@ A composite type is valid if:
 - Custom composite types (use `$extensions` for metadata)
 - Composite type coercion
 - Runtime composite type validation libraries (use DTCG-compliant validators)
-

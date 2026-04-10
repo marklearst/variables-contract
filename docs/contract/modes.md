@@ -6,9 +6,15 @@ title: Modes
 
 **Variable Design Standard (VDS) Extension**: Modes are NOT part of the DTCG 2025.10 specification. This is a Variable Design Standard (VDS) extension inspired by Figma's modes concept. For strict DTCG compliance, use separate variables or store mode metadata in `$extensions`.
 
-Modes represent intentional variants of variables (example: `light`/`dark`, `mobile`/`desktop`).
+Modes represent named variants of variables (example: `light`/`dark`, `mobile`/`desktop`).
 
-If modes are inconsistent, theme switching breaks and mode-specific outputs fail.
+If mode keys do not match within a collection, theme switching breaks and mode-specific outputs fail.
+
+## Requirements
+
+- If `$value` is an object, its keys MUST be treated as mode names.
+- All variables in a collection MUST use the same mode key set.
+- Changing a mode key is a breaking change.
 
 ## Mode structure
 
@@ -39,13 +45,13 @@ Rules:
 - Mode names MUST be strings
 - Mode names SHOULD be lowercase
 - Mode names SHOULD be descriptive (`light`, `dark`, `mobile`, `desktop`)
-- Mode names MUST be consistent within collections
+- Mode names MUST match within collections
 
-## Mode consistency
+## Mode key sets
 
 All variables in a collection that use modes MUST use the same mode keys.
 
-Example of consistent modes:
+Example of matching modes:
 
 ```json
 {
@@ -70,7 +76,7 @@ Example of consistent modes:
 
 Both variables use `light` and `dark` modes.
 
-Example of inconsistent modes (invalid):
+Example of mismatched modes (invalid):
 
 ```json
 {
@@ -93,6 +99,21 @@ Example of inconsistent modes (invalid):
 ```
 
 `color.surface` is missing `dark` mode.
+
+## Failure modes
+
+If mode rules are ignored:
+
+- Mode keys differ across variables in the same collection
+- Mode values are missing for a required key
+- Theme switching breaks in generated outputs
+
+## Validation checklist
+
+- [ ] Mode keys match across a collection
+- [ ] Mode keys are lowercase strings
+- [ ] Mode values are valid for the variable type
+- [ ] Mode values are either literals or references
 
 ## Mode values
 
@@ -212,7 +233,7 @@ Example:
 }
 ```
 
-The `$extensions.modes` documents the expected modes but does not enforce them. Validation should check mode consistency.
+The `$extensions.modes` documents the expected modes but does not enforce them. Validation should check mode key sets.
 
 ## Mode limitations
 
@@ -220,7 +241,7 @@ Rules:
 
 - Keep modes limited (example: `light`, `dark`)
 - Avoid mode explosion (do not create modes for every variation)
-- Use modes for intentional variants, not for every possible value
+- Use modes for named variants (light/dark), not for every possible value
 
 ## Examples
 
@@ -285,7 +306,7 @@ Rules:
 
 ## Failure modes
 
-If modes are inconsistent:
+If mode keys do not match:
 
 - Theme switching breaks
 - Mode-specific outputs fail
@@ -297,7 +318,7 @@ If modes are inconsistent:
 Modes are valid if:
 
 - Mode keys are strings
-- Mode keys are consistent within collections
+- Mode keys match within collections
 - Mode values are valid for the variable type
 - Mode references resolve correctly
 - All variables in a collection use the same mode keys (if they use modes)
@@ -340,6 +361,5 @@ Example of DTCG-compliant approach without modes:
 ## Out of scope
 
 - Runtime mode switching (handle in consumption layer)
-- Mode transformation (handle in adapters)
+- Mode conversion (handle in adapters)
 - Mode-specific build outputs (handle in build tools)
-
