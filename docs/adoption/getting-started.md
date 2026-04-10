@@ -4,13 +4,13 @@ title: Adoption - Getting Started
 
 # Team Adoption Guide
 
-How to adopt Variable Contract in your team or organization.
+How to adopt Variable Design Standard (VDS) in your team or organization.
 
 If you skip adoption steps, you get inconsistent variables, broken validation, and team confusion.
 
 ## Prerequisites
 
-Before adopting Variable Contract:
+Before adopting Variable Design Standard (VDS):
 
 - Designers use Figma (or similar design tool)
 - Developers use version control (Git)
@@ -26,7 +26,7 @@ Before adopting Variable Contract:
 1. Create variable repository structure
 
    - Set up `tokens/` directory in version control
-   - Create initial Variable Contract JSON files
+   - Create initial Variable Design Standard (VDS) JSON files
    - Set up file organization (base, semantic, component)
 
 2. Set up validation
@@ -51,14 +51,14 @@ Before adopting Variable Contract:
 **Goal**: Create first variable set
 
 1. Export existing variables from Figma
-2. Run adapter to normalize to Variable Contract format
+2. Run adapter to normalize to Variable Design Standard (VDS) format
 3. Validate normalized JSON
 4. Commit to version control
 5. Generate initial outputs (CSS, TypeScript)
 
 **Deliverables**:
 
-- First Variable Contract JSON files
+- First Variable Design Standard (VDS) JSON files
 - Generated CSS/TypeScript outputs
 - Validation passing
 
@@ -81,7 +81,7 @@ Before adopting Variable Contract:
 
 **Goal**: Establish ongoing workflow
 
-1. Train designers on Variable Contract naming
+1. Train designers on Variable Design Standard (VDS) naming
 2. Train developers on variable consumption
 3. Set up review process
 4. Document change workflow
@@ -98,7 +98,7 @@ Before adopting Variable Contract:
 
 Responsibilities:
 
-- Maintain Variable Contract JSON
+- Maintain Variable Design Standard (VDS) JSON
 - Review variable changes
 - Set up validation and CI
 - Manage versioning and releases
@@ -126,7 +126,9 @@ Responsibilities:
 
 ### Step 1: Repository setup
 
-Create repository structure:
+Create repository structure following the canonical file layout:
+
+#### Basic structure
 
 ```
 tokens/
@@ -141,6 +143,93 @@ tokens/
     button.json
     input.json
 ```
+
+#### Grouping strategy
+
+- **base/**: Raw scales and palettes (base variables)
+- **semantic/**: Intent-based aliases (alias variables)
+- **component/**: Component-specific overrides (component variables)
+
+#### Multi-brand structure
+
+For multi-brand systems:
+
+```
+tokens/
+  base/
+    color.json
+    spacing.json
+    typography.json
+  brands/
+    brand-a/
+      color.json        # Extends base/color.json
+      spacing.json
+    brand-b/
+      color.json        # Extends base/color.json
+      spacing.json
+  semantic/
+    color.json          # References brand-specific variables
+    spacing.json
+  component/
+    button.json
+    input.json
+```
+
+#### Multi-theme structure
+
+For systems with multiple themes:
+
+```
+tokens/
+  base/
+    color.json
+    spacing.json
+  themes/
+    light/
+      color.json        # Light theme variables
+    dark/
+      color.json        # Dark theme variables
+  semantic/
+    color.json          # Uses modes to reference theme variables
+    spacing.json
+  component/
+    button.json
+```
+
+#### Combined multi-brand and multi-theme
+
+For complex systems:
+
+```
+tokens/
+  base/
+    color.json
+    spacing.json
+  brands/
+    brand-a/
+      themes/
+        light/
+          color.json
+        dark/
+          color.json
+    brand-b/
+      themes/
+        light/
+          color.json
+        dark/
+          color.json
+  semantic/
+    color.json
+  component/
+    button.json
+```
+
+#### File naming conventions
+
+- Use lowercase with hyphens for file names: `color.json`, `spacing-scale.json`
+- Group files by category (color, spacing, typography)
+- Keep related variables together in the same file
+- Split large files when they exceed ~500 variables for maintainability
 
 ### Step 2: Install tooling
 

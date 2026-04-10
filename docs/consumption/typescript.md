@@ -4,7 +4,7 @@ title: Consumption - TypeScript
 
 # TypeScript Consumption
 
-How to consume Variable Contract variables in TypeScript with type safety.
+How to consume Variable Design Standard (VDS) variables in TypeScript with type safety.
 
 ## Type generation
 
@@ -283,7 +283,7 @@ export function useTheme() {
 
 ## Implementation rules
 
-1. Generate types from Variable Contract
+1. Generate types from Variable Design Standard (VDS)
 2. Use type-safe access
 3. Document type usage
 4. Test type safety

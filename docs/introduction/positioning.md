@@ -2,29 +2,29 @@
 title: Positioning
 ---
 
-# Variable Contract Positioning
+# Variable Design Standard (VDS) Positioning
 
-What Variable Contract is, what it is not, and how it fits into the larger UMP system.
+What Variable Design Standard (VDS) is, what it is not, and how it fits into the larger UDS framework.
 
-## What Variable Contract is
+## What Variable Design Standard (VDS) is
 
-Variable Contract is:
+Variable Design Standard (VDS) is:
 
 - A governance layer on DTCG 2025.10 format
 - Rules for naming, validation, and versioning
 - Adapter patterns for tool integration
 - A standard for managing variables in version control
 
-Variable Contract provides:
+Variable Design Standard (VDS) provides:
 
 - Structure (DTCG-compliant JSON)
 - Governance (naming rules, change control)
 - Validation (what to check)
 - Adapters (how to convert tool outputs)
 
-## What Variable Contract is NOT
+## What Variable Design Standard (VDS) is NOT
 
-Variable Contract is NOT:
+Variable Design Standard (VDS) is NOT:
 
 - A new format (uses DTCG 2025.10)
 - A tool (works with existing tools)
@@ -32,24 +32,25 @@ Variable Contract is NOT:
 - A runtime library (use DTCG-compliant validators)
 - A build tool (use Style Dictionary or similar)
 
-## UMP context
+## UDS Framework
 
-Variable Contract is part of UMP (UI Mapping Protocol), a larger system for mapping design and development artifacts.
+Variable Design Standard is part of UDS (UI Design Standard), a comprehensive framework for design-to-code governance.
 
-UMP components:
+UDS components:
 
-- Variable Contract (this spec) - variables/tokens
-- Component Contract (future) - component mapping
-- Pattern Contract (future) - pattern mapping
+- Variable Design Standard (VDS) - this spec
+- Integrity Design Standard (IDS) - tooling layer (future)
+- Component Design Standard (future) - component mapping
+- Pattern Design Standard (future) - pattern mapping
 - Design-Dev Mapping (future) - artifact relationships
 
-Variable Contract is the first piece of UMP, focusing on variables.
+Variable Design Standard is the first standard in UDS, focusing on variables.
 
 ## Target audience
 
 ### Designers
 
-Designers use Variable Contract to:
+Designers use Variable Design Standard (VDS) to:
 
 - Create variables in Figma
 - Follow naming conventions
@@ -58,7 +59,7 @@ Designers use Variable Contract to:
 
 ### Developers
 
-Developers use Variable Contract to:
+Developers use Variable Design Standard (VDS) to:
 
 - Consume variables in code
 - Validate variable changes
@@ -67,9 +68,9 @@ Developers use Variable Contract to:
 
 ### Design Engineers
 
-Design Engineers use Variable Contract to:
+Design Engineers use Variable Design Standard (VDS) to:
 
-- Maintain variable contract
+- Maintain Variable Design Standard (VDS)
 - Review variable changes
 - Set up validation
 - Manage versioning
@@ -77,7 +78,7 @@ Design Engineers use Variable Contract to:
 
 ## Problem it solves
 
-Variable Contract solves:
+Variable Design Standard (VDS) solves:
 
 1. **Naming confusion**: Everyone calls them something different
 2. **No governance**: Variables change without rules
@@ -88,7 +89,7 @@ Variable Contract solves:
 
 ## How it works
 
-Variable Contract works by:
+Variable Design Standard (VDS) works by:
 
 1. Defining structure (DTCG 2025.10 format)
 2. Adding governance (naming, validation, versioning)
@@ -98,7 +99,7 @@ Variable Contract works by:
 
 ## Success criteria
 
-Variable Contract succeeds when:
+Variable Design Standard (VDS) succeeds when:
 
 - Teams adopt it without confusion
 - Variables are validated automatically
@@ -108,8 +109,7 @@ Variable Contract succeeds when:
 
 ## Out of scope
 
-- UMP full system (separate project)
+- UDS full system (separate project)
 - Runtime libraries (use existing tools)
 - UI tools (use existing tools)
 - Design decisions (govern structure, not values)
-

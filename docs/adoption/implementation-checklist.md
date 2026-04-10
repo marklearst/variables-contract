@@ -4,7 +4,7 @@ title: Adoption - Implementation Checklist
 
 # Implementation Checklist
 
-Pre-implementation, implementation, and post-implementation checklists for Variable Contract adoption.
+Pre-implementation, implementation, and post-implementation checklists for Variable Design Standard (VDS) adoption.
 
 ## Pre-implementation checklist
 
@@ -15,7 +15,7 @@ Before starting implementation, verify:
 - [ ] Design Engineer role assigned
 - [ ] Designers available for training
 - [ ] Developers available for integration
-- [ ] Team understands Variable Contract concept
+- [ ] Team understands Variable Design Standard (VDS) concept
 - [ ] Stakeholders approve adoption
 
 ### Technical readiness
@@ -44,7 +44,7 @@ During implementation, complete:
 - [ ] Install validation tool
 - [ ] Configure CI validation
 - [ ] Set up pre-commit hooks
-- [ ] Create initial Variable Contract JSON structure
+- [ ] Create initial Variable Design Standard (VDS) JSON structure
 - [ ] Document team-specific guidelines
 
 ### Phase 2: Initial variables
@@ -53,7 +53,7 @@ During implementation, complete:
 - [ ] Run adapter to normalize export
 - [ ] Validate normalized JSON
 - [ ] Fix any validation errors
-- [ ] Commit Variable Contract JSON to version control
+- [ ] Commit Variable Design Standard (VDS) JSON to version control
 - [ ] Configure build tool (Style Dictionary)
 - [ ] Generate initial outputs (CSS, TypeScript)
 - [ ] Verify outputs are correct
@@ -79,7 +79,7 @@ During implementation, complete:
 
 ## Conformance checklist
 
-To claim Variable Contract compliance, verify:
+To claim Variable Design Standard (VDS) compliance, verify:
 
 ### Format compliance
 
@@ -158,7 +158,7 @@ After implementation, verify:
 ### Documentation
 
 - [ ] Team documentation is complete
-- [ ] Variable Contract JSON is documented
+- [ ] Variable Design Standard (VDS) JSON is documented
 - [ ] Consumption patterns are documented
 - [ ] Workflow is documented
 - [ ] Troubleshooting guide is available

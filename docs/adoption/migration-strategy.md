@@ -4,7 +4,7 @@ title: Adoption - Migration Strategy
 
 # Phased Migration Strategy
 
-How to migrate existing variable systems to Variable Contract using a phased approach.
+How to migrate existing variable systems to Variable Design Standard (VDS) using a phased approach.
 
 If you migrate everything at once, you risk breaking production, losing references, and confusing the team.
 
@@ -53,9 +53,9 @@ Use when:
 
 ### Phase 1: Foundation (Week 1-2)
 
-**Goal**: Set up Variable Contract alongside existing system
+**Goal**: Set up Variable Design Standard (VDS) alongside existing system
 
-1. Set up Variable Contract structure
+1. Set up Variable Design Standard (VDS) structure
    - Create `tokens/` directory
    - Set up validation
    - Configure CI
@@ -71,7 +71,7 @@ Use when:
    - Commit to version control
 
 **Deliverables**:
-- Variable Contract structure set up
+- Variable Design Standard (VDS) structure set up
 - Adapter working
 - All variables converted (not yet consumed)
 
@@ -79,12 +79,12 @@ Use when:
 
 **Goal**: Run both systems in parallel
 
-1. Generate outputs from Variable Contract
+1. Generate outputs from Variable Design Standard (VDS)
    - Configure Style Dictionary
    - Generate CSS/TypeScript
    - Verify outputs match existing
 
-2. Update components to use Variable Contract outputs
+2. Update components to use Variable Design Standard (VDS) outputs
    - Start with new components
    - Gradually migrate existing components
    - Test each migration
@@ -95,7 +95,7 @@ Use when:
    - Document learnings
 
 **Deliverables**:
-- Variable Contract outputs generated
+- Variable Design Standard (VDS) outputs generated
 - Some components using new variables
 - Both systems running in parallel
 
@@ -109,9 +109,9 @@ Use when:
    - Document changes
 
 2. Update design workflow
-   - Train designers on Variable Contract
+   - Train designers on Variable Design Standard (VDS)
    - Update Figma workflow
-   - Export to Variable Contract format
+   - Export to Variable Design Standard (VDS) format
 
 3. Deprecate old system
    - Mark old variables as deprecated
@@ -137,14 +137,14 @@ Use when:
    - Remove old build configs
    - Update documentation
 
-3. Finalize Variable Contract
+3. Finalize Variable Design Standard (VDS)
    - Complete migration documentation
    - Train team on new system
    - Celebrate success
 
 **Deliverables**:
 - Old system removed
-- Variable Contract fully adopted
+- Variable Design Standard (VDS) fully adopted
 - Team trained
 
 ## Migration by format
@@ -170,7 +170,7 @@ Use when:
 
 **Phase 1**: Extract variables
 - Extract Material-specific variables
-- Map to Variable Contract structure
+- Map to Variable Design Standard (VDS) structure
 - Normalize naming
 
 **Phase 2**: Create adapters
@@ -181,7 +181,7 @@ Use when:
 **Phase 3**: Migrate consumption
 - Update components
 - Remove Material-specific code
-- Use Variable Contract outputs
+- Use Variable Design Standard (VDS) outputs
 
 ### From custom formats
 
@@ -198,7 +198,7 @@ Use when:
 **Phase 3**: Migrate consumption
 - Update components
 - Remove old system
-- Use Variable Contract
+- Use Variable Design Standard (VDS)
 
 ## Migration checklist
 
@@ -207,13 +207,13 @@ Use when:
 - [ ] Audit existing variables
 - [ ] Document current format
 - [ ] Identify migration approach
-- [ ] Set up Variable Contract structure
+- [ ] Set up Variable Design Standard (VDS) structure
 - [ ] Create adapter (if needed)
 - [ ] Test adapter output
 
 ### During migration
 
-- [ ] Convert variables to Variable Contract
+- [ ] Convert variables to Variable Design Standard (VDS)
 - [ ] Validate converted JSON
 - [ ] Generate outputs
 - [ ] Test outputs match existing

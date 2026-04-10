@@ -4,7 +4,7 @@ title: Patterns - Performance Optimization
 
 # Performance Optimization
 
-How to reduce build times and file sizes for Variable Contract with large variable sets.
+How to reduce build times and file sizes for Variable Design Standard (VDS) with large variable sets.
 
 ## Performance considerations
 
