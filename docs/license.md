@@ -4,7 +4,7 @@ title: License
 
 # License
 
-The Variables Contract Specification is dual-licensed:
+The Variable Design Standard (VDS) Specification is dual-licensed:
 
 1. **CC BY-ND 4.0** — Legally recognized base license
 2. **Standards Integrity Addendum** — Additional terms for public use
@@ -29,7 +29,7 @@ Additional terms apply to public-facing uses. These prevent ecosystem fragmentat
 
 ### Conformance Tiers
 
-**Variables Contract Conformant** requires:
+**Variable Design Standard (VDS) Conformant** requires:
 
 - Full Variable Anatomy (Base, Alias, Component)
 - Mode resolution and inheritance
@@ -37,7 +37,7 @@ Additional terms apply to public-facing uses. These prevent ecosystem fragmentat
 - Valid DTCG-aligned JSON with references (not flattened values)
 - Naming convention enforcement
 
-**Variables Contract Compatible** requires:
+**Variable Design Standard (VDS) Compatible** requires:
 
 - Data format that does not corrupt Specification-compliant data
 - Attribution to the Canonical Source
@@ -47,15 +47,15 @@ Additional terms apply to public-facing uses. These prevent ecosystem fragmentat
 Public-facing tooling must include:
 
 ```text
-Built on the Variables Contract Specification
-https://variables-contract.vercel.app
+Built on the Variable Design Standard (VDS) Specification
+https://variable-design-standard.vercel.app
 ```
 
 JSON files should include:
 
 ```json
 {
-  "$schema": "https://variables-contract.vercel.app/assets/schema/v1.json"
+  "$schema": "https://variable-design-standard.vercel.app/assets/schema/v1.json"
 }
 ```
 
@@ -82,7 +82,7 @@ You may NOT claim compatibility if your tool:
 
 **Name Misappropriation**
 
-"Variables Contract" and "VCSL" may only be used for truthful conformance statements.
+"Variable Design Standard (VDS)" and "VDS" may only be used for truthful conformance statements.
 
 ### Enforcement
 
@@ -118,9 +118,9 @@ You may NOT claim compatibility if your tool:
 
 ## Full License
 
-The complete license is in the repository [LICENSE](https://github.com/marklearst/variables-contract/blob/main/LICENSE) file.
+The complete license is in the repository [LICENSE](https://github.com/marklearst/variable-design-standard/blob/main/LICENSE) file.
 
 ## Contact
 
 For licensing inquiries, conformance certification, or permission requests:
-https://variables-contract.vercel.app/license
+https://variable-design-standard.vercel.app/license

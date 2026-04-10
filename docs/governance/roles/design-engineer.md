@@ -4,7 +4,7 @@ title: Role - Design Engineer
 
 # Variable Governance - Design Engineer Role
 
-True hybrid role. Masters both design and frontend. Owns the Variable Contract. Approves all variable changes.
+True hybrid role. Masters both design and frontend. Owns the Variable Design Standard (VDS). Approves all variable changes.
 
 ## The standard
 
@@ -60,7 +60,7 @@ If a candidate cannot demonstrate these skills, they are not ready for this role
 
 ### Contract owner responsibilities
 
-- Own the Variable Contract ([Variable Contract](/contract/variable-contract)).
+- Own the Variable Design Standard (VDS) ([Variable Design Standard (VDS)](/contract/variable-contract)).
 - Approve all variable changes before they enter version control.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
@@ -142,4 +142,4 @@ Design Engineer bridges design and development. This requires demonstrated profi
 
 In smaller teams, one person fills this role. In larger teams, multiple Design Engineers may work together, with one serving as the primary contract owner.
 
-The Variable Contract depends on this role being held to a clear standard. The skills are specific and verifiable.
+The Variable Design Standard (VDS) depends on this role being held to a clear standard. The skills are specific and verifiable.

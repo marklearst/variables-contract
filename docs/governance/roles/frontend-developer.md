@@ -8,14 +8,14 @@ Consumes variables in code. Maintains build pipelines. Does not create variables
 
 ## Scope
 
-Frontend Developers (UI/Engineer) consume variables generated from the Variable Contract. They maintain build pipelines. They do not create variables. They do not own the contract.
+Frontend Developers (UI/Engineer) consume variables generated from the Variable Design Standard (VDS). They maintain build pipelines. They do not create variables. They do not own the contract.
 
 Design Engineer owns the contract. Designer creates variables. Frontend Developer consumes outputs.
 
 ## Responsibilities
 
 - Consume variables in code (CSS variables, TypeScript types, theme objects).
-- Maintain build pipelines that generate outputs from Variable Contract JSON.
+- Maintain build pipelines that generate outputs from Variable Design Standard (VDS) JSON.
 - Integrate variables into component libraries (React, Vue, etc.).
 - Test variable consumption (see [Consumption Tests](/testing/consumption-tests)).
 - Report consumption issues to Design Engineer.
@@ -25,17 +25,17 @@ Design Engineer owns the contract. Designer creates variables. Frontend Develope
 Frontend Developer MUST NOT:
 
 - Create variables in Figma (Designer owns this).
-- Modify the Variable Contract JSON directly without Design Engineer approval.
+- Modify the Variable Design Standard (VDS) JSON directly without Design Engineer approval.
 - Define naming conventions (Design Engineer owns this).
 - Approve variable changes (Design Engineer owns this).
-- Hand-edit generated outputs (regenerate from Variable Contract JSON).
+- Hand-edit generated outputs (regenerate from Variable Design Standard (VDS) JSON).
 
 These boundaries exist because variable authoring and contract ownership require design fluency. Frontend Developer consumes. Design Engineer validates. Designer creates.
 
 ## What success looks like
 
 - Components use semantic variables (not base palette variables directly).
-- Build outputs are generated from Variable Contract JSON (not hand-edited).
+- Build outputs are generated from Variable Design Standard (VDS) JSON (not hand-edited).
 - Variables are type-safe (TypeScript types generated correctly).
 - CSS variables are consumed correctly with fallbacks.
 - Component styling updates automatically when variables change.
@@ -43,7 +43,7 @@ These boundaries exist because variable authoring and contract ownership require
 
 ## Interfaces
 
-- **Design Engineer**: Provides Variable Contract JSON. Maintains contract. Tests variables in React before approval. Frontend Developer reports consumption issues. Design Engineer troubleshoots.
+- **Design Engineer**: Provides Variable Design Standard (VDS) JSON. Maintains contract. Tests variables in React before approval. Frontend Developer reports consumption issues. Design Engineer troubleshoots.
 - **Designer**: Creates variables in Figma. Frontend Developer consumes generated outputs. No direct variable creation handoff.
 
 ## Consumption patterns
@@ -83,7 +83,7 @@ function Button() {
 
 Frontend Developers maintain pipelines that:
 
-1. Read Variable Contract JSON from version control.
+1. Read Variable Design Standard (VDS) JSON from version control.
 2. Generate CSS variables, TypeScript types, theme objects.
 3. Output platform-specific formats.
 4. Integrate with component libraries.
@@ -93,7 +93,7 @@ See [Build Pipelines](/tooling/build-pipelines) for examples.
 ## Common mistakes
 
 - Consuming base palette variables directly in components (use semantic variables).
-- Hand-editing generated outputs (regenerate from Variable Contract JSON).
+- Hand-editing generated outputs (regenerate from Variable Design Standard (VDS) JSON).
 - Not testing variable consumption (add consumption tests).
 - Ignoring breaking changes (read release notes, update code).
 - Trying to fix variable issues by editing code (report to Design Engineer instead).
@@ -121,6 +121,6 @@ If Frontend Developer doesn't report consumption issues:
 ## Out of scope
 
 - Creating variables in Figma (Designer owns this).
-- Maintaining the Variable Contract (Design Engineer owns this).
+- Maintaining the Variable Design Standard (VDS) (Design Engineer owns this).
 - Defining naming conventions (Design Engineer owns this).
 - Approving variable changes (Design Engineer owns this).

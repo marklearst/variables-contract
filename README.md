@@ -1,18 +1,20 @@
-# Variables Contract
+# Variable Design Standard (VDS)
 
 Public specification and governance standard for design variables. DTCG 2025.10 compliant format with naming rules, validation requirements, versioning strategy, and adapter patterns.
 
-**Version:** 0.3.7
+**Version:** 0.4.0
 **Status:** Draft
 **Editor:** Mark Learst
 
-Variables are variables. CSS variables, JavaScript variables, Figma variables. Variables Contract standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
+**Also known as:** Variables Contract
+
+Variables are variables. CSS variables, JavaScript variables, Figma variables. Variable Design Standard standardizes how we name, structure, and govern them. No metaphors. No cute names. Just variables.
 
 If variables are managed without a contract, you get silent renames, broken references, inconsistent naming, tool lock-in, and production failures.
 
 ## What this is
 
-Variables Contract defines:
+Variable Design Standard defines:
 
 - JSON structure (DTCG 2025.10 format)
 - Naming convention (dot-separated paths, lowercase, no platform prefixes)
@@ -21,7 +23,7 @@ Variables Contract defines:
 - Versioning strategy (semantic versioning, breaking change definitions)
 - Adapter patterns (Figma, Tokens Studio, Style Dictionary)
 
-Variables Contract does NOT define:
+Variable Design Standard does NOT define:
 
 - Variable values (your design decisions)
 - Tools to use (works with any DTCG-compliant tool)
@@ -32,7 +34,7 @@ Variables Contract does NOT define:
 
 Variables are variables. CSS variables, JavaScript variables, Figma variables. They store values, can be referenced, and can be changed.
 
-"Design tokens" creates confusion. Developers know variables. Designers know variables. Variables Contract uses the term everyone understands.
+"Design tokens" creates confusion. Developers know variables. Designers know variables. Variable Design Standard uses the term everyone understands.
 
 See [Why Variables](docs/introduction/why-variables) for the full argument.
 
@@ -42,47 +44,50 @@ See [Why Variables](docs/introduction/why-variables) for the full argument.
 
 Everyone calls them something different: design tokens, style properties, design constants, variables, tokens. This creates confusion and separation between design and code.
 
-Variables Contract standardizes on "variables" and provides clear naming rules.
+Variable Design Standard standardizes on "variables" and provides clear naming rules.
 
 ### No governance
 
 Variables change without rules. Renames break components. Invalid references ship to production. Breaking changes go unnoticed.
 
-Variables Contract provides governance: naming rules, validation requirements, versioning strategy, change control process.
+Variable Design Standard provides governance: naming rules, validation requirements, versioning strategy, change control process.
 
 ### Tool lock-in
 
 Variables are tied to specific tools. Figma exports don't work with Style Dictionary. Tokens Studio format doesn't match DTCG. Migration is painful.
 
-Variables Contract is tool-agnostic. Use any tool. Adapters normalize tool outputs to the contract.
+Variable Design Standard is tool-agnostic. Use any tool. Adapters normalize tool outputs to the standard.
 
 ### Handoff breaks
 
 Design and code don't align. Designers create variables in Figma. Developers consume CSS variables. The connection breaks.
 
-Variables Contract bridges the gap. Variables flow from Figma through adapters to version control to generated outputs.
+Variable Design Standard bridges the gap. Variables flow from Figma through adapters to version control to generated outputs.
 
 ### No validation
 
 Invalid variables ship to production. Broken references break components. Type mismatches cause runtime errors.
 
-Variables Contract requires validation. CI checks catch errors before they ship.
+Variable Design Standard requires validation. CI checks catch errors before they ship.
 
 ## DTCG 2025.10 compliance
 
-Variables Contract is DTCG 2025.10 compliant. Any JSON file that follows Variables Contract rules is valid DTCG 2025.10 format.
+Variable Design Standard is DTCG 2025.10 compliant. Any JSON file that follows Variable Design Standard rules is valid DTCG 2025.10 format.
 
 What DTCG provides:
 
 - JSON structure for variables and groups
-- Type system (color, dimension, fontFamily, etc.)
-- Reference syntax (curly brace and JSON Pointer)
+- Type system (color, dimension, fontFamily, fontWeight, duration, cubicBezier, number)
+- Reference syntax (curly brace `{path}` and JSON Pointer `#/path`)
 - Composite types (border, transition, shadow, gradient, typography)
-- Group extension with `$ref`
-- Mode support
+- Group extension with `$extends`
+- `$extensions` for vendor-specific metadata
 
-What Variables Contract adds:
+What Variable Design Standard adds:
 
+- **Modes**: Contextual variants (light/dark, mobile/desktop) stored in `$value` objects. DTCG does not define modes. This is a Variable Design Standard extension.
+- **String shortcuts**: Convenience formats like `"16px"` for dimensions and `"200ms"` for durations. DTCG requires object format.
+- **Hex color shorthand**: Convenience format like `"#0066cc"` for colors. DTCG requires object format with `colorSpace` and `components`.
 - Naming convention rules
 - Change control process
 - Validation requirements beyond format correctness
@@ -93,7 +98,7 @@ See [DTCG Alignment](docs/contract/dtcg-alignment) for details.
 
 ## Quick start
 
-### For teams adopting Variables Contract
+### For teams adopting Variable Design Standard
 
 1. Read [Getting Started](docs/adoption/getting-started)
 2. Set up repository structure (`tokens/` directory)
@@ -123,7 +128,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ### For Design Engineers
 
-1. Read [Variable Contract](docs/contract/variable-contract)
+1. Read [Variable Design Standard](docs/contract/variable-contract)
 2. Set up [Validation](docs/governance/validation)
 3. Configure [CI/CD](docs/tooling/ci-cd)
 4. Review [Change Control](docs/governance/change-control)
@@ -134,12 +139,12 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 ### Introduction
 
 - [Why Variables](docs/introduction/why-variables) - Why "variables" not "design tokens"
-- [Comparison](docs/introduction/comparison) - Variables Contract vs DTCG, Style Dictionary, Material, Adobe
-- [Positioning](docs/introduction/positioning) - What Variables Contract is and is not
+- [Comparison](docs/introduction/comparison) - Variable Design Standard vs DTCG, Style Dictionary, Material, Adobe
+- [Positioning](docs/introduction/positioning) - What Variable Design Standard is and is not
 
 ### Contract reference
 
-- [Variables Contract](docs/contract/variable-contract) - JSON shape and structure
+- [Variable Design Standard](docs/contract/variable-contract) - JSON shape and structure
 - [Groups](docs/contract/groups) - Group structure and extension
 - [References](docs/contract/references) - Reference syntax and resolution
 - [Modes](docs/contract/modes) - Mode structure and resolution
@@ -173,7 +178,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ### Tooling
 
-- [Ecosystem](docs/tooling/ecosystem) - Tools that support Variables Contract
+- [Ecosystem](docs/tooling/ecosystem) - Tools that support Variable Design Standard
 - [CI/CD](docs/tooling/ci-cd) - CI/CD integration patterns
 - [Build Pipelines](docs/tooling/build-pipelines) - Complete build pipeline examples
 - [Figma Adapter](docs/adapters/figma) - Figma export normalization
@@ -206,7 +211,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ## Requirements
 
-Variables Contract JSON files MUST:
+Variable Design Standard JSON files MUST:
 
 - Use DTCG 2025.10 format
 - Follow naming convention (dot-separated paths, lowercase, no platform prefixes)
@@ -216,7 +221,7 @@ Variables Contract JSON files MUST:
 - Avoid circular references
 - Use consistent mode keys within collections
 
-Variables Contract JSON files SHOULD:
+Variable Design Standard JSON files SHOULD:
 
 - Include `$description` when intent is not obvious
 - Use semantic aliases for UI consumption
@@ -227,7 +232,7 @@ See [Validation Checklist](docs/governance/validation) for complete requirements
 
 ## Validation
 
-Variables Contract requires validation at multiple points:
+Variables Design Standard requires validation at multiple points:
 
 1. After adapter normalization (check structure, naming, references)
 2. In CI on every PR (block invalid changes)
@@ -248,7 +253,7 @@ See [Validation](docs/governance/validation) for validation tools and CI setup.
 
 ## Versioning
 
-Variables Contract uses semantic versioning (MAJOR.MINOR.PATCH):
+Variable Design Standard uses semantic versioning (MAJOR.MINOR.PATCH):
 
 - MAJOR: breaking changes (renames, removals, type changes)
 - MINOR: new variables, new modes, non-breaking additions
@@ -271,7 +276,7 @@ See [Versioning](docs/governance/versioning) for complete versioning strategy.
 
 ## Adapters
 
-Adapters normalize tool outputs into Variables Contract format.
+Adapters normalize tool outputs into Variable Design Standard format.
 
 ### Figma adapter
 
@@ -298,7 +303,7 @@ See [Tokens Studio Adapter](docs/adapters/tokens-studio) for details.
 
 ### Style Dictionary adapter
 
-Generates platform outputs from Variables Contract JSON:
+Generates platform outputs from Variable Design Standard (VDS) JSON:
 
 - CSS variables
 - TypeScript types
@@ -314,22 +319,23 @@ See [Style Dictionary Adapter](docs/adapters/style-dictionary) for details.
 - [DTCG Compliant Example](docs/examples/dtcg-compliant) - Complete DTCG 2025.10 example
 - [Adapter Pipeline](docs/examples/adapter-pipeline) - End-to-end transformation example
 
-## UMP context
+## UDS Framework
 
-Variables Contract is part of UMP (UI Mapping Protocol), a larger system for mapping design and development artifacts.
+Variable Design Standard is part of UDS (UI Design Standard), a comprehensive framework for design-to-code governance.
 
-UMP components:
+UDS components:
 
-- Variables Contract (this spec) - variables/tokens
-- Component Contract (future) - component mapping
-- Pattern Contract (future) - pattern mapping
+- Variable Design Standard (VDS) - this spec
+- Integrity Design Standard (IDS) - tooling layer (future)
+- Component Design Standard (future) - component mapping
+- Pattern Design Standard (future) - pattern mapping
 - Design-Dev Mapping (future) - artifact relationships
 
-Variables Contract is the first piece of UMP, focusing on variables.
+Variable Design Standard is the first standard in UDS, focusing on variables.
 
 ## Status
 
-Variables Contract is:
+Variable Design Standard is:
 
 - DTCG 2025.10 compliant
 - Production-ready
@@ -337,16 +343,18 @@ Variables Contract is:
 - Validated in CI
 - Used by teams
 
-Variables Contract is NOT:
+Variable Design Standard (VDS) is NOT:
 
 - A W3C standard (uses DTCG format)
 - A tool (works with existing tools)
 - A design system (governs structure, not values)
 - Complete UMP system (focuses on variables)
 
+See [Status of this Document](docs/meta/status-of-this-document) for publication status, editors, and acknowledgments.
+
 ## Failure modes
 
-If Variables Contract is not used:
+If Variable Design Standard is not used:
 
 - Silent renames break components
 - Broken references cause production failures
@@ -355,7 +363,7 @@ If Variables Contract is not used:
 - No validation allows invalid variables to ship
 - Versioning chaos makes upgrades risky
 
-If Variables Contract is used incorrectly:
+If Variable Design Standard is used incorrectly:
 
 - Skipping validation allows invalid variables to ship
 - Not following naming convention breaks code generation
@@ -365,7 +373,7 @@ If Variables Contract is used incorrectly:
 
 ## Contributing
 
-Variables Contract is a public specification. Contributions welcome.
+Variable Design Standard is a public specification. Contributions welcome.
 
 Before contributing:
 
@@ -405,26 +413,45 @@ Generates static site in `site/`.
 
 **Editor:** Mark Learst
 
-Variables Contract is maintained by the editor. Contributions welcome.
+Variable Design Standard is maintained by the editor. Contributions welcome.
 
 ## Acknowledgments
 
-Variables Contract builds on:
+Variable Design Standard builds on:
 
 - [DTCG 2025.10 Format](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
 - [Style Dictionary](https://styledictionary.com/) - Output generation tool
 - Figma Variables - Design tool integration
 - Tokens Studio - Design tool integration
 
+## JSON Schema
+
+Variable Design Standard provides a JSON Schema for validation:
+
+- **Schema URL**: `/assets/schema/v1.json`
+- **Usage**: Add `"$schema": "https://variable-design-standard.vercel.app/assets/schema/v1.json"` to your JSON files
+- **Documentation**: See [Schema Documentation](docs/schema) for complete reference
+
+The schema validates:
+
+- Variable structure (`$type`, `$value` requirements)
+- Type correctness
+- Reference syntax
+- Group structure
+- Mode objects
+
+See [Schema](docs/schema) for validation tools and IDE integration.
+
 ## References
 
 - [DTCG 2025.10 Specification](https://www.designtokens.org/tr/2025.10/format/) - Design Tokens Community Group format
-- [Variables Contract Documentation](docs/index.md) - Complete specification and governance
+- [Variable Design Standard Documentation](docs/index.md) - Complete specification and governance
 - [DTCG Alignment](docs/contract/dtcg-alignment.md) - Compliance details
+- [JSON Schema](docs/schema) - Validation schema and tools
 
 ## Conformance
 
-To claim Variables Contract compliance:
+To claim Variable Design Standard compliance:
 
 1. Use DTCG 2025.10 format for variable JSON
 2. Follow naming convention (dot-separated paths, lowercase, no platform prefixes)

@@ -2,17 +2,17 @@
 title: Conformance
 ---
 
-# Variable Contract Conformance
+# Variable Design Standard (VDS) Conformance
 
 ::: callout warning License Requirement
 Claiming conformance without meeting these requirements violates the [Standards Integrity License](../license). False conformance claims result in automatic license termination.
 :::
 
-How to claim Variable Contract compliance and what it means.
+How to claim Variable Design Standard (VDS) compliance and what it means.
 
 ## Technical Conformance Tests
 
-The following tests determine whether an implementation is conformant. Tools that fail any MUST test cannot claim "Variables Contract Conformant" status.
+The following tests determine whether an implementation is conformant. Tools that fail any MUST test cannot claim "Variable Design Standard (VDS) Conformant" status.
 
 ### Test 1: Reference Preservation (MUST)
 
@@ -112,7 +112,7 @@ npx ajv-cli validate -s schema/v1.json -d tokens.json
 
 ## Conformance statement
 
-A Variable Contract implementation is conformant if it meets all MUST requirements and follows all SHOULD requirements unless justified.
+A Variable Design Standard (VDS) implementation is conformant if it meets all MUST requirements and follows all SHOULD requirements unless justified.
 
 ## Conformance requirements
 
@@ -123,7 +123,7 @@ MUST:
 - Use DTCG 2025.10 format for variable JSON
 - Include `$type` and `$value` on all variables
 - Use valid DTCG types (color, dimension, fontFamily, etc.)
-- Support group structure and extension (`$ref`)
+- Support group structure and extension (`$extends`)
 
 ### Naming compliance
 
@@ -198,7 +198,7 @@ SHOULD:
 
 ## Claiming conformance
 
-To claim Variable Contract compliance:
+To claim Variable Design Standard (VDS) compliance:
 
 1. Document your implementation
 2. Verify all MUST requirements are met
@@ -208,11 +208,11 @@ To claim Variable Contract compliance:
 ## Conformance report template
 
 ```markdown
-# Variable Contract Conformance Report
+# Variable Design Standard (VDS) Conformance Report
 
 **Organization:** [Your organization]
 **Date:** [Date]
-**Version:** [Variable Contract version]
+**Version:** [Variable Design Standard (VDS) version]
 
 ## Format Compliance
 
@@ -254,7 +254,7 @@ To claim Variable Contract compliance:
 
 ## Test suite
 
-Variable Contract conformance can be verified using:
+Variable Design Standard (VDS) conformance can be verified using:
 
 - DTCG validators (format compliance)
 - Custom validators (naming, references, modes)

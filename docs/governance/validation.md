@@ -2,7 +2,7 @@
 title: Governance - Validation
 ---
 
-# Variable Contract Validation
+# Variable Design Standard (VDS) Validation
 
 Validation catches contract violations before they break components or build pipelines.
 
@@ -19,7 +19,7 @@ Validation MUST check:
 5. Circular references (no reference cycles)
 6. Type correctness (`$value` matches `$type` format)
 7. Mode consistency (mode keys shared within collections)
-8. Group extension (`$ref` targets exist, no circular group references)
+8. Group extension (`$extends` targets exist, no circular group references)
 
 ## Validation tools
 
@@ -33,7 +33,7 @@ Use DTCG-compliant validators for format validation:
 
 ### Custom validation scripts
 
-Create custom scripts to check Variable Contract-specific rules:
+Create custom scripts to check Variable Design Standard (VDS)-specific rules:
 
 - Naming convention enforcement
 - Reference resolution
@@ -43,7 +43,7 @@ Create custom scripts to check Variable Contract-specific rules:
 Example validation script structure:
 
 ```javascript
-// Validate Variable Contract JSON
+// Validate Variable Design Standard (VDS) JSON
 function validateVariableContract(json) {
   const errors = [];
 
@@ -96,7 +96,7 @@ repos:
   - repo: local
     hooks:
       - id: validate-variables
-        name: Validate Variable Contract
+        name: Validate Variable Design Standard (VDS)
         entry: npm run validate:tokens
         language: system
         files: 'tokens/.*\.json$'
@@ -104,7 +104,7 @@ repos:
 
 ## Validation checklist
 
-A Variable Contract JSON file is valid if:
+A Variable Design Standard (VDS) JSON file is valid if:
 
 ### Structure validation
 
@@ -145,7 +145,7 @@ A Variable Contract JSON file is valid if:
 
 ### Group validation
 
-- Group `$ref` targets exist
+- Group `$extends` targets exist
 - No circular group references
 - Group properties (`$deprecated`, `$extensions`) are valid types
 

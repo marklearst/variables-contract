@@ -8,7 +8,7 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 
 ## What a governed variable system provides
 
-- A shared variable contract between design and code.
+- A shared Variable Design Standard (VDS) between design and code.
 - Variable names and structures that support CI validation and code generation.
 - A semantic layer that prevents direct palette usage in components.
 - Change control and versioning so upgrades are explicit.
@@ -22,7 +22,7 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 ## Where changes happen
 
 - Variables are stored as Design Tokens JSON in version control.
-- Design tools can be used for authoring, but the repo is the contract.
+- Design tools can be used for authoring, but the repo is the Variable Design Standard (VDS).
 
 ## How changes ship
 

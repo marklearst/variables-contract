@@ -2,10 +2,10 @@
 // basePath is "/variables-contract" for GitHub Pages
 // Vercel deploys from gh-pages branch (same build) and uses rewrites
 const basePath = "/variables-contract";
-const siteUrl = "https://marklearst.github.io/variables-contract";
+const siteUrl = "https://marklearst.github.io/variables-design-standard";
 
 module.exports = {
-  siteTitle: "Variables Contract",
+  siteTitle: "VDS",
   srcDir: "docs",
   outputDir: "site",
   basePath,
@@ -20,6 +20,7 @@ module.exports = {
     defaultMode: "dark",
     enableModeToggle: true,
     positionMode: "top",
+    // customCss: ["/assets/css/vercel-theme.css"],
   },
   autoTitleFromH1: true,
   copyCode: true,
@@ -350,6 +351,38 @@ module.exports = {
           title: "JSON Schema",
           path: "schema",
           icon: "code",
+        },
+      ],
+    },
+    {
+      title: "Meta",
+      icon: "info",
+      collapsible: true,
+      children: [
+        {
+          title: "Status of this Document",
+          path: "meta/status-of-this-document",
+          icon: "file-text",
+        },
+        {
+          title: "Specification Status",
+          path: "meta/status",
+          icon: "tag",
+        },
+        {
+          title: "Change Log",
+          path: "meta/change-log",
+          icon: "list",
+        },
+        {
+          title: "Contributors",
+          path: "meta/contributors",
+          icon: "users",
+        },
+        {
+          title: "References",
+          path: "meta/references",
+          icon: "book",
         },
       ],
     },

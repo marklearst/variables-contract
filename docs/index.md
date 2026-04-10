@@ -1,13 +1,13 @@
 ---
-title: Variables Contract
+title: Variable Design Standard (VDS)
 ---
 
-# Variables Contract
+# Specification Overview
 
 |                |                                    |
 | -------------- | ---------------------------------- |
-| **Status**     | Draft Standard                     |
-| **Version**    | 0.3.7                              |
+| **Status**     | Draft                              |
+| **Version**    | 0.4.0                              |
 | **Editor**     | Mark Learst                        |
 | **Compliance** | DTCG 2025.10                       |
 | **Schema**     | [v1.json](assets/schema/v1.json)   |
@@ -15,12 +15,12 @@ title: Variables Contract
 
 A deterministic protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control.
 
-This specification is protected under the [Variables Contract License](license). Usage for AI-generated derivative standards, false compatibility claims, or ecosystem fragmentation is prohibited.
+This specification is protected under the [Variable Design Standard License](license). Usage for AI-generated derivative standards, false compatibility claims, or ecosystem fragmentation is prohibited.
 
 ## Start here
 
 - [Why Variables](introduction/why-variables) - Why we call them variables, not design tokens
-- [Variables Contract](contract/variable-contract) - JSON shape and structure
+- [Variable Design Standard (VDS)](contract/variable-contract) - JSON shape and structure
 - [Variables Governance](governance/overview) - Governance principles and workflow
 - [DTCG Alignment](contract/dtcg-alignment) - DTCG 2025.10 compliance
 - [Getting Started](adoption/getting-started) - Team adoption guide
@@ -28,12 +28,12 @@ This specification is protected under the [Variables Contract License](license).
 ## Introduction
 
 - [Why Variables](introduction/why-variables) - Why "variables" not "design tokens"
-- [Comparison](introduction/comparison) - Variables Contract vs other standards
-- [Positioning](introduction/positioning) - What Variables Contract is and is not
+- [Comparison](introduction/comparison) - Variable Design Standard vs other standards
+- [Positioning](introduction/positioning) - What Variable Design Standard is and is not
 
 ## Contract reference
 
-- [Variables Contract](contract/variable-contract) - JSON shape and structure
+- [Variable Design Standard (VDS)](contract/variable-contract) - JSON shape and structure
 - [Groups](contract/groups) - Group structure and extension
 - [References](contract/references) - Reference syntax and resolution
 - [Modes](contract/modes) - Mode structure and resolution
@@ -72,7 +72,7 @@ This specification is protected under the [Variables Contract License](license).
 
 ## Tooling
 
-- [Ecosystem](tooling/ecosystem) - Tools that support Variable Contract
+- [Ecosystem](tooling/ecosystem) - Tools that support Variable Design Standard
 - [CI/CD](tooling/ci-cd) - CI/CD integration patterns and examples
 - [Build Pipelines](tooling/build-pipelines) - Complete build pipeline examples
 - [Figma](adapters/figma) - Figma export normalization and workflow
@@ -122,6 +122,14 @@ This specification is protected under the [Variables Contract License](license).
 - [Glossary](reference/glossary) - Terminology definitions
 - [Quick Reference](reference/quick-reference) - Cheat sheet for common tasks
 - [Conformance](reference/conformance) - How to claim compliance
+
+## Meta
+
+- [Status of this Document](meta/status-of-this-document) - Publication status, editors, acknowledgments
+- [Specification Status](meta/status) - Status taxonomy and definitions
+- [Change Log](meta/change-log) - Version history and release notes
+- [Contributors](meta/contributors) - People who have contributed
+- [References](meta/references) - External standards and specifications
 
 ## FAQ
 

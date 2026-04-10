@@ -8,7 +8,7 @@ Creates variables in Figma. Does not own the contract. Does not approve changes.
 
 ## Scope
 
-Designers (UX/Product/UI) author variables in Figma. They do not own the Variable Contract. They do not make contract decisions. They do not approve variable changes for consumption.
+Designers (UX/Product/UI) author variables in Figma. They do not own the Variable Design Standard (VDS). They do not make contract decisions. They do not approve variable changes for consumption.
 
 Design Engineer reviews and approves all variable changes before they enter the contract.
 
@@ -26,7 +26,7 @@ Design Engineer reviews and approves all variable changes before they enter the 
 Designer MUST NOT:
 
 - Approve variable changes without Design Engineer review.
-- Modify the Variable Contract JSON directly.
+- Modify the Variable Design Standard (VDS) JSON directly.
 - Define consumption patterns (how variables map to CSS, TypeScript, React).
 - Override naming convention decisions.
 - Push variables to version control without Design Engineer approval.
@@ -94,7 +94,7 @@ If Designer bypasses Design Engineer review:
 
 ## Out of scope
 
-- Maintaining the Variable Contract (Design Engineer owns this).
+- Maintaining the Variable Design Standard (VDS) (Design Engineer owns this).
 - Writing code or build pipelines (Frontend Developer owns this).
 - Defining consumption patterns (Design Engineer owns this).
 - Approving variable changes (Design Engineer owns this).

@@ -2,15 +2,15 @@
 title: Contributors
 ---
 
-# Variable Contract Contributors
+# Variable Design Standard (VDS) Contributors
 
-People who have contributed to Variable Contract.
+People who have contributed to Variable Design Standard (VDS).
 
 ## Editor
 
 **Mark Learst** - Editor and maintainer
 
-Variable Contract has been in development since 2017.
+Variable Design Standard (VDS) has been in development since 2017.
 
 ## Contributing
 

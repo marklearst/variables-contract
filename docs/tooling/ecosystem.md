@@ -2,9 +2,9 @@
 title: Tooling - Ecosystem
 ---
 
-# Variable Contract Tooling Ecosystem
+# Variable Design Standard (VDS) Tooling Ecosystem
 
-Tools that support Variable Contract (DTCG 2025.10 format).
+Tools that support Variable Design Standard (VDS) (DTCG 2025.10 format).
 
 ## Validation tools
 
@@ -14,7 +14,7 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 - **style-dictionary** - Built-in DTCG format validation
 - **Custom validators** - Build using DTCG JSON Schema
 
-### Variable Contract validators
+### Variable Design Standard (VDS) validators
 
 - **Custom validation scripts** - Check naming, references, modes
 - **CI validation** - GitHub Actions, GitLab CI, etc.
@@ -26,14 +26,14 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 
 - **Purpose**: Generate platform outputs (CSS, TypeScript, etc.)
 - **DTCG support**: Yes (v5+)
-- **Usage**: Output adapter for Variable Contract
+- **Usage**: Output adapter for Variable Design Standard (VDS)
 - **Link**: [Style Dictionary](https://styledictionary.com/)
 
 ### Custom build tools
 
 - **Purpose**: Generate custom outputs
 - **DTCG support**: Use DTCG-compliant parsers
-- **Usage**: Build custom formats from Variable Contract JSON
+- **Usage**: Build custom formats from Variable Design Standard (VDS) JSON
 
 ## Adapter tools
 
@@ -41,7 +41,7 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 
 - **Figma REST API** - Export variables from Figma
 - **Figma Dev Mode plugin** - Export variables
-- **Custom adapters** - Normalize Figma exports to Variable Contract
+- **Custom adapters** - Normalize Figma exports to Variable Design Standard (VDS)
 
 ### Tokens Studio adapters
 
@@ -50,8 +50,8 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 
 ### Other adapters
 
-- **Material Design** - Convert Material tokens to Variable Contract
-- **Adobe Spectrum** - Convert Spectrum tokens to Variable Contract
+- **Material Design** - Convert Material tokens to Variable Design Standard (VDS)
+- **Adobe Spectrum** - Convert Spectrum tokens to Variable Design Standard (VDS)
 - **Custom formats** - Build adapters for any format
 
 ## Editor integrations
@@ -59,8 +59,8 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 ### VS Code
 
 - **Design Tokens extension** - Syntax highlighting for DTCG format
-- **JSON Schema validation** - Validate Variable Contract JSON
-- **Custom extensions** - Build Variable Contract-specific features
+- **JSON Schema validation** - Validate Variable Design Standard (VDS) JSON
+- **Custom extensions** - Build Variable Design Standard (VDS)-specific features
 
 ### Other editors
 
@@ -72,13 +72,13 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 
 ### GitHub Actions
 
-- **Validation workflows** - Validate Variable Contract JSON
+- **Validation workflows** - Validate Variable Design Standard (VDS) JSON
 - **Build workflows** - Generate outputs
 - **Release workflows** - Version and release variables
 
 ### GitLab CI
 
-- **Validation pipelines** - Validate Variable Contract JSON
+- **Validation pipelines** - Validate Variable Design Standard (VDS) JSON
 - **Build pipelines** - Generate outputs
 
 ### Other CI/CD
@@ -121,7 +121,7 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 
 ## Tool compatibility matrix
 
-| Tool | DTCG Support | Variable Contract Support | Notes |
+| Tool | DTCG Support | Variable Design Standard (VDS) Support | Notes |
 |------|--------------|---------------------------|-------|
 | Style Dictionary | Yes (v5+) | Yes (via DTCG) | Output adapter |
 | Figma | Partial | Yes (via adapter) | Export and normalize |
@@ -134,7 +134,7 @@ Tools that support Variable Contract (DTCG 2025.10 format).
 ### For validation
 
 - Use DTCG-compliant validators for format validation
-- Add custom validation for Variable Contract rules
+- Add custom validation for Variable Design Standard (VDS) rules
 - Set up CI validation for automated checks
 
 ### For building
