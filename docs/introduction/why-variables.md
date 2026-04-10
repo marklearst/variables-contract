@@ -8,9 +8,9 @@ title: Why Variables
 This page is part of the [Variable Design Standard (VDS)](../contract/variable-contract) governed specification. See [License](../license) for usage terms.
 :::
 
-Variables are variables. CSS variables, JavaScript variables, Figma variables. They're all variables.
+Scope: terminology. VDS uses “variables” because it matches the language used in code and design tools.
 
-If you call them "design tokens" or "style properties" or "design constants," you create confusion. Developers know variables. Designers know variables. Variable Design Standard (VDS) uses the term everyone understands.
+Failure if ignored: teams split vocabulary and handoff breaks.
 
 ## The naming problem
 
@@ -22,9 +22,9 @@ Everyone calls them something different:
 - Variables (CSS, JavaScript, Figma)
 - Tokens (Tokens Studio, Adobe)
 
-This creates confusion. A developer sees "design token" and thinks "what's that?" A designer sees "CSS variable" and thinks "is that different?"
+This splits vocabulary across roles and makes handoff less precise.
 
-## Variables are variables
+## Variables are shared primitives
 
 Variables exist in:
 
@@ -33,7 +33,7 @@ Variables exist in:
 - Figma: Variables panel
 - TypeScript: `export const color = { primary: '#0066cc' }`
 
-They're all variables. They store values. They can be referenced. They can be changed.
+They store values, can be referenced, and can be changed.
 
 ## Why Variable Design Standard (VDS) uses "variables"
 
@@ -58,16 +58,16 @@ Variable Design Standard (VDS) does NOT standardize:
 - What tools you use (use any tool)
 - How you consume them (CSS, JS, whatever works)
 
-## The "design token" problem
+## The term "design token"
 
-"Design token" implies:
+The term "design token" implies:
 
 - Special category separate from code
 - Design-only concept
 - Something designers own exclusively
 - Marketing terminology
 
-This creates separation between design and code. Variables bridge that gap.
+This separates design from code. Variables keep the same term across both.
 
 ## Variable Design Standard (VDS)'s approach
 

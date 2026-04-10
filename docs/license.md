@@ -6,8 +6,8 @@ title: License
 
 The Variable Design Standard (VDS) Specification is dual-licensed:
 
-1. **CC BY-ND 4.0** — Legally recognized base license
-2. **Standards Integrity Addendum** — Additional terms for public use
+1. **CC BY-ND 4.0**. Legally recognized base license.
+2. **Standards Integrity Addendum**. Additional terms for public use.
 
 ## Part I: Base License (CC BY-ND 4.0)
 
@@ -15,13 +15,13 @@ This Specification is licensed under [Creative Commons Attribution-NoDerivatives
 
 **You are free to:**
 
-- **Share** — Copy and redistribute in any medium or format
-- **Implement** — Build software that conforms to the Specification
+- **Share**. Copy and redistribute in any medium or format.
+- **Implement**. Build software that conforms to the Specification.
 
 **Under these terms:**
 
-- **Attribution** — You must give appropriate credit and link to the license
-- **NoDerivatives** — You may not distribute modified versions of the Specification as an alternative standard
+- **Attribution**. You must give appropriate credit and link to the license.
+- **NoDerivatives**. You may not distribute modified versions of the Specification as an alternative standard.
 
 ## Part II: Standards Integrity Addendum
 

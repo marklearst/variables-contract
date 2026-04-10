@@ -8,7 +8,7 @@ People who have contributed to Variable Design Standard (VDS).
 
 ## Editor
 
-**Mark Learst** - Editor and maintainer
+**Mark Learst**: Editor and maintainer
 
 Variable Design Standard (VDS) has been in development since 2017.
 
