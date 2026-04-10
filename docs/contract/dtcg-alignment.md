@@ -4,27 +4,30 @@ title: DTCG Alignment
 
 # DTCG Alignment
 
-Variable Contract is DTCG 2025.10 compliant. What that means and what Variable Contract adds.
+Variable Design Standard (VDS) is DTCG 2025.10 compliant. What that means and what Variable Design Standard (VDS) adds.
 
 ## Compliance statement
 
-Variable Contract uses the Design Tokens Community Group (DTCG) format 2025.10 as its base format. Any JSON file that follows Variable Contract rules is valid DTCG 2025.10 format.
+Variable Design Standard (VDS) uses the Design Tokens Community Group (DTCG) format 2025.10 as its base format. Variable Design Standard (VDS) extends DTCG with modes and convenience formats. Files using only DTCG features are strictly compliant. Files using modes or string shortcuts for dimension/duration are Variable Design Standard (VDS) format.
 
 ## What DTCG provides
 
 DTCG 2025.10 defines:
 
 - JSON structure for variables and groups
-- Type system (color, dimension, fontFamily, etc.)
-- Reference syntax (curly brace and JSON Pointer)
+- Type system (color, dimension, fontFamily, fontWeight, duration, cubicBezier, number)
+- Reference syntax (curly brace `{path}` and JSON Pointer `#/path`)
 - Composite types (border, transition, shadow, gradient, typography)
-- Group extension with `$ref`
-- Mode support
+- Group extension with `$extends`
+- `$extensions` for vendor-specific metadata
 
-## What Variable Contract adds
+## What Variable Design Standard (VDS) adds
 
-Variable Contract adds a governance layer on top of DTCG format:
+Variable Design Standard (VDS) adds governance and extensions on top of DTCG format:
 
+- **Modes**: Contextual variants (light/dark, mobile/desktop) stored in `$value` objects. DTCG does not define modes. This is a Variable Design Standard (VDS) extension.
+- **String shortcuts**: Convenience formats like `"16px"` for dimensions and `"200ms"` for durations. DTCG requires object format.
+- **Hex color shorthand**: Convenience format like `"#0066cc"` for colors. DTCG requires object format with `colorSpace` and `components`.
 - Naming convention rules (see [Naming](naming))
 - Change control process (see [Change Control](/governance/change-control))
 - Role definitions (see [Design Engineer](/governance/roles/design-engineer))
@@ -33,25 +36,39 @@ Variable Contract adds a governance layer on top of DTCG format:
 
 ## Compatibility matrix
 
-| DTCG Feature                           | Variable Contract Requirement | Notes                          |
-| -------------------------------------- | ----------------------------- | ------------------------------ |
-| Variable structure (`$type`, `$value`) | MUST                          | Required for all variables     |
-| Groups                                 | MUST                          | Required for organization      |
-| Group extension (`$ref`)               | MAY                           | Supported but not required     |
-| Curly brace references (`{path}`)      | MUST                          | Canonical format               |
-| JSON Pointer references (`#/path`)     | MAY                           | Supported for DTCG compliance  |
-| Modes                                  | SHOULD                        | Use when needed for variants   |
-| Composite types                        | MAY                           | Use when structure is needed   |
-| `$extensions`                          | MAY                           | For tool metadata only         |
-| `$deprecated`                          | SHOULD                        | Use when deprecating variables |
+| Feature                                | Source            | Variable Design Standard (VDS) Requirement | Notes                                        |
+| -------------------------------------- | ----------------- | ----------------------------- | -------------------------------------------- |
+| Variable structure (`$type`, `$value`) | DTCG              | MUST                          | Required for all variables                   |
+| Groups                                 | DTCG              | MUST                          | Required for organization                    |
+| Group extension (`$extends`)           | DTCG              | MAY                           | Use curly brace syntax: `"$extends": "{group}"` |
+| Curly brace references (`{path}`)      | DTCG              | MUST                          | Canonical format                             |
+| JSON Pointer references (`$ref`)       | DTCG              | MAY                           | Supported for DTCG compliance                |
+| Composite types                        | DTCG              | MAY                           | Use when structure is needed                 |
+| `$extensions`                          | DTCG              | MAY                           | For tool metadata only                       |
+| `$deprecated`                          | DTCG              | SHOULD                        | Use when deprecating variables               |
+| Modes in `$value`                      | Variable Design Standard (VDS) | SHOULD                        | VC extension for contextual variants         |
+| Dimension string (`"16px"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
+| Duration string (`"200ms"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
+| Hex color string (`"#hex"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
 
 ## Format differences
 
-Variable Contract does not change DTCG format. It adds:
+Variable Design Standard (VDS) extends DTCG format with:
 
-1. Naming rules that enforce dot-separated paths
-2. Validation that checks references resolve
-3. Governance that treats renames as breaking changes
+1. Modes in `$value` objects for contextual variants (not in DTCG spec)
+2. String shortcuts for dimension (`"16px"`), duration (`"200ms"`), and color (`"#hex"`)
+3. Naming rules that enforce dot-separated paths
+4. Validation that checks references resolve
+5. Governance that treats renames as breaking changes
+
+## Strict DTCG compliance
+
+For strict DTCG 2025.10 compliance, use:
+
+- Color: `{"colorSpace": "srgb", "components": [r, g, b], "hex": "#optional"}`
+- Dimension: `{"value": 16, "unit": "px"}`
+- Duration: `{"value": 200, "unit": "ms"}`
+- No modes in `$value` (use separate variables or `$extensions` for mode metadata)
 
 ## Migration from older formats
 
@@ -60,15 +77,16 @@ If you have variables in older DTCG formats (pre-2025.10):
 1. Update reference syntax to use curly braces: `{path.to.variable}`
 2. Add `$type` to all variables if missing
 3. Move tool metadata to `$extensions` if it's in root properties
-4. Update group structure if using deprecated patterns
+4. Update group extension from `$ref` to `$extends` with curly brace syntax
 
 ## Failure modes
 
 If you ignore DTCG compliance:
 
-- Tools that expect DTCG format will fail to parse your variables
+- Tools that expect strict DTCG format may reject string shortcuts for dimension/duration/color
+- Tools that expect strict DTCG format will not recognize modes in `$value`
 - Reference resolution may break if you use non-standard syntax
-- Group extension will not work if `$ref` format is wrong
+- Group extension requires `$extends` with curly brace syntax in DTCG 2025.10
 
 ## Out of scope
 

@@ -57,6 +57,154 @@ Rules:
 - Alias variables: for usage in UI.
 - Component variables: for controlled overrides when needed.
 
+## Formal Invariants
+
+These invariants MUST be maintained for Variable Design Standard (VDS) conformance. Violations are non-conformant.
+
+### Base Variables
+
+**Invariant 1**: Base variables MUST contain literal values only.
+
+- Base variables MUST NOT reference other base variables
+- Base variables MAY be referenced by alias or component variables
+- Base variables MUST NOT be consumed directly by components (unless explicitly allowed)
+
+**Example (conformant)**:
+```json
+{
+  "color": {
+    "gray": {
+      "900": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.1, 0.1, 0.1],
+          "hex": "#1a1a1a"
+        }
+      }
+    }
+  }
+}
+```
+
+**Example (non-conformant)**:
+```json
+{
+  "color": {
+    "gray": {
+      "900": {
+        "$type": "color",
+        "$value": "{color.gray.800}"  // Base variable referencing another base variable
+      }
+    }
+  }
+}
+```
+
+### Alias Variables
+
+**Invariant 2**: Alias variables SHOULD reference base variables or other alias variables.
+
+- Alias variables MUST NOT reference component variables
+- Alias variables SHOULD describe semantic intent, not implementation
+- Alias variables form the semantic abstraction layer
+
+**Example (conformant)**:
+```json
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.gray.900}"  // References base variable
+      }
+    }
+  }
+}
+```
+
+**Example (non-conformant)**:
+```json
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{component.button.color.text}"  // Alias referencing component variable
+      }
+    }
+  }
+}
+```
+
+### Component Variables
+
+**Invariant 3**: Component variables SHOULD reference alias variables (not base variables directly).
+
+- Component variables MUST NOT reference other component variables
+- Component variables MUST be component-scoped
+- Component variables provide fine-grained control when needed
+
+**Example (conformant)**:
+```json
+{
+  "component": {
+    "button": {
+      "color": {
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{color.surface.brand}"  // References alias variable
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**Example (non-conformant)**:
+```json
+{
+  "component": {
+    "button": {
+      "color": {
+        "background": {
+          "default": {
+            "$type": "color",
+            "$value": "{color.gray.900}"  // Component variable referencing base directly
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### Reference Chain Preservation
+
+**Invariant 4**: Flattening references to literal values is non-conformant.
+
+- Reference chains MUST be preserved in output
+- Tools MUST NOT flatten `{color.text.primary}` to `#1a1a1a` in the contract format
+- Flattening destroys the dependency graph and breaks theme switching
+
+**Example (conformant output)**:
+```json
+{
+  "color.text.primary": "{color.gray.900}"
+}
+```
+
+**Example (non-conformant output)**:
+```json
+{
+  "color.text.primary": "#1a1a1a"  // Flattened - reference chain lost
+}
+```
+
+**Why this matters**: When `color.gray.900` changes, `color.text.primary` should update automatically. Flattening breaks this dependency.
+
 ## Validation checklist
 
 - [ ] Base variables contain only raw values (no references to other base variables)

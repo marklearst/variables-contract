@@ -4,7 +4,7 @@ title: References
 
 # References
 
-References allow variables to point to other variables. Variable Contract supports two reference syntaxes: curly brace and JSON Pointer.
+References allow variables to point to other variables. Variable Design Standard (VDS) supports two reference syntaxes: curly brace and JSON Pointer.
 
 ## Reference syntax
 
@@ -72,11 +72,11 @@ Rules:
 
 - JSON Pointer paths use forward slashes
 - Paths start with `#/`
-- Array indices use numeric segments (not used in Variable Contract)
+- Array indices use numeric segments (not used in Variable Design Standard (VDS))
 
 ## When to use each format
 
-- Use curly brace syntax (`{path}`) for Variable Contract files
+- Use curly brace syntax (`{path}`) for Variable Design Standard (VDS) files
 - JSON Pointer syntax (`#/path`) is supported for DTCG compliance but curly brace is preferred
 
 ## Reference resolution
@@ -91,7 +91,7 @@ References are resolved by following the path to find the target variable's `$va
 4. If the target has a `$value`, resolve it:
    - If `$value` is a literal, return it
    - If `$value` is a reference, resolve recursively
-   - If `$value` is an object (modes), resolve the mode value
+   - If `$value` is a mode object (Variable Design Standard (VDS) extension), resolve the mode value for the current mode
 
 ### Resolution algorithm for JSON Pointer
 
@@ -274,7 +274,9 @@ Supported typography component references:
 - `{variable.letterSpacing}` - letter spacing (dimension)
 - `{variable.lineHeight}` - line height (number)
 
-## References in modes
+## References in modes (Variable Design Standard (VDS) extension)
+
+**Note**: Modes in `$value` are a Variable Design Standard (VDS) extension, NOT part of the DTCG 2025.10 specification. See [Modes](modes) for details.
 
 When a variable uses modes, references can appear in mode values.
 
@@ -285,7 +287,11 @@ Example:
   "color": {
     "primary": {
       "$type": "color",
-      "$value": "#0066cc"
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0, 0.4, 0.8],
+        "hex": "#0066cc"
+      }
     },
     "surface": {
       "default": {
@@ -317,14 +323,14 @@ References fail validation if:
 
 ## Examples
 
-### Basic reference
+### Basic reference (DTCG compliant)
 
 ```json
 {
   "spacing": {
     "base": {
       "$type": "dimension",
-      "$value": "16px"
+      "$value": { "value": 16, "unit": "px" }
     },
     "medium": {
       "$type": "dimension",
@@ -334,7 +340,9 @@ References fail validation if:
 }
 ```
 
-### Reference with modes
+### Reference with modes (Variable Design Standard (VDS) extension)
+
+**Note**: Modes in `$value` are a Variable Design Standard (VDS) extension, NOT part of DTCG 2025.10.
 
 ```json
 {

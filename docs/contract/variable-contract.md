@@ -1,8 +1,8 @@
 ---
-title: Variable Contract
+title: Variable Design Standard (VDS)
 ---
 
-# Variable Contract
+# Variable Design Standard (VDS)
 
 JSON shape for variables stored in version control, validated in CI, and used to generate outputs.
 
@@ -40,7 +40,7 @@ A variable is an object with the following properties:
 
 A group is an object that contains nested groups and/or variables. Groups do not have `$type`/`$value`.
 
-Groups can extend other groups using `$ref`. See [Groups](groups) for details.
+Groups can extend other groups using `$extends` with curly brace syntax. See [Groups](groups) for details.
 
 ## `$type`
 
@@ -90,14 +90,14 @@ Rules:
 
 ## Reference syntax
 
-Variable Contract supports two reference syntaxes:
+Variable Design Standard (VDS) supports two reference syntaxes:
 
 - Curly brace syntax (canonical): `{path.to.variable}`
 - JSON Pointer syntax (DTCG required): `#/path/to/variable`
 
 Rules:
 
-- References must use curly brace format in Variable Contract files.
+- References must use curly brace format in Variable Design Standard (VDS) files.
 - JSON Pointer syntax is supported for DTCG compliance.
 - Tool-specific reference formats are allowed only as adapter inputs.
 
@@ -145,11 +145,11 @@ A change is considered valid if:
 - Alias variables do not duplicate raw palette values when a base variable exists.
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).
-- Group extensions (`$ref`) do not create circular references (see [Groups](groups)).
+- Group extensions (`$extends`) do not create circular references (see [Groups](groups)).
 
 ## Conformance
 
-Variable Contract conformance requires:
+Variable Design Standard (VDS) conformance requires:
 
 - DTCG 2025.10 format compliance
 - Naming convention compliance
@@ -161,7 +161,7 @@ See [Conformance](/reference/conformance) for complete conformance requirements 
 
 ## Out of scope
 
-Variable Contract does NOT define:
+Variable Design Standard (VDS) does NOT define:
 
 - Variable values (your design decisions: colors, spacing, typography)
 - Tools to use (works with any DTCG-compliant tool)

@@ -4,11 +4,11 @@ title: DTCG Compliant Example
 
 # DTCG Compliant Example
 
-A complete DTCG 2025.10 compliant variable file demonstrating primitive types, composite types, references, modes, and group extension.
+A strictly DTCG 2025.10 compliant variable file demonstrating primitive types, composite types, references, and group extension.
 
-- Raw file: [dtcg-compliant.json](dtcg-compliant.json)
+- Raw file: [dtcg-compliant.json](/assets/schema/dtcg-compliant.json)
 
-This file can be used as a starting point for new projects or as a reference for Variable Contract compliance. See [DTCG Alignment](/contract/dtcg-alignment) for compliance details.
+This file uses only features defined in the [DTCG 2025.10 specification](https://www.designtokens.org/tr/drafts/format/). It does NOT use Variable Design Standard (VDS) extensions like modes in `$value`. See [DTCG Alignment](/contract/dtcg-alignment) for what DTCG provides vs what Variable Design Standard (VDS) adds.
 
 ## File overview
 
@@ -17,13 +17,21 @@ The example file includes:
 - Primitive types: color, dimension, fontFamily, fontWeight, duration, cubicBezier
 - Composite types: border, transition, shadow, gradient, typography
 - References using curly brace syntax
-- Modes for light/dark theme variants
-- Group extension using `$ref`
+- Group extension using `$extends`
 - Component layer demonstrating variable hierarchy
+
+**Not included** (Variable Design Standard (VDS) extensions):
+
+- Modes in `$value` objects (see [Modes](/contract/modes) for VC extension)
+- String shortcuts for dimension/duration/color
 
 ## Primitive types
 
-Basic types with single values. See [Types](/contract/types) for complete reference.
+DTCG 2025.10 requires specific object formats for certain types. See [Types](/contract/types) for complete reference.
+
+### Color (object format required)
+
+DTCG requires color values as objects with `colorSpace` and `components`:
 
 ```json
 {
@@ -31,18 +39,68 @@ Basic types with single values. See [Types](/contract/types) for complete refere
     "base": {
       "primary": {
         "$type": "color",
-        "$value": "#0066cc"
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.278431, 0.388235, 0.749020],
+          "hex": "#4763BF"
+        },
+        "$extensions": {
+          "com.variables-contract.version": "0.4.0"
+        }
       }
     }
-  },
+  }
+}
+```
+
+Supported color spaces: `srgb`, `hsl`, `p3`, `rec2020`.
+
+**Note**: The `$extensions` property with `com.variables-contract.version` is a version marker used for document fingerprinting. This helps identify copied content and track specification versions.
+
+### Dimension (object format required)
+
+DTCG requires dimension values as objects with `value` and `unit`:
+
+```json
+{
   "spacing": {
     "base": {
       "medium": {
         "$type": "dimension",
-        "$value": "16px"
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
       }
     }
-  },
+  }
+}
+```
+
+### Duration (object format required)
+
+DTCG requires duration values as objects with `value` and `unit`:
+
+```json
+{
+  "duration": {
+    "fast": {
+      "$type": "duration",
+      "$value": {
+        "value": 200,
+        "unit": "ms"
+      }
+    }
+  }
+}
+```
+
+### Other primitive types
+
+Font family, font weight, cubic bezier, and number types use simple values:
+
+```json
+{
   "font": {
     "family": {
       "primary": {
@@ -55,12 +113,6 @@ Basic types with single values. See [Types](/contract/types) for complete refere
         "$type": "fontWeight",
         "$value": 700
       }
-    }
-  },
-  "duration": {
-    "fast": {
-      "$type": "duration",
-      "$value": "200ms"
     }
   },
   "easing": {
@@ -83,7 +135,11 @@ Structured types combining multiple values. See [Composite Types](/contract/comp
       "$type": "border",
       "$value": {
         "width": { "value": 1, "unit": "px" },
-        "color": "#e0e0e0",
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0.88, 0.88, 0.88],
+          "hex": "#e0e0e0"
+        },
         "style": "solid"
       }
     }
@@ -92,7 +148,11 @@ Structured types combining multiple values. See [Composite Types](/contract/comp
     "small": {
       "$type": "shadow",
       "$value": {
-        "color": "rgba(0, 0, 0, 0.1)",
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.1
+        },
         "offsetX": { "value": 0, "unit": "px" },
         "offsetY": { "value": 2, "unit": "px" },
         "blur": { "value": 4, "unit": "px" },
@@ -138,7 +198,7 @@ Variables can reference other variables using curly brace syntax. See [Reference
       "$type": "transition",
       "$value": {
         "duration": "{duration.fast}",
-        "delay": "0ms",
+        "delay": { "value": 0, "unit": "ms" },
         "timingFunction": "{easing.default}"
       }
     }
@@ -146,55 +206,29 @@ Variables can reference other variables using curly brace syntax. See [Reference
 }
 ```
 
-## Modes
-
-Mode objects define variants for different contexts (light/dark, mobile/desktop). See [Modes](/contract/modes) for structure rules.
-
-```json
-{
-  "color": {
-    "semantic": {
-      "text": {
-        "primary": {
-          "$type": "color",
-          "$value": {
-            "light": "{color.base.gray.900}",
-            "dark": "{color.base.gray.100}"
-          }
-        }
-      },
-      "surface": {
-        "default": {
-          "$type": "color",
-          "$value": {
-            "light": "#ffffff",
-            "dark": "#000000"
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-Mode values can be literals or references. References resolve per-mode at build time.
-
 ## Group extension
 
-Groups can extend other groups using `$ref`. See [Groups](/contract/groups) for extension rules.
+Groups can extend other groups using `$extends` with curly brace syntax. See [Groups](/contract/groups) for extension rules.
 
 ```json
 {
   "color": {
+    "base": {
+      "primary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.278431, 0.388235, 0.749020],
+          "hex": "#4763BF"
+        }
+      }
+    },
     "semantic": {
-      "$ref": "#/color/base",
+      "$extends": "{color.base}",
       "text": {
         "primary": {
           "$type": "color",
-          "$value": {
-            "light": "{color.base.gray.900}",
-            "dark": "{color.base.gray.100}"
-          }
+          "$value": "{color.base.gray.900}"
         }
       }
     }
@@ -202,7 +236,7 @@ Groups can extend other groups using `$ref`. See [Groups](/contract/groups) for 
 }
 ```
 
-The `$ref` property imports all variables from the referenced group. Local definitions override inherited ones.
+The `$extends` property imports all variables from the referenced group. Local definitions override inherited ones.
 
 ## Component layer
 
@@ -216,19 +250,13 @@ Component variables reference semantic variables, creating a consumption layer f
         "background": {
           "default": {
             "$type": "color",
-            "$value": {
-              "light": "{color.semantic.surface.default}",
-              "dark": "{color.semantic.surface.default}"
-            }
+            "$value": "{color.semantic.surface.default}"
           }
         },
         "text": {
           "default": {
             "$type": "color",
-            "$value": {
-              "light": "{color.semantic.text.primary}",
-              "dark": "{color.semantic.text.primary}"
-            }
+            "$value": "{color.semantic.text.primary}"
           }
         }
       },
@@ -245,24 +273,51 @@ Component variables reference semantic variables, creating a consumption layer f
 
 This pattern creates a clear hierarchy: base → semantic → component.
 
+## Modes (Variable Design Standard (VDS) extension)
+
+**Note**: Modes in `$value` are NOT part of the DTCG 2025.10 specification. If you need light/dark theme variants, Variable Design Standard (VDS) provides modes as an extension. See [Modes](/contract/modes).
+
+For strict DTCG compliance without modes, use separate variables:
+
+```json
+{
+  "color": {
+    "semantic": {
+      "text": {
+        "primary": {
+          "light": {
+            "$type": "color",
+            "$value": "{color.base.gray.900}"
+          },
+          "dark": {
+            "$type": "color",
+            "$value": "{color.base.gray.100}"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 ## Failure modes
 
-Invalid DTCG format causes build failures and runtime errors:
+Invalid DTCG format causes build failures:
 
-- **Missing `$type`**: Validators reject the variable. Build tools cannot determine output format.
-- **Invalid `$value` for type**: Schema validation fails. A `color` type with value `16px` is rejected.
-- **Broken references**: References to non-existent paths (`{does.not.exist}`) cause build failures or produce undefined CSS custom properties.
-- **Inconsistent mode keys**: If one variable uses `light`/`dark` and another uses `day`/`night`, mode resolution fails. All variables in a file MUST use the same mode keys.
+- **Missing `$type`**: Validators reject the variable.
+- **Invalid `$value` format**: Using `"16px"` for dimension instead of `{"value": 16, "unit": "px"}` is not strictly DTCG compliant.
+- **Invalid color format**: Using `"#4763BF"` instead of the color object format is not strictly DTCG compliant.
+- **Broken references**: References to non-existent paths cause build failures.
 - **Circular references**: `{a}` references `{b}` which references `{a}`. Build tools detect this and fail.
 
 ## Out of scope
 
-This example demonstrates format compliance, not:
+This example demonstrates strict DTCG format compliance, not:
 
-- **Platform output**: CSS, SCSS, or JavaScript output. See [Adapter Pipeline](/examples/adapter-pipeline) for transformation examples.
-- **Tool-specific input**: Figma or Tokens Studio export formats. See [Figma Export](/examples/figma-export) for tool output.
+- **Variable Design Standard (VDS) extensions**: Modes, string shortcuts. See [Modes](/contract/modes) for VC extensions.
+- **Platform output**: CSS, SCSS, or JavaScript output. See [Adapter Pipeline](/examples/adapter-pipeline).
+- **Tool-specific input**: Figma or Tokens Studio export formats. See [Figma Export](/examples/figma-export).
 - **Multi-brand architecture**: Brand overrides and theme composition. See [Multi-brand Architecture](/patterns/multi-brand-architecture).
-- **Naming conventions**: Category prefixes and path structure rules. See [Naming](/contract/naming).
 
 ## Validation
 

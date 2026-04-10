@@ -4,7 +4,7 @@ title: Types
 
 # Types
 
-Types define how a variable's `$value` is interpreted. Variable Contract supports all DTCG 2025.10 types.
+Types define how a variable's `$value` is interpreted. Variable Design Standard (VDS) supports all DTCG 2025.10 types.
 
 ## Type system overview
 
@@ -22,12 +22,31 @@ Every variable MUST have a `$type` property. The type determines:
 
 Represents a color value.
 
-Valid formats:
+**DTCG 2025.10 format** (canonical):
 
-- Hex string: `"#0066cc"` or `"#06c"`
-- RGB object: `{ "r": 0, "g": 102, "b": 204, "alpha": 1 }`
-- RGBA object: `{ "r": 0, "g": 102, "b": 204, "alpha": 0.5 }`
-- Color space object: `{ "colorSpace": "srgb", "components": [0, 0.4, 0.8] }`
+```json
+{
+  "$type": "color",
+  "$value": {
+    "colorSpace": "srgb",
+    "components": [0.278431, 0.388235, 0.749020],
+    "hex": "#4763BF"
+  }
+}
+```
+
+The DTCG spec requires a color space object with `colorSpace`, `components` array (values 0-1), and optional `hex` string. Supported color spaces: `srgb`, `hsl`, `p3`, `rec2020`.
+
+**Variable Design Standard (VDS) shorthand** (convenience):
+
+```json
+{
+  "$type": "color",
+  "$value": "#4763BF"
+}
+```
+
+Hex strings (`"#0066cc"`, `"#06c"`) are a Variable Design Standard (VDS) convenience format. They are NOT strictly DTCG 2025.10 compliant but are widely supported by tools.
 
 Examples:
 
@@ -36,29 +55,25 @@ Examples:
   "color": {
     "primary": {
       "$type": "color",
-      "$value": "#0066cc"
-    },
-    "primary-rgb": {
-      "$type": "color",
-      "$value": {
-        "r": 0,
-        "g": 102,
-        "b": 204,
-        "alpha": 1
-      }
-    },
-    "primary-srgb": {
-      "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.4, 0.8]
+        "components": [0.278431, 0.388235, 0.749020],
+        "hex": "#4763BF"
+      },
+      "$extensions": {
+        "com.variables-contract.version": "0.4.0"
       }
+    },
+    "primary-shorthand": {
+      "$type": "color",
+      "$value": "#4763BF",
+      "$description": "Variable Design Standard (VDS) shorthand - not strict DTCG"
     }
   }
 }
 ```
 
-Property-level references: `{variable.r}`, `{variable.g}`, `{variable.b}`, `{variable.alpha}`
+Property-level references: `{variable.components}`, `{variable.colorSpace}`, `{variable.hex}`
 
 ### Dimension
 
@@ -66,10 +81,30 @@ Property-level references: `{variable.r}`, `{variable.g}`, `{variable.b}`, `{var
 
 Represents a length value with a unit.
 
-Valid formats:
+**DTCG 2025.10 format** (canonical):
 
-- String with unit: `"16px"`, `"1.5rem"`, `"100%"`
-- Object: `{ "value": 16, "unit": "px" }`
+```json
+{
+  "$type": "dimension",
+  "$value": {
+    "value": 16,
+    "unit": "px"
+  }
+}
+```
+
+The DTCG spec requires an object with numeric `value` and string `unit`. Note: Figma only imports dimensions with `"px"` unit.
+
+**Variable Design Standard (VDS) shorthand** (convenience):
+
+```json
+{
+  "$type": "dimension",
+  "$value": "16px"
+}
+```
+
+String format (`"16px"`, `"1.5rem"`) is a Variable Design Standard (VDS) convenience format. It is NOT strictly DTCG 2025.10 compliant.
 
 Examples:
 
@@ -78,14 +113,15 @@ Examples:
   "spacing": {
     "base": {
       "$type": "dimension",
-      "$value": "16px"
-    },
-    "base-object": {
-      "$type": "dimension",
       "$value": {
         "value": 16,
         "unit": "px"
       }
+    },
+    "base-shorthand": {
+      "$type": "dimension",
+      "$value": "16px",
+      "$description": "Variable Design Standard (VDS) shorthand - not strict DTCG"
     }
   }
 }
@@ -169,10 +205,30 @@ Validation:
 
 Represents a time duration.
 
-Valid formats:
+**DTCG 2025.10 format** (canonical):
 
-- String with unit: `"200ms"`, `"0.5s"`
-- Number in milliseconds: `200` (interpreted as milliseconds)
+```json
+{
+  "$type": "duration",
+  "$value": {
+    "value": 200,
+    "unit": "ms"
+  }
+}
+```
+
+The DTCG spec requires an object with numeric `value` and string `unit`. Valid units: `ms` (milliseconds), `s` (seconds). Note: Figma only imports durations with `"s"` (seconds) unit.
+
+**Variable Design Standard (VDS) shorthand** (convenience):
+
+```json
+{
+  "$type": "duration",
+  "$value": "200ms"
+}
+```
+
+String format (`"200ms"`, `"0.5s"`) is a Variable Design Standard (VDS) convenience format. It is NOT strictly DTCG 2025.10 compliant.
 
 Examples:
 
@@ -181,11 +237,15 @@ Examples:
   "duration": {
     "fast": {
       "$type": "duration",
-      "$value": "200ms"
+      "$value": {
+        "value": 200,
+        "unit": "ms"
+      }
     },
-    "slow": {
+    "fast-shorthand": {
       "$type": "duration",
-      "$value": "500ms"
+      "$value": "200ms",
+      "$description": "Variable Design Standard (VDS) shorthand - not strict DTCG"
     }
   }
 }
@@ -193,8 +253,8 @@ Examples:
 
 Validation:
 
-- If string, MUST end with `ms` or `s`
-- If number, interpreted as milliseconds
+- Value MUST be a number
+- Unit MUST be `ms` or `s`
 
 ### Cubic Bézier
 
@@ -309,20 +369,27 @@ Type mismatches MUST be rejected during validation.
 
 ## Examples
 
-### Complete type examples
+### DTCG 2025.10 compliant examples
 
 ```json
 {
   "color": {
     "primary": {
       "$type": "color",
-      "$value": "#0066cc"
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [0.278431, 0.388235, 0.749020],
+        "hex": "#4763BF"
+      }
     }
   },
   "spacing": {
     "base": {
       "$type": "dimension",
-      "$value": "16px"
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
     }
   },
   "font": {
@@ -342,7 +409,10 @@ Type mismatches MUST be rejected during validation.
   "duration": {
     "fast": {
       "$type": "duration",
-      "$value": "200ms"
+      "$value": {
+        "value": 200,
+        "unit": "ms"
+      }
     }
   },
   "easing": {
@@ -355,6 +425,33 @@ Type mismatches MUST be rejected during validation.
     "disabled": {
       "$type": "number",
       "$value": 0.5
+    }
+  }
+}
+```
+
+### Variable Design Standard (VDS) shorthand examples
+
+These use convenience formats that are widely supported but NOT strictly DTCG 2025.10 compliant:
+
+```json
+{
+  "color": {
+    "primary": {
+      "$type": "color",
+      "$value": "#4763BF"
+    }
+  },
+  "spacing": {
+    "base": {
+      "$type": "dimension",
+      "$value": "16px"
+    }
+  },
+  "duration": {
+    "fast": {
+      "$type": "duration",
+      "$value": "200ms"
     }
   }
 }

@@ -1,45 +1,64 @@
 {
+  "$description": "DTCG 2025.10 compliant example. This file uses strict DTCG format without Variable Design Standard (VDS) extensions like modes in $value.",
   "color": {
     "base": {
       "gray": {
         "100": {
           "$type": "color",
-          "$value": "#f5f5f5"
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.96, 0.96, 0.96],
+            "hex": "#f5f5f5"
+          }
         },
         "900": {
           "$type": "color",
-          "$value": "#1a1a1a"
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0.1, 0.1, 0.1],
+            "hex": "#1a1a1a"
+          }
         }
       },
       "primary": {
         "$type": "color",
-        "$value": "#0066cc"
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.278431, 0.388235, 0.74902],
+          "hex": "#4763BF"
+        },
+        "$extensions": {
+          "com.variables-contract.version": "0.4.0"
+        }
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0.4, 0.4, 0.4],
+          "hex": "#666666"
+        }
       }
     },
     "semantic": {
-      "$ref": "#/color/base",
+      "$extends": "{color.base}",
       "text": {
         "primary": {
           "$type": "color",
-          "$value": {
-            "light": "{color.base.gray.900}",
-            "dark": "{color.base.gray.100}"
-          }
+          "$value": "{color.base.gray.900}"
         },
         "secondary": {
           "$type": "color",
-          "$value": {
-            "light": "#666666",
-            "dark": "#999999"
-          }
+          "$value": "{color.base.secondary}"
         }
       },
       "surface": {
         "default": {
           "$type": "color",
           "$value": {
-            "light": "#ffffff",
-            "dark": "#000000"
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "hex": "#ffffff"
           }
         }
       }
@@ -49,15 +68,24 @@
     "base": {
       "small": {
         "$type": "dimension",
-        "$value": "8px"
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        }
       },
       "medium": {
         "$type": "dimension",
-        "$value": "16px"
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
       },
       "large": {
         "$type": "dimension",
-        "$value": "24px"
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
       }
     },
     "semantic": {
@@ -80,10 +108,6 @@
       "primary": {
         "$type": "fontFamily",
         "$value": "Roboto"
-      },
-      "secondary": {
-        "$type": "fontFamily",
-        "$value": ["Roboto", "Helvetica", "Arial", "sans-serif"]
       }
     },
     "weight": {
@@ -99,22 +123,34 @@
     "size": {
       "base": {
         "$type": "dimension",
-        "$value": "16px"
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
       },
       "lg": {
         "$type": "dimension",
-        "$value": "24px"
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        }
       }
     }
   },
   "duration": {
     "fast": {
       "$type": "duration",
-      "$value": "200ms"
+      "$value": {
+        "value": 200,
+        "unit": "ms"
+      }
     },
     "slow": {
       "$type": "duration",
-      "$value": "500ms"
+      "$value": {
+        "value": 500,
+        "unit": "ms"
+      }
     }
   },
   "easing": {
@@ -131,15 +167,25 @@
     "default": {
       "$type": "border",
       "$value": {
-        "width": { "value": 1, "unit": "px" },
-        "color": "#e0e0e0",
+        "width": {
+          "value": 1,
+          "unit": "px"
+        },
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0.88, 0.88, 0.88],
+          "hex": "#e0e0e0"
+        },
         "style": "solid"
       }
     },
     "thick": {
       "$type": "border",
       "$value": {
-        "width": { "value": 2, "unit": "px" },
+        "width": {
+          "value": 2,
+          "unit": "px"
+        },
         "color": "{color.semantic.text.secondary}",
         "style": "solid"
       }
@@ -150,7 +196,10 @@
       "$type": "transition",
       "$value": {
         "duration": "{duration.fast}",
-        "delay": "0ms",
+        "delay": {
+          "value": 0,
+          "unit": "ms"
+        },
         "timingFunction": "{easing.default}"
       }
     }
@@ -159,21 +208,53 @@
     "small": {
       "$type": "shadow",
       "$value": {
-        "color": "rgba(0, 0, 0, 0.1)",
-        "offsetX": { "value": 0, "unit": "px" },
-        "offsetY": { "value": 2, "unit": "px" },
-        "blur": { "value": 4, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.1
+        },
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 2,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 4,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
       }
     },
     "large": {
       "$type": "shadow",
       "$value": {
-        "color": "rgba(0, 0, 0, 0.2)",
-        "offsetX": { "value": 0, "unit": "px" },
-        "offsetY": { "value": 8, "unit": "px" },
-        "blur": { "value": 16, "unit": "px" },
-        "spread": { "value": 0, "unit": "px" }
+        "color": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "alpha": 0.2
+        },
+        "offsetX": {
+          "value": 0,
+          "unit": "px"
+        },
+        "offsetY": {
+          "value": 8,
+          "unit": "px"
+        },
+        "blur": {
+          "value": 16,
+          "unit": "px"
+        },
+        "spread": {
+          "value": 0,
+          "unit": "px"
+        }
       }
     }
   },
@@ -186,7 +267,11 @@
           "position": 0
         },
         {
-          "color": "#004499",
+          "color": {
+            "colorSpace": "srgb",
+            "components": [0, 0.27, 0.6],
+            "hex": "#004499"
+          },
           "position": 1
         }
       ]
@@ -199,7 +284,10 @@
         "fontFamily": "{font.family.primary}",
         "fontSize": "{font.size.lg}",
         "fontWeight": "{font.weight.bold}",
-        "letterSpacing": { "value": 0, "unit": "px" },
+        "letterSpacing": {
+          "value": 0,
+          "unit": "px"
+        },
         "lineHeight": 1.5
       }
     },
@@ -209,7 +297,10 @@
         "fontFamily": "{font.family.primary}",
         "fontSize": "{font.size.base}",
         "fontWeight": "{font.weight.normal}",
-        "letterSpacing": { "value": 0, "unit": "px" },
+        "letterSpacing": {
+          "value": 0,
+          "unit": "px"
+        },
         "lineHeight": 1.2
       }
     }
@@ -220,19 +311,13 @@
         "background": {
           "default": {
             "$type": "color",
-            "$value": {
-              "light": "{color.semantic.surface.default}",
-              "dark": "{color.semantic.surface.default}"
-            }
+            "$value": "{color.semantic.surface.default}"
           }
         },
         "text": {
           "default": {
             "$type": "color",
-            "$value": {
-              "light": "{color.semantic.text.primary}",
-              "dark": "{color.semantic.text.primary}"
-            }
+            "$value": "{color.semantic.text.primary}"
           }
         }
       },
@@ -257,4 +342,3 @@
     }
   }
 }
-

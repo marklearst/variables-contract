@@ -4,6 +4,8 @@ title: Modes
 
 # Modes
 
+**Variable Design Standard (VDS) Extension**: Modes are NOT part of the DTCG 2025.10 specification. This is a Variable Design Standard (VDS) extension inspired by Figma's modes concept. For strict DTCG compliance, use separate variables or store mode metadata in `$extensions`.
+
 Modes represent intentional variants of variables (example: `light`/`dark`, `mobile`/`desktop`).
 
 If modes are inconsistent, theme switching breaks and mode-specific outputs fail.
@@ -299,6 +301,41 @@ Modes are valid if:
 - Mode values are valid for the variable type
 - Mode references resolve correctly
 - All variables in a collection use the same mode keys (if they use modes)
+
+## DTCG compliance
+
+Modes in `$value` are a Variable Design Standard (VDS) extension. For strict DTCG 2025.10 compliance:
+
+- Use separate variables for each mode (example: `color.surface.light`, `color.surface.dark`)
+- Store mode metadata in `$extensions` for documentation purposes
+- Use DTCG object format for values (not string shortcuts)
+
+Example of DTCG-compliant approach without modes:
+
+```json
+{
+  "color": {
+    "surface": {
+      "light": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [1, 1, 1],
+          "hex": "#ffffff"
+        }
+      },
+      "dark": {
+        "$type": "color",
+        "$value": {
+          "colorSpace": "srgb",
+          "components": [0, 0, 0],
+          "hex": "#000000"
+        }
+      }
+    }
+  }
+}
+```
 
 ## Out of scope
 
