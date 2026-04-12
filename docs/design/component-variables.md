@@ -1,10 +1,12 @@
 ---
-title: Design - Component Variables
+title: Design: Component Variables
 ---
 
 # Using Variables in Figma Components
 
-How to use variables in Figma components for consistent styling.
+Scope: applying variables in Figma components so shared styles update together.
+
+Failure if ignored: components hardcode values and fall out of sync.
 
 ## Applying variables to components
 
@@ -115,4 +117,3 @@ If component variables are wrong:
 - Component creation (see Figma docs)
 - Variable creation (see workflow docs)
 - Component library structure (separate concern)
-

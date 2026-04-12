@@ -1,10 +1,12 @@
 ---
-title: Testing - Visual Regression
+title: Testing: Visual Regression
 ---
 
 # Visual Regression Testing
 
-How to test variable changes with visual regression testing.
+Scope: visual regression checks for variable changes.
+
+Failure if ignored: visual regressions ship without detection.
 
 ## Visual regression testing
 
@@ -98,7 +100,7 @@ test("button visual test", async ({ page }) => {
 1. Test critical components
 2. Test all modes
 3. Test all states
-4. Use consistent viewports
+4. Use the same viewport sizes across runs
 5. Review differences carefully
 
 ## Failure modes
@@ -108,10 +110,10 @@ If visual regression testing fails:
 - Visual changes go unnoticed
 - Mode switching breaks
 - Component states break
-- Inconsistent styling
+- Viewport sizes differ between runs
 
 ## Out of scope
 
-- Test framework setup (see tool docs)
+- Test tool setup (see tool docs)
 - Component rendering (separate concern)
 - Test infrastructure (separate concern)
