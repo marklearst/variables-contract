@@ -137,7 +137,7 @@ Note the `@` prefix on collection names and `$` prefix on group names.
 
 Figma Variables can be exported via:
 
-- **REST API**: [Local Variables endpoint](https://developers.figma.com/docs/rest-api/variables-endpoints/) (**Enterprise plan only** - requires Full seat in an Enterprise org)
+- **REST API**: [Local Variables endpoint](https://developers.figma.com/docs/rest-api/variables-endpoints/) (**Enterprise plan only**: requires Full seat in an Enterprise org)
 - **Plugin API**: [figma.variables](https://developers.figma.com/docs/plugins/api/figma-variables/) (all plans, requires plugin development)
 - **Third-party plugins**: Tokens Studio, Design Tokens export plugins
 
@@ -187,7 +187,7 @@ Using raw Figma exports without normalization causes:
 This example shows raw Figma output, not:
 
 - **Normalized format**: See [DTCG Compliant Example](/examples/dtcg-compliant) for canonical structure.
-- **Normalization steps**: See [Figma Adapter](/adapters/figma) for transformation rules.
+- **Normalization steps**: See [Figma Adapter](/adapters/figma) for conversion rules.
 - **Tokens Studio format**: Different export structure with its own adapter.
 - **Plugin development**: See [Figma Plugin API](https://developers.figma.com/docs/plugins/api/figma-variables/) for building export tools.
 
@@ -200,4 +200,4 @@ The [Figma Adapter](/adapters/figma) transforms this format into Variable Design
 3. Convert reference syntax to DTCG format
 4. Relocate metadata to `$extensions`
 
-See [Adapter Pipeline](/examples/adapter-pipeline) for end-to-end transformation examples.
+See [Adapter Pipeline](/examples/adapter-pipeline) for export-to-contract conversion examples.
