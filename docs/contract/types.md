@@ -67,7 +67,7 @@ Examples:
         "hex": "#4763BF"
       },
       "$extensions": {
-        "com.variables-contract.version": "0.4.0"
+        "com.variables-contract.version": "0.5.0"
       }
     },
     "primary-shorthand": {

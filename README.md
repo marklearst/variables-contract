@@ -2,7 +2,7 @@
 
 Public specification and governance standard for design variables. DTCG 2025.10 compliant format with naming rules, validation requirements, versioning strategy, and adapter patterns.
 
-**Version:** 0.4.0
+**Version:** 0.5.0
 **Status:** Draft
 **Editor:** Mark Learst
 
