@@ -1,5 +1,5 @@
 ---
-title: Scenarios: Component Integration
+title: "Scenarios: Component Integration"
 ---
 
 # Component Library Integration
@@ -256,9 +256,8 @@ CSS:
 .button {
   background-color: var(--component-button-color-background-default);
   color: var(--component-button-color-text-default);
-  padding: var(--component-button-spacing-padding-vertical) var(
-      --component-button-spacing-padding-horizontal
-    );
+  padding: var(--component-button-spacing-padding-vertical)
+    var(--component-button-spacing-padding-horizontal);
 }
 
 .button:hover {

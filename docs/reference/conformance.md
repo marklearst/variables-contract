@@ -1,5 +1,5 @@
 ---
-title: Conformance
+title: "Reference: Conformance"
 ---
 
 # Variable Design Standard (VDS) Conformance

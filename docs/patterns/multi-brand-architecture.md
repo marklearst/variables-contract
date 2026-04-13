@@ -1,5 +1,5 @@
 ---
-title: Patterns: Multi-Brand Architecture
+title: "Patterns: Multi-Brand Architecture"
 ---
 
 # Multi-Brand Architecture

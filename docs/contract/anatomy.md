@@ -1,5 +1,5 @@
 ---
-title: Contract: Anatomy
+title: "Contract: Anatomy"
 ---
 
 # Contract: Anatomy

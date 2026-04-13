@@ -1,5 +1,5 @@
 ---
-title: Contributors
+title: "Meta: Contributors"
 ---
 
 # Variable Design Standard (VDS) Contributors

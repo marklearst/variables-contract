@@ -1,5 +1,5 @@
 ---
-title: DTCG Alignment
+title: "Contract: DTCG Alignment"
 ---
 
 # DTCG Alignment
@@ -44,20 +44,20 @@ Variable Design Standard (VDS) adds governance and extensions on top of DTCG for
 
 ## Compatibility matrix
 
-| Feature                                | Source            | Variable Design Standard (VDS) Requirement | Notes                                        |
-| -------------------------------------- | ----------------- | ----------------------------- | -------------------------------------------- |
-| Variable structure (`$type`, `$value`) | DTCG              | MUST                          | Required for all variables                   |
-| Groups                                 | DTCG              | MUST                          | Required for organization                    |
-| Group extension (`$extends`)           | DTCG              | MAY                           | Use curly brace syntax: `"$extends": "{group}"` |
-| Curly brace references (`{path}`)      | DTCG              | MUST                          | Canonical format                             |
-| JSON Pointer references (`$ref`)       | DTCG              | MAY                           | Supported for DTCG compliance                |
-| Composite types                        | DTCG              | MAY                           | Use when structure is needed                 |
-| `$extensions`                          | DTCG              | MAY                           | For tool metadata only                       |
-| `$deprecated`                          | DTCG              | SHOULD                        | Use when deprecating variables               |
-| Modes in `$value`                      | Variable Design Standard (VDS) | SHOULD                        | VC extension for contextual variants         |
-| Dimension string (`"16px"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
-| Duration string (`"200ms"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
-| Hex color string (`"#hex"`)            | Variable Design Standard (VDS) | MAY                           | VC convenience; DTCG requires object format  |
+| Feature                                | Source                         | Variable Design Standard (VDS) Requirement | Notes                                           |
+| -------------------------------------- | ------------------------------ | ------------------------------------------ | ----------------------------------------------- |
+| Variable structure (`$type`, `$value`) | DTCG                           | MUST                                       | Required for all variables                      |
+| Groups                                 | DTCG                           | MUST                                       | Required for organization                       |
+| Group extension (`$extends`)           | DTCG                           | MAY                                        | Use curly brace syntax: `"$extends": "{group}"` |
+| Curly brace references (`{path}`)      | DTCG                           | MUST                                       | Canonical format                                |
+| JSON Pointer references (`$ref`)       | DTCG                           | MAY                                        | Supported for DTCG compliance                   |
+| Composite types                        | DTCG                           | MAY                                        | Use when structure is needed                    |
+| `$extensions`                          | DTCG                           | MAY                                        | For tool metadata only                          |
+| `$deprecated`                          | DTCG                           | SHOULD                                     | Use when deprecating variables                  |
+| Modes in `$value`                      | Variable Design Standard (VDS) | SHOULD                                     | VC extension for contextual variants            |
+| Dimension string (`"16px"`)            | Variable Design Standard (VDS) | MAY                                        | VC convenience; DTCG requires object format     |
+| Duration string (`"200ms"`)            | Variable Design Standard (VDS) | MAY                                        | VC convenience; DTCG requires object format     |
+| Hex color string (`"#hex"`)            | Variable Design Standard (VDS) | MAY                                        | VC convenience; DTCG requires object format     |
 
 ## Format differences
 

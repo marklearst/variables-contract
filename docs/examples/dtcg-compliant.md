@@ -1,5 +1,5 @@
 ---
-title: DTCG Compliant Example
+title: "Examples: DTCG Compliant"
 ---
 
 # DTCG Compliant Example
@@ -41,7 +41,7 @@ DTCG requires color values as objects with `colorSpace` and `components`:
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
-          "components": [0.278431, 0.388235, 0.749020],
+          "components": [0.278431, 0.388235, 0.74902],
           "hex": "#4763BF"
         },
         "$extensions": {
@@ -218,7 +218,7 @@ Groups can extend other groups using `$extends` with curly brace syntax. See [Gr
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
-          "components": [0.278431, 0.388235, 0.749020],
+          "components": [0.278431, 0.388235, 0.74902],
           "hex": "#4763BF"
         }
       }

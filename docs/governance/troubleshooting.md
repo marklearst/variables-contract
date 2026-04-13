@@ -1,5 +1,5 @@
 ---
-title: Governance: Troubleshooting
+title: "Governance: Troubleshooting"
 ---
 
 # Troubleshooting

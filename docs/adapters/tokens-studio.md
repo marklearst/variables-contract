@@ -1,5 +1,5 @@
 ---
-title: Tokens Studio Adapter
+title: "Adapters: Tokens Studio"
 ---
 
 # Tokens Studio Adapter

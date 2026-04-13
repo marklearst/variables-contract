@@ -1,5 +1,5 @@
 ---
-title: Design: Component Variables
+title: "Design: Component Variables"
 ---
 
 # Using Variables in Figma Components

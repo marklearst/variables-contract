@@ -1,5 +1,5 @@
 ---
-title: Governance: Migration
+title: "Governance: Migration"
 ---
 
 # Migration Guide
@@ -235,6 +235,7 @@ If you have variables in custom formats:
 ### Step 1: Map structure
 
 Identify:
+
 - Variable names and paths
 - Variable types
 - Variable values

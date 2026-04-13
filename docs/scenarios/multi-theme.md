@@ -1,5 +1,5 @@
 ---
-title: Scenarios: Multi-Theme
+title: "Scenarios: Multi-Theme"
 ---
 
 # Multi-Theme Patterns

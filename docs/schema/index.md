@@ -1,5 +1,5 @@
 ---
-title: Schema
+title: "Schema: Overview"
 ---
 
 # Variable Design Standard (VDS) JSON Schema

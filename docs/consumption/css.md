@@ -1,5 +1,5 @@
 ---
-title: Consumption: CSS
+title: "Consumption: CSS"
 ---
 
 # CSS Variable Consumption

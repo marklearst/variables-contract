@@ -1,5 +1,5 @@
 ---
-title: Governance: Getting Started
+title: "Governance: Getting Started"
 ---
 
 # Governance: Getting Started

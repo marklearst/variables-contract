@@ -1,5 +1,5 @@
 ---
-title: Adoption: Getting Started
+title: "Adoption: Getting Started"
 ---
 
 # Team Adoption Guide
@@ -26,14 +26,12 @@ Before adopting Variable Design Standard (VDS):
 **Goal**: Set up structure and tooling
 
 1. Create variable repository structure
-
    - Set up `tokens/` directory in version control
    - Create initial Variable Design Standard (VDS) JSON files
    - Set up file organization (base, semantic, component)
    - Define brand and mode folders (file selection rule)
 
 2. Set up validation
-
    - Install validation tools
    - Configure CI validation
    - Set up pre-commit hooks

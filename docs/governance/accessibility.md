@@ -1,5 +1,5 @@
 ---
-title: Governance: Accessibility
+title: "Governance: Accessibility"
 ---
 
 # Variable Governance: Accessibility

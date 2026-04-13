@@ -1,5 +1,5 @@
 ---
-title: Variable Design Standard (VDS)
+title: "Contract: Variable Contract"
 ---
 
 # Variable Design Standard (VDS)

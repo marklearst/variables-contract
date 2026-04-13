@@ -1,5 +1,5 @@
 ---
-title: Composite Types
+title: "Contract: Composite Types"
 ---
 
 # Composite Types
@@ -162,6 +162,7 @@ Represents a gradient with color stops.
 Structure:
 
 Array of stop objects, each with:
+
 - `color`: color value or reference
 - `position`: number between 0 and 1, or reference
 

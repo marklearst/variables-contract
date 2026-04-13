@@ -1,5 +1,5 @@
 ---
-title: Variable Governance
+title: "Governance: Overview Index"
 ---
 
 # Variable Governance

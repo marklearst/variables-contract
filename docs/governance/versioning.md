@@ -1,5 +1,5 @@
 ---
-title: Governance: Versioning
+title: "Governance: Versioning"
 ---
 
 # Variable Design Standard (VDS) Versioning

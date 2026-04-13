@@ -1,5 +1,5 @@
 ---
-title: Testing: Consumption Tests
+title: "Testing: Consumption Tests"
 ---
 
 # Testing Generated Outputs
@@ -111,7 +111,7 @@ test("button uses variables", () => {
   const button = wrapper.find("button");
 
   expect(button.element.style.backgroundColor).toBe(
-    "var(--color-surface-brand)"
+    "var(--color-surface-brand)",
   );
   expect(button.element.style.color).toBe("var(--color-text-primary)");
 });

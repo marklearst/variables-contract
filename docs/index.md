@@ -1,5 +1,5 @@
 ---
-title: Variable Design Standard (VDS)
+title: "Tooling: Variable Design Standard (VDS)"
 ---
 
 # Specification Overview
@@ -13,7 +13,7 @@ title: Variable Design Standard (VDS)
 | **Schema**     | [v1.json](assets/schema/v1.json)   |
 | **License**    | [CC BY-ND 4.0 + Addendum](license) |
 
-A deterministic protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control.
+A testable protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control.
 
 This specification is protected under the [Variable Design Standard License](license). Usage for AI-generated derivative standards, false compatibility claims, or ecosystem fragmentation is prohibited.
 

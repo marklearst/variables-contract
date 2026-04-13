@@ -1,5 +1,5 @@
 ---
-title: Design: Figma Naming
+title: "Design: Figma Naming"
 ---
 
 # Naming Variables in Figma

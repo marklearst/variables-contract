@@ -1,5 +1,5 @@
 ---
-title: Comparison
+title: "Introduction: Comparison"
 ---
 
 # Variable Design Standard (VDS) vs Other Standards
@@ -10,16 +10,16 @@ Failure if ignored: teams pick formats without governance and ship incompatible 
 
 ## Comparison matrix
 
-| Feature           | VDS          | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
-| ----------------- | ------------ | ------------ | ---------------- | --------------- | -------------- |
-| Format            | DTCG 2025.10 | DTCG 2025.10 | Legacy + DTCG    | Custom JSON     | Custom JSON    |
-| Governance        | Yes          | No           | No               | Partial         | Partial        |
-| Naming rules      | Yes          | No           | No               | Yes             | Yes            |
-| Validation        | Yes          | Format only  | Format only      | Partial         | Partial        |
-| Versioning        | Yes          | No           | No               | Yes             | Yes            |
-| Adapters          | Yes          | No           | Tool-specific    | No              | No             |
-| Tool-agnostic     | Yes          | Yes          | No               | No              | No             |
-| Designer-focused  | Yes          | No           | No               | Yes             | Yes            |
+| Feature          | VDS          | DTCG 2025.10 | Style Dictionary | Material Design | Adobe Spectrum |
+| ---------------- | ------------ | ------------ | ---------------- | --------------- | -------------- |
+| Format           | DTCG 2025.10 | DTCG 2025.10 | Legacy + DTCG    | Custom JSON     | Custom JSON    |
+| Governance       | Yes          | No           | No               | Partial         | Partial        |
+| Naming rules     | Yes          | No           | No               | Yes             | Yes            |
+| Validation       | Yes          | Format only  | Format only      | Partial         | Partial        |
+| Versioning       | Yes          | No           | No               | Yes             | Yes            |
+| Adapters         | Yes          | No           | Tool-specific    | No              | No             |
+| Tool-agnostic    | Yes          | Yes          | No               | No              | No             |
+| Designer-focused | Yes          | No           | No               | Yes             | Yes            |
 | Engineer-focused | Yes          | No           | Yes              | Partial         | Partial        |
 
 ## Variable Design Standard (VDS) vs DTCG 2025.10
@@ -169,7 +169,7 @@ Use Variable Design Standard (VDS) when:
 
 - You need governance for variables
 - You want DTCG compliance
-- You work with designers and developers
+- You work with designers and engineers
 - You need validation and versioning
 - You want tool-agnostic approach
 - You need migration paths

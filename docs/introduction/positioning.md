@@ -1,5 +1,5 @@
 ---
-title: Positioning
+title: "Introduction: Positioning"
 ---
 
 # Variable Design Standard (VDS) Positioning

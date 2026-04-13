@@ -1,5 +1,5 @@
 ---
-title: Consumption: TypeScript
+title: "Consumption: TypeScript"
 ---
 
 # TypeScript Consumption
@@ -39,21 +39,21 @@ Generated TypeScript file:
 ```typescript
 export const color = {
   surface: {
-    brand: '#0066cc',
-    default: '#ffffff'
+    brand: "#0066cc",
+    default: "#ffffff",
   },
   text: {
-    primary: '#000000',
-    secondary: '#666666'
-  }
+    primary: "#000000",
+    secondary: "#666666",
+  },
 };
 
 export const spacing = {
   component: {
     button: {
-      padding: '16px'
-    }
-  }
+      padding: "16px",
+    },
+  },
 };
 ```
 
@@ -64,12 +64,12 @@ export const spacing = {
 Import generated types:
 
 ```typescript
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 const buttonStyle = {
   backgroundColor: color.surface.brand,
   color: color.text.primary,
-  padding: spacing.component.button.padding
+  padding: spacing.component.button.padding,
 };
 ```
 
@@ -82,7 +82,7 @@ export type Color = typeof color;
 export type Spacing = typeof spacing;
 
 // Usage
-const brandColor: Color['surface']['brand'] = color.surface.brand;
+const brandColor: Color["surface"]["brand"] = color.surface.brand;
 ```
 
 ## React integration
@@ -92,7 +92,7 @@ const brandColor: Color['surface']['brand'] = color.surface.brand;
 Use in React style objects:
 
 ```tsx
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 function Button({ children }: { children: React.ReactNode }) {
   return (
@@ -100,7 +100,7 @@ function Button({ children }: { children: React.ReactNode }) {
       style={{
         backgroundColor: color.surface.brand,
         color: color.text.primary,
-        padding: spacing.component.button.padding
+        padding: spacing.component.button.padding,
       }}
     >
       {children}
@@ -114,17 +114,19 @@ function Button({ children }: { children: React.ReactNode }) {
 Use with CSS modules:
 
 ```tsx
-import styles from './Button.module.css';
-import { color } from './tokens';
+import styles from "./Button.module.css";
+import { color } from "./tokens";
 
 function Button({ children }: { children: React.ReactNode }) {
   return (
     <button
       className={styles.button}
-      style={{
-        '--button-bg': color.surface.brand,
-        '--button-color': color.text.primary
-      } as React.CSSProperties}
+      style={
+        {
+          "--button-bg": color.surface.brand,
+          "--button-color": color.text.primary,
+        } as React.CSSProperties
+      }
     >
       {children}
     </button>
@@ -146,12 +148,12 @@ Use in Vue style binding:
 </template>
 
 <script setup lang="ts">
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 const buttonStyle = {
   backgroundColor: color.surface.brand,
   color: color.text.primary,
-  padding: spacing.component.button.padding
+  padding: spacing.component.button.padding,
 };
 </script>
 ```
@@ -165,13 +167,13 @@ Generate mode-specific types:
 ```typescript
 export const color = {
   surface: {
-    light: '#ffffff',
-    dark: '#000000'
-  }
+    light: "#ffffff",
+    dark: "#000000",
+  },
 };
 
 // Usage with mode
-function getSurfaceColor(mode: 'light' | 'dark') {
+function getSurfaceColor(mode: "light" | "dark") {
   return color.surface[mode];
 }
 ```
@@ -181,12 +183,12 @@ function getSurfaceColor(mode: 'light' | 'dark') {
 Use with theme context:
 
 ```typescript
-import { createContext, useContext } from 'react';
-import { color } from './tokens';
+import { createContext, useContext } from "react";
+import { color } from "./tokens";
 
-type Theme = 'light' | 'dark';
+type Theme = "light" | "dark";
 
-const ThemeContext = createContext<Theme>('light');
+const ThemeContext = createContext<Theme>("light");
 
 function useTheme() {
   return useContext(ThemeContext);
@@ -196,7 +198,7 @@ function useColor() {
   const theme = useTheme();
   return {
     surface: color.surface[theme],
-    text: color.text[theme]
+    text: color.text[theme],
   };
 }
 ```

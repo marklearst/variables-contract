@@ -1,5 +1,5 @@
 ---
-title: Design: Figma Workflow
+title: "Design: Figma Workflow"
 ---
 
 # Designer Workflow
