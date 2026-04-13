@@ -1,10 +1,12 @@
 ---
-title: Testing - Validation
+title: Testing: Validation
 ---
 
 # Testing Variable Changes
 
-How to test variable changes and validate references, types, and modes.
+Scope: validation tests for references, types, and mode key sets.
+
+Failure if ignored: invalid variables ship and break builds.
 
 ## Reference validation tests
 
@@ -119,11 +121,11 @@ function isValidDimension(value) {
 }
 ```
 
-## Mode consistency tests
+## Mode key set tests
 
-### Test mode consistency
+### Test mode key sets
 
-Test that modes are consistent within collections:
+Test that each collection uses one mode key set:
 
 ```javascript
 function testModeConsistency(variables) {
@@ -203,7 +205,7 @@ function testVariableContract(variables) {
   errors.push(...testReferenceResolution(variables));
   errors.push(...testCircularReferences(variables));
   errors.push(...testTypeCorrectness(variables));
-  errors.push(...testModeConsistency(variables));
+  errors.push(...testModeKeySets(variables));
   errors.push(...testNamingConvention(variables));
 
   return errors;
@@ -215,7 +217,7 @@ function testVariableContract(variables) {
 1. Test reference resolution
 2. Test circular references
 3. Test type correctness
-4. Test mode consistency
+4. Test mode key sets
 5. Test naming convention
 
 ## Failure modes

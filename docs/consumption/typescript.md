@@ -1,10 +1,12 @@
 ---
-title: Consumption - TypeScript
+title: Consumption: TypeScript
 ---
 
 # TypeScript Consumption
 
-How to consume Variable Design Standard (VDS) variables in TypeScript with type safety.
+Scope: TypeScript consumption of Variable Design Standard (VDS) outputs.
+
+Failure if ignored: code compiles against stale or invalid types.
 
 ## Type generation
 
@@ -303,4 +305,3 @@ If TypeScript consumption is wrong:
 - Type generation tools (use Style Dictionary)
 - Runtime type checking (use TypeScript compiler)
 - Type inference (use TypeScript features)
-

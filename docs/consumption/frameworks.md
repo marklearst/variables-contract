@@ -1,10 +1,12 @@
 ---
-title: Consumption - Frameworks
+title: Consumption: UI Libraries
 ---
 
-# Framework Integration
+# UI Library Integration
 
-How to integrate Variable Design Standard (VDS) variables with React, Vue, and other frameworks.
+Scope: UI library integration using Variable Design Standard (VDS) outputs.
+
+Failure if ignored: components bypass generated outputs and drift from the contract.
 
 ## React integration
 
@@ -297,12 +299,12 @@ const buttonStyle = computed(() => ({
 1. Use CSS variables when possible
 2. Use TypeScript types for type safety
 3. Create theme context/hooks for mode switching
-4. Document framework integration
-5. Test framework consumption
+4. Document library integration
+5. Test library consumption
 
 ## Failure modes
 
-If framework integration is wrong:
+If library integration is wrong:
 
 - Hardcoded values
 - No type safety
@@ -311,7 +313,6 @@ If framework integration is wrong:
 
 ## Out of scope
 
-- Framework-specific features (see framework docs)
+- React or Vue specific features (see tool docs)
 - State management (separate concern)
 - Component architecture (separate concern)
-

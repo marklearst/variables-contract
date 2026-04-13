@@ -1,5 +1,5 @@
 ---
-title: Design - Figma Workflow
+title: Design: Figma Workflow
 ---
 
 # Designer Workflow
@@ -53,7 +53,7 @@ Before exporting variables:
 
 1. Verify naming follows convention
 2. Check all references resolve
-3. Verify modes are consistent
+3. Verify each collection uses one mode key set
 4. Check no duplicate values
 5. Verify variable organization
 
@@ -63,7 +63,7 @@ Before exporting:
 
 - [ ] All variables named correctly
 - [ ] All references resolve
-- [ ] Modes are consistent
+- [ ] Mode keys match across variables in each collection
 - [ ] No duplicate values
 - [ ] Collections organized correctly
 
@@ -106,7 +106,7 @@ Commit normalized JSON:
 1. Plan variables before creating
 2. Use references instead of duplicating
 3. Follow naming convention
-4. Keep modes consistent
+4. Keep the same mode key set across the collection
 5. Review before export
 
 ## Failure modes
@@ -116,11 +116,10 @@ If workflow is wrong:
 - Variables created incorrectly
 - Naming violations
 - Broken references
-- Inconsistent modes
+- Mode keys differ across variables
 
 ## Out of scope
 
 - Figma UI details (see Figma docs)
 - Adapter details (see adapter docs)
 - Review process (see governance docs)
-

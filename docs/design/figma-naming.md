@@ -1,10 +1,12 @@
 ---
-title: Design - Figma Naming
+title: Design: Figma Naming
 ---
 
 # Naming Variables in Figma
 
-How to name variables in Figma UI to match Variable Design Standard (VDS) naming convention.
+Scope: Figma UI naming rules that map to Variable Design Standard (VDS).
+
+Failure if ignored: exports do not match the contract naming rules.
 
 If variables are named incorrectly in Figma, adapter normalization fails and naming violations occur.
 
@@ -108,8 +110,8 @@ Bad:
 
 Create collections for base variables:
 
-- `primitives` - Raw scales and palettes
-- `base` - Base variables
+- `primitives`: Raw scales and palettes
+- `base`: Base variables
 
 Example:
 
@@ -127,8 +129,8 @@ primitives/
 
 Create collections for semantic variables:
 
-- `tokens` - Semantic aliases
-- `semantic` - Semantic variables
+- `tokens`: Semantic aliases
+- `semantic`: Semantic variables
 
 Example:
 
@@ -146,8 +148,8 @@ tokens/
 
 Create collections for component variables:
 
-- `components` - Component-specific variables
-- `component` - Component variables
+- `components`: Component-specific variables
+- `component`: Component variables
 
 Example:
 
@@ -176,7 +178,7 @@ Bad mode names:
 - `DARK` (should be lowercase)
 - `light-mode` (use simple names)
 
-### Mode consistency
+### Mode key sets
 
 All variables in a collection should use the same modes.
 
@@ -250,12 +252,12 @@ tokens/
 
 ## Implementation rules
 
-1. Use forward slashes in Figma (`/`) - exports convert to nested JSON with `$` prefixes
+1. Use forward slashes in Figma (`/`). Exports convert to nested JSON with `$` prefixes
 2. Use lowercase for all names
 3. Use descriptive names (usage, not implementation)
 4. Organize by collections (base, semantic, component)
-5. Keep mode names consistent
-6. Do NOT type `@` or `$` prefixes - these are added by exports and removed by the adapter
+5. Keep the same mode names across collections
+6. Do NOT type `@` or `$` prefixes. These are added by exports and removed by the adapter
 
 ## Failure modes
 
@@ -271,4 +273,3 @@ If Figma naming is wrong:
 - Figma UI features (see Figma docs)
 - Variable creation process (see workflow docs)
 - Export process (see adapter docs)
-

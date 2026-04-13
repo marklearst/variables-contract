@@ -1,10 +1,12 @@
 ---
-title: Testing - Consumption Tests
+title: Testing: Consumption Tests
 ---
 
 # Testing Generated Outputs
 
-How to test CSS variables, TypeScript types, and framework integration.
+Scope: tests for generated CSS variables, TypeScript types, and integration outputs.
+
+Failure if ignored: broken outputs ship without detection.
 
 ## CSS variable tests
 
@@ -75,7 +77,7 @@ const brandColor: string = color.surface.brand;
 // const invalidColor: number = color.surface.brand;
 ```
 
-## Framework integration tests
+## Integration output tests
 
 ### React integration test
 
@@ -119,7 +121,7 @@ test("button uses variables", () => {
 
 1. Test CSS generation
 2. Test TypeScript types
-3. Test framework integration
+3. Test integration outputs
 4. Test mode-specific outputs
 5. Test reference resolution
 
@@ -129,11 +131,11 @@ If consumption tests fail:
 
 - Generated outputs are wrong
 - Types are incorrect
-- Framework integration breaks
+- Integration outputs break
 - Mode switching fails
 
 ## Out of scope
 
-- Test framework setup (see tool docs)
+- Test tool setup (see tool docs)
 - Component testing (separate concern)
 - E2E testing (separate concern)
