@@ -8,9 +8,9 @@ This section describes the status of this document at the time of its publicatio
 
 ## Current Publication
 
-**Version**: 0.4.0
+**Version**: 0.5.0
 **Status**: Draft
-**Date**: January 26, 2026
+**Date**: January 27, 2026
 **Editor**: Mark Learst
 
 ## Document Status
@@ -51,7 +51,7 @@ Issues, questions, and feedback are welcome via:
 
 When filing an issue, please include:
 
-- **Variable Design Standard (VDS) version** (e.g., 0.4.0)
+- **Variable Design Standard (VDS) version** (e.g., 0.5.0)
 - **Type of issue**: Bug, question, proposal, documentation
 - **Description**: Clear description of the issue or question
 - **Steps to reproduce** (for bugs): How to reproduce the issue
@@ -72,7 +72,7 @@ When filing an issue, please include:
 
 ### Editor
 
-**Mark Learst**: Editor and maintainer
+**Mark Learst** - Editor and maintainer
 
 Variable Design Standard (VDS) has been in development since 2017.
 
@@ -84,10 +84,10 @@ See [Contributors](contributors) for a list of people who have contributed to Va
 
 Variable Design Standard (VDS) builds on:
 
-- [DTCG 2025.10 Format Specification](https://www.designtokens.org/tr/2025.10/format/): Base format specification
-- [Style Dictionary](https://styledictionary.com/): Output generation tool
-- Figma Variables: Design tool integration
-- Tokens Studio: Design tool integration
+- [DTCG 2025.10 Format Specification](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
+- [Style Dictionary](https://styledictionary.com/) - Output generation tool
+- Figma Variables - Design tool integration
+- Tokens Studio - Design tool integration
 - The design systems community for feedback and validation
 
 ## Document History
@@ -96,8 +96,8 @@ Version history and release notes are documented in the [Change Log](change-log)
 
 ### Recent Versions
 
-- **0.4.0** (Current): Documentation hardening and DTCG compliance improvements
-- **0.3.7**: Previous version with initial documentation structure
+- **0.5.0** (Current) - Cadence alignment, JSON-as-API framing, and role naming update
+- **0.4.0** - Documentation hardening and DTCG compliance improvements
 
 ### Future Versions
 

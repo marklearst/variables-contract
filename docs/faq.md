@@ -114,7 +114,7 @@ See [License](license) for usage terms.
 
 ## Is Variable Design Standard (VDS) production-ready?
 
-Yes. Version 0.4.0 is in Draft status but production-ready. Used by teams in production. See [Specification Status](meta/status) for status definitions.
+Yes. Version 0.5.0 is in Draft status but production-ready. Used by teams in production. See [Specification Status](meta/status) for status definitions.
 
 ## How do I claim conformance?
 

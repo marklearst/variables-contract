@@ -7,7 +7,7 @@ title: Variable Design Standard (VDS)
 |                |                                    |
 | -------------- | ---------------------------------- |
 | **Status**     | Draft                              |
-| **Version**    | 0.4.0                              |
+| **Version**    | 0.5.0                              |
 | **Editor**     | Mark Learst                        |
 | **Compliance** | DTCG 2025.10                       |
 | **Schema**     | [v1.json](assets/schema/v1.json)   |

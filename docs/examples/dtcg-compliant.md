@@ -45,7 +45,7 @@ DTCG requires color values as objects with `colorSpace` and `components`:
           "hex": "#4763BF"
         },
         "$extensions": {
-          "com.variables-contract.version": "0.4.0"
+          "com.variables-contract.version": "0.5.0"
         }
       }
     }
