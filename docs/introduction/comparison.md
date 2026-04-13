@@ -4,7 +4,9 @@ title: Comparison
 
 # Variable Design Standard (VDS) vs Other Standards
 
-How Variable Design Standard (VDS) compares to other variable/token standards and why it wins.
+Scope: comparison of Variable Design Standard (VDS) to other variable and token standards.
+
+Failure if ignored: teams pick formats without governance and ship incompatible rules.
 
 ## Comparison matrix
 
@@ -18,7 +20,7 @@ How Variable Design Standard (VDS) compares to other variable/token standards an
 | Adapters          | Yes          | No           | Tool-specific    | No              | No             |
 | Tool-agnostic     | Yes          | Yes          | No               | No              | No             |
 | Designer-focused  | Yes          | No           | No               | Yes             | Yes            |
-| Developer-focused | Yes          | No           | Yes              | Partial         | Partial        |
+| Engineer-focused | Yes          | No           | Yes              | Partial         | Partial        |
 
 ## Variable Design Standard (VDS) vs DTCG 2025.10
 
@@ -90,16 +92,16 @@ Material Design is a design system. Variable Design Standard (VDS) is a governan
 
 ## Variable Design Standard (VDS) vs Adobe Spectrum
 
-### Adobe Spectrum is complex
+### Adobe Spectrum is specialized
 
 Adobe Spectrum:
 
 - Complex taxonomy (namespace, domain, object, base, modifiers)
 - Many naming segments
 - Brand-specific structure
-- Over-engineered for most use cases
+- More detailed taxonomy than most teams need
 
-### Variable Design Standard (VDS) is simple
+### Variable Design Standard (VDS) keeps a smaller required surface
 
 Variable Design Standard (VDS):
 
@@ -108,39 +110,39 @@ Variable Design Standard (VDS):
 - Flexible structure
 - Practical and testable
 
-Adobe Spectrum solves Adobe's problems. Variable Design Standard (VDS) solves everyone's problems.
+Adobe Spectrum solves Adobe-specific constraints. Variable Design Standard (VDS) keeps a smaller required surface for broader use.
 
-## Why Variable Design Standard (VDS) wins
+## Why teams choose Variable Design Standard (VDS)
 
-### 1. Simplicity
+### 1. Smaller contract surface
 
 - Variables are variables, not special "tokens"
 - Simple naming (dot-separated paths)
 - Clear structure
 - Easy to understand
 
-### 2. Governance
+### 2. Governance baked in
 
 - Clear rules (not opinions)
 - Testable requirements
 - Versioning strategy
 - Change control process
 
-### 3. Tool-agnostic
+### 3. Tool-agnostic by design
 
 - Works with any tool
 - Adapter pattern for tool integration
 - Not tied to specific tools
 - Flexible consumption
 
-### 4. Designer + Developer
+### 4. Designer and Engineer alignment
 
 - Works for both audiences
 - Clear handoff process
 - Shared understanding
 - No separation
 
-### 5. Production-ready
+### 5. Stable discipline
 
 - Validation in CI
 - Version control integration

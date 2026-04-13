@@ -33,7 +33,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 - Suitable for production use with awareness of potential minor changes
 
 **Transition criteria**: Move from Draft to Candidate Standard when:
-- Core features are stable
+- Core features are frozen for the current major version
 - Breaking changes are limited to major versions
 - Community feedback period begins
 
@@ -42,7 +42,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 **Definition**: Production-ready, breaking changes only in major versions.
 
 **Characteristics**:
-- Specification is stable and production-ready
+- Required fields are frozen for the current major version
 - Breaking changes only in major versions (following semantic versioning)
 - Minor and patch versions are backward-compatible
 - Recommended for production use
@@ -74,20 +74,20 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 
 **Variable Design Standard (VDS) 0.4.0**: **Draft**
 
-The specification is in active development. While it is production-ready and used by teams, breaking changes may occur as the specification evolves based on feedback and implementation experience.
+The specification is in active development. While it is used in production by some teams, breaking changes may occur as the specification evolves based on feedback and implementation experience.
 
 ## Status History
 
-- **0.1.0 - 0.3.7**: Draft
+- **0.1.0: 0.3.7**: Draft
 - **0.4.0**: Draft (current)
 
 ## Status Indicators
 
 Status is indicated in:
-- `docs/index.md` - Status metadata table
-- `docs/meta/change-log.md` - Version status field
-- `docs/faq.md` - Production-ready answer
-- This document - Status definitions
+- `docs/index.md`: Status metadata table
+- `docs/meta/change-log.md`: Version status field
+- `docs/faq.md`: Production-ready answer
+- This document: Status definitions
 
 ## Compatibility Promises by Status
 

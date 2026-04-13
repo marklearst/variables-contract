@@ -123,7 +123,7 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 1. Read [CSS Consumption](docs/consumption/css) or [TypeScript Consumption](docs/consumption/typescript)
 2. Use generated CSS variables or TypeScript types
-3. Follow [Framework Integration](docs/consumption/frameworks) for React/Vue
+3. Follow [UI Library Integration](docs/consumption/frameworks) for React/Vue
 4. Test variable consumption
 
 ### For Design Engineers
@@ -138,78 +138,80 @@ See [Implementation Checklist](docs/adoption/implementation-checklist) for compl
 
 ### Introduction
 
-- [Why Variables](docs/introduction/why-variables) - Why "variables" not "design tokens"
-- [Comparison](docs/introduction/comparison) - Variable Design Standard vs DTCG, Style Dictionary, Material, Adobe
-- [Positioning](docs/introduction/positioning) - What Variable Design Standard is and is not
+- [Why Variables](docs/introduction/why-variables): Why "variables" not "design tokens"
+- [Comparison](docs/introduction/comparison): Variable Design Standard vs DTCG, Style Dictionary, Material, Adobe
+- [Positioning](docs/introduction/positioning): What Variable Design Standard is and is not
 
 ### Contract reference
 
-- [Variable Design Standard](docs/contract/variable-contract) - JSON shape and structure
-- [Groups](docs/contract/groups) - Group structure and extension
-- [References](docs/contract/references) - Reference syntax and resolution
-- [Modes](docs/contract/modes) - Mode structure and resolution
-- [Types](docs/contract/types) - Type system reference
-- [Composite Types](docs/contract/composite-types) - Border, Transition, Shadow, Gradient, Typography
-- [Naming](docs/contract/naming) - Naming convention
-- [Anatomy](docs/contract/anatomy) - Base, alias, and component tokens
+- [Variable Design Standard](docs/contract/variable-contract): JSON shape and structure
+- [Groups](docs/contract/groups): Group structure and extension
+- [References](docs/contract/references): Reference syntax and resolution
+- [Modes](docs/contract/modes): Mode structure and resolution
+- [Types](docs/contract/types): Type system reference
+- [Composite Types](docs/contract/composite-types): Border, Transition, Shadow, Gradient, Typography
+- [Naming](docs/contract/naming): Naming convention
+- [Anatomy](docs/contract/anatomy): Base, alias, and component tokens
 
 ### Adoption
 
-- [Getting Started](docs/adoption/getting-started) - Team adoption guide
-- [Implementation Checklist](docs/adoption/implementation-checklist) - Pre/post implementation checklists
-- [Migration Strategy](docs/adoption/migration-strategy) - Phased migration approaches
+- [Getting Started](docs/adoption/getting-started): Team adoption guide
+- [Implementation Checklist](docs/adoption/implementation-checklist): Pre/post implementation checklists
+- [Migration Strategy](docs/adoption/migration-strategy): Phased migration approaches
 
 ### Governance
 
-- [Governance Overview](docs/governance/overview) - Governance principles and workflow
-- [Change Control](docs/governance/change-control) - Review and release process
-- [Validation](docs/governance/validation) - Validation tools and CI setup
-- [Versioning](docs/governance/versioning) - Semantic versioning and breaking changes
-- [Migration](docs/governance/migration) - Migrating from other formats
-- [Troubleshooting](docs/governance/troubleshooting) - Common issues and solutions
-- [Accessibility](docs/governance/accessibility) - Accessibility constraints
+- [Governance Overview](docs/governance/overview): Governance principles and workflow
+- [Change Control](docs/governance/change-control): Review and release process
+- [Validation](docs/governance/validation): Validation tools and CI setup
+- [Versioning](docs/governance/versioning): Semantic versioning and breaking changes
+- [Migration](docs/governance/migration): Migrating from other formats
+- [Troubleshooting](docs/governance/troubleshooting): Common issues and solutions
+- [Accessibility](docs/governance/accessibility): Accessibility constraints
 
 ### Scenarios
 
-- [Multi-Brand](docs/scenarios/multi-brand) - Multi-brand architecture patterns
-- [Multi-Theme](docs/scenarios/multi-theme) - Theme composition and mode inheritance
-- [Large Sets](docs/scenarios/large-sets) - Performance considerations
-- [Component Integration](docs/scenarios/component-integration) - Component library integration
+- [Multi-Brand](docs/scenarios/multi-brand): Multi-brand architecture patterns
+- [Multi-Theme](docs/scenarios/multi-theme): Theme composition and mode inheritance
+- [Large Sets](docs/scenarios/large-sets): Performance considerations
+- [Component Integration](docs/scenarios/component-integration): Component library integration
 
 ### Tooling
 
-- [Ecosystem](docs/tooling/ecosystem) - Tools that support Variable Design Standard
-- [CI/CD](docs/tooling/ci-cd) - CI/CD integration patterns
-- [Build Pipelines](docs/tooling/build-pipelines) - Complete build pipeline examples
-- [Figma Adapter](docs/adapters/figma) - Figma export normalization
-- [Tokens Studio Adapter](docs/adapters/tokens-studio) - Tokens Studio export normalization
-- [Style Dictionary Adapter](docs/adapters/style-dictionary) - CSS/TypeScript output generation
+- [Ecosystem](docs/tooling/ecosystem): Tools that support Variable Design Standard
+- [CI/CD](docs/tooling/ci-cd): CI/CD integration patterns
+- [Build Pipelines](docs/tooling/build-pipelines): Complete build pipeline examples
+- [Figma Adapter](docs/adapters/figma): Figma export normalization
+- [Tokens Studio Adapter](docs/adapters/tokens-studio): Tokens Studio export normalization
+- [Style Dictionary Adapter](docs/adapters/style-dictionary): CSS/TypeScript output generation
 
 ### Consumption
 
-- [CSS](docs/consumption/css) - CSS variable consumption patterns
-- [TypeScript](docs/consumption/typescript) - TypeScript type generation
-- [Frameworks](docs/consumption/frameworks) - React/Vue integration
+- [CSS](docs/consumption/css): CSS variable consumption patterns
+- [TypeScript](docs/consumption/typescript): TypeScript type generation
+- [UI Libraries](docs/consumption/frameworks): React/Vue integration
 
 ### Design
 
-- [Figma Naming](docs/design/figma-naming) - How to name variables in Figma
-- [Figma Workflow](docs/design/figma-workflow) - Designer workflow
-- [Component Variables](docs/design/component-variables) - Using variables in Figma components
+- [Figma Naming](docs/design/figma-naming): How to name variables in Figma
+- [Figma Workflow](docs/design/figma-workflow): Designer workflow
+- [Component Variables](docs/design/component-variables): Using variables in Figma components
 
 ### Testing
 
-- [Validation](docs/testing/validation) - Testing variable changes
-- [Visual Regression](docs/testing/visual-regression) - Visual regression testing
-- [Consumption Tests](docs/testing/consumption-tests) - Testing generated outputs
+- [Validation](docs/testing/validation): Testing variable changes
+- [Visual Regression](docs/testing/visual-regression): Visual regression testing
+- [Consumption Tests](docs/testing/consumption-tests): Testing generated outputs
 
 ### Patterns
 
-- [Multi-Brand Architecture](docs/patterns/multi-brand-architecture) - Complete multi-brand example
-- [Theme Composition](docs/patterns/theme-composition) - Theme composition patterns
-- [Performance](docs/patterns/performance) - Performance optimization
+- [Multi-Brand Architecture](docs/patterns/multi-brand-architecture): Complete multi-brand example
+- [Theme Composition](docs/patterns/theme-composition): Theme composition patterns
+- [Performance](docs/patterns/performance): Performance constraints
 
 ## Requirements
+
+JSON-as-API means file paths and names are the interface. Treat renames as breaking changes.
 
 Variable Design Standard JSON files MUST:
 
@@ -219,7 +221,7 @@ Variable Design Standard JSON files MUST:
 - Include `$type` and `$value` on all variables
 - Resolve all references (no broken references)
 - Avoid circular references
-- Use consistent mode keys within collections
+- Use the same mode key set within each collection
 
 Variable Design Standard JSON files SHOULD:
 
@@ -247,7 +249,7 @@ Validation checks:
 - Reference resolution (all references resolve)
 - Circular reference detection (no reference cycles)
 - Type correctness (`$value` matches `$type`)
-- Mode consistency (mode keys shared within collections)
+- Mode key set checks (keys match within each collection)
 
 See [Validation](docs/governance/validation) for validation tools and CI setup.
 
@@ -270,7 +272,7 @@ Non-breaking changes:
 
 - New variables
 - New modes
-- Value changes (if documented and intentional)
+- Value changes (if approved in review and documented)
 
 See [Versioning](docs/governance/versioning) for complete versioning strategy.
 
@@ -315,21 +317,21 @@ See [Style Dictionary Adapter](docs/adapters/style-dictionary) for details.
 
 ## Examples
 
-- [Figma Export JSON](docs/examples/figma-export) - Example Figma export
-- [DTCG Compliant Example](docs/examples/dtcg-compliant) - Complete DTCG 2025.10 example
-- [Adapter Pipeline](docs/examples/adapter-pipeline) - End-to-end transformation example
+- [Figma Export JSON](docs/examples/figma-export): Example Figma export
+- [DTCG Compliant Example](docs/examples/dtcg-compliant): Complete DTCG 2025.10 example
+- [Adapter Pipeline](docs/examples/adapter-pipeline): Export-to-contract conversion example
 
-## UDS Framework
+## UDS System
 
-Variable Design Standard is part of UDS (UI Design Standard), a comprehensive framework for design-to-code governance.
+Variable Design Standard is part of UDS (UI Design Standard), a comprehensive standard set for design-to-code governance.
 
 UDS components:
 
-- Variable Design Standard (VDS) - this spec
-- Integrity Design Standard (IDS) - tooling layer (future)
-- Component Design Standard (future) - component mapping
-- Pattern Design Standard (future) - pattern mapping
-- Design-Dev Mapping (future) - artifact relationships
+- Variable Design Standard (VDS): this spec
+- Integrity Design Standard (IDS): tooling layer (future)
+- Component Design Standard (future): component mapping
+- Pattern Design Standard (future): pattern mapping
+- Design-Dev Mapping (future): artifact relationships
 
 Variable Design Standard is the first standard in UDS, focusing on variables.
 
@@ -419,10 +421,10 @@ Variable Design Standard is maintained by the editor. Contributions welcome.
 
 Variable Design Standard builds on:
 
-- [DTCG 2025.10 Format](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
-- [Style Dictionary](https://styledictionary.com/) - Output generation tool
-- Figma Variables - Design tool integration
-- Tokens Studio - Design tool integration
+- [DTCG 2025.10 Format](https://www.designtokens.org/tr/2025.10/format/): Base format specification
+- [Style Dictionary](https://styledictionary.com/): Output generation tool
+- Figma Variables: Design tool integration
+- Tokens Studio: Design tool integration
 
 ## JSON Schema
 
@@ -444,10 +446,10 @@ See [Schema](docs/schema) for validation tools and IDE integration.
 
 ## References
 
-- [DTCG 2025.10 Specification](https://www.designtokens.org/tr/2025.10/format/) - Design Tokens Community Group format
-- [Variable Design Standard Documentation](docs/index.md) - Complete specification and governance
-- [DTCG Alignment](docs/contract/dtcg-alignment.md) - Compliance details
-- [JSON Schema](docs/schema) - Validation schema and tools
+- [DTCG 2025.10 Specification](https://www.designtokens.org/tr/2025.10/format/): Design Tokens Community Group format
+- [Variable Design Standard Documentation](docs/index.md): Complete specification and governance
+- [DTCG Alignment](docs/contract/dtcg-alignment.md): Compliance details
+- [JSON Schema](docs/schema): Validation schema and tools
 
 ## Conformance
 

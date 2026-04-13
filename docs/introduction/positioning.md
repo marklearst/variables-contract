@@ -4,7 +4,7 @@ title: Positioning
 
 # Variable Design Standard (VDS) Positioning
 
-What Variable Design Standard (VDS) is, what it is not, and how it fits into the larger UDS framework.
+What Variable Design Standard (VDS) is, what it is not, and how it fits into the larger UDS system.
 
 ## What Variable Design Standard (VDS) is
 
@@ -21,6 +21,7 @@ Variable Design Standard (VDS) provides:
 - Governance (naming rules, change control)
 - Validation (what to check)
 - Adapters (how to convert tool outputs)
+- File selection rule (brand and mode selection by file list)
 
 ## What Variable Design Standard (VDS) is NOT
 
@@ -32,17 +33,17 @@ Variable Design Standard (VDS) is NOT:
 - A runtime library (use DTCG-compliant validators)
 - A build tool (use Style Dictionary or similar)
 
-## UDS Framework
+## UDS System
 
-Variable Design Standard is part of UDS (UI Design Standard), a comprehensive framework for design-to-code governance.
+Variable Design Standard is part of UDS (UI Design Standard), a comprehensive standard set for design-to-code governance.
 
 UDS components:
 
-- Variable Design Standard (VDS) - this spec
-- Integrity Design Standard (IDS) - tooling layer (future)
-- Component Design Standard (future) - component mapping
-- Pattern Design Standard (future) - pattern mapping
-- Design-Dev Mapping (future) - artifact relationships
+- Variable Design Standard (VDS): this spec
+- Integrity Design Standard (IDS): tooling layer (future)
+- Component Design Standard (future): component mapping
+- Pattern Design Standard (future): pattern mapping
+- Design-Dev Mapping (future): artifact relationships
 
 Variable Design Standard is the first standard in UDS, focusing on variables.
 
@@ -94,8 +95,20 @@ Variable Design Standard (VDS) works by:
 1. Defining structure (DTCG 2025.10 format)
 2. Adding governance (naming, validation, versioning)
 3. Providing adapters (tool integration)
-4. Enabling validation (CI checks)
+4. Running validation (CI checks)
 5. Supporting migration (from any format)
+
+## JSON-as-API
+
+The JSON file set is the API surface. Paths and names are the contract. Brand and mode selection happens by file list, not by a mapped layer.
+
+## Standard posture
+
+Variable Design Standard (VDS) is a spec and a governance layer.
+
+- The contract is the JSON in version control.
+- CI validates structure, naming, references, and modes.
+- Contract changes are reviewed before merge.
 
 ## Success criteria
 

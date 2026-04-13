@@ -72,7 +72,7 @@ When filing an issue, please include:
 
 ### Editor
 
-**Mark Learst** - Editor and maintainer
+**Mark Learst**: Editor and maintainer
 
 Variable Design Standard (VDS) has been in development since 2017.
 
@@ -84,10 +84,10 @@ See [Contributors](contributors) for a list of people who have contributed to Va
 
 Variable Design Standard (VDS) builds on:
 
-- [DTCG 2025.10 Format Specification](https://www.designtokens.org/tr/2025.10/format/) - Base format specification
-- [Style Dictionary](https://styledictionary.com/) - Output generation tool
-- Figma Variables - Design tool integration
-- Tokens Studio - Design tool integration
+- [DTCG 2025.10 Format Specification](https://www.designtokens.org/tr/2025.10/format/): Base format specification
+- [Style Dictionary](https://styledictionary.com/): Output generation tool
+- Figma Variables: Design tool integration
+- Tokens Studio: Design tool integration
 - The design systems community for feedback and validation
 
 ## Document History
@@ -96,8 +96,8 @@ Version history and release notes are documented in the [Change Log](change-log)
 
 ### Recent Versions
 
-- **0.4.0** (Current) - Documentation hardening and DTCG compliance improvements
-- **0.3.7** - Previous version with initial documentation structure
+- **0.4.0** (Current): Documentation hardening and DTCG compliance improvements
+- **0.3.7**: Previous version with initial documentation structure
 
 ### Future Versions
 
