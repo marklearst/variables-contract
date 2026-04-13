@@ -1,8 +1,8 @@
 ---
-title: Contract - Naming Convention
+title: Contract: Naming Convention
 ---
 
-# Contract - Naming Convention
+# Contract: Naming Convention
 
 Naming is an API. If names change casually, every consumer breaks.
 
@@ -41,6 +41,14 @@ Notes:
 - Use hyphens inside a segment when needed.
 - Avoid spaces.
 - Avoid punctuation other than `.` and `-`.
+
+## Requirements
+
+- Names MUST use dot-separated segments.
+- Names MUST be lowercase.
+- Names MUST NOT include platform names.
+- Alias names SHOULD describe usage, not values.
+- Component names MUST be component-scoped.
 
 ## Required naming rules
 

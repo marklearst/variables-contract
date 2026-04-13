@@ -14,7 +14,7 @@ https://variable-design-standard.vercel.app/assets/schema/v1.json
 
 ## Usage
 
-Add the `$schema` property to your Variable Design Standard (VDS) JSON files to enable validation:
+Add the `$schema` property to your Variable Design Standard (VDS) JSON files so validators can run schema checks:
 
 ```json
 {
@@ -34,14 +34,14 @@ Add the `$schema` property to your Variable Design Standard (VDS) JSON files to 
 
 Every variable must have:
 
-- `$type` - One of the supported types
-- `$value` - A literal value, reference, or mode object
+- `$type`: One of the supported types
+- `$value`: A literal value, reference, or mode object
 
 Optional properties:
 
-- `$description` - Human-readable description
-- `$deprecated` - Boolean deprecation marker
-- `$extensions` - Non-standard metadata
+- `$description`: Human-readable description
+- `$deprecated`: Boolean deprecation marker
+- `$extensions`: Non-standard metadata
 
 ### Supported Types
 
@@ -130,11 +130,11 @@ Groups cannot have `$type` or `$value` properties.
 
 ### IDE Integration
 
-Most modern IDEs support JSON Schema validation. Add the `$schema` property to enable:
+Most modern IDEs support JSON Schema validation. Add the `$schema` property so editors can run:
 
-- **VS Code** - Automatic validation with IntelliSense
-- **JetBrains IDEs** - Built-in JSON Schema support
-- **Sublime Text** - With LSP plugin
+- **VS Code**: Automatic validation with IntelliSense
+- **JetBrains IDEs**: Built-in JSON Schema support
+- **Sublime Text**: With LSP plugin
 
 ### CLI Validation
 
@@ -166,18 +166,18 @@ Add schema validation to your pipeline:
 
 Future versions will be published at `/schema/v2`, `/schema/v3`, etc. The schema follows semantic versioning principles:
 
-- **Patch** - Bug fixes, clarifications (backward compatible)
-- **Minor** - New optional features (backward compatible)
-- **Major** - Breaking changes to validation rules
+- **Patch**: Bug fixes, clarifications (backward compatible)
+- **Minor**: New optional features (backward compatible)
+- **Major**: Breaking changes to validation rules
 
 ## Limitations
 
 The JSON Schema validates structure but cannot check:
 
-- **Reference resolution** - Whether referenced variables exist
-- **Circular references** - Cycles in reference chains
-- **Mode consistency** - Whether all variables in a collection use the same modes
-- **Naming conventions** - Variable Design Standard (VDS) naming rules
+- **Reference resolution**: Whether referenced variables exist
+- **Circular references**: Cycles in reference chains
+- **Mode key sets**: Whether all variables in a collection use the same modes
+- **Naming conventions**: Variable Design Standard (VDS) naming rules
 
 Use additional validation tooling for complete conformance checking.
 

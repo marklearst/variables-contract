@@ -1,8 +1,8 @@
 ---
-title: Contract - Anatomy
+title: Contract: Anatomy
 ---
 
-# Contract - Anatomy
+# Contract: Anatomy
 
 These are the three layers we use so components do not depend on raw palette values.
 
@@ -57,6 +57,87 @@ Rules:
 - Alias variables: for usage in UI.
 - Component variables: for controlled overrides when needed.
 
+## No mapped layer
+
+VDS defines three layers only. Base, Alias, Component.
+
+Requirements:
+
+- VDS implementations MUST NOT add a fourth layer between Alias and Base.
+- Brand and theme selection MUST happen by file selection or by modes on Alias variables.
+- Alias variables SHOULD NOT exist only to redirect a base value under a second name.
+
+Example (conformant):
+
+```json
+// tokens/brand-a/color.json
+{
+  "color": {
+    "surface": {
+      "brand": { "$type": "color", "$value": "{color.brand.primary}" }
+    }
+  }
+}
+```
+
+```json
+// tokens/brand-b/color.json
+{
+  "color": {
+    "surface": {
+      "brand": { "$type": "color", "$value": "{color.brand.primary}" }
+    }
+  }
+}
+```
+
+Example (non-conformant):
+
+```json
+{
+  "mapped": {
+    "brand": {
+      "primary": { "$type": "color", "$value": "{color.blue.500}" }
+    }
+  },
+  "color": {
+    "surface": {
+      "brand": { "$type": "color", "$value": "{mapped.brand.primary}" }
+    }
+  }
+}
+```
+
+Example selection (CSS):
+
+```css
+@layer base, brand;
+@import "variables-base.css" layer(base);
+@import "variables-brand-a.css" layer(brand);
+```
+
+Guidance:
+
+- Treat the file tree as the selection boundary. The folder name picks the brand and mode.
+- Keep alias values direct. One alias hop from base is the default.
+- Do not add a mapped collection in a design tool panel. Use alias modes or file selection.
+- Use CSS cascade layers to select brand output at consumption time.
+- File selection rule selects brands and modes by file selection.
+
+Why this is faster:
+
+- A mapped layer forces a second naming decision for every semantic token.
+- A mapped layer adds one more reference hop for every resolution.
+- The three layer graph keeps review scope small and keeps pickers focused.
+- No extra collection to review, audit, or keep in sync.
+- CSS handles layout and motion. Tokens stay focused on values and intent.
+
+## Contract posture
+
+- Variable JSON in version control is the contract.
+- CI validates structure, naming, references, and modes.
+- Contract changes are reviewed before merge. See [Governance](../governance/overview).
+
 ## Formal Invariants
 
 These invariants MUST be maintained for Variable Design Standard (VDS) conformance. Violations are non-conformant.
@@ -70,6 +151,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 - Base variables MUST NOT be consumed directly by components (unless explicitly allowed)
 
 **Example (conformant)**:
+
 ```json
 {
   "color": {
@@ -88,13 +170,14 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 ```
 
 **Example (non-conformant)**:
+
 ```json
 {
   "color": {
     "gray": {
       "900": {
         "$type": "color",
-        "$value": "{color.gray.800}"  // Base variable referencing another base variable
+        "$value": "{color.gray.800}" // Base variable referencing another base variable
       }
     }
   }
@@ -110,13 +193,14 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 - Alias variables form the semantic abstraction layer
 
 **Example (conformant)**:
+
 ```json
 {
   "color": {
     "text": {
       "primary": {
         "$type": "color",
-        "$value": "{color.gray.900}"  // References base variable
+        "$value": "{color.gray.900}" // References base variable
       }
     }
   }
@@ -124,13 +208,14 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 ```
 
 **Example (non-conformant)**:
+
 ```json
 {
   "color": {
     "text": {
       "primary": {
         "$type": "color",
-        "$value": "{component.button.color.text}"  // Alias referencing component variable
+        "$value": "{component.button.color.text}" // Alias referencing component variable
       }
     }
   }
@@ -146,6 +231,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 - Component variables provide fine-grained control when needed
 
 **Example (conformant)**:
+
 ```json
 {
   "component": {
@@ -154,7 +240,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
         "background": {
           "default": {
             "$type": "color",
-            "$value": "{color.surface.brand}"  // References alias variable
+            "$value": "{color.surface.brand}" // References alias variable
           }
         }
       }
@@ -164,6 +250,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 ```
 
 **Example (non-conformant)**:
+
 ```json
 {
   "component": {
@@ -172,7 +259,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
         "background": {
           "default": {
             "$type": "color",
-            "$value": "{color.gray.900}"  // Component variable referencing base directly
+            "$value": "{color.gray.900}" // Component variable referencing base directly
           }
         }
       }
@@ -190,6 +277,7 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 - Flattening destroys the dependency graph and breaks theme switching
 
 **Example (conformant output)**:
+
 ```json
 {
   "color.text.primary": "{color.gray.900}"
@@ -197,9 +285,10 @@ These invariants MUST be maintained for Variable Design Standard (VDS) conforman
 ```
 
 **Example (non-conformant output)**:
+
 ```json
 {
-  "color.text.primary": "#1a1a1a"  // Flattened - reference chain lost
+  "color.text.primary": "#1a1a1a" // Flattened - reference chain lost
 }
 ```
 
@@ -220,6 +309,7 @@ If anatomy rules are ignored:
 - Semantic intent is lost (developers guess meaning from value)
 - Component variables reference base variables (tight coupling, hard to refactor)
 - Alias layer is skipped (no semantic abstraction)
+- Mapped layers appear (extra decision and more reference hops)
 
 ## Out of scope
 

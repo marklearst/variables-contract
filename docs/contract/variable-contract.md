@@ -8,6 +8,8 @@ JSON shape for variables stored in version control, validated in CI, and used to
 
 If the contract is loose, you get silent renames, broken references, and "same variable, different meaning" across tools.
 
+JSON-as-API: file paths and variable names are the API surface. A rename is a breaking change.
+
 ## DTCG compliance
 
 This contract is DTCG 2025.10 compliant. See [DTCG Alignment](dtcg-alignment) for details.
@@ -42,6 +44,21 @@ A group is an object that contains nested groups and/or variables. Groups do not
 
 Groups can extend other groups using `$extends` with curly brace syntax. See [Groups](groups) for details.
 
+## Examples
+
+```json
+{
+  "color": {
+    "text": {
+      "primary": {
+        "$type": "color",
+        "$value": "{color.gray.1000}"
+      }
+    }
+  }
+}
+```
+
 ## `$type`
 
 `$type` describes how a tool should interpret `$value`.
@@ -67,7 +84,7 @@ Rules:
 
 ## Modes
 
-Modes represent intentional variants of a variable (example: `light`/`dark`, `mobile`/`desktop`).
+Modes represent named variants of a variable (example: `light`/`dark`, `mobile`/`desktop`).
 
 Rules:
 
@@ -75,7 +92,7 @@ Rules:
 - Mode names should not change without a breaking change.
 - A mode value may be a literal value or a reference.
 
-See [Modes](modes) for complete mode documentation including structure, resolution, and consistency rules.
+See [Modes](modes) for complete mode documentation including structure, resolution, and mode key set rules.
 
 ## References (aliases)
 
@@ -133,7 +150,7 @@ Rules:
 - Deprecated variables must include a migration path in release notes.
 - Deprecated variables should remain available for at least one release cycle unless removal is urgent.
 
-## Validation checklist
+## Validation Checklist
 
 A change is considered valid if:
 
@@ -146,6 +163,14 @@ A change is considered valid if:
 - Component variables do not reference base variables directly unless explicitly documented.
 - Breaking changes are versioned and documented (rename, removal, `$type` change).
 - Group extensions (`$extends`) do not create circular references (see [Groups](groups)).
+
+## Failure modes
+
+If contract rules are ignored:
+
+- References do not resolve and builds fail
+- Mode keys differ across variables and theme switching breaks
+- Components consume base values and lose semantic intent
 
 ## Conformance
 
@@ -168,5 +193,5 @@ Variable Design Standard (VDS) does NOT define:
 - Consumption patterns (CSS, TypeScript, whatever works for your team)
 - Design system decisions (governs structure, not values)
 - Runtime libraries (validation is build-time)
-- UI frameworks (tool-agnostic)
+- UI libraries (tool-agnostic)
 - Component structure (focuses on variables only)

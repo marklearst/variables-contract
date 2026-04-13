@@ -6,6 +6,12 @@ title: Groups
 
 Groups organize variables into nested structures. Groups can extend other groups to inherit their structure.
 
+## Requirements
+
+- Groups MUST be objects that contain groups and/or variables.
+- Groups MUST NOT include `$type` or `$value`.
+- `$extends` is allowed only on groups.
+
 ## Group structure
 
 A group is an object that contains nested groups and/or variables. Groups do not have `$type` or `$value` properties.
@@ -94,7 +100,7 @@ After resolution, `color.brand` contains:
 - `color.brand.secondary` (inherited from `color.base.secondary`)
 - `color.brand.accent` (new variable)
 
-**Note**: DTCG 2025.10 also supports JSON Pointer syntax (`$ref` with `#/path/to/group`) for compatibility with JSON Schema tooling. Variable Design Standard (VDS) recommends `$extends` with curly brace syntax for consistency with variable references.
+**Note**: DTCG 2025.10 also supports JSON Pointer syntax (`$ref` with `#/path/to/group`) for compatibility with JSON Schema tooling. Variable Design Standard (VDS) recommends `$extends` with curly brace syntax to align with variable references.
 
 ## Group properties
 
@@ -434,7 +440,7 @@ If you ignore group rules:
 - Overriding variables incorrectly can break component styling
 - Empty groups add noise without value
 
-## Validation checklist
+## Validation Checklist
 
 A group is valid if:
 
@@ -448,4 +454,3 @@ A group is valid if:
 - Runtime group resolution algorithms (use DTCG-compliant resolvers)
 - Group merging strategies beyond override semantics
 - Group versioning (handle at variable level)
-
