@@ -1,5 +1,5 @@
 ---
-title: Testing: Visual Regression
+title: "Testing: Visual Regression"
 ---
 
 # Visual Regression Testing

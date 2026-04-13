@@ -1,5 +1,5 @@
 ---
-title: Tooling: Build Pipelines
+title: "Tooling: Build Pipelines"
 ---
 
 # Build Pipeline Examples
