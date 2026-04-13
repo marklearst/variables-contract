@@ -4,7 +4,7 @@ title: Variable Governance Overview
 
 # Variable Governance Overview
 
-Governance is what keeps variable changes boring: reviewed, versioned, and safe to roll out.
+Governance keeps variable changes reviewed, versioned, and safe to roll out.
 
 ## What a governed variable system provides
 
@@ -30,7 +30,22 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 - Breaking changes are versioned and documented.
 - Releases include notes and migration guidance when needed.
 
-## Next docs to read
+## Workflow
+
+1. Design proposes a change with intended usage.
+2. Design Engineer updates JSON and runs validation.
+3. Frontend Engineer validates consumption impact.
+4. PR is reviewed and merged.
+5. Release notes document breaking changes.
+
+## Review checklist
+
+- [ ] Naming follows the contract
+- [ ] References resolve and are acyclic
+- [ ] Mode keys match within a collection
+- [ ] Breaking changes are versioned
+
+## Links
 
 - [Getting Started](getting-started)
 - [Change Control](change-control)
@@ -41,11 +56,11 @@ Governance is what keeps variable changes boring: reviewed, versioned, and safe 
 
 ## Roles
 
-- [Designer](roles/designer) - Creates variables in Figma
-- [Design Engineer](roles/design-engineer) - Bridges design and development, owns contract
-- [Frontend Developer](roles/frontend-developer) - Consumes variables in code
+- [Designer](roles/designer): Creates variables in Figma
+- [Design Engineer](roles/design-engineer): Bridges design and development, owns contract
+- [Frontend Engineer](roles/frontend-engineer): Consumes variables in code
 
-## Reference
+## Related
 
 - [Naming](/contract/naming)
 - [Tokens Studio](/adapters/tokens-studio)

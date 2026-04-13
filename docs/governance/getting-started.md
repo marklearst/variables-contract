@@ -1,8 +1,8 @@
 ---
-title: Governance - Getting Started
+title: Governance: Getting Started
 ---
 
-# Governance - Getting Started
+# Governance: Getting Started
 
 Use this checklist when you're adding or changing a variable.
 
@@ -32,7 +32,7 @@ Create a new variable only when:
 - multiple components need the same decision
 - you can name it in a way you won't want to rename later
 
-## How to propose a variable change
+## Workflow
 
 Before you open a change:
 
@@ -42,15 +42,26 @@ Before you open a change:
 4. Add a description if the intent is not obvious.
 5. Decide whether the change is breaking.
 
-## Review requirements
+## Review checklist
 
 Reviews need:
 
 - Design Engineer (contract owner, reviews naming, structure, references)
-- Frontend Developer (validates consumption feasibility)
+- Frontend Engineer (validates consumption feasibility)
+
+## Ownership
+
+- Design Engineer: owns the contract and validation rules
+- Frontend Engineer: owns consumption checks
 
 ## Release expectations
 
 - Use semantic versioning.
 - Renames and removals are breaking changes.
 - Publish release notes with migration steps when applicable.
+
+## Links
+
+- [Validation](validation)
+- [Versioning](versioning)
+- [Conformance](../reference/conformance)

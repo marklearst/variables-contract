@@ -1,5 +1,5 @@
 ---
-title: Governance - Validation
+title: Governance: Validation
 ---
 
 # Variable Design Standard (VDS) Validation
@@ -18,8 +18,14 @@ Validation MUST check:
 4. Reference resolution (all references point to existing variables)
 5. Circular references (no reference cycles)
 6. Type correctness (`$value` matches `$type` format)
-7. Mode consistency (mode keys shared within collections)
+7. Mode key set checks (mode keys match within collections)
 8. Group extension (`$extends` targets exist, no circular group references)
+
+## Workflow
+
+1. Run schema validation on JSON files.
+2. Run VDS checks (naming, references, mode key set).
+3. Block merge if any errors are found.
 
 ## Validation tools
 
@@ -27,8 +33,8 @@ Validation MUST check:
 
 Use DTCG-compliant validators for format validation:
 
-- [@tokens-studio/sd-transforms](https://github.com/tokens-studio/sd-transforms) - Style Dictionary transforms with DTCG support
-- [style-dictionary](https://github.com/style-dictionary/style-dictionary) - Built-in DTCG format validation
+- [@tokens-studio/sd-transforms](https://github.com/tokens-studio/sd-transforms): Style Dictionary transforms with DTCG support
+- [style-dictionary](https://github.com/style-dictionary/style-dictionary): Built-in DTCG format validation
 - Custom validators using DTCG JSON Schema
 
 ### Custom validation scripts
@@ -38,7 +44,7 @@ Create custom scripts to check Variable Design Standard (VDS)-specific rules:
 - Naming convention enforcement
 - Reference resolution
 - Circular reference detection
-- Mode consistency checks
+- Mode key set checks
 
 Example validation script structure:
 
@@ -53,7 +59,7 @@ function validateVariableContract(json) {
   // Check references resolve
   // Check for circular references
   // Check type correctness
-  // Check mode consistency
+  // Check mode key sets
 
   return errors;
 }
@@ -139,7 +145,7 @@ A Variable Design Standard (VDS) JSON file is valid if:
 ### Mode validation
 
 - Mode keys are strings
-- Mode keys are consistent within collections
+- Mode keys match within collections
 - Mode values are valid for the variable type
 - Mode references resolve correctly
 
@@ -218,4 +224,14 @@ If validation is skipped:
 
 - Runtime validation libraries (use DTCG-compliant validators)
 - Validation UI tools (use existing tools or build custom)
-- Performance optimization for large token sets (handle separately)
+- Performance work for large token sets (handle separately)
+
+## Ownership
+
+- Design Engineer: owns validation rules and CI setup
+- Frontend Engineer: validates outputs in consumption
+
+## Links
+
+- [Conformance](../reference/conformance)
+- [Change Control](change-control)

@@ -1,8 +1,8 @@
 ---
-title: Governance - Change Control
+title: Governance: Change Control
 ---
 
-# Governance - Design and Development Workflow
+# Governance: Design and Development Workflow
 
 Use this workflow so a variable change doesn't silently break components.
 
@@ -10,7 +10,7 @@ Use this workflow so a variable change doesn't silently break components.
 
 - **Designer**: Proposes intent and usage (states, pairings, constraints). Creates variables in Figma.
 - **Design Engineer**: Reviews changes, validates contract compliance, maintains naming rules. Bridges design and development.
-- **Frontend Developer**: Validates consumption feasibility, implements variables in code, owns compatibility.
+- **Frontend Engineer**: Validates consumption feasibility, implements variables in code, owns compatibility.
 
 ## Workflow overview
 
@@ -52,7 +52,7 @@ Before creating or changing tokens:
 All variable changes should be reviewed by at least:
 
 - Design Engineer (contract owner, reviews naming, structure, references)
-- Frontend Developer (validates consumption feasibility)
+- Frontend Engineer (validates consumption feasibility)
 
 Reviews should verify:
 
@@ -75,3 +75,9 @@ Reviews should verify:
   - what changed
   - who needs to update
   - migration steps when applicable
+
+## Links
+
+- [Versioning](versioning)
+- [Validation](validation)
+- [Conformance](../reference/conformance)

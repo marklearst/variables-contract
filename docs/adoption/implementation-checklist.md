@@ -1,5 +1,5 @@
 ---
-title: Adoption - Implementation Checklist
+title: Adoption: Implementation Checklist
 ---
 
 # Implementation Checklist
@@ -41,6 +41,7 @@ During implementation, complete:
 
 - [ ] Create `tokens/` directory structure
 - [ ] Set up base/semantic/component folders
+- [ ] Define brand and mode folders (file selection rule)
 - [ ] Install validation tool
 - [ ] Configure CI validation
 - [ ] Set up pre-commit hooks
@@ -87,6 +88,7 @@ To claim Variable Design Standard (VDS) compliance, verify:
 - [ ] All variables have `$type` and `$value`
 - [ ] Valid DTCG types used (color, dimension, etc.)
 - [ ] Group structure used correctly
+- [ ] No mapped layer in the contract graph
 
 ### Naming compliance
 
@@ -121,9 +123,11 @@ To claim Variable Design Standard (VDS) compliance, verify:
 ### Governance compliance
 
 - [ ] Change control process defined
-- [ ] Roles assigned (Designer, Design Engineer, Frontend Developer)
+- [ ] Roles assigned (Designer, Design Engineer, Frontend Engineer)
 - [ ] Review process documented
 - [ ] Release process documented
+- [ ] File selection rule documented (brand and mode folders)
+- [ ] Contract review gate defined
 
 See [Conformance](reference/conformance) for complete conformance requirements.
 
@@ -179,7 +183,7 @@ Implementation is successful when:
 If implementation fails:
 
 - Validation not set up (invalid variables ship)
-- Team not trained (inconsistent usage)
+- Team not trained (base values used in components instead of alias variables)
 - Review process missing (breaking changes)
 - Documentation missing (confusion)
 - Integration incomplete (variables not used)
@@ -198,4 +202,3 @@ After successful implementation:
 - Tool-specific implementation (see adapter docs)
 - Design system creation (focus on variables)
 - Component library setup (separate concern)
-

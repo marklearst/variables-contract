@@ -1,12 +1,18 @@
 ---
-title: Tooling - CI/CD Integration
+title: Tooling: CI/CD Integration
 ---
 
 # CI/CD Integration
 
-How to integrate Variable Design Standard (VDS) validation and builds into CI/CD pipelines.
+Scope: CI/CD integration for Variable Design Standard (VDS) validation and builds.
 
-If CI/CD is not set up, invalid variables ship to production and breaking changes go unnoticed.
+Failure if ignored: invalid variables ship and breaking changes go unnoticed.
+
+## Workflow
+
+1. Validate token JSON on every PR.
+2. Build outputs after validation.
+3. Deploy outputs only after validation and build succeed.
 
 ## CI/CD patterns
 
@@ -179,7 +185,7 @@ Create pre-commit hook:
 npx husky add .husky/pre-commit "npm run validate:tokens"
 ```
 
-### Pre-commit framework
+### Pre-commit config
 
 Create `.pre-commit-config.yaml`:
 
@@ -311,6 +317,12 @@ Add to `package.json`:
 4. Cache dependencies in CI
 5. Run validation before build
 
+## Review checklist
+
+- [ ] Validation runs on every PR
+- [ ] Builds run only after validation passes
+- [ ] Outputs are checked for changes
+
 ## Failure modes
 
 If CI/CD is not set up:
@@ -325,3 +337,13 @@ If CI/CD is not set up:
 - Tool-specific CI/CD setup (see tool docs)
 - Deployment strategies (focus on validation/build)
 - Monitoring and alerting (separate concern)
+
+## Ownership
+
+- Frontend Engineer: owns CI configuration
+- Design Engineer: defines validation rules
+
+## Links
+
+- [Validation](../governance/validation)
+- [Build Pipelines](build-pipelines)

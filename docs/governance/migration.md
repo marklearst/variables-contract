@@ -1,14 +1,14 @@
 ---
-title: Governance - Migration
+title: Governance: Migration
 ---
 
 # Migration Guide
 
-How to migrate existing variable formats to Variable Design Standard (VDS) format.
+Scope: migration rules for converting existing variable formats to Variable Design Standard (VDS).
 
-If you skip migration steps, you lose reference resolution, break type validation, and create maintenance burden.
+Failure if ignored: references fail, type validation breaks, and maintenance cost grows.
 
-## Migration overview
+## Workflow
 
 Migration converts existing variable formats to Variable Design Standard (VDS) (DTCG 2025.10) format with governance rules applied.
 
@@ -20,6 +20,14 @@ Migration steps:
 4. Convert references (update reference syntax)
 5. Validate output (run validation checklist)
 6. Test consumption (verify generated outputs work)
+
+## Review checklist
+
+- [ ] Reference syntax converted to curly brace format
+- [ ] All variables include `$type`
+- [ ] Tool metadata moved to `$extensions`
+- [ ] Validation checklist passes
+- [ ] Outputs match previous behavior
 
 ## From older DTCG formats
 
@@ -264,7 +272,7 @@ After migration, verify:
 - Names follow naming convention
 - No circular references
 - Types match values
-- Modes are consistent
+- Mode keys match within a collection
 - Validation passes
 
 ## Testing migration
@@ -302,3 +310,13 @@ If migration is incomplete:
 - Cross-format conversion libraries
 - Migration UI tools
 
+## Ownership
+
+- Design Engineer: plans and reviews migration steps
+- Frontend Engineer: validates outputs after migration
+
+## Links
+
+- [Adapters](/adapters)
+- [Validation](validation)
+- [Conformance](../reference/conformance)

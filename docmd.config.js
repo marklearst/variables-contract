@@ -161,8 +161,8 @@ module.exports = {
               icon: "user",
             },
             {
-              title: "Frontend Developer",
-              path: "governance/roles/frontend-developer",
+              title: "Frontend Engineer",
+              path: "governance/roles/frontend-engineer",
               icon: "code",
             },
           ],
@@ -224,7 +224,7 @@ module.exports = {
       children: [
         { title: "CSS", path: "consumption/css", icon: "file-code" },
         { title: "TypeScript", path: "consumption/typescript", icon: "type" },
-        { title: "Frameworks", path: "consumption/frameworks", icon: "layers" },
+        { title: "UI Libraries", path: "consumption/frameworks", icon: "layers" },
       ],
     },
     {

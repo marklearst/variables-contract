@@ -8,7 +8,13 @@ title: Conformance
 Claiming conformance without meeting these requirements violates the [Standards Integrity License](../license). False conformance claims result in automatic license termination.
 :::
 
-How to claim Variable Design Standard (VDS) compliance and what it means.
+Scope: conformance claims and the required evidence.
+
+Failure if ignored: conformance claims are invalid.
+
+## Conformance posture
+
+Conformance claims require automated validation and a documented review gate. If the gate does not exist, do not claim conformance.
 
 ## Technical Conformance Tests
 
@@ -193,7 +199,7 @@ SHOULD:
 
 - Review variable changes before merge
 - Follow change control process
-- Assign roles (Designer, Design Engineer, Frontend Developer)
+- Assign roles (Designer, Design Engineer, Frontend Engineer)
 - Document team-specific patterns
 
 ## Claiming conformance

@@ -1,16 +1,16 @@
 ---
-title: Role - Frontend Developer
+title: Role: Frontend Engineer
 ---
 
-# Variable Governance - Frontend Developer Role
+# Variable Governance: Frontend Engineer Role
 
 Consumes variables in code. Maintains build pipelines. Does not create variables. Does not own the contract.
 
 ## Scope
 
-Frontend Developers (UI/Engineer) consume variables generated from the Variable Design Standard (VDS). They maintain build pipelines. They do not create variables. They do not own the contract.
+Frontend Engineers consume variables generated from the Variable Design Standard (VDS). They maintain build pipelines. They do not create variables. They do not own the contract.
 
-Design Engineer owns the contract. Designer creates variables. Frontend Developer consumes outputs.
+Design Engineer owns the contract. Designer creates variables. Frontend Engineer consumes outputs.
 
 ## Responsibilities
 
@@ -20,9 +20,14 @@ Design Engineer owns the contract. Designer creates variables. Frontend Develope
 - Test variable consumption (see [Consumption Tests](/testing/consumption-tests)).
 - Report consumption issues to Design Engineer.
 
+## Ownership
+
+- Owns build pipeline configuration
+- Owns integration of generated outputs into code
+
 ## Boundaries
 
-Frontend Developer MUST NOT:
+Frontend Engineer MUST NOT:
 
 - Create variables in Figma (Designer owns this).
 - Modify the Variable Design Standard (VDS) JSON directly without Design Engineer approval.
@@ -30,7 +35,7 @@ Frontend Developer MUST NOT:
 - Approve variable changes (Design Engineer owns this).
 - Hand-edit generated outputs (regenerate from Variable Design Standard (VDS) JSON).
 
-These boundaries exist because variable authoring and contract ownership require design fluency. Frontend Developer consumes. Design Engineer validates. Designer creates.
+These boundaries exist because variable authoring and contract ownership require design fluency. Frontend Engineer consumes. Design Engineer validates. Designer creates.
 
 ## What success looks like
 
@@ -43,8 +48,21 @@ These boundaries exist because variable authoring and contract ownership require
 
 ## Interfaces
 
-- **Design Engineer**: Provides Variable Design Standard (VDS) JSON. Maintains contract. Tests variables in React before approval. Frontend Developer reports consumption issues. Design Engineer troubleshoots.
-- **Designer**: Creates variables in Figma. Frontend Developer consumes generated outputs. No direct variable creation handoff.
+- **Design Engineer**: Provides Variable Design Standard (VDS) JSON. Maintains contract. Tests variables in React before approval. Frontend Engineer reports consumption issues. Design Engineer troubleshoots.
+- **Designer**: Creates variables in Figma. Frontend Engineer consumes generated outputs. No direct variable creation handoff.
+
+## Workflow
+
+1. Pull the latest generated outputs.
+2. Update component usage to semantic variables.
+3. Run consumption tests.
+4. Report broken references or mode issues.
+
+## Checklist
+
+- [ ] Outputs are generated from contract JSON
+- [ ] Components use semantic variables
+- [ ] Consumption tests pass
 
 ## Consumption patterns
 
@@ -81,7 +99,7 @@ function Button() {
 
 ## Build pipeline
 
-Frontend Developers maintain pipelines that:
+Frontend Engineers maintain pipelines that:
 
 1. Read Variable Design Standard (VDS) JSON from version control.
 2. Generate CSS variables, TypeScript types, theme objects.
@@ -100,19 +118,19 @@ See [Build Pipelines](/tooling/build-pipelines) for examples.
 
 ## Failure modes
 
-If Frontend Developer bypasses Design Engineer:
+If Frontend Engineer bypasses Design Engineer:
 
-- Variable issues are fixed in code, not in contract (drift).
+- Variable issues are fixed in code while contract JSON stays unchanged.
 - Workarounds accumulate (technical debt).
-- Contract becomes stale (not source of truth).
+- Contract JSON no longer matches production usage.
 
-If Frontend Developer hand-edits outputs:
+If Frontend Engineer hand-edits outputs:
 
 - Next build overwrites changes.
 - Variables don't match contract.
 - Debugging becomes impossible.
 
-If Frontend Developer doesn't report consumption issues:
+If Frontend Engineer doesn't report consumption issues:
 
 - Design Engineer doesn't know about problems.
 - Variables ship with consumption bugs.
@@ -124,3 +142,9 @@ If Frontend Developer doesn't report consumption issues:
 - Maintaining the Variable Design Standard (VDS) (Design Engineer owns this).
 - Defining naming conventions (Design Engineer owns this).
 - Approving variable changes (Design Engineer owns this).
+
+## Links
+
+- [CSS Consumption](/consumption/css)
+- [Build Pipelines](/tooling/build-pipelines)
+- [Change Control](../change-control)

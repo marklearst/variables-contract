@@ -1,10 +1,16 @@
 ---
-title: Tooling - Build Pipelines
+title: Tooling: Build Pipelines
 ---
 
 # Build Pipeline Examples
 
 Complete build pipeline examples for generating outputs from Variable Design Standard (VDS).
+
+## Workflow
+
+1. Validate token JSON.
+2. Build outputs from the validated contract.
+3. Publish artifacts to the build output location.
 
 ## Basic pipeline
 
@@ -336,9 +342,16 @@ console.log("Build complete!");
 
 1. Validate before building
 2. Generate all needed outputs
-3. Use consistent naming
+3. Use the same naming rules across outputs
 4. Cache build outputs
 5. Document build process
+
+## Review checklist
+
+- [ ] Validation runs before build
+- [ ] Outputs include CSS and TypeScript where required
+- [ ] Naming rules match across outputs
+- [ ] Build artifacts are published
 
 ## Failure modes
 
@@ -346,11 +359,21 @@ If build pipeline is wrong:
 
 - Invalid outputs generated
 - Missing outputs
-- Inconsistent naming
+- Names differ across outputs
 - Slow builds
 
 ## Out of scope
 
 - Tool-specific build configs (see tool docs)
 - Deployment strategies (focus on build)
-- Build optimization (see performance docs)
+- Build performance (see performance docs)
+
+## Ownership
+
+- Frontend Engineer: owns build pipeline configuration
+- Design Engineer: reviews output correctness
+
+## Links
+
+- [Validation](../governance/validation)
+- [Change Control](../governance/change-control)

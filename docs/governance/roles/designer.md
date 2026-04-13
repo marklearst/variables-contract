@@ -1,8 +1,8 @@
 ---
-title: Role - Designer
+title: Role: Designer
 ---
 
-# Variable Governance - Designer Role
+# Variable Governance: Designer Role
 
 Creates variables in Figma. Does not own the contract. Does not approve changes.
 
@@ -20,6 +20,11 @@ Design Engineer reviews and approves all variable changes before they enter the 
 - Use variables in Figma components (see [Component Variables](/design/component-variables)).
 - Export variables for normalization (see [Figma Workflow](/design/figma-workflow)).
 - Submit variable changes for review by Design Engineer.
+
+## Ownership
+
+- Owns variable authoring in design tools
+- Owns export quality for adapter input
 
 ## Boundaries
 
@@ -39,14 +44,14 @@ These boundaries exist because variable changes affect production code. A rename
 - Variables follow naming convention (dot-separated paths, lowercase).
 - No duplicate values when a base variable exists.
 - Semantic variables reference base variables (not raw values).
-- Mode values are consistent within collections.
+- Mode values use one mode key set within each collection.
 - Variables are used in Figma components (not hardcoded values).
 - All variable changes are reviewed by Design Engineer before entering the contract.
 
 ## Interfaces
 
 - **Design Engineer**: Reviews all variable changes. Validates contract compliance (naming, structure, references). Tests consumption feasibility in React. Approves changes before they enter version control.
-- **Frontend Developer**: Consumes variables in code. Designer creates variables. Design Engineer validates. Frontend Developer consumes generated outputs.
+- **Frontend Engineer**: Consumes variables in code. Designer creates variables. Design Engineer validates. Frontend Engineer consumes generated outputs.
 
 ## Workflow
 
@@ -59,7 +64,7 @@ These boundaries exist because variable changes affect production code. A rename
 7. Design Engineer approves and commits to version control.
 8. Variables are released.
 
-## Review gate
+## Review checklist
 
 All variable changes go through Design Engineer review. No exceptions.
 
@@ -67,7 +72,7 @@ Design Engineer checks:
 
 - Naming convention compliance
 - Reference validity
-- Mode consistency
+- Mode key set match within collections
 - Consumption feasibility
 - Breaking change assessment
 
@@ -77,7 +82,7 @@ If Design Engineer rejects, Designer revises and resubmits.
 
 - Creating variables with platform names (example: `color.ios.primary`).
 - Duplicating values instead of referencing base variables.
-- Using inconsistent naming (mixing styles within the same collection).
+- Mixing naming styles within the same collection.
 - Hardcoding values in components instead of using variables.
 - Pushing variables without Design Engineer review.
 - Making renames without understanding the downstream impact.
@@ -89,13 +94,19 @@ If Designer bypasses Design Engineer review:
 - Broken references ship to production.
 - Naming convention violations break code generation.
 - Breaking changes ship without migration notes.
-- Frontend Developer consumes invalid variables.
+- Frontend Engineer consumes invalid variables.
 - Component styling breaks.
 
 ## Out of scope
 
 - Maintaining the Variable Design Standard (VDS) (Design Engineer owns this).
-- Writing code or build pipelines (Frontend Developer owns this).
+- Writing code or build pipelines (Frontend Engineer owns this).
 - Defining consumption patterns (Design Engineer owns this).
 - Approving variable changes (Design Engineer owns this).
 - Making contract decisions (Design Engineer owns this).
+
+## Links
+
+- [Naming](/contract/naming)
+- [Change Control](../change-control)
+- [Validation](../validation)
