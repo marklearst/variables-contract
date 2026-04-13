@@ -96,11 +96,11 @@ Style Dictionary handles both formats. Use DTCG format for Variable Design Stand
 
 Transform groups apply multiple transforms:
 
-- `css` - CSS variable transforms
-- `js` - JavaScript/TypeScript transforms
-- `scss` - SCSS variable transforms
-- `android` - Android resource transforms
-- `ios` - iOS plist transforms
+- `css`: CSS variable transforms
+- `js`: JavaScript/TypeScript transforms
+- `scss`: SCSS variable transforms
+- `android`: Android resource transforms
+- `ios`: iOS plist transforms
 
 ## Custom transforms
 

@@ -1,10 +1,12 @@
 ---
-title: Adoption - Migration Strategy
+title: Adoption: Migration Strategy
 ---
 
 # Phased Migration Strategy
 
-How to migrate existing variable systems to Variable Design Standard (VDS) using a phased approach.
+Scope: phased migration steps from existing variable systems to Variable Design Standard (VDS).
+
+Failure if ignored: migration stalls and outputs diverge from the contract.
 
 If you migrate everything at once, you risk breaking production, losing references, and confusing the team.
 
@@ -27,7 +29,7 @@ Cons:
 Use when:
 - Small variable set (< 50 variables)
 - Low production usage
-- Team can handle disruption
+- Team can handle changes
 
 ### Phased migration
 
@@ -285,4 +287,3 @@ Adjust based on:
 - Automated migration tools (build custom scripts)
 - Tool-specific migration (see adapter docs)
 - Design system migration (focus on variables)
-

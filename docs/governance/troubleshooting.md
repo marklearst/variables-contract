@@ -1,10 +1,17 @@
 ---
-title: Governance - Troubleshooting
+title: Governance: Troubleshooting
 ---
 
 # Troubleshooting
 
 Common issues when working with Variable Design Standard (VDS) and how to fix them.
+
+## Workflow
+
+1. Reproduce the error in CI or local validation.
+2. Identify the file and variable path from the error output.
+3. Fix the cause (type, reference, or mode key set).
+4. Re-run validation before merge.
 
 ## Circular references
 
@@ -102,6 +109,12 @@ Option 2: Fix value
 
 Run validation before committing. Check type matches value format.
 
+## Review checklist
+
+- [ ] Error reproduced with validation output
+- [ ] Variable path and file identified
+- [ ] Fix applied and validation passes
+
 ## Reference resolution failures
 
 ### Problem
@@ -162,11 +175,11 @@ Variable `color.surface` has mode `light` but collection expects `light` and `da
 
 ### Cause
 
-Mode keys are inconsistent within a collection.
+Mode keys do not match within a collection.
 
 ### Solution
 
-Add missing modes or remove inconsistent modes:
+Add missing modes or remove mismatched modes:
 
 Before:
 
@@ -215,7 +228,7 @@ After:
 
 ### Prevention
 
-Define mode strategy upfront. Validate mode consistency in CI.
+Define mode strategy upfront. Validate mode key sets in CI.
 
 ## Naming violations
 
@@ -475,3 +488,9 @@ If issues persist:
 - Tool-specific issues (see adapter documentation)
 - Build pipeline issues (see Style Dictionary documentation)
 - Runtime consumption issues (see platform-specific docs)
+
+## Links
+
+- [Validation](validation)
+- [Change Control](change-control)
+- [Adapters](/adapters)

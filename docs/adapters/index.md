@@ -69,10 +69,10 @@ If adapters fail:
 
 ## Adapter documentation
 
-- [Figma Adapter](figma) - Figma Variables export normalization
-- [Tokens Studio Adapter](tokens-studio) - Tokens Studio export normalization
-- [Style Dictionary Adapter](style-dictionary) - Variable Design Standard (VDS) to CSS/TypeScript/etc.
-- [Tailwind Adapter](tailwind) - Tailwind theme configuration generation
+- [Figma Adapter](figma): Figma Variables export normalization
+- [Tokens Studio Adapter](tokens-studio): Tokens Studio export normalization
+- [Style Dictionary Adapter](style-dictionary): Variable Design Standard (VDS) to CSS/TypeScript/etc.
+- [Tailwind Adapter](tailwind): Tailwind theme configuration generation
 
 ## Out of scope
 

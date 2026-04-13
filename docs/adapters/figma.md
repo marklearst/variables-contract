@@ -229,7 +229,7 @@ Check that normalized names follow Variable Design Standard (VDS) naming convent
 - Names MUST be lowercase
 - Names MUST NOT include platform prefixes
 
-## Complete transformation example
+## Complete conversion example
 
 Figma export:
 
@@ -326,7 +326,7 @@ Normalized Variable Design Standard (VDS):
 If you need to sync changes back to Figma:
 
 - Preserve Figma IDs in `$extensions.figma.variableId` and `$extensions.figma.collectionId`
-- Keep mode keys consistent with Figma mode keys
+- Keep mode keys the same as the Figma mode keys
 - Maintain reference paths that Figma can resolve
 
 ## Failure modes

@@ -70,7 +70,7 @@ Example:
 }
 ```
 
-This format is already correct. No transformation needed.
+This format is already correct. No conversion needed.
 
 ### Step 4: Validate naming
 
@@ -80,7 +80,7 @@ Check that names follow Variable Design Standard (VDS) naming convention (see [N
 - Names MUST be lowercase
 - Names MUST NOT include platform prefixes
 
-## Complete transformation example
+## Complete conversion example
 
 Tokens Studio export:
 

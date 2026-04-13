@@ -4,13 +4,19 @@ title: Adapter Pipeline Example
 
 # Adapter Pipeline Example
 
-This example shows the complete transformation from Figma export to CSS variables.
+This example shows the complete conversion from Figma export to CSS variables.
 
 ## Pipeline overview
 
 1. Figma export JSON (input)
 2. Figma adapter normalization (Variable Design Standard (VDS))
 3. Style Dictionary build (CSS variables output)
+
+## Requirements
+
+- Figma export JSON (plugin output)
+- Figma adapter normalization step
+- Style Dictionary build config
 
 ## Step 1: Figma export (input)
 
@@ -212,10 +218,15 @@ If any step fails:
 - Style Dictionary config errors produce empty outputs
 - Reference resolution failures cause undefined CSS variables
 
-## Validation points
+## Validation checklist
 
 Validate at each step:
 
 1. Figma export: JSON syntax, required fields
 2. Adapter output: Variable Design Standard (VDS) compliance, naming convention
 3. Style Dictionary output: CSS syntax, all references resolved
+
+## Out of scope
+
+- Alternate adapter pipelines (see [Adapters](/adapters))
+- Tool-specific deployment steps
