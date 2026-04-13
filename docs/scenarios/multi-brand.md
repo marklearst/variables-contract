@@ -1,12 +1,12 @@
 ---
-title: Scenarios - Multi-Brand
+title: Scenarios: Multi-Brand
 ---
 
 # Multi-Brand Architecture
 
-How to structure variables for multiple brands using Variable Design Standard (VDS).
+This scenario specifies a folder-based multi-brand structure where semantic names stay identical across brands.
 
-If brands share variables incorrectly, you get duplication, maintenance burden, and inconsistent branding.
+Failure if ignored: brand values leak across outputs and maintenance cost grows.
 
 ## Architecture patterns
 
@@ -285,7 +285,7 @@ Brands extend base groups:
 1. Share base scales (spacing, typography)
 2. Keep brand-specific variables minimal
 3. Reference base variables in brand variables
-4. Use consistent naming across brands
+4. Use the same semantic names across brand folders
 5. Document brand differences
 
 ## Failure modes
@@ -293,7 +293,7 @@ Brands extend base groups:
 If multi-brand structure is wrong:
 
 - Duplication of shared variables
-- Inconsistent branding
+- Brand A values appear in Brand B output
 - Maintenance burden
 - Build complexity
 

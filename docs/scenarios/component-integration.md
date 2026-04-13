@@ -1,12 +1,12 @@
 ---
-title: Scenarios - Component Integration
+title: Scenarios: Component Integration
 ---
 
 # Component Library Integration
 
-How to integrate Variable Design Standard (VDS) with component libraries.
+This scenario specifies how component libraries consume variables.
 
-If components don't use variables correctly, you get hardcoded values, inconsistent styling, and maintenance burden.
+Failure if ignored: components bypass semantic aliases and hardcode values.
 
 ## Component variable patterns
 

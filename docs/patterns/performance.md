@@ -1,10 +1,12 @@
 ---
-title: Patterns - Performance Optimization
+title: Patterns: Performance
 ---
 
-# Performance Optimization
+# Performance
 
-How to reduce build times and file sizes for Variable Design Standard (VDS) with large variable sets.
+This pattern specifies constraints that keep build time and file size within limits.
+
+Failure if ignored: builds slow down and outputs become too large to manage.
 
 ## Performance considerations
 
@@ -32,7 +34,7 @@ Poor organization causes:
 - Merge conflicts
 - Maintenance burden
 
-## Optimization strategies
+## Performance strategies
 
 ### File organization
 
@@ -92,7 +94,7 @@ async function processFilesParallel(files) {
 }
 ```
 
-## Build optimization
+## Build performance
 
 ### Caching
 
@@ -144,6 +146,5 @@ If performance rules are not followed:
 ## Out of scope
 
 - Runtime performance (handle in consumption layer)
-- Database optimization (use version control)
-- Network optimization (separate concern)
-
+- Database performance (use version control)
+- Network performance (separate concern)

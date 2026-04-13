@@ -1,12 +1,12 @@
 ---
-title: Scenarios - Multi-Theme
+title: Scenarios: Multi-Theme
 ---
 
 # Multi-Theme Patterns
 
-How to structure variables for multiple themes (light/dark, mobile/desktop) using modes.
+This scenario specifies theme variants using mode keys (light/dark, mobile/desktop).
 
-If themes are inconsistent, theme switching breaks and mode-specific outputs fail.
+Failure if ignored: mode key sets diverge and theme switching fails.
 
 ## Theme composition patterns
 
@@ -145,7 +145,7 @@ Example:
 }
 ```
 
-The `$extensions.modes` documents expected modes but does not enforce them. Validation should check mode consistency.
+The `$extensions.modes` documents expected modes but does not enforce them. Validation should check mode key sets.
 
 ## Theme switching implementation
 
@@ -278,14 +278,14 @@ Avoid mode explosion. Prefer separate mode dimensions when possible.
 ## Implementation rules
 
 1. Keep modes limited (`light`, `dark`)
-2. Use consistent mode keys across variables
+2. Use the same mode keys on every variable in a collection
 3. Reference base variables in mode values
 4. Document mode strategy
-5. Validate mode consistency
+5. Validate that each variable exposes the same mode set
 
 ## Failure modes
 
-If themes are inconsistent:
+If mode keys differ across variables in the same collection:
 
 - Theme switching breaks
 - Mode-specific outputs fail
@@ -295,5 +295,5 @@ If themes are inconsistent:
 ## Out of scope
 
 - Runtime theme switching (handle in consumption layer)
-- Theme transformation (handle in adapters)
+- Theme conversion (handle in adapters)
 - Theme management UI (use existing tools)
