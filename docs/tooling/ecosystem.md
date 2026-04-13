@@ -1,5 +1,5 @@
 ---
-title: Tooling: Ecosystem
+title: "Tooling: Ecosystem"
 ---
 
 # Variable Design Standard (VDS) Tooling Ecosystem

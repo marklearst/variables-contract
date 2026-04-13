@@ -1,5 +1,5 @@
 ---
-title: Adapter Pipeline Example
+title: "Examples: Adapter Pipeline"
 ---
 
 # Adapter Pipeline Example

@@ -1,5 +1,5 @@
 ---
-title: Specification Status
+title: "Meta: Specification Status"
 ---
 
 # Variable Design Standard (VDS) Specification Status
@@ -13,6 +13,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 **Definition**: Active development, breaking changes possible.
 
 **Characteristics**:
+
 - Specification is under active development
 - Breaking changes may occur in any version (major, minor, or patch)
 - Features may be added, removed, or changed
@@ -26,6 +27,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 **Definition**: Feature-complete, seeking feedback, minor changes possible.
 
 **Characteristics**:
+
 - Core specification is feature-complete
 - Breaking changes limited to major versions
 - Minor changes and clarifications may occur
@@ -33,6 +35,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 - Suitable for production use with awareness of potential minor changes
 
 **Transition criteria**: Move from Draft to Candidate Standard when:
+
 - Core features are stable
 - Breaking changes are limited to major versions
 - Community feedback period begins
@@ -42,6 +45,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 **Definition**: Production-ready, breaking changes only in major versions.
 
 **Characteristics**:
+
 - Specification is stable and production-ready
 - Breaking changes only in major versions (following semantic versioning)
 - Minor and patch versions are backward-compatible
@@ -49,6 +53,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 - Long-term support commitment
 
 **Transition criteria**: Move from Candidate Standard to Stable when:
+
 - Sufficient community feedback received
 - No major issues identified
 - Implementation experience validates the specification
@@ -59,6 +64,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 **Definition**: No longer recommended, migration path provided.
 
 **Characteristics**:
+
 - Specification is no longer actively maintained
 - Migration path to replacement specification provided
 - Security updates may still be provided
@@ -66,6 +72,7 @@ This document defines the status taxonomy for Variable Design Standard (VDS) and
 - New implementations should use replacement specification
 
 **Transition criteria**: Move to Deprecated when:
+
 - Replacement specification is available
 - Migration path is documented
 - Deprecation period begins (typically one major version cycle)
@@ -84,6 +91,7 @@ The specification is in active development. While it is production-ready and use
 ## Status Indicators
 
 Status is indicated in:
+
 - `docs/index.md` - Status metadata table
 - `docs/meta/change-log.md` - Version status field
 - `docs/faq.md` - Production-ready answer
@@ -91,12 +99,12 @@ Status is indicated in:
 
 ## Compatibility Promises by Status
 
-| Status | Breaking Changes | Minor Changes | Patch Changes |
-|--------|-----------------|---------------|---------------|
-| Draft | Any version | Any version | Any version |
-| Candidate Standard | Major only | Minor allowed | Patch allowed |
-| Stable | Major only | Minor allowed | Patch allowed |
-| Deprecated | None (maintenance mode) | None | Security only |
+| Status             | Breaking Changes        | Minor Changes | Patch Changes |
+| ------------------ | ----------------------- | ------------- | ------------- |
+| Draft              | Any version             | Any version   | Any version   |
+| Candidate Standard | Major only              | Minor allowed | Patch allowed |
+| Stable             | Major only              | Minor allowed | Patch allowed |
+| Deprecated         | None (maintenance mode) | None          | Security only |
 
 ## Out of scope
 

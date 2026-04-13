@@ -1,5 +1,5 @@
 ---
-title: References
+title: "Meta: References"
 ---
 
 # Variable Design Standard (VDS) References
@@ -63,4 +63,3 @@ Variable Design Standard (VDS) does not reference:
 - Runtime libraries (validation is build-time)
 - UI frameworks (tool-agnostic)
 - Design system decisions (governs structure, not values)
-

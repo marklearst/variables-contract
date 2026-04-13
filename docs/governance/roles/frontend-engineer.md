@@ -1,5 +1,5 @@
 ---
-title: Role: Frontend Engineer
+title: "Governance > Roles: Frontend Engineer"
 ---
 
 # Variable Governance: Frontend Engineer Role

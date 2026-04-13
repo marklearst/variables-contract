@@ -1,5 +1,5 @@
 ---
-title: Adoption: Implementation Checklist
+title: "Adoption: Implementation Checklist"
 ---
 
 # Implementation Checklist

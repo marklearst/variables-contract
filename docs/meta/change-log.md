@@ -1,5 +1,5 @@
 ---
-title: Change Log
+title: "Meta: Change Log"
 ---
 
 # Variable Design Standard (VDS) Change Log

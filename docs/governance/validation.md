@@ -1,5 +1,5 @@
 ---
-title: Governance: Validation
+title: "Governance: Validation"
 ---
 
 # Variable Design Standard (VDS) Validation

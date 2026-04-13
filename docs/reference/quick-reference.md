@@ -1,5 +1,5 @@
 ---
-title: Quick Reference
+title: "Reference: Quick Reference"
 ---
 
 # Variable Design Standard (VDS) Quick Reference
@@ -11,12 +11,14 @@ Cheat sheet for common Variable Design Standard (VDS) tasks.
 Format: `{category}.{system}.{role}.{state}.{scale}`
 
 Rules:
+
 - Lowercase
 - Dot-separated segments
 - No platform names
 - Semantic aliases for UI usage
 
 Examples:
+
 - `color.gray.900` (base)
 - `color.text.primary` (alias)
 - `component.button.color.background.default` (component)
@@ -44,6 +46,7 @@ Canonical: `{path.to.variable}`
 DTCG required: `#/path/to/variable`
 
 Example:
+
 ```json
 {
   "$value": "{color.primary}"
@@ -101,17 +104,20 @@ Example:
 ## Role responsibilities
 
 **Designer:**
+
 - Create variables in Figma
 - Follow naming convention
 - Use variables in components
 
 **Design Engineer:**
+
 - Review variable changes
 - Maintain contract
 - Run adapters
 - Publish releases
 
 **Frontend Engineer:**
+
 - Consume variables in code
 - Maintain build pipelines
 - Test consumption
@@ -143,4 +149,3 @@ tokens/
 - [Variable Design Standard (VDS)](contract/variable-contract)
 - [Roles](governance/roles)
 - [Change Control](governance/change-control)
-

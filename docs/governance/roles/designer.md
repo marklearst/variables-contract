@@ -1,5 +1,5 @@
 ---
-title: Role: Designer
+title: "Governance > Roles: Designer"
 ---
 
 # Variable Governance: Designer Role

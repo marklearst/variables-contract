@@ -1,5 +1,5 @@
 ---
-title: Types
+title: "Contract: Types"
 ---
 
 # Types
@@ -35,7 +35,7 @@ Represents a color value.
   "$type": "color",
   "$value": {
     "colorSpace": "srgb",
-    "components": [0.278431, 0.388235, 0.749020],
+    "components": [0.278431, 0.388235, 0.74902],
     "hex": "#4763BF"
   }
 }
@@ -63,7 +63,7 @@ Examples:
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.278431, 0.388235, 0.749020],
+        "components": [0.278431, 0.388235, 0.74902],
         "hex": "#4763BF"
       },
       "$extensions": {
@@ -384,7 +384,7 @@ Type mismatches MUST be rejected during validation.
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.278431, 0.388235, 0.749020],
+        "components": [0.278431, 0.388235, 0.74902],
         "hex": "#4763BF"
       }
     }

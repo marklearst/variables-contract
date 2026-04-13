@@ -1,5 +1,5 @@
 ---
-title: Patterns: Performance
+title: "Patterns: Performance"
 ---
 
 # Performance
@@ -79,7 +79,7 @@ Only rebuild changed files:
 
 ```javascript
 function buildIncremental(changedFiles) {
-  return changedFiles.map(file => processFile(file));
+  return changedFiles.map((file) => processFile(file));
 }
 ```
 
@@ -89,7 +89,7 @@ Process files in parallel:
 
 ```javascript
 async function processFilesParallel(files) {
-  const promises = files.map(file => processFile(file));
+  const promises = files.map((file) => processFile(file));
   return Promise.all(promises);
 }
 ```

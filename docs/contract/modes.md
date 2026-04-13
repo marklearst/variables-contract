@@ -1,5 +1,5 @@
 ---
-title: Modes
+title: "Contract: Modes"
 ---
 
 # Modes
@@ -206,6 +206,7 @@ Example resolution chain:
 ```
 
 Resolution for `light` mode:
+
 1. `color.text.primary` → `{color.gray.900}` (reference)
 2. `color.gray.900` → resolve `light` mode → `#1a1a1a`
 3. Final value: `#1a1a1a`

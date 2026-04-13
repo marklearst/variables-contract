@@ -1,5 +1,5 @@
 ---
-title: Testing: Validation
+title: "Testing: Validation"
 ---
 
 # Testing Variable Changes
@@ -148,7 +148,7 @@ function testModeConsistency(variables) {
           JSON.stringify(expectedModes.sort())
         ) {
           errors.push(
-            `Mode mismatch in ${path}: expected ${expectedModes}, got ${modeKeys}`
+            `Mode mismatch in ${path}: expected ${expectedModes}, got ${modeKeys}`,
           );
         }
       }

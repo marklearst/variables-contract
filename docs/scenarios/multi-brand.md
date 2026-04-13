@@ -1,5 +1,5 @@
 ---
-title: Scenarios: Multi-Brand
+title: "Scenarios: Multi-Brand"
 ---
 
 # Multi-Brand Architecture

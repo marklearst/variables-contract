@@ -1,5 +1,5 @@
 ---
-title: Contract: Naming Convention
+title: "Contract: Naming Convention"
 ---
 
 # Contract: Naming Convention

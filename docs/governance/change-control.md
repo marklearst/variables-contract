@@ -1,5 +1,5 @@
 ---
-title: Governance: Change Control
+title: "Governance: Change Control"
 ---
 
 # Governance: Design and Development Workflow

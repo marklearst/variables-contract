@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: "Tooling: Frequently Asked Questions"
 ---
 
 # Frequently Asked Questions

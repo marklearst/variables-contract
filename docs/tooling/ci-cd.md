@@ -1,5 +1,5 @@
 ---
-title: Tooling: CI/CD Integration
+title: "Tooling: CI/CD Integration"
 ---
 
 # CI/CD Integration

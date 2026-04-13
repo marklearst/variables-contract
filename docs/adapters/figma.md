@@ -1,5 +1,5 @@
 ---
-title: Figma Adapter
+title: "Adapters: Figma"
 ---
 
 # Figma Adapter
@@ -417,9 +417,7 @@ For Enterprise plan users with REST API access, the input format differs:
     "VariableCollectionId:502:189": {
       "id": "VariableCollectionId:502:189",
       "name": "Primitives",
-      "modes": [
-        { "modeId": "502:0", "name": "Light" }
-      ]
+      "modes": [{ "modeId": "502:0", "name": "Light" }]
     }
   }
 }

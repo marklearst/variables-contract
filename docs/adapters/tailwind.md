@@ -1,5 +1,5 @@
 ---
-title: Tailwind Adapter
+title: "Adapters: Tailwind"
 ---
 
 # Tailwind Adapter
@@ -85,9 +85,7 @@ Generate CSS custom properties from Variable Design Standard (VDS) JSON. Tailwin
 **Component usage:**
 
 ```tsx
-<button className="bg-surface-brand text-white px-4 py-2">
-  Click me
-</button>
+<button className="bg-surface-brand text-white px-4 py-2">Click me</button>
 ```
 
 ### Pattern 2: Direct CSS generation
@@ -242,9 +240,7 @@ Design Engineer MUST:
 **Component usage:**
 
 ```tsx
-<button className="bg-surface-brand text-white px-4 py-2">
-  Click me
-</button>
+<button className="bg-surface-brand text-white px-4 py-2">Click me</button>
 ```
 
 Tailwind CSS v4 generates: `background-color: var(--color-surface-brand)`
@@ -274,11 +270,13 @@ If Tailwind adapter fails:
 Tailwind CSS v4 installation:
 
 1. Install Tailwind CSS:
+
    ```bash
    npm i tailwindcss @tailwindcss/postcss
    ```
 
 2. Add PostCSS plugin:
+
    ```js
    export default {
      plugins: ["@tailwindcss/postcss"],
@@ -298,4 +296,3 @@ For Vite projects, use `@tailwindcss/vite` plugin instead. See [Tailwind CSS v4 
 - Custom Tailwind plugins (separate concern)
 - JavaScript config files (Tailwind CSS v4 doesn't use them)
 - Vite/PostCSS setup details (see Tailwind CSS v4 docs)
-

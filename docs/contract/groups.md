@@ -1,5 +1,5 @@
 ---
-title: Groups
+title: "Contract: Groups"
 ---
 
 # Groups
@@ -96,6 +96,7 @@ Example:
 ```
 
 After resolution, `color.brand` contains:
+
 - `color.brand.primary` (overridden, value is `#ff0066`)
 - `color.brand.secondary` (inherited from `color.base.secondary`)
 - `color.brand.accent` (new variable)
@@ -150,6 +151,7 @@ Group extension follows explicit precedence rules:
 Variables and nested groups defined in the extending group take precedence over inherited definitions with the same name.
 
 Example:
+
 ```json
 {
   "color": {
@@ -185,6 +187,7 @@ After resolution, `color.brand.primary` uses the local definition (`#ff0066`), n
 When both the extending group and the referenced group have a nested group with the same name, the nested groups merge rather than replace.
 
 Example:
+
 ```json
 {
   "color": {
@@ -234,6 +237,7 @@ When the extending group defines a variable with the same name as an inherited v
 - **Validation**: This is allowed and expected behavior
 
 Example:
+
 ```json
 {
   "spacing": {
@@ -273,26 +277,28 @@ Groups with `$extends` MUST follow these rules:
 A group that uses `$extends` MUST NOT have `$type` or `$value` properties at the same level.
 
 **Invalid**:
+
 ```json
 {
   "color": {
     "brand": {
       "$extends": "{color.base}",
-      "$type": "color",  // PROHIBITED
-      "$value": "#0066cc"  // PROHIBITED
+      "$type": "color", // PROHIBITED
+      "$value": "#0066cc" // PROHIBITED
     }
   }
 }
 ```
 
 **Valid**:
+
 ```json
 {
   "color": {
     "brand": {
       "$extends": "{color.base}",
       "primary": {
-        "$type": "color",  // Allowed - this is a variable, not the group
+        "$type": "color", // Allowed - this is a variable, not the group
         "$value": "#0066cc"
       }
     }
@@ -386,6 +392,7 @@ Group extension is resolved before variable reference resolution. The resolution
 ```
 
 After resolution, `spacing.mobile` contains:
+
 - `spacing.mobile.small` (overridden, value is `4px`)
 - `spacing.mobile.medium` (inherited, value is `16px`)
 

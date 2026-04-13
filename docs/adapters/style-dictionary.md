@@ -1,5 +1,5 @@
 ---
-title: Style Dictionary Adapter
+title: "Adapters: Style Dictionary"
 ---
 
 # Style Dictionary Adapter
@@ -114,11 +114,11 @@ Example custom transform:
 
 ```javascript
 module.exports = {
-  name: 'name/kebab',
-  type: 'name',
-  transform: function(prop, options) {
-    return prop.path.join('-');
-  }
+  name: "name/kebab",
+  type: "name",
+  transform: function (prop, options) {
+    return prop.path.join("-");
+  },
 };
 ```
 
@@ -254,7 +254,7 @@ Output (`dist/tokens.ts`):
 
 ```typescript
 export const color = {
-  primary: '#0066cc'
+  primary: "#0066cc",
 };
 ```
 
@@ -285,4 +285,3 @@ Note: Tailwind CSS v4 uses CSS-first configuration. Generate CSS custom properti
 - Style Dictionary installation and setup (see Style Dictionary docs)
 - Custom transform implementation details
 - Platform-specific build configurations
-

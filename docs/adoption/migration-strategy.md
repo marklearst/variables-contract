@@ -1,5 +1,5 @@
 ---
-title: Adoption: Migration Strategy
+title: "Adoption: Migration Strategy"
 ---
 
 # Phased Migration Strategy
@@ -17,16 +17,19 @@ If you migrate everything at once, you risk breaking production, losing referenc
 Migrate everything at once.
 
 Pros:
+
 - Clean break from old system
 - No dual-system maintenance
 - Faster completion
 
 Cons:
+
 - High risk of breaking production
 - Difficult to test thoroughly
 - Team confusion during transition
 
 Use when:
+
 - Small variable set (< 50 variables)
 - Low production usage
 - Team can handle changes
@@ -36,17 +39,20 @@ Use when:
 Migrate incrementally over time.
 
 Pros:
+
 - Lower risk
 - Easier to test
 - Team can adapt gradually
 - Can rollback if issues
 
 Cons:
+
 - Longer timeline
 - Dual-system maintenance
 - More coordination needed
 
 Use when:
+
 - Large variable set (> 50 variables)
 - High production usage
 - Team needs gradual transition
@@ -73,6 +79,7 @@ Use when:
    - Commit to version control
 
 **Deliverables**:
+
 - Variable Design Standard (VDS) structure set up
 - Adapter working
 - All variables converted (not yet consumed)
@@ -97,6 +104,7 @@ Use when:
    - Document learnings
 
 **Deliverables**:
+
 - Variable Design Standard (VDS) outputs generated
 - Some components using new variables
 - Both systems running in parallel
@@ -121,6 +129,7 @@ Use when:
    - Plan removal timeline
 
 **Deliverables**:
+
 - Most components migrated
 - Design workflow updated
 - Old system deprecated
@@ -145,6 +154,7 @@ Use when:
    - Celebrate success
 
 **Deliverables**:
+
 - Old system removed
 - Variable Design Standard (VDS) fully adopted
 - Team trained
@@ -154,16 +164,19 @@ Use when:
 ### From Style Dictionary format
 
 **Phase 1**: Convert format
+
 - Rename `value` → `$value`
 - Rename `type` → `$type`
 - Update reference syntax
 
 **Phase 2**: Apply governance
+
 - Normalize naming
 - Add validation
 - Set up versioning
 
 **Phase 3**: Migrate consumption
+
 - Update build configs
 - Migrate components
 - Remove old format
@@ -171,16 +184,19 @@ Use when:
 ### From Material Design tokens
 
 **Phase 1**: Extract variables
+
 - Extract Material-specific variables
 - Map to Variable Design Standard (VDS) structure
 - Normalize naming
 
 **Phase 2**: Create adapters
+
 - Create adapter for Material format
 - Convert existing tokens
 - Validate output
 
 **Phase 3**: Migrate consumption
+
 - Update components
 - Remove Material-specific code
 - Use Variable Design Standard (VDS) outputs
@@ -188,16 +204,19 @@ Use when:
 ### From custom formats
 
 **Phase 1**: Audit existing system
+
 - Document current structure
 - Identify variable types
 - Map references
 
 **Phase 2**: Create adapter
+
 - Write adapter for custom format
 - Convert all variables
 - Validate output
 
 **Phase 3**: Migrate consumption
+
 - Update components
 - Remove old system
 - Use Variable Design Standard (VDS)
@@ -236,6 +255,7 @@ Use when:
 ### Risk: Breaking production
 
 Mitigation:
+
 - Run parallel systems
 - Migrate incrementally
 - Test thoroughly
@@ -244,6 +264,7 @@ Mitigation:
 ### Risk: Lost references
 
 Mitigation:
+
 - Validate references during conversion
 - Test reference resolution
 - Document reference mapping
@@ -251,6 +272,7 @@ Mitigation:
 ### Risk: Team confusion
 
 Mitigation:
+
 - Train team early
 - Document migration process
 - Provide support
@@ -277,6 +299,7 @@ Typical phased migration:
 - Week 13-14: Cleanup
 
 Adjust based on:
+
 - Variable set size
 - Component count
 - Team size

@@ -1,5 +1,5 @@
 ---
-title: Scenarios: Large Variable Sets
+title: "Scenarios: Large Variable Sets"
 ---
 
 # Large Variable Sets

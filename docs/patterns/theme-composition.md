@@ -1,5 +1,5 @@
 ---
-title: Patterns: Theme Composition
+title: "Patterns: Theme Composition"
 ---
 
 # Theme Composition Patterns
@@ -159,7 +159,7 @@ Generate mode-specific CSS:
 
 ```javascript
 function setTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
+  document.documentElement.setAttribute("data-theme", theme);
 }
 ```
 

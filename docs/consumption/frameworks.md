@@ -1,5 +1,5 @@
 ---
-title: Consumption: UI Libraries
+title: "Consumption: UI Libraries"
 ---
 
 # UI Library Integration
@@ -16,11 +16,7 @@ Use CSS variables in React:
 
 ```jsx
 function Button({ children }) {
-  return (
-    <button className="button">
-      {children}
-    </button>
-  );
+  return <button className="button">{children}</button>;
 }
 ```
 
@@ -36,7 +32,7 @@ function Button({ children }) {
 Use generated TypeScript types:
 
 ```tsx
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 function Button({ children }: { children: React.ReactNode }) {
   return (
@@ -44,7 +40,7 @@ function Button({ children }: { children: React.ReactNode }) {
       style={{
         backgroundColor: color.surface.brand,
         color: color.text.primary,
-        padding: spacing.component.button.padding
+        padding: spacing.component.button.padding,
       }}
     >
       {children}
@@ -58,8 +54,8 @@ function Button({ children }: { children: React.ReactNode }) {
 Use with styled-components:
 
 ```jsx
-import styled from 'styled-components';
-import { color, spacing } from './tokens';
+import styled from "styled-components";
+import { color, spacing } from "./tokens";
 
 const Button = styled.button`
   background-color: ${color.surface.brand};
@@ -71,8 +67,8 @@ const Button = styled.button`
 Use with emotion:
 
 ```jsx
-import { css } from '@emotion/react';
-import { color, spacing } from './tokens';
+import { css } from "@emotion/react";
+import { color, spacing } from "./tokens";
 
 const buttonStyle = css`
   background-color: ${color.surface.brand};
@@ -90,21 +86,21 @@ function Button({ children }) {
 Use theme context for mode switching:
 
 ```jsx
-import { createContext, useContext, useState } from 'react';
-import { color } from './tokens';
+import { createContext, useContext, useState } from "react";
+import { color } from "./tokens";
 
 const ThemeContext = createContext({
-  theme: 'light',
+  theme: "light",
   setTheme: () => {},
-  colors: color
+  colors: color,
 });
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
 
   const colors = {
     surface: color.surface[theme],
-    text: color.text[theme]
+    text: color.text[theme],
   };
 
   return (
@@ -152,12 +148,12 @@ Use style binding:
 </template>
 
 <script setup>
-import { color, spacing } from './tokens';
+import { color, spacing } from "./tokens";
 
 const buttonStyle = {
   backgroundColor: color.surface.brand,
   color: color.text.primary,
-  padding: spacing.component.button.padding
+  padding: spacing.component.button.padding,
 };
 </script>
 ```
@@ -168,15 +164,15 @@ Use provide/inject for theme:
 
 ```vue
 <script setup>
-import { provide, inject, ref } from 'vue';
-import { color } from './tokens';
+import { provide, inject, ref } from "vue";
+import { color } from "./tokens";
 
-const theme = ref('light');
+const theme = ref("light");
 
-provide('theme', theme);
-provide('colors', {
+provide("theme", theme);
+provide("colors", {
   surface: color.surface[theme.value],
-  text: color.text[theme.value]
+  text: color.text[theme.value],
 });
 </script>
 ```
@@ -189,14 +185,16 @@ Use CSS variables in Angular:
 
 ```typescript
 @Component({
-  selector: 'app-button',
+  selector: "app-button",
   template: '<button class="button"><ng-content></ng-content></button>',
-  styles: [`
-    .button {
-      background-color: var(--color-surface-brand);
-      color: var(--color-text-primary);
-    }
-  `]
+  styles: [
+    `
+      .button {
+        background-color: var(--color-surface-brand);
+        color: var(--color-text-primary);
+      }
+    `,
+  ],
 })
 export class ButtonComponent {}
 ```
@@ -206,18 +204,18 @@ export class ButtonComponent {}
 Use style binding:
 
 ```typescript
-import { Component } from '@angular/core';
-import { color, spacing } from './tokens';
+import { Component } from "@angular/core";
+import { color, spacing } from "./tokens";
 
 @Component({
-  selector: 'app-button',
-  template: '<button [style]="buttonStyle"><ng-content></ng-content></button>'
+  selector: "app-button",
+  template: '<button [style]="buttonStyle"><ng-content></ng-content></button>',
 })
 export class ButtonComponent {
   buttonStyle = {
-    'background-color': color.surface.brand,
-    'color': color.text.primary,
-    'padding': spacing.component.button.padding
+    "background-color": color.surface.brand,
+    color: color.text.primary,
+    padding: spacing.component.button.padding,
   };
 }
 ```
@@ -229,21 +227,20 @@ export class ButtonComponent {
 Complete React button:
 
 ```jsx
-import { useTheme } from './ThemeContext';
+import { useTheme } from "./ThemeContext";
 
-function Button({ children, variant = 'primary' }) {
+function Button({ children, variant = "primary" }) {
   const { colors } = useTheme();
 
-  const backgroundColor = variant === 'primary'
-    ? colors.surface.brand
-    : colors.surface.secondary;
+  const backgroundColor =
+    variant === "primary" ? colors.surface.brand : colors.surface.secondary;
 
   return (
     <button
       style={{
         backgroundColor,
         color: colors.text.primary,
-        padding: '12px 24px'
+        padding: "12px 24px",
       }}
     >
       {children}
@@ -258,38 +255,36 @@ Complete Vue button:
 
 ```vue
 <template>
-  <button
-    :class="['button', `button--${variant}`]"
-    :style="buttonStyle"
-  >
+  <button :class="['button', `button--${variant}`]" :style="buttonStyle">
     <slot></slot>
   </button>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { inject } from 'vue';
-import { color, spacing } from './tokens';
+import { computed } from "vue";
+import { inject } from "vue";
+import { color, spacing } from "./tokens";
 
 const props = defineProps({
   variant: {
     type: String,
-    default: 'primary'
-  }
+    default: "primary",
+  },
 });
 
-const theme = inject('theme', 'light');
+const theme = inject("theme", "light");
 const colors = computed(() => ({
   surface: color.surface[theme],
-  text: color.text[theme]
+  text: color.text[theme],
 }));
 
 const buttonStyle = computed(() => ({
-  backgroundColor: props.variant === 'primary'
-    ? colors.value.surface.brand
-    : colors.value.surface.secondary,
+  backgroundColor:
+    props.variant === "primary"
+      ? colors.value.surface.brand
+      : colors.value.surface.secondary,
   color: colors.value.text.primary,
-  padding: spacing.component.button.padding
+  padding: spacing.component.button.padding,
 }));
 </script>
 ```

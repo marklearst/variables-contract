@@ -1,5 +1,5 @@
 ---
-title: Figma Export JSON
+title: "Examples: Figma Export"
 ---
 
 # Figma Export JSON
@@ -37,9 +37,7 @@ Collections are prefixed with `@` in the export and contain `$collection_metadat
     "$collection_metadata": {
       "name": "Primitives",
       "figmaId": "VariableCollectionId:502:189",
-      "modes": [
-        { "key": "mode_1", "name": "Mode 1" }
-      ]
+      "modes": [{ "key": "mode_1", "name": "Mode 1" }]
     }
   }
 }
@@ -124,14 +122,14 @@ Note the `@` prefix on collection names and `$` prefix on group names.
 
 ## Figma vs Variable Design Standard (VDS) format
 
-| Aspect | Figma Export | Variable Design Standard (VDS) |
-|--------|--------------|-------------------|
-| Collection prefix | `@primitives` | `primitives` |
-| Group prefix | `$color` | `color` |
-| Reference syntax | `{@primitives.$color.x}` | `{primitives.color.x}` |
-| Mode values | In `$variable_metadata.modes` | In `$value` object |
-| Metadata | `$collection_metadata`, `$variable_metadata` | `$extensions` |
-| Path separator | `/` in metadata name | `.` in JSON path |
+| Aspect            | Figma Export                                 | Variable Design Standard (VDS) |
+| ----------------- | -------------------------------------------- | ------------------------------ |
+| Collection prefix | `@primitives`                                | `primitives`                   |
+| Group prefix      | `$color`                                     | `color`                        |
+| Reference syntax  | `{@primitives.$color.x}`                     | `{primitives.color.x}`         |
+| Mode values       | In `$variable_metadata.modes`                | In `$value` object             |
+| Metadata          | `$collection_metadata`, `$variable_metadata` | `$extensions`                  |
+| Path separator    | `/` in metadata name                         | `.` in JSON path               |
 
 ## Obtaining exports
 

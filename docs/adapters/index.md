@@ -1,5 +1,5 @@
 ---
-title: Adapters
+title: "Adapters: Overview"
 ---
 
 # Adapters
