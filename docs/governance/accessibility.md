@@ -36,6 +36,6 @@ When a variable changes:
 
 ## Links
 
-- [Types](/contract/types)
-- [Modes](/contract/modes)
-- [CSS Consumption](/consumption/css)
+- [Types](/contract/types.md)
+- [Modes](/contract/modes.md)
+- [CSS Consumption](/consumption/css.md)

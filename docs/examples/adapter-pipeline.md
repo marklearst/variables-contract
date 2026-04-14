@@ -228,5 +228,5 @@ Validate at each step:
 
 ## Out of scope
 
-- Alternate adapter pipelines (see [Adapters](/adapters))
+- Alternate adapter pipelines (see [Adapters](/adapters.md))
 - Tool-specific deployment steps

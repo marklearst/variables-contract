@@ -318,6 +318,6 @@ If migration is incomplete:
 
 ## Links
 
-- [Adapters](/adapters)
+- [Adapters](/adapters.md)
 - [Validation](validation)
 - [Conformance](../reference/conformance)

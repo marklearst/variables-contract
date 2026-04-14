@@ -62,6 +62,6 @@ Governance keeps variable changes reviewed, versioned, and safe to roll out.
 
 ## Related
 
-- [Naming](/contract/naming)
-- [Tokens Studio](/adapters/tokens-studio)
+- [Naming](/contract/naming.md)
+- [Tokens Studio](/adapters/tokens-studio.md)
 - [Accessibility](accessibility)

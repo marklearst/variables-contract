@@ -169,7 +169,7 @@ The REST API uses a different structure than plugin exports. Key differences:
 }
 ```
 
-The Figma adapter handles both formats. See [Figma Adapter](/adapters/figma) for details.
+The Figma adapter handles both formats. See [Figma Adapter](/adapters/figma.md) for details.
 
 ## Failure modes
 
@@ -184,18 +184,18 @@ Using raw Figma exports without normalization causes:
 
 This example shows raw Figma output, not:
 
-- **Normalized format**: See [DTCG Compliant Example](/examples/dtcg-compliant) for canonical structure.
-- **Normalization steps**: See [Figma Adapter](/adapters/figma) for conversion rules.
+- **Normalized format**: See [DTCG Compliant Example](/examples/dtcg-compliant.md) for canonical structure.
+- **Normalization steps**: See [Figma Adapter](/adapters/figma.md) for conversion rules.
 - **Tokens Studio format**: Different export structure with its own adapter.
 - **Plugin development**: See [Figma Plugin API](https://developers.figma.com/docs/plugins/api/figma-variables/) for building export tools.
 
 ## Normalization
 
-The [Figma Adapter](/adapters/figma) transforms this format into Variable Design Standard (VDS) canonical structure:
+The [Figma Adapter](/adapters/figma.md) transforms this format into Variable Design Standard (VDS) canonical structure:
 
 1. Remove `@` and `$` prefixes from paths
 2. Move `$variable_metadata.modes` into `$value` objects
 3. Convert reference syntax to DTCG format
 4. Relocate metadata to `$extensions`
 
-See [Adapter Pipeline](/examples/adapter-pipeline) for export-to-contract conversion examples.
+See [Adapter Pipeline](/examples/adapter-pipeline.md) for export-to-contract conversion examples.

@@ -60,7 +60,7 @@ If a candidate cannot demonstrate these skills, they are not ready for this role
 
 ### Contract owner responsibilities
 
-- Own the Variable Design Standard (VDS) ([Variable Design Standard (VDS)](/contract/variable-contract)).
+- Own the Variable Design Standard (VDS) ([Variable Design Standard (VDS)](/contract/variable-contract.md)).
 - Approve all variable changes before they enter version control.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
@@ -159,6 +159,6 @@ The Variable Design Standard (VDS) depends on this role being held to a clear st
 
 ## Links
 
-- [Variable Contract](/contract/variable-contract)
+- [Variable Contract](/contract/variable-contract.md)
 - [Change Control](../change-control)
 - [Validation](../validation)

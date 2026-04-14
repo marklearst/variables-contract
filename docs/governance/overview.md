@@ -8,7 +8,7 @@ Governance keeps a variable change from turning into a cleanup project across co
 
 The rules here treat variable names and references like an API: changes are reviewed, and breaking changes are called out.
 
-The contract rules (schema and validation expectations) live in [Variable Design Standard (VDS)](/contract/variable-contract).
+The contract rules (schema and validation expectations) live in [Variable Design Standard (VDS)](/contract/variable-contract.md).
 
 ## Governance purpose
 

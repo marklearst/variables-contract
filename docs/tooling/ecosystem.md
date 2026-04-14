@@ -175,5 +175,5 @@ Tools that support Variable Design Standard (VDS) (DTCG 2025.10 format).
 
 ## Links
 
-- [Adapters](/adapters)
+- [Adapters](/adapters/index.md)
 - [Build Pipelines](build-pipelines)

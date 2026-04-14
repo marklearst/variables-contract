@@ -190,4 +190,4 @@ The schema is available at:
 
 ## Conformance
 
-Using this schema for validation is one component of Variable Design Standard (VDS) conformance. See [Conformance](/reference/conformance) for complete requirements.
+Using this schema for validation is one component of Variable Design Standard (VDS) conformance. See [Conformance](/reference/conformance.md) for complete requirements.

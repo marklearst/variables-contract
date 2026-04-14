@@ -37,9 +37,9 @@ Variable Design Standard (VDS) adds governance and extensions on top of DTCG for
 - **String shortcuts**: Convenience formats like `"16px"` for dimensions and `"200ms"` for durations. DTCG requires object format.
 - **Hex color shorthand**: Convenience format like `"#0066cc"` for colors. DTCG requires object format with `colorSpace` and `components`.
 - Naming convention rules (see [Naming](naming))
-- Change control process (see [Change Control](/governance/change-control))
-- Role definitions (see [Design Engineer](/governance/roles/design-engineer))
-- Adapter patterns for tool integration (see [Adapters](/adapters))
+- Change control process (see [Change Control](/governance/change-control.md))
+- Role definitions (see [Design Engineer](/governance/roles/design-engineer.md))
+- Adapter patterns for tool integration (see [Adapters](/adapters.md))
 - Validation requirements beyond format correctness
 
 ## Compatibility matrix

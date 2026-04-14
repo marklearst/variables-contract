@@ -8,7 +8,7 @@ A strictly DTCG 2025.10 compliant variable file demonstrating primitive types, c
 
 - Raw file: [dtcg-compliant.json](/assets/schema/dtcg-compliant.json)
 
-This file uses only features defined in the [DTCG 2025.10 specification](https://www.designtokens.org/tr/drafts/format/). It does NOT use Variable Design Standard (VDS) extensions like modes in `$value`. See [DTCG Alignment](/contract/dtcg-alignment) for what DTCG provides vs what Variable Design Standard (VDS) adds.
+This file uses only features defined in the [DTCG 2025.10 specification](https://www.designtokens.org/tr/drafts/format/). It does NOT use Variable Design Standard (VDS) extensions like modes in `$value`. See [DTCG Alignment](/contract/dtcg-alignment.md) for what DTCG provides vs what Variable Design Standard (VDS) adds.
 
 ## File overview
 
@@ -22,12 +22,12 @@ The example file includes:
 
 **Not included** (Variable Design Standard (VDS) extensions):
 
-- Modes in `$value` objects (see [Modes](/contract/modes) for VC extension)
+- Modes in `$value` objects (see [Modes](/contract/modes.md) for VC extension)
 - String shortcuts for dimension/duration/color
 
 ## Primitive types
 
-DTCG 2025.10 requires specific object formats for certain types. See [Types](/contract/types) for complete reference.
+DTCG 2025.10 requires specific object formats for certain types. See [Types](/contract/types.md) for complete reference.
 
 ### Color (object format required)
 
@@ -126,7 +126,7 @@ Font family, font weight, cubic bezier, and number types use simple values:
 
 ## Composite types
 
-Structured types combining multiple values. See [Composite Types](/contract/composite-types) for complete reference.
+Structured types combining multiple values. See [Composite Types](/contract/composite-types.md) for complete reference.
 
 ```json
 {
@@ -177,7 +177,7 @@ Structured types combining multiple values. See [Composite Types](/contract/comp
 
 ## References
 
-Variables can reference other variables using curly brace syntax. See [References](/contract/references) for resolution rules.
+Variables can reference other variables using curly brace syntax. See [References](/contract/references.md) for resolution rules.
 
 ```json
 {
@@ -208,7 +208,7 @@ Variables can reference other variables using curly brace syntax. See [Reference
 
 ## Group extension
 
-Groups can extend other groups using `$extends` with curly brace syntax. See [Groups](/contract/groups) for extension rules.
+Groups can extend other groups using `$extends` with curly brace syntax. See [Groups](/contract/groups.md) for extension rules.
 
 ```json
 {
@@ -275,7 +275,7 @@ This pattern creates a clear hierarchy: base → semantic → component.
 
 ## Modes (Variable Design Standard (VDS) extension)
 
-**Note**: Modes in `$value` are NOT part of the DTCG 2025.10 specification. If you need light/dark theme variants, Variable Design Standard (VDS) provides modes as an extension. See [Modes](/contract/modes).
+**Note**: Modes in `$value` are NOT part of the DTCG 2025.10 specification. If you need light/dark theme variants, Variable Design Standard (VDS) provides modes as an extension. See [Modes](/contract/modes.md).
 
 For strict DTCG compliance without modes, use separate variables:
 
@@ -314,10 +314,10 @@ Invalid DTCG format causes build failures:
 
 This example demonstrates strict DTCG format compliance, not:
 
-- **Variable Design Standard (VDS) extensions**: Modes, string shortcuts. See [Modes](/contract/modes) for VC extensions.
-- **Platform output**: CSS, SCSS, or JavaScript output. See [Adapter Pipeline](/examples/adapter-pipeline).
-- **Tool-specific input**: Figma or Tokens Studio export formats. See [Figma Export](/examples/figma-export).
-- **Multi-brand architecture**: Brand overrides and theme composition. See [Multi-brand Architecture](/patterns/multi-brand-architecture).
+- **Variable Design Standard (VDS) extensions**: Modes, string shortcuts. See [Modes](/contract/modes.md) for VC extensions.
+- **Platform output**: CSS, SCSS, or JavaScript output. See [Adapter Pipeline](/examples/adapter-pipeline.md).
+- **Tool-specific input**: Figma or Tokens Studio export formats. See [Figma Export](/examples/figma-export.md).
+- **Multi-brand architecture**: Brand overrides and theme composition. See [Multi-brand Architecture](/patterns/multi-brand-architecture.md).
 
 ## Validation
 
@@ -327,4 +327,4 @@ Validate DTCG compliance using the JSON schema:
 npx ajv validate -s schema/v1.json -d examples/dtcg-compliant.json
 ```
 
-See [Validation](/governance/validation) for CI integration patterns.
+See [Validation](/governance/validation.md) for CI integration patterns.

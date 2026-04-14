@@ -493,4 +493,4 @@ If issues persist:
 
 - [Validation](validation)
 - [Change Control](change-control)
-- [Adapters](/adapters)
+- [Adapters](/adapters.md)

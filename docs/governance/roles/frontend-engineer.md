@@ -17,7 +17,7 @@ Design Engineer owns the contract. Designer creates variables. Frontend Engineer
 - Consume variables in code (CSS variables, TypeScript types, theme objects).
 - Maintain build pipelines that generate outputs from Variable Design Standard (VDS) JSON.
 - Integrate variables into component libraries (React, Vue, etc.).
-- Test variable consumption (see [Consumption Tests](/testing/consumption-tests)).
+- Test variable consumption (see [Consumption Tests](/testing/consumption-tests.md)).
 - Report consumption issues to Design Engineer.
 
 ## Ownership
@@ -106,7 +106,7 @@ Frontend Engineers maintain pipelines that:
 3. Output platform-specific formats.
 4. Integrate with component libraries.
 
-See [Build Pipelines](/tooling/build-pipelines) for examples.
+See [Build Pipelines](/tooling/build-pipelines.md) for examples.
 
 ## Common mistakes
 
@@ -145,6 +145,6 @@ If Frontend Engineer doesn't report consumption issues:
 
 ## Links
 
-- [CSS Consumption](/consumption/css)
-- [Build Pipelines](/tooling/build-pipelines)
+- [CSS Consumption](/consumption/css.md)
+- [Build Pipelines](/tooling/build-pipelines.md)
 - [Change Control](../change-control)
