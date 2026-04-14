@@ -1,5 +1,6 @@
 ---
 title: "Contract: DTCG Alignment"
+description: "Variable Design Standard (VDS) is DTCG 2025.10 compliant. What that means and what Variable Design Standard (VDS) adds."
 ---
 
 # DTCG Alignment
@@ -36,10 +37,10 @@ Variable Design Standard (VDS) adds governance and extensions on top of DTCG for
 - **Modes**: Contextual variants (light/dark, mobile/desktop) stored in `$value` objects. DTCG does not define modes. This is a Variable Design Standard (VDS) extension.
 - **String shortcuts**: Convenience formats like `"16px"` for dimensions and `"200ms"` for durations. DTCG requires object format.
 - **Hex color shorthand**: Convenience format like `"#0066cc"` for colors. DTCG requires object format with `colorSpace` and `components`.
-- Naming convention rules (see [Naming](naming))
-- Change control process (see [Change Control](/governance/change-control.md))
-- Role definitions (see [Design Engineer](/governance/roles/design-engineer.md))
-- Adapter patterns for tool integration (see [Adapters](/adapters.md))
+- Naming convention rules (see [Naming Convention](/contract/naming))
+- Change control process (see [Change Control](/governance/change-control))
+- Role definitions (see [Design Engineer](/governance/roles/design-engineer))
+- Adapter patterns for tool integration (see [Adapters](/adapters))
 - Validation requirements beyond format correctness
 
 ## Compatibility matrix

@@ -1,5 +1,6 @@
 ---
 title: "Governance > Roles: Frontend Engineer"
+description: "Consumes variables in code. Maintains build pipelines. Does not create variables. Does not own the contract. Does not review variable changes for contract compliance. Does not test consumption feasibility in React. Does not build and maintain production component libraries in Figma and React. Does not write clear documentation for both designers and developers. Does not translate design intent to code and code constraints to design."
 ---
 
 # Variable Governance: Frontend Engineer Role
@@ -17,7 +18,7 @@ Design Engineer owns the contract. Designer creates variables. Frontend Engineer
 - Consume variables in code (CSS variables, TypeScript types, theme objects).
 - Maintain build pipelines that generate outputs from Variable Design Standard (VDS) JSON.
 - Integrate variables into component libraries (React, Vue, etc.).
-- Test variable consumption (see [Consumption Tests](/testing/consumption-tests.md)).
+- Test variable consumption (see [Consumption Tests](/testing/consumption-tests)).
 - Report consumption issues to Design Engineer.
 
 ## Ownership
@@ -106,7 +107,7 @@ Frontend Engineers maintain pipelines that:
 3. Output platform-specific formats.
 4. Integrate with component libraries.
 
-See [Build Pipelines](/tooling/build-pipelines.md) for examples.
+See [Build Pipelines](/tooling/build-pipelines) for examples.
 
 ## Common mistakes
 
@@ -145,6 +146,6 @@ If Frontend Engineer doesn't report consumption issues:
 
 ## Links
 
-- [CSS Consumption](/consumption/css.md)
-- [Build Pipelines](/tooling/build-pipelines.md)
-- [Change Control](../change-control)
+- [CSS Consumption](/consumption/css)
+- [Build Pipelines](/tooling/build-pipelines)
+- [Change Control](/governance/change-control)

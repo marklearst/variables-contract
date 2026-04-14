@@ -1,5 +1,6 @@
 ---
 title: "Patterns: Theme Composition"
+description: "This pattern specifies theme composition using modes and references. Failure if ignored: theme variants diverge and outputs do not match expected modes."
 ---
 
 # Theme Composition Patterns

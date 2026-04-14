@@ -1,5 +1,6 @@
 ---
 title: "Meta: Specification Status"
+description: "This document defines the status taxonomy for Variable Design Standard (VDS) and what each status means. Draft: Active development, breaking changes possible. Candidate Standard: Feature-complete, seeking feedback, minor changes possible. Stable: Production-ready, breaking changes only in major versions. Deprecated: No longer recommended, migration path provided."
 ---
 
 # Variable Design Standard (VDS) Specification Status

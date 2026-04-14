@@ -1,5 +1,6 @@
 ---
 title: "Adapters: Tokens Studio"
+description: "Tokens Studio exports are close to Variable Design Standard (VDS) format but may include Tokens Studio-specific metadata. This adapter normalizes Tokens Studio exports."
 ---
 
 # Tokens Studio Adapter
@@ -74,7 +75,7 @@ This format is already correct. No conversion needed.
 
 ### Step 4: Validate naming
 
-Check that names follow Variable Design Standard (VDS) naming convention (see [Naming](/contract/naming.md)).
+Check that names follow Variable Design Standard (VDS) naming convention (see [Naming](/contract/naming)).
 
 - Names MUST use dot-separated paths
 - Names MUST be lowercase
@@ -204,12 +205,12 @@ Designers author variables in Figma using Tokens Studio plugin. The repo JSON is
 2. Design Engineer validates export JSON (run adapter if needed).
 3. Design Engineer commits JSON to version control.
 4. Design Engineer opens PR for review.
-5. Reviewers check naming, types, references (see [Change Control](/governance/change-control.md)).
+5. Reviewers check naming, types, references (see [Change Control](/governance/change-control)).
 6. After merge, CI validates JSON and generates build outputs.
 
 ### What gets reviewed
 
-- Variable names follow naming convention ([Naming](/contract/naming.md))
+- Variable names follow naming convention ([Naming](/contract/naming))
 - References resolve correctly
 - Token organization (base, semantic, component layers)
 - Breaking changes are documented
@@ -232,7 +233,7 @@ Before exporting from Tokens Studio:
 - Semantic aliases: reference base tokens, describe usage
 - Component tokens: reference semantic aliases, component-scoped
 
-See [Anatomy](/contract/anatomy.md) for details.
+See [Anatomy](/contract/anatomy) for details.
 
 ### Artifacts that change
 

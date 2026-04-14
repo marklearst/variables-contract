@@ -1,5 +1,6 @@
 ---
 title: "Patterns: Multi-Brand Architecture"
+description: "This pattern specifies a multi-brand architecture that keeps one semantic name set across brands. Failure if ignored: brand values leak across outputs or require a mapped layer to resolve."
 ---
 
 # Multi-Brand Architecture

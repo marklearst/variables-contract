@@ -1,5 +1,6 @@
 ---
 title: "Testing: Consumption Tests"
+description: "Tests for generated CSS variables, TypeScript types, and integration outputs. Failure if ignored: broken outputs ship without detection. Test CSS generation, mode-specific CSS generation, type generation, integration tests, and output tests."
 ---
 
 # Testing Generated Outputs

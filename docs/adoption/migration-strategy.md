@@ -1,5 +1,6 @@
 ---
 title: "Adoption: Migration Strategy"
+description: "Phased migration steps from existing variable systems to Variable Design Standard (VDS)."
 ---
 
 # Phased Migration Strategy

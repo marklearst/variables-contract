@@ -1,5 +1,6 @@
 ---
 title: "Introduction: Comparison"
+description: "Comparison of Variable Design Standard (VDS) to other variable and token standards. Scope: comparison of Variable Design Standard (VDS) to other variable and token standards. Failure if ignored: teams pick formats without governance and ship incompatible rules."
 ---
 
 # Variable Design Standard (VDS) vs Other Standards
@@ -191,7 +192,7 @@ Variable Design Standard (VDS) supports migration from:
 - Adobe Spectrum (simplify structure, apply governance)
 - Custom formats (normalize to Variable Design Standard (VDS))
 
-See [Migration Strategy](adoption/migration-strategy) for details.
+See [Migration Strategy](/adoption/migration-strategy) for details.
 
 ## Out of scope
 

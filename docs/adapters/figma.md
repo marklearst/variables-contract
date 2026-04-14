@@ -1,5 +1,6 @@
 ---
 title: "Adapters: Figma"
+description: "Figma Variables exports include tool-specific metadata and reference syntax. This adapter normalizes Figma exports into Variable Design Standard (VDS) format."
 ---
 
 # Figma Adapter
@@ -223,7 +224,7 @@ After:
 
 ### Step 6: Validate naming
 
-Check that normalized names follow Variable Design Standard (VDS) naming convention (see [Naming](/contract/naming.md)).
+Check that normalized names follow Variable Design Standard (VDS) naming convention (see [Naming](/contract/naming)).
 
 - Names MUST use dot-separated paths
 - Names MUST be lowercase
@@ -365,12 +366,12 @@ Designers author variables in Figma. Changes flow through export, normalization,
 2. Design Engineer runs Figma adapter to normalize export JSON.
 3. Design Engineer commits normalized JSON to version control.
 4. Design Engineer opens PR for review.
-5. Reviewers check naming, types, references (see [Change Control](/governance/change-control.md)).
+5. Reviewers check naming, types, references (see [Change Control](/governance/change-control)).
 6. After merge, CI generates build outputs.
 
 ### What gets reviewed
 
-- Variable names follow naming convention ([Naming](/contract/naming.md))
+- Variable names follow naming convention ([Naming](/contract/naming))
 - References resolve correctly
 - Modes are limited (`light`, `dark`)
 - No duplicate values when base tokens exist

@@ -1,5 +1,6 @@
 ---
 title: "Governance: Change Control"
+description: "Use this workflow so a variable change doesn't silently break components. Roles: Designer, Design Engineer, Frontend Engineer. Workflow overview: Design proposes a change. Variable change is reviewed (naming, type, references, modes). Tokens are updated in the repo JSON through a PR. Component implementation consumes semantic tokens. Changes are released with versioning and notes."
 ---
 
 # Governance: Design and Development Workflow
@@ -78,6 +79,6 @@ Reviews should verify:
 
 ## Links
 
-- [Versioning](versioning)
-- [Validation](validation)
-- [Conformance](../reference/conformance)
+- [Versioning](/governance/versioning)
+- [Validation](/governance/validation)
+- [Conformance](/reference/conformance)

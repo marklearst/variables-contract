@@ -1,5 +1,6 @@
 ---
 title: "Scenarios: Multi-Brand"
+description: "This scenario specifies a folder-based multi-brand structure where semantic names stay identical across brands. Failure if ignored: brand values leak across outputs and maintenance cost grows."
 ---
 
 # Multi-Brand Architecture

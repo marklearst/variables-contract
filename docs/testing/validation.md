@@ -1,5 +1,6 @@
 ---
 title: "Testing: Validation"
+description: "Validation tests for references, types, and mode key sets. Failure if ignored: invalid variables ship and break builds. Test reference resolution, circular references, type correctness, mode key set checks, and naming convention."
 ---
 
 # Testing Variable Changes

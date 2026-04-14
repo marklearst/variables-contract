@@ -1,5 +1,6 @@
 ---
 title: "Scenarios: Large Variable Sets"
+description: "This scenario specifies constraints for large variable sets (100+ variables). Failure if ignored: build time and memory use grow until validation and output generation fail."
 ---
 
 # Large Variable Sets

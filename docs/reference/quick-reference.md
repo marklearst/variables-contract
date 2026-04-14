@@ -1,5 +1,6 @@
 ---
 title: "Reference: Quick Reference"
+description: "Cheat sheet for common Variable Design Standard (VDS) tasks. Naming convention: Format: `{category}.{system}.{role}.{state}.{scale}`. Rules: Lowercase, Dot-separated segments, No platform names, Semantic aliases for UI usage. Variable structure: Required: `$type`, `$value`. Optional: `$description`, `$extensions`, `$deprecated`. Reference syntax: Canonical: `{path.to.variable}`. DTCG required: `#/path/to/variable`.
 ---
 
 # Variable Design Standard (VDS) Quick Reference
@@ -145,7 +146,6 @@ tokens/
 
 ## Links
 
-- [Naming Convention](contract/naming)
-- [Variable Design Standard (VDS)](contract/variable-contract)
-- [Roles](governance/roles)
-- [Change Control](governance/change-control)
+- [Naming Convention](../contract/naming)
+- [Variable Design Standard (VDS)](../contract/variable-contract)
+- [Change Control](../governance/change-control)

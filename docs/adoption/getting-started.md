@@ -1,5 +1,6 @@
 ---
 title: "Adoption: Getting Started"
+description: "Team adoption steps for Variable Design Standard (VDS)."
 ---
 
 # Team Adoption Guide
@@ -342,8 +343,8 @@ Avoid these mistakes:
 
 After adoption:
 
-- Review [Implementation Checklist](adoption/implementation-checklist)
-- Set up [Migration Strategy](adoption/migration-strategy) if migrating
+- Review [Implementation Checklist](implementation-checklist)
+- Set up [Migration Strategy](migration-strategy) if migrating
 - Document team-specific patterns
 - Iterate on workflow
 

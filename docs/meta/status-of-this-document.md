@@ -1,5 +1,6 @@
 ---
 title: "Meta: Status of this Document"
+description: "This section describes the status of this document at the time of its publication. Version: 0.5.0. Status: Draft. Date: January 27, 2026. Editor: Mark Learst."
 ---
 
 # Status of this Document
@@ -15,7 +16,7 @@ This section describes the status of this document at the time of its publicatio
 
 ## Document Status
 
-This specification is a **Draft** standard. See [Specification Status](status) for status definitions and compatibility promises.
+This specification is a **Draft** standard. See [Specification Status](/meta/status) for status definitions and compatibility promises.
 
 ### What This Means
 
@@ -33,7 +34,7 @@ This specification is a **Draft** standard. See [Specification Status](status) f
 
 ## Patent Policy
 
-This specification is subject to the [Variable Design Standard (VDS) License](license), which includes:
+This specification is subject to the [Variable Design Standard (VDS) License](/license), which includes:
 
 - **CC BY-ND 4.0** base license
 - **Standards Integrity Addendum** for public use
@@ -44,7 +45,7 @@ The license permits implementation and sharing while preventing ecosystem fragme
 
 Issues, questions, and feedback are welcome via:
 
-- **GitHub Issues**: [Create an issue](https://github.com/marklearst/variables-contract/issues/new)
+- **GitHub Issues**: [Create an issue](https://github.com/marklearst/variable-design-standard/issues/new)
 - **Discussion**: Use GitHub Discussions for questions and proposals
 
 ### What to Include
@@ -78,7 +79,7 @@ Variable Design Standard (VDS) has been in development since 2017.
 
 ### Contributors
 
-See [Contributors](contributors) for a list of people who have contributed to Variable Design Standard (VDS).
+See [Contributors](/meta/contributors) for a list of people who have contributed to Variable Design Standard (VDS).
 
 ### Acknowledgments
 
@@ -92,7 +93,7 @@ Variable Design Standard (VDS) builds on:
 
 ## Document History
 
-Version history and release notes are documented in the [Change Log](change-log).
+Version history and release notes are documented in the [Change Log](/meta/change-log).
 
 ### Recent Versions
 
@@ -101,7 +102,7 @@ Version history and release notes are documented in the [Change Log](change-log)
 
 ### Future Versions
 
-See [Change Log](change-log) for planned future versions and roadmap.
+See [Change Log](/meta/change-log) for planned future versions and roadmap.
 
 ## Feedback
 
@@ -109,10 +110,10 @@ Feedback on this specification is welcome and encouraged. Please file issues or 
 
 ## Conformance
 
-To claim Variable Design Standard (VDS) compliance, see [Conformance](reference/conformance) for requirements and how to report compliance.
+To claim Variable Design Standard (VDS) compliance, see [Conformance](/reference/conformance) for requirements and how to report compliance.
 
 ## License
 
-This work is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) with the [Standards Integrity Addendum](license).
+This work is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) with the [Standards Integrity Addendum](/license).
 
-See [License](license) for full license text and terms.
+See [License](/license) for full license text and terms.

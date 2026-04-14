@@ -1,5 +1,6 @@
 ---
 title: "Contract: Types"
+description: "Types define how a variable's `$value` is interpreted. Variable Design Standard (VDS) supports all DTCG 2025.10 types. These are the primitive types: color, dimension, fontFamily, fontWeight, duration, cubicBezier, number."
 ---
 
 # Types

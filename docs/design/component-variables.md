@@ -1,5 +1,6 @@
 ---
 title: "Design: Component Variables"
+description: "Applying variables in Figma components so shared styles update together. If components hardcode values, they fall out of sync. Variable Design Standard (VDS) variables map directly to Figma variables."
 ---
 
 # Using Variables in Figma Components

@@ -1,5 +1,6 @@
 ---
 title: "Contract: References"
+description: "References allow variables to point to other variables. Variable Design Standard (VDS) supports two reference syntaxes: curly brace and JSON Pointer."
 ---
 
 # References

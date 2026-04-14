@@ -1,5 +1,6 @@
 ---
 title: "Patterns: Performance"
+description: "This pattern specifies constraints that keep build time and file size within limits. Failure if ignored: builds slow down and outputs become too large to manage."
 ---
 
 # Performance

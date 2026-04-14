@@ -1,5 +1,6 @@
 ---
 title: "Consumption: CSS"
+description: "CSS consumption patterns for Variable Design Standard (VDS) outputs. Use CSS custom properties generated from Variable Design Standard (VDS) JSON."
 ---
 
 # CSS Variable Consumption

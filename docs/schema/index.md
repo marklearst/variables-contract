@@ -1,5 +1,6 @@
 ---
 title: "Schema: Overview"
+description: "The Variable Design Standard (VDS) provides a JSON Schema for validating design variable files. This schema enforces DTCG 2025.10 alignment and Variable Design Standard (VDS) conformance requirements. Schema URL: https://variable-design-standard.vercel.app/assets/schema/v1.json. Usage: Add the `$schema` property to your Variable Design Standard (VDS) JSON files so validators can run schema checks."
 ---
 
 # Variable Design Standard (VDS) JSON Schema
@@ -185,9 +186,9 @@ Use additional validation tooling for complete conformance checking.
 
 The schema is available at:
 
-- **URL:** [/assets/schema/v1.json](/assets/schema/v1.json)
-- **Raw:** [GitHub](https://github.com/marklearst/variables-contract/blob/main/assets/schema/v1.json)
+- **URL:** [/assets/schema/v1.json](assets/schema/v1.json)
+- **Raw:** [GitHub](https://github.com/marklearst/variable-design-standard/blob/main/assets/schema/v1.json)
 
 ## Conformance
 
-Using this schema for validation is one component of Variable Design Standard (VDS) conformance. See [Conformance](/reference/conformance.md) for complete requirements.
+Using this schema for validation is one component of Variable Design Standard (VDS) conformance. See [Conformance](reference/conformance) for complete requirements.

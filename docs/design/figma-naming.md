@@ -1,5 +1,6 @@
 ---
 title: "Design: Figma Naming"
+description: "Figma UI naming rules that map to Variable Design Standard (VDS). If variables are named incorrectly in Figma, adapter normalization fails and naming violations occur. Do NOT type `@` or `$` in the Figma UI. These are export artifacts that the adapter removes."
 ---
 
 # Naming Variables in Figma

@@ -1,5 +1,6 @@
 ---
 title: "Tooling: Frequently Asked Questions"
+description: "Common questions about Variable Design Standard (VDS). What is Variable Design Standard (VDS)?"
 ---
 
 # Frequently Asked Questions
@@ -24,7 +25,7 @@ Both. The spec defines JSON shape, naming, references, and modes. Governance def
 
 ## Do I need to change my existing variables?
 
-Not immediately. Variable Design Standard (VDS) provides migration paths from existing formats (Style Dictionary, custom formats, older DTCG). See [Migration Strategy](adoption/migration-strategy).
+Not immediately. Variable Design Standard (VDS) provides migration paths from existing formats (Style Dictionary, custom formats, older DTCG). See [Migration Strategy](/adoption/migration-strategy).
 
 ## What tools do I need?
 
@@ -55,7 +56,7 @@ In smaller teams, one person (Design Engineer) may fill multiple roles. But resp
 5. Document migration path
 6. Remove deprecated variable in next major version
 
-See [Versioning](governance/versioning) for details.
+See [Versioning](/governance/versioning) for details.
 
 ## Can I use platform names in variable names?
 
@@ -63,7 +64,7 @@ No. Variable names MUST NOT include platform names (ios, android, web, etc.). Pl
 
 ## What if my tool uses different reference syntax?
 
-Use an adapter to normalize tool-specific syntax to Variable Design Standard (VDS) format. See [Adapters](adapters) for examples.
+Use an adapter to normalize tool-specific syntax to Variable Design Standard (VDS) format. See [Adapters](/adapters) for examples.
 
 ## How do I validate variables?
 
@@ -75,17 +76,17 @@ Run validation in CI:
 4. Detect circular references
 5. Validate types
 
-See [Validation](governance/validation) for tools and setup.
+See [Validation](/governance/validation) for tools and setup.
 
 ## Can I use modes?
 
 Yes. Modes are supported. Mode keys must match within collections (validation enforces this). Common modes: light/dark, mobile/desktop.
 
-See [Modes](contract/modes) for details.
+See [Modes](/contract/modes) for details.
 
 ## Do I need a mapped layer or mapped collection?
 
-No. Variable Design Standard (VDS) uses three layers only: base, alias, component. Brand selection happens by file selection or alias modes. CSS cascade layers handle consumption. See [Anatomy](contract/anatomy), [Multi-Brand Architecture](patterns/multi-brand-architecture), and [CSS Consumption](consumption/css).
+No. Variable Design Standard (VDS) uses three layers only: base, alias, component. Brand selection happens by file selection or alias modes. CSS cascade layers handle consumption. See [Anatomy](/contract/anatomy), [Multi-Brand Architecture](/patterns/multi-brand-architecture), and [CSS Consumption](/consumption/css).
 
 ## What's the difference between base, alias, and component variables?
 
@@ -93,11 +94,11 @@ No. Variable Design Standard (VDS) uses three layers only: base, alias, componen
 - **Alias variables**: Semantic names that reference base variables (color.text.primary)
 - **Component variables**: Component-scoped aliases (component.button.color.background.default)
 
-See [Anatomy](contract/anatomy) for details.
+See [Anatomy](/contract/anatomy) for details.
 
 ## How do I get started?
 
-1. Read [Getting Started](adoption/getting-started)
+1. Read [Getting Started](/adoption/getting-started)
 2. Set up repository structure
 3. Install validation tools
 4. Configure CI validation
@@ -108,17 +109,17 @@ See [Anatomy](contract/anatomy) for details.
 
 ## Can I contribute?
 
-Yes. Contributions welcome. See [Contributors](meta/contributors) for details.
+Yes. Contributions welcome. See [Contributors](/meta/contributors) for details.
 
-See [License](license) for usage terms.
+See [License](/license) for usage terms.
 
 ## Is Variable Design Standard (VDS) production-ready?
 
-Yes. Version 0.5.0 is in Draft status but production-ready. Used by teams in production. See [Specification Status](meta/status) for status definitions.
+Yes. Version 0.5.0 is in Draft status but production-ready. Used by teams in production. See [Specification Status](/meta/status) for status definitions.
 
 ## How do I claim conformance?
 
-See [Conformance](reference/conformance) for conformance requirements and report template.
+See [Conformance](/reference/conformance) for conformance requirements and report template.
 
 ## What if I find a bug?
 

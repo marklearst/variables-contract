@@ -1,5 +1,6 @@
 ---
 title: "Contract: Groups"
+description: "Groups organize variables into nested structures. Groups can extend other groups to inherit their structure."
 ---
 
 # Groups

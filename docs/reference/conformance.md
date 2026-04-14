@@ -1,5 +1,6 @@
 ---
 title: "Reference: Conformance"
+description: "Conformance claims and the required evidence. Failure if ignored: conformance claims are invalid. Variable Design Standard (VDS) Conformant requires full Variable Anatomy (Base, Alias, Component), Mode resolution and inheritance, Reference syntax and resolution, DTCG-aligned JSON structure, and Naming conventions. Variable Design Standard (VDS) Compatible requires not corrupting Specification-compliant data and including attribution."
 ---
 
 # Variable Design Standard (VDS) Conformance
@@ -109,7 +110,7 @@ The following tests determine whether an implementation is conformant. Tools tha
 
 ### Test 6: Schema Validation (SHOULD)
 
-**Requirement:** Implementation should validate against the [JSON Schema](../schema).
+**Requirement:** Implementation should validate against the [JSON Schema](/schema).
 
 ```bash
 # Validation command
@@ -266,7 +267,7 @@ Variable Design Standard (VDS) conformance can be verified using:
 - Custom validators (naming, references, modes)
 - CI checks (automated validation)
 
-See [Validation](governance/validation) for validation tools and setup.
+See [Validation](/governance/validation) for validation tools and setup.
 
 ## Non-conformance
 

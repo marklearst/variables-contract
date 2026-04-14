@@ -1,5 +1,6 @@
 ---
 title: "Testing: Visual Regression"
+description: "Visual regression checks for variable changes. Failure if ignored: visual regressions ship without detection. Test screenshot comparison, mode switching, and component testing."
 ---
 
 # Visual Regression Testing

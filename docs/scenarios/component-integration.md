@@ -1,5 +1,6 @@
 ---
 title: "Scenarios: Component Integration"
+description: "This scenario specifies how component libraries consume variables. Failure if ignored: components bypass semantic aliases and hardcode values."
 ---
 
 # Component Library Integration

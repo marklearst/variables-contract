@@ -1,5 +1,6 @@
 ---
 title: "Contract: Naming Convention"
+description: "Naming is an API. If names change casually, every consumer breaks. These rules are tool-agnostic and map directly to the Design Tokens Community Group (DTCG) file format."
 ---
 
 # Contract: Naming Convention

@@ -1,5 +1,6 @@
 ---
 title: "Governance: Accessibility"
+description: "Accessibility is a constraint on variables, not an afterthought. Variables should make accessible defaults easier to ship, not easier to bypass."
 ---
 
 # Variable Governance: Accessibility
@@ -36,6 +37,7 @@ When a variable changes:
 
 ## Links
 
-- [Types](/contract/types.md)
-- [Modes](/contract/modes.md)
-- [CSS Consumption](/consumption/css.md)
+- [Types](/contract/types)
+- [Modes](/contract/modes)
+- [CSS Consumption](/consumption/css)
+- [Conformance](/reference/conformance)

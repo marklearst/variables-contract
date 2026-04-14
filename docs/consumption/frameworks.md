@@ -1,5 +1,6 @@
 ---
 title: "Consumption: UI Libraries"
+description: "UI library integration using Variable Design Standard (VDS) outputs. Use CSS variables, TypeScript types, and theme context in React and Vue components."
 ---
 
 # UI Library Integration

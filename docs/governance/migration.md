@@ -1,5 +1,6 @@
 ---
 title: "Governance: Migration"
+description: "Migration rules for converting existing variable formats to Variable Design Standard (VDS). Scope: migration rules for converting existing variable formats to Variable Design Standard (VDS). Failure if ignored: references fail, type validation breaks, and maintenance cost grows."
 ---
 
 # Migration Guide
@@ -318,6 +319,6 @@ If migration is incomplete:
 
 ## Links
 
-- [Adapters](/adapters.md)
-- [Validation](validation)
-- [Conformance](../reference/conformance)
+- [Adapters](/adapters)
+- [Validation](/governance/validation)
+- [Conformance](/reference/conformance)

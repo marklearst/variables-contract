@@ -1,5 +1,6 @@
 ---
 title: "Contract: Composite Types"
+description: "Composite types combine multiple primitive types into structured values. They represent complex design decisions like borders, shadows, and typography styles."
 ---
 
 # Composite Types

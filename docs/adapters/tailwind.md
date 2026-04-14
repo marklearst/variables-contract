@@ -1,5 +1,6 @@
 ---
 title: "Adapters: Tailwind"
+description: "Tailwind CSS v4 integration patterns for Variable Design Standard (VDS). Generate CSS custom properties from Variable Design Standard (VDS) JSON using Tailwind CSS v4's CSS-first approach."
 ---
 
 # Tailwind Adapter

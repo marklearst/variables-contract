@@ -1,5 +1,6 @@
 ---
 title: "Design: Figma Workflow"
+description: "Workflow for designers creating and managing variables in Figma. Reduces handoff friction and naming errors. Plan variables before creating them. Use references instead of duplicating values. Follow naming convention. Keep the same mode key set across the collection. Review before export."
 ---
 
 # Designer Workflow

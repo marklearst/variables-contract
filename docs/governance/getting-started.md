@@ -1,5 +1,6 @@
 ---
 title: "Governance: Getting Started"
+description: "Use this checklist when you're adding or changing a variable. Variable names are an API. Avoid renames. Components should consume semantic aliases, not raw palette values. Variables live in version control as Design Tokens JSON."
 ---
 
 # Governance: Getting Started
@@ -15,11 +16,11 @@ Use this checklist when you're adding or changing a variable.
 ## Where to start
 
 1. Read:
-   - [Variable Governance](overview)
-   - [Naming](/contract/naming.md)
-   - [Tokens Studio](/adapters/tokens-studio.md)
-   - [Change Control](change-control)
-2. Identify which variable category you are working in:
+   - [Variable Governance](/governance/overview)
+   - [Naming Convention](/contract/naming)
+   - [Tokens Studio](/adapters/tokens-studio)
+   - [Change Control](/governance/change-control)
+1. Identify which variable category you are working in:
    - base
    - alias (semantic)
    - component
@@ -62,6 +63,6 @@ Reviews need:
 
 ## Links
 
-- [Validation](validation)
-- [Versioning](versioning)
-- [Conformance](../reference/conformance)
+- [Validation](/governance/validation)
+- [Versioning](/governance/versioning)
+- [Conformance](/reference/conformance)

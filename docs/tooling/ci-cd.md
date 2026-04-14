@@ -1,5 +1,6 @@
 ---
 title: "Tooling: CI/CD Integration"
+description: "CI/CD integration for Variable Design Standard (VDS) validation and builds. Failure if ignored: invalid variables ship and breaking changes go unnoticed. Workflow: Validate token JSON on every PR. Build outputs after validation. Deploy outputs only after validation and build succeed. CI/CD patterns: Validation only, Validation + build, Validation + build + deploy."
 ---
 
 # CI/CD Integration
@@ -345,5 +346,5 @@ If CI/CD is not set up:
 
 ## Links
 
-- [Validation](../governance/validation)
-- [Build Pipelines](build-pipelines)
+- [Validation](/governance/validation)
+- [Build Pipelines](/tooling/build-pipelines)

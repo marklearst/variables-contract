@@ -1,5 +1,6 @@
 ---
 title: "Adapters: Overview"
+description: "Adapters normalize tool outputs into Variable Design Standard (VDS) format and transform Variable Design Standard (VDS) format into tool inputs."
 ---
 
 # Adapters
@@ -69,10 +70,10 @@ If adapters fail:
 
 ## Adapter documentation
 
-- [Figma Adapter](figma): Figma Variables export normalization
-- [Tokens Studio Adapter](tokens-studio): Tokens Studio export normalization
-- [Style Dictionary Adapter](style-dictionary): Variable Design Standard (VDS) to CSS/TypeScript/etc.
-- [Tailwind Adapter](tailwind): Tailwind theme configuration generation
+- [Figma Adapter](adapters/figma): Figma Variables export normalization
+- [Tokens Studio Adapter](adapters/tokens-studio): Tokens Studio export normalization
+- [Style Dictionary Adapter](adapters/style-dictionary): Variable Design Standard (VDS) to CSS/TypeScript/etc.
+- [Tailwind Adapter](adapters/tailwind): Tailwind theme configuration generation
 
 ## Out of scope
 

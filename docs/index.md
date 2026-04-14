@@ -1,5 +1,6 @@
 ---
-title: "Tooling: Variable Design Standard (VDS)"
+title: "Variable Design Standard (VDS) Specification"
+description: "A testable protocol for design-to-code variable governance. JSON shape, naming, references, modes, and change control. Status: Draft. Version: 0.5.0. Editor: Mark Learst. Compliance: DTCG 2025.10. Schema: v1.json. License: CC BY-ND 4.0 + Addendum. Variable Design Standard (VDS) defines how variables are named, structured, reviewed, and shipped across design and code. It adds governance, validation, and role boundaries to the DTCG 2025.10 format so handoff holds as teams and products grow. JSON-as-API means file paths and names are the interface."
 ---
 
 # Specification Overview

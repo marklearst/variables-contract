@@ -1,5 +1,6 @@
 ---
 title: "Governance > Roles: Design Engineer"
+description: "True hybrid role. Masters both design and frontend. Owns the Variable Design Standard (VDS). Approves all variable changes. Reviews all variable changes for contract compliance and tests consumption feasibility in React. Can build and maintain production component libraries in Figma and React. Can write clear documentation for both designers and developers. Can translate design intent to code and code constraints to design."
 ---
 
 # Variable Governance: Design Engineer Role
@@ -60,7 +61,7 @@ If a candidate cannot demonstrate these skills, they are not ready for this role
 
 ### Contract owner responsibilities
 
-- Own the Variable Design Standard (VDS) ([Variable Design Standard (VDS)](/contract/variable-contract.md)).
+- Own the Variable Design Standard (VDS) ([Variable Design Standard (VDS)](/contract/variable-contract)).
 - Approve all variable changes before they enter version control.
 - Maintain naming rules and category boundaries (base, alias, component).
 - Review variable changes for contract correctness, references, and mode strategy.
@@ -159,6 +160,6 @@ The Variable Design Standard (VDS) depends on this role being held to a clear st
 
 ## Links
 
-- [Variable Contract](/contract/variable-contract.md)
-- [Change Control](../change-control)
-- [Validation](../validation)
+- [Variable Contract](/contract/variable-contract)
+- [Change Control](/governance/change-control)
+- [Validation](/governance/validation)

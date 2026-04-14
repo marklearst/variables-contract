@@ -1,5 +1,6 @@
 ---
 title: "Adapters: Style Dictionary"
+description: "Style Dictionary consumes Variable Design Standard (VDS) (DTCG) format and generates platform outputs like CSS variables, TypeScript types, and Tailwind CSS v4 custom properties."
 ---
 
 # Style Dictionary Adapter
@@ -272,7 +273,7 @@ Output (`dist/theme.css`):
 }
 ```
 
-Note: Tailwind CSS v4 uses CSS-first configuration. Generate CSS custom properties, not JavaScript config files. See [Tailwind Adapter](adapters/tailwind) for details.
+Note: Tailwind CSS v4 uses CSS-first configuration. Generate CSS custom properties, not JavaScript config files. See [Tailwind Adapter](/adapters/tailwind) for details.
 
 ## Links
 

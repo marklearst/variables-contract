@@ -1,5 +1,6 @@
 ---
 title: "Meta: References"
+description: "External standards and specifications referenced by Variable Design Standard (VDS). DTCG 2025.10 Format Specification, Semantic Versioning, JSON Pointer."
 ---
 
 # Variable Design Standard (VDS) References

@@ -1,5 +1,6 @@
 ---
 title: "Tooling: License"
+description: "The Variable Design Standard (VDS) Specification is dual-licensed: CC BY-ND 4.0 and Standards Integrity Addendum. CC BY-ND 4.0 is legally recognized base license. Standards Integrity Addendum is additional terms for public use."
 ---
 
 # License

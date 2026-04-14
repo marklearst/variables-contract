@@ -1,5 +1,6 @@
 ---
 title: "Governance > Roles: Designer"
+description: "Creates variables in Figma. Does not own the contract. Does not approve changes. Does not review variable changes for contract compliance. Does not test consumption feasibility in React. Does not build and maintain production component libraries in Figma and React. Does not write clear documentation for both designers and developers. Does not translate design intent to code and code constraints to design."
 ---
 
 # Variable Governance: Designer Role
@@ -14,11 +15,11 @@ Design Engineer reviews and approves all variable changes before they enter the 
 
 ## Responsibilities
 
-- Create variables in Figma following naming convention (see [Naming](/contract/naming.md)).
+- Create variables in Figma following naming convention (see [Naming](/contract/naming)).
 - Define semantic intent for variables (what they represent, not just values).
 - Define mode values (light/dark, mobile/desktop) when needed.
-- Use variables in Figma components (see [Component Variables](/design/component-variables.md)).
-- Export variables for normalization (see [Figma Workflow](/design/figma-workflow.md)).
+- Use variables in Figma components (see [Component Variables](/design/component-variables)).
+- Export variables for normalization (see [Figma Workflow](/design/figma-workflow)).
 - Submit variable changes for review by Design Engineer.
 
 ## Ownership
@@ -107,6 +108,6 @@ If Designer bypasses Design Engineer review:
 
 ## Links
 
-- [Naming](/contract/naming.md)
-- [Change Control](../change-control)
-- [Validation](../validation)
+- [Naming](/contract/naming)
+- [Change Control](/governance/change-control)
+- [Validation](/governance/validation)

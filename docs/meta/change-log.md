@@ -1,5 +1,6 @@
 ---
 title: "Meta: Change Log"
+description: "Version history and release notes for Variable Design Standard (VDS). Documentation hardening and DTCG 2025.10 compliance improvements. Spec-wide cadence alignment, role naming update, and JSON-as-API framing. Previous version with initial documentation structure."
 ---
 
 # Variable Design Standard (VDS) Change Log
@@ -35,21 +36,31 @@ Spec-wide cadence alignment, role naming update, and JSON-as-API framing.
 
 Highlights across introduction, contract, governance, scenarios, patterns, consumption, testing, tooling, and adapters. See git history for full file list.
 
-## Version 0.4.0
-
-**Status:** Draft
-**Date:** January 26, 2026
-
+::: changelog
+== v0.4.0
 Documentation hardening and DTCG 2025.10 compliance improvements.
-
-## Version 0.3.7
-
+== v0.3.7
 Previous version with initial documentation structure.
+:::
 
 ## Future versions
 
-- **v0.6.0**: Reference adapters as code (Figma, Tokens Studio)
-- **v0.7.0**: Reference output generators (CSS, TypeScript, Tailwind v4)
-- **v1.0.0**: Formal Status of this Document (SOTD), conformance registry, stabilized schema
+::: changelog
+== v0.6.0
 
-See [Versioning](governance/versioning) for versioning strategy and breaking change definitions.
+### Minor update
+
+Reference adapters as code (Figma, Tokens Studio)
+== v0.7.0
+
+### Minor update
+
+Reference output generators (CSS, TypeScript, Tailwind v4)
+== v1.0.0
+
+### Major update
+
+Formal Status of this Document (SOTD), conformance registry, stabilized schema
+:::
+
+See [Versioning](/governance/versioning) for versioning strategy and breaking change definitions.

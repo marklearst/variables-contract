@@ -1,5 +1,6 @@
 ---
 title: "Tooling: Ecosystem"
+description: "Tools that support Variable Design Standard (VDS) (DTCG 2025.10 format). Validation tools: DTCG-compliant validators, Variable Design Standard (VDS) validators. Build tools: Style Dictionary. Adapter tools: Figma adapters, Tokens Studio adapters, Other adapters."
 ---
 
 # Variable Design Standard (VDS) Tooling Ecosystem
@@ -134,13 +135,13 @@ Tools that support Variable Design Standard (VDS) (DTCG 2025.10 format).
 
 ## Tool compatibility matrix
 
-| Tool | DTCG Support | Variable Design Standard (VDS) Support | Notes |
-|------|--------------|---------------------------|-------|
-| Style Dictionary | Yes (v5+) | Yes (via DTCG) | Output adapter |
-| Figma | Partial | Yes (via adapter) | Export and normalize |
-| Tokens Studio | Yes | Yes (via adapter) | Export and normalize |
-| @dtcg/validator | Yes | Yes (format only) | Add custom validation |
-| GitHub Actions | N/A | Yes (custom workflows) | CI integration |
+| Tool             | DTCG Support | Variable Design Standard (VDS) Support | Notes                 |
+| ---------------- | ------------ | -------------------------------------- | --------------------- |
+| Style Dictionary | Yes (v5+)    | Yes (via DTCG)                         | Output adapter        |
+| Figma            | Partial      | Yes (via adapter)                      | Export and normalize  |
+| Tokens Studio    | Yes          | Yes (via adapter)                      | Export and normalize  |
+| @dtcg/validator  | Yes          | Yes (format only)                      | Add custom validation |
+| GitHub Actions   | N/A          | Yes (custom workflows)                 | CI integration        |
 
 ## Choosing tools
 
@@ -175,5 +176,5 @@ Tools that support Variable Design Standard (VDS) (DTCG 2025.10 format).
 
 ## Links
 
-- [Adapters](/adapters/index.md)
-- [Build Pipelines](build-pipelines)
+- [Adapters](/adapters)
+- [Build Pipelines](/tooling/build-pipelines)

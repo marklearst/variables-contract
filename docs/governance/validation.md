@@ -1,5 +1,6 @@
 ---
 title: "Governance: Validation"
+description: "Validation catches contract violations before they break components or build pipelines. If validation is missing, invalid references, type mismatches, and naming violations ship to production. Validation MUST check: JSON syntax (valid JSON structure). Variable structure (`$type` and `$value` present on all variables). Naming convention (dot-separated paths, lowercase, no platform prefixes). Reference resolution (all references point to existing variables). Circular references (no reference cycles). Type correctness (`$value` matches `$type` format). Mode key set checks (mode keys match within collections). Group extension (`$extends` targets exist, no circular group references)."
 ---
 
 # Variable Design Standard (VDS) Validation
@@ -233,5 +234,5 @@ If validation is skipped:
 
 ## Links
 
-- [Conformance](../reference/conformance)
-- [Change Control](change-control)
+- [Conformance](/reference/conformance)
+- [Change Control](/governance/change-control)

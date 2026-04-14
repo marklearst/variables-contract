@@ -1,5 +1,6 @@
 ---
 title: "Scenarios: Multi-Theme"
+description: "This scenario specifies theme variants using mode keys (light/dark, mobile/desktop). Failure if ignored: mode key sets diverge and theme switching fails."
 ---
 
 # Multi-Theme Patterns

@@ -1,5 +1,6 @@
 ---
 title: "Contract: Anatomy"
+description: "These are the three layers we use so components do not depend on raw palette values. Base, Alias, and Component. Base variables hold raw scales and palettes. Alias variables represent intent and reference base variables. Component variables are component-scoped aliases for fine-grained control."
 ---
 
 # Contract: Anatomy
@@ -136,7 +137,7 @@ Why this is faster:
 
 - Variable JSON in version control is the contract.
 - CI validates structure, naming, references, and modes.
-- Contract changes are reviewed before merge. See [Governance](../governance/overview).
+- Contract changes are reviewed before merge. See [Governance](/governance/overview).
 
 ## Formal Invariants
 
@@ -315,4 +316,4 @@ If anatomy rules are ignored:
 
 - Specific variable values (anatomy governs structure, not content)
 - Number of variables per category (depends on design system size)
-- Naming within categories (see [Naming Convention](naming))
+- Naming within categories (see [Naming Convention](/contract/naming))

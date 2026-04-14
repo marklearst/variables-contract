@@ -1,5 +1,6 @@
 ---
 title: "Reference: Glossary"
+description: "Terminology used in Variable Design Standard (VDS) specification and governance. Base variable: A variable that stores a raw value (color hex, dimension, etc.). Alias variable: A semantic variable that references another variable. Component variable: A component-scoped alias that references semantic variables. File selection rule: A file selection model where the folder path and file name select the active brand or mode. JSON-as-API: Treat the JSON file set as the API surface. Paths and names are the interface. File selection chooses brand and mode. Variable Design Standard (VDS): A governance layer on DTCG 2025.10 format. Rules for naming, validation, and versioning. Adapter patterns for tool integration. A standard for managing variables in version control."
 ---
 
 # Variable Design Standard (VDS) Glossary

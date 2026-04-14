@@ -1,5 +1,6 @@
 ---
 title: "Tooling: Build Pipelines"
+description: "Complete build pipeline examples for generating outputs from Variable Design Standard (VDS). Workflow: Validate token JSON. Build outputs from the validated contract. Publish artifacts to the build output location. Basic pipeline: Input: Variable Design Standard (VDS) JSON files. Output: CSS variables. Configuration: Style Dictionary config."
 ---
 
 # Build Pipeline Examples
@@ -375,5 +376,5 @@ If build pipeline is wrong:
 
 ## Links
 
-- [Validation](../governance/validation)
-- [Change Control](../governance/change-control)
+- [Validation](/governance/validation)
+- [Change Control](/governance/change-control)

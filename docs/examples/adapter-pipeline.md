@@ -1,5 +1,6 @@
 ---
 title: "Examples: Adapter Pipeline"
+description: "This example shows the complete conversion from Figma export to CSS variables. It includes the Figma export, Figma adapter normalization, and Style Dictionary build."
 ---
 
 # Adapter Pipeline Example
@@ -228,5 +229,5 @@ Validate at each step:
 
 ## Out of scope
 
-- Alternate adapter pipelines (see [Adapters](/adapters.md))
+- Alternate adapter pipelines (see [Adapters](/adapters))
 - Tool-specific deployment steps

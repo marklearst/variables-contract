@@ -1,5 +1,6 @@
 ---
 title: "Governance: Versioning"
+description: "Versioning communicates breaking changes and migration requirements. If versioning rules are not followed, consumers cannot plan upgrades and breaking changes ship without notice. Semantic versioning (MAJOR.MINOR.PATCH) for variable releases: MAJOR: breaking changes (renames, removals, type changes). MINOR: new variables, new modes, non-breaking additions. PATCH: bug fixes, documentation updates."
 ---
 
 # Variable Design Standard (VDS) Versioning

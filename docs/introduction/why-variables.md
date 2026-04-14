@@ -1,11 +1,12 @@
 ---
 title: "Introduction: Why Variables"
+description: "Terminology. VDS uses “variables” because it matches the language used in code and design tools. Failure if ignored: teams split vocabulary and handoff breaks."
 ---
 
 # Why Variables
 
 ::: callout info Part of the Variable Design Standard (VDS) Specification
-This page is part of the [Variable Design Standard (VDS)](../contract/variable-contract) governed specification. See [License](../license) for usage terms.
+This page is part of the [Variable Design Standard (VDS)](/contract/variable-contract) governed specification. See [License](/license) for usage terms.
 :::
 
 Scope: terminology. VDS uses “variables” because it matches the language used in code and design tools.

@@ -1,5 +1,6 @@
 ---
 title: "Consumption: TypeScript"
+description: "TypeScript consumption of Variable Design Standard (VDS) outputs. Use TypeScript types generated from Variable Design Standard (VDS) JSON."
 ---
 
 # TypeScript Consumption

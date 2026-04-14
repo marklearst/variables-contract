@@ -1,5 +1,6 @@
 ---
 title: "Introduction: Positioning"
+description: "What Variable Design Standard (VDS) is, what it is not, and how it fits into the larger UDS system."
 ---
 
 # Variable Design Standard (VDS) Positioning

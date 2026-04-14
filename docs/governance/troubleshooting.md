@@ -1,5 +1,6 @@
 ---
 title: "Governance: Troubleshooting"
+description: "Common issues when working with Variable Design Standard (VDS) and how to fix them. Workflow: Reproduce the error in CI or local validation. Identify the file and variable path from the error output. Fix the cause (type, reference, or mode key set). Re-run validation before merge."
 ---
 
 # Troubleshooting
@@ -479,9 +480,9 @@ Validate property-level references target compatible types.
 If issues persist:
 
 1. Check validation output for specific errors
-2. Review [Validation](validation) guide
-3. Check [Change Control](change-control) for review process
-4. Consult [Design Engineer](roles/design-engineer) role
+2. Review [Validation](/governance/validation) guide
+3. Check [Change Control](/governance/change-control) for review process
+4. Consult [Design Engineer](/governance/roles/design-engineer) role
 
 ## Out of scope
 
@@ -491,6 +492,6 @@ If issues persist:
 
 ## Links
 
-- [Validation](validation)
-- [Change Control](change-control)
-- [Adapters](/adapters.md)
+- [Validation](/governance/validation)
+- [Change Control](/governance/change-control)
+- [Adapters](/adapters)

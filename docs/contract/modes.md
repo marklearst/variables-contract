@@ -1,5 +1,6 @@
 ---
 title: "Contract: Modes"
+description: "Modes represent named variants of variables (example: `light`/`dark`, `mobile`/`desktop`). If mode keys do not match within a collection, theme switching breaks and mode-specific outputs fail."
 ---
 
 # Modes

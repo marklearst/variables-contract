@@ -1,5 +1,6 @@
 ---
 title: "Adoption: Implementation Checklist"
+description: "Pre-implementation, implementation, and post-implementation checklists for Variable Design Standard (VDS) adoption."
 ---
 
 # Implementation Checklist
@@ -129,7 +130,7 @@ To claim Variable Design Standard (VDS) compliance, verify:
 - [ ] File selection rule documented (brand and mode folders)
 - [ ] Contract review gate defined
 
-See [Conformance](reference/conformance) for complete conformance requirements.
+See [Conformance](../reference/conformance) for complete conformance requirements.
 
 ## Post-implementation validation
 
