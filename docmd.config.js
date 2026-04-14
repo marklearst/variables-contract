@@ -15,15 +15,28 @@ module.exports = {
     collapsible: true,
     defaultCollapsed: false,
   },
+  logo: {
+    light: "/assets/images/vds.svg", // Path to logo for light mode
+    dark: "/assets/images/vds.svg", // Path to logo for dark mode
+    alt: "Variable Design Standard (VDS) Logo", // Alt text for the logo
+    href: "/", // Optional: link for the logo, defaults to site root
+    height: "100px", // Optional: specify height via CSS is often better
+  },
   theme: {
     name: "default",
     defaultMode: "dark",
     enableModeToggle: true,
     positionMode: "top",
+    customCss: ["/assets/css/base.css"],
     // customCss: ["/assets/css/vercel-theme.css"],
   },
   autoTitleFromH1: true,
   copyCode: true,
+  sponsor: {
+    enabled: true,
+    title: "Sponsor the Project",
+    link: "https://github.com/sponsors/marklearst",
+  },
   customJs: ["/assets/js/vercel-analytics.js"],
   navigation: [
     { title: "Home", path: ".", icon: "home" },
@@ -224,7 +237,11 @@ module.exports = {
       children: [
         { title: "CSS", path: "consumption/css", icon: "file-code" },
         { title: "TypeScript", path: "consumption/typescript", icon: "type" },
-        { title: "UI Libraries", path: "consumption/frameworks", icon: "layers" },
+        {
+          title: "UI Libraries",
+          path: "consumption/frameworks",
+          icon: "layers",
+        },
       ],
     },
     {

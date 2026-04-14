@@ -12,6 +12,6 @@
     "version:check": "node scripts/check-version.js"
   },
   "devDependencies": {
-    "@mgks/docmd": "^0.3.2"
+    "@mgks/docmd": "^0.3.8"
   }
 }
